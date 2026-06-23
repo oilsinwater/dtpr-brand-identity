@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>16 Sprint Recipes — DTPR Brand Identity Audit</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2.5rem 0;
+  }
+  @media (max-width: 900px) { .recipe-grid { grid-template-columns: 1fr; } }
+
+  .recipe-card {
+    border: 2px solid var(--gray-200);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+  .recipe-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .recipe-header {
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    border-bottom: 2px solid var(--gray-100);
+  }
+  .recipe-header svg {
+    flex-shrink: 0;
+  }
+  .recipe-header-text h2 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    color: var(--navy);
+    margin-bottom: 0.25rem;
+  }
+  .recipe-header-text .recipe-tag {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--r-sm);
+    display: inline-block;
+  }
+  .tag-regulatory { background: #fff3cd; color: #856404; }
+  .tag-maker      { background: rgba(198,233,61,0.2); color: #4d5c00; }
+  .tag-commons    { background: #cff4fc; color: #0c5460; }
+
+  .recipe-body {
+    padding: 1.5rem;
+    flex: 1;
+  }
+  .recipe-body p.persona-desc {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+  }
+
+  .coord-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    margin-bottom: 1.25rem;
+  }
+  .coord-table thead th {
+    background: var(--gray-100);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.4rem 0.6rem;
+    text-align: left;
+    color: var(--gray-600);
+  }
+  .coord-table tbody td {
+    padding: 0.45rem 0.6rem;
+    border-bottom: 1px solid var(--gray-100);
+    vertical-align: top;
+  }
+  .coord-table tbody td:first-child {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--gray-500);
+    white-space: nowrap;
+  }
+  .coord-table tbody td:nth-child(2) {
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .coord-table tbody td:last-child {
+    color: var(--gray-600);
+    font-size: 0.8rem;
+  }
+
+  .box-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-400);
+    margin: 1rem 0 0.35rem;
+  }
+
+  .recipe-accent {
+    border-top: 2px solid var(--gray-100);
+    padding: 1rem 1.5rem;
+    background: var(--gray-50);
+  }
+  .recipe-accent p {
+    font-size: 0.82rem;
+    color: var(--gray-600);
+    line-height: 1.55;
+  }
+  .recipe-accent strong {
+    color: var(--navy);
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 0.3rem;
+  }
+
+  /* Coord badge chips */
+  .chip {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--r-sm);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+  .chip-a { background: #fef3c7; color: #92400e; }
+  .chip-b { background: rgba(198,233,61,0.25); color: #4d5c00; }
+  .chip-c { background: #dbeafe; color: #1e40af; }
+  .chip-d { background: #ede9fe; color: #5b21b6; }
+
+  .recipe-legend-note {
+    background: rgba(198, 233, 61, 0.07);
+    border-left: 5px solid var(--chartreuse);
+    padding: 1.5rem;
+    border-radius: 0 var(--r-md) var(--r-md) 0;
+    margin: 2.5rem 0;
+  }
+  .recipe-legend-note h4 {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+  }
+  .recipe-legend-note p {
+    font-size: 0.92rem;
+    color: var(--gray-800);
+    line-height: 1.65;
+    margin-bottom: 0.5rem;
+  }
+  .recipe-legend-note code {
+    background: var(--gray-100);
+    padding: 0.1em 0.4em;
+    border-radius: 3px;
+    font-size: 0.85em;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="sprint-index.html"><span class="dot"></span>DTPR · Visual System Prep</a>
+  <nav>
+    <a href="index.html" class="nav-split-link">← Brand Audit</a>
+    <a href="sprint-index.html">Cover</a>
+    <a href="13-sprint-morphology.html">13 Form Box</a>
+    <a href="14-transformation-morphology.html">14 Process Box</a>
+    <a href="15-semantic-morphology.html">15 Semantic Box</a>
+    <a href="16-sprint-recipes.html" aria-current="page">16 Recipes</a>
+    <a href="17-geometric-blueprint.html">17 Blueprint</a>
+    <a href="18-core-caa-assets.html">18 CAA Assets</a>
+    <a href="19-iso-3864-matrix.html">19 ISO Matrix</a>
+    <a href="20-responsive-specs.html">20 Responsive</a>
+  </nav>
+  <span class="badge-draft">v0.3 · system prep</span>
+</header>
+
+<main>
+  <span class="eyebrow">16 · Sprint Recipes</span>
+  <h1>Sprint Recipes: Three Deployment Paths</h1>
+  <p class="lede">A Sprint Recipe is formed by selecting exactly one option from each Morphological Box. The three recipes below define the canonical design paths for DTPR — each tuned to a distinct audience, deployment context, and transparency register.</p>
+
+  <div class="recipe-legend-note">
+    <h4>How to Read a Recipe</h4>
+    <p>Each recipe specifies coordinates across the three boxes as <code>Form[n]</code>, <code>Process[n]</code>, and <code>Semantic[n]</code>. Option letters map to columns in each table: <code>A</code> = flat/minimal, <code>B</code> = speculative/maker, <code>C</code> = human/ecosystem, <code>D</code> = regulated/standard. These are not rigid rules — they are starting constraints that a design sprint collapses into a single coherent system.</p>
+    <p>The three recipes are not exhaustive. They represent the three primary deployment tracks identified in the DTPR consolidation plan and the Assembly Day proto-personas. Additional recipes can be composed from the tables as deployment contexts evolve.</p>
+  </div>
+
+  <div class="recipe-grid">
+
+    <!-- RECIPE 1: REGULATORY -->
+    <div class="recipe-card">
+      <div class="recipe-header" style="background: #fffbeb; border-bottom-color: #fde68a;">
+        <svg viewBox="0 0 60 60" width="56" height="56">
+          <!-- Scale of justice simplified -->
+          <line x1="30" y1="10" x2="30" y2="50" stroke="#002684" stroke-width="2.5"/>
+          <line x1="10" y1="22" x2="50" y2="22" stroke="#002684" stroke-width="2.5"/>
+          <ellipse cx="15" cy="33" rx="8" ry="5" fill="none" stroke="#856404" stroke-width="2"/>
+          <ellipse cx="45" cy="33" rx="8" ry="5" fill="none" stroke="#856404" stroke-width="2"/>
+          <line x1="15" y1="22" x2="15" y2="33" stroke="#002684" stroke-width="1.5"/>
+          <line x1="45" y1="22" x2="45" y2="33" stroke="#002684" stroke-width="1.5"/>
+          <rect x="25" y="50" width="10" height="4" rx="1" fill="#002684"/>
+        </svg>
+        <div class="recipe-header-text">
+          <h2>Regulatory Track</h2>
+          <span class="recipe-tag tag-regulatory">Public Sector · ISO 3864</span>
+        </div>
+      </div>
+      <div class="recipe-body">
+        <p class="persona-desc">For city managers, compliance officers, and infrastructure deployers who need risk mitigation language, standardized disclosure formats, and verifiable accountability chains. Must co-exist with ISO safety signage.</p>
+
+        <div class="box-label">Form Box (p.13)</div>
+        <table class="coord-table">
+          <thead><tr><th>Variable</th><th>Selection</th><th>Rationale</th></tr></thead>
+          <tbody>
+            <tr><td>1. Shape</td><td><span class="chip chip-d">D</span> Hexagon Grid</td><td>ISO-compatible unit grid</td></tr>
+            <tr><td>2. Grid</td><td><span class="chip chip-d">D</span> ISO Modular</td><td>Standardized layout</td></tr>
+            <tr><td>3. Color</td><td><span class="chip chip-d">D</span> Safety Semantic</td><td>ISO 3864 compliance</td></tr>
+            <tr><td>4. Illustration</td><td><span class="chip chip-a">A</span> Flat Icon</td><td>Maximum legibility</td></tr>
+            <tr><td>5. Typography</td><td><span class="chip chip-d">D</span> Condensed Sans</td><td>Space-efficient signage</td></tr>
+            <tr><td>6. Motion</td><td><span class="chip chip-a">A</span> None / Static</td><td>Physical-first context</td></tr>
+          </tbody>
+        </table>
+
+        <div class="box-label">Process Box (p.14)</div>
+        <table class="coord-table">
+          <thead><tr><th>Variable</th><th>Selection</th><th>Rationale</th></tr></thead>
+          <tbody>
+            <tr><td>1. Grid Decomp</td><td><span class="chip chip-d">D</span> Strict ISO</td><td>Grid never breaks</td></tr>
+            <tr><td>2. Scale Adapt</td><td><span class="chip chip-d">D</span> Physical Distance</td><td>10m / 2m / 0.5m rules</td></tr>
+            <tr><td>3. Interaction</td><td><span class="chip chip-a">A</span> QR Deeplink</td><td>Single physical entry</td></tr>
+            <tr><td>4. Dynamic Overlay</td><td><span class="chip chip-a">A</span> None</td><td>Stable static panel</td></tr>
+            <tr><td>5. Gateway Hand-off</td><td><span class="chip chip-c">C</span> Icon Guide</td><td>Plain-lang citizen entry</td></tr>
+            <tr><td>6. Nav Anchors</td><td><span class="chip chip-d">D</span> Fixed Persistent</td><td>Cross-domain navigation</td></tr>
+          </tbody>
+        </table>
+
+        <div class="box-label">Semantic Box (p.15)</div>
+        <table class="coord-table">
+          <thead><tr><th>Variable</th><th>Selection</th><th>Rationale</th></tr></thead>
+          <tbody>
+            <tr><td>1. Deploy Track</td><td><span class="chip chip-a">A</span> Physical Sensors</td><td>Primary signage context</td></tr>
+            <tr><td>2. Audience</td><td><span class="chip chip-c">C</span> Deployer</td><td>Compliance-driven</td></tr>
+            <tr><td>3. Disclosure</td><td><span class="chip chip-b">B</span> Categorical 7Qs</td><td>7-question taxonomy</td></tr>
+            <tr><td>4. Feedback Loop</td><td><span class="chip chip-d">D</span> Issue Reporting</td><td>Formal discrepancy log</td></tr>
+            <tr><td>5. Stewardship</td><td><span class="chip chip-b">B</span> Founding Steward</td><td>Helpful Places mark</td></tr>
+            <tr><td>6. Education</td><td><span class="chip chip-d">D</span> Pitch Checklist</td><td>City champion asset</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="recipe-accent">
+        <strong>Output Targets</strong>
+        <p>Physical signage panel specs · ISO co-placement guide · Deployment Playbook · Compliance checklist</p>
+      </div>
+    </div>
+
+    <!-- RECIPE 2: MAKER -->
+    <div class="recipe-card">
+      <div class="recipe-header" style="background: rgba(198,233,61,0.08); border-bottom-color: #c6e93d;">
+        <svg viewBox="0 0 60 60" width="56" height="56">
+          <!-- Wrench + hex -->
+          <polygon points="30,8 42,15 42,29 30,36 18,29 18,15" fill="none" stroke="#4d5c00" stroke-width="2"/>
+          <circle cx="30" cy="22" r="5" fill="#c6e93d" stroke="#4d5c00" stroke-width="1.5"/>
+          <line x1="34" y1="27" x2="46" y2="50" stroke="#4d5c00" stroke-width="3" stroke-linecap="round"/>
+          <rect x="40" y="46" width="10" height="6" rx="2" fill="#002684" transform="rotate(-40 45 49)"/>
+        </svg>
+        <div class="recipe-header-text">
+          <h2>Maker Track</h2>
+          <span class="recipe-tag tag-maker">Developer · Community Build</span>
+        </div>
+      </div>
+      <div class="recipe-body">
+        <p class="persona-desc">For technical evaluators, civic hackers, open-source contributors, and developer communities integrating the DTPR standard programmatically. Graph-paper maker aesthetic. Protocol-native, hackable-by-design.</p>
+
+        <div class="box-label">Form Box (p.13)</div>
+        <table class="coord-table">
+          <thead><tr><th>Variable</th><th>Selection</th><th>Rationale</th></tr></thead>
+          <tbody>
+            <tr><td>1. Shape</td><td><span class="chip chip-b">B</span> Graph Paper</td><td>Builder aesthetic</td></tr>
+            <tr><td>2. Grid</td><td><span class="chip chip-b">B</span> Fluid Columns</td><td>Responsive-first layout</td></tr>
+            <tr><td>3. Color</td><td><span class="chip chip-b">B</span> Graph Accent</td><td>Navy + chartreuse CTA</td></tr>
+            <tr><td>4. Illustration</td><td><span class="chip chip-b">B</span> Maker Sketch</td><td>Sketchbook / clip style</td></tr>
+            <tr><td>5. Typography</td><td><span class="chip chip-b">B</span> Mono Primary</td><td>Code-first, JetBrains Mono</td></tr>
+            <tr><td>6. Motion</td><td><span class="chip chip-b">B</span> Micro-interaction</td><td>Hover state feedback</td></tr>
+          </tbody>
+        </table>
+
+        <div class="box-label">Process Box (p.14)</div>
+        <table class="coord-table">
+          <thead><tr><th>Variable</th><th>Selection</th><th>Rationale</th></tr></thead>
+          <tbody>
+            <tr><td>1. Grid Decomp</td><td><span class="chip chip-b">B</span> Fluid Overlay</td><td>Breakpoint-responsive</td></tr>
+            <tr><td>2. Scale Adapt</td><td><span class="chip chip-b">B</span> Viewport Fluid</td><td>320px → desktop</td></tr>
+            <tr><td>3. Interaction</td><td><span class="chip chip-b">B</span> Hover + Filter</td><td>Taxonomy explorer</td></tr>
+            <tr><td>4. Dynamic Overlay</td><td><span class="chip chip-c">C</span> Live Data</td><td>API-driven real state</td></tr>
+            <tr><td>5. Gateway Hand-off</td><td><span class="chip chip-b">B</span> Developer Portal</td><td>Quickstart entry</td></tr>
+            <tr><td>6. Nav Anchors</td><td><span class="chip chip-b">B</span> Scrollspy</td><td>Docs sidebar pattern</td></tr>
+          </tbody>
+        </table>
+
+        <div class="box-label">Semantic Box (p.15)</div>
+        <table class="coord-table">
+          <thead><tr><th>Variable</th><th>Selection</th><th>Rationale</th></tr></thead>
+          <tbody>
+            <tr><td>1. Deploy Track</td><td><span class="chip chip-b">B</span> Digital Channels</td><td>Code integration</td></tr>
+            <tr><td>2. Audience</td><td><span class="chip chip-d">D</span> Developer (API)</td><td>Protocol-native</td></tr>
+            <tr><td>3. Disclosure</td><td><span class="chip chip-d">D</span> Dynamic Explorer</td><td>Interactive taxonomy</td></tr>
+            <tr><td>4. Feedback Loop</td><td><span class="chip chip-a">A</span> Anonymous Rating</td><td>Lightweight signal</td></tr>
+            <tr><td>5. Stewardship</td><td><span class="chip chip-a">A</span> Pure Commons</td><td>Open-source first</td></tr>
+            <tr><td>6. Education</td><td><span class="chip chip-b">B</span> Scrollytelling</td><td>Guided demo tour</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="recipe-accent">
+        <strong>Output Targets</strong>
+        <p>Developer portal UI · API quickstart pages · Interactive taxonomy explorer · Open-source kit</p>
+      </div>
+    </div>
+
+    <!-- RECIPE 3: COMMONS -->
+    <div class="recipe-card">
+      <div class="recipe-header" style="background: #ecfeff; border-bottom-color: #a5f3fc;">
+        <svg viewBox="0 0 60 60" width="56" height="56">
+          <!-- Three connected people / commons -->
+          <circle cx="30" cy="15" r="7" fill="none" stroke="#0c5460" stroke-width="2"/>
+          <circle cx="12" cy="40" r="7" fill="none" stroke="#0c5460" stroke-width="2"/>
+          <circle cx="48" cy="40" r="7" fill="none" stroke="#0c5460" stroke-width="2"/>
+          <line x1="30" y1="22" x2="16" y2="34" stroke="#0c5460" stroke-width="1.5"/>
+          <line x1="30" y1="22" x2="44" y2="34" stroke="#0c5460" stroke-width="1.5"/>
+          <line x1="19" y1="40" x2="41" y2="40" stroke="#bae6ed" stroke-width="1.5" stroke-dasharray="3,2"/>
+          <circle cx="30" cy="15" r="3" fill="#bae6ed"/>
+        </svg>
+        <div class="recipe-header-text">
+          <h2>Commons Track</h2>
+          <span class="recipe-tag tag-commons">Resident · Advocate · Ecosystem</span>
+        </div>
+      </div>
+      <div class="recipe-body">
+        <p class="persona-desc">For Impacted Citizens (QR scan arrivals), Vigilant Advocates, and community organizations. Centered on plain-language legibility, accessible feedback mechanisms, and human-rights-grounded disclosure. Mobile-first.</p>
+
+        <div class="box-label">Form Box (p.13)</div>
+        <table class="coord-table">
+          <thead><tr><th>Variable</th><th>Selection</th><th>Rationale</th></tr></thead>
+          <tbody>
+            <tr><td>1. Shape</td><td><span class="chip chip-c">C</span> Organic + Hex</td><td>Human, approachable</td></tr>
+            <tr><td>2. Grid</td><td><span class="chip chip-c">C</span> Single Column</td><td>Mobile-first QR landing</td></tr>
+            <tr><td>3. Color</td><td><span class="chip chip-c">C</span> Palette Accessible</td><td>WCAG AA contrast</td></tr>
+            <tr><td>4. Illustration</td><td><span class="chip chip-c">C</span> People-Centered</td><td>Relatable scenarios</td></tr>
+            <tr><td>5. Typography</td><td><span class="chip chip-c">C</span> Large Body Text</td><td>Accessibility-first</td></tr>
+            <tr><td>6. Motion</td><td><span class="chip chip-c">C</span> Page Transitions</td><td>Wayfinding guidance</td></tr>
+          </tbody>
+        </table>
+
+        <div class="box-label">Process Box (p.14)</div>
+        <table class="coord-table">
+          <thead><tr><th>Variable</th><th>Selection</th><th>Rationale</th></tr></thead>
+          <tbody>
+            <tr><td>1. Grid Decomp</td><td><span class="chip chip-c">C</span> Stacked Card</td><td>Single-thumb mobile</td></tr>
+            <tr><td>2. Scale Adapt</td><td><span class="chip chip-c">C</span> Content Hierarchy</td><td>Progressive disclosure</td></tr>
+            <tr><td>3. Interaction</td><td><span class="chip chip-c">C</span> Tap + Expand</td><td>Touch-first accordion</td></tr>
+            <tr><td>4. Dynamic Overlay</td><td><span class="chip chip-b">B</span> Contextual Pop-in</td><td>Definition tooltips</td></tr>
+            <tr><td>5. Gateway Hand-off</td><td><span class="chip chip-a">A</span> Icon Guide</td><td>"You scanned a sign"</td></tr>
+            <tr><td>6. Nav Anchors</td><td><span class="chip chip-c">C</span> Progress Dots</td><td>Onboarding wayfinding</td></tr>
+          </tbody>
+        </table>
+
+        <div class="box-label">Semantic Box (p.15)</div>
+        <table class="coord-table">
+          <thead><tr><th>Variable</th><th>Selection</th><th>Rationale</th></tr></thead>
+          <tbody>
+            <tr><td>1. Deploy Track</td><td><span class="chip chip-d">D</span> Combined Hybrid</td><td>Physical + digital</td></tr>
+            <tr><td>2. Audience</td><td><span class="chip chip-a">A</span> Resident (Plain)</td><td>Non-technical first</td></tr>
+            <tr><td>3. Disclosure</td><td><span class="chip chip-b">B</span> Categorical 7Qs</td><td>Icon-forward answers</td></tr>
+            <tr><td>4. Feedback Loop</td><td><span class="chip chip-b">B</span> Public Comments</td><td>Spatial feedback pins</td></tr>
+            <tr><td>5. Stewardship</td><td><span class="chip chip-a">A</span> Pure Commons</td><td>Community-owned framing</td></tr>
+            <tr><td>6. Education</td><td><span class="chip chip-a">A</span> Nutrition Label</td><td>Standardized overview</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="recipe-accent">
+        <strong>Output Targets</strong>
+        <p>Icon Guide mobile landing · Feedback Portal · Advocate Community Kit · Accessibility-first sign panel</p>
+      </div>
+    </div>
+
+  </div><!-- /recipe-grid -->
+
+  <div class="sprint-legend" style="background: rgba(198,233,61,0.07); border-left: 5px solid var(--chartreuse); padding: 1.5rem; border-radius: 0 var(--r-md) var(--r-md) 0; margin: 2.5rem 0;">
+    <h4 style="font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); margin-bottom: 0.6rem;">FVS Alignment Note</h4>
+    <p style="font-size: 0.92rem; color: var(--gray-800); line-height: 1.65; margin-bottom: 0.75rem;">In Lorenz's <em>Flexible Visual Systems</em>, the tool for managing a system's combinatorial variables is the <strong>morphological box</strong> (Zwicky/Gerstner, pp.&nbsp;52–53) — "a way to limit your options and keep an overview about them at the same time." Our three boxes are one such morphological box split across three axes; a Sprint Recipe is exactly Lorenz's selection step (locking one value per variable).</p>
+    <ol style="margin-left: 1.2rem; font-size: 0.92rem; color: var(--gray-800); line-height: 1.65;">
+      <li><strong>Form Box (p.13) → form-based vocabulary:</strong> Shape, grid, color, and type — the parameters that, in FVS terms, achieve identification through a distinctive <em>form</em>. These stay stable within a recipe.</li>
+      <li><strong>Process Box (p.14) → transformation-based vocabulary:</strong> The rules for how elements respond to context (viewport, distance, interaction). In FVS terms, identification through a distinctive <em>process</em>. Each recipe defines a distinct transformation envelope.</li>
+      <li><strong>Semantic Box (p.15) → communication problem + visual-language taxonomy:</strong> Deployment track, audience register, reference type, and feedback mechanism. This maps to Lorenz's communication-problem tetrahedron (Product / Target Group / Competitors / Market) and the iconic-vs-symbolic reference axis — it anchors the system to real-world accountability and gives it direction.</li>
+      <li><strong>Recipe → CAA execution:</strong> The morphological box <em>enumerates</em>; the CAA method (Components → Assets → Application) <em>executes</em>. Once a recipe is locked, all downstream work (Geometric Blueprint → Application Assets → Responsive Specs) inherits its constraints. Switching recipes requires revisiting the blueprint.</li>
+    </ol>
+  </div>
+
+  <div class="page-nav">
+    <a href="15-semantic-morphology.html">← 15 Semantic Box</a>
+    <a href="index.html">↑ Cover</a>
+    <a href="17-geometric-blueprint.html">17 Blueprint →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.3 · June 2026 · Superbloom Design · <a href="https://github.com/superbloom/dtpr-brand-identity" target="_blank" rel="noopener">view on GitHub</a> (forthcoming)</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>09 Iconography — DTPR Brand Identity Audit</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="dot"></span>DTPR · Brand Identity Audit</a>
+  <nav>
+    <a href="index.html">Cover</a>
+    <a href="01-evolution.html">01 Evolution</a>
+    <a href="02-dtpr-io.html">02 dtpr.io</a>
+    <a href="03-vision.html">03 vision</a>
+    <a href="04-makeshift.html">04 Makeshift</a>
+    <a href="05-docs.html">05 docs.dtpr</a>
+    <a href="06-marks.html">06 Marks</a>
+    <a href="07-color.html">07 Color</a>
+    <a href="08-typography.html">08 Type</a>
+    <a href="09-iconography.html" aria-current="page">09 Icons</a>
+    <a href="10-illustrations.html">10 Illustrations</a>
+    <a href="11-voice.html">11 Voice</a>
+    <a href="12-findings.html">12 Findings</a>
+    <a href="sprint-index.html" class="nav-split-link">Visual System Prep →</a>
+  </nav>
+  <span class="badge-draft">v0.3 · audit</span>
+</header>
+
+<main>
+  <span class="eyebrow">09 · Iconography</span>
+  <h1>The hex-as-container grammar</h1>
+  <p class="lede">The hexagon is the atomic unit of the DTPR design system. Every icon is a populated hexagon. Every layout is a tessellation of hexagons. The 147-element taxonomy is the body of work that gives the system its semantic content.</p>
+
+  <div class="tag-row">
+    <span class="tag observed">OBSERVED</span>
+    <span class="tag source-vision">vision.dtpr.io</span>
+    <span class="tag source-dtpr">dtpr.io</span>
+  </div>
+
+  <hr>
+
+  <h2>The hexagon container</h2>
+
+  <p>The SVG's own metadata names it: <code>dtpr_icons / container / hexagon</code>. This is a deliberate architectural choice — the hexagon is <em>not</em> a logo, it is a <em>container</em>. The brand mark is a populated instance of this container.</p>
+
+  <figure>
+    <img src="assets/marks/hexagon.svg" alt="Hexagon container" style="max-width: 220px;">
+    <figcaption>
+      <strong>dtpr_icons / container / hexagon.svg.</strong> Source: Sketch 53 (2020). 36×36 viewBox with 4px translate offset. Stroke is 2px at <code>#000000</code>.
+    </figcaption>
+  </figure>
+
+  <h2>The 147-element taxonomy</h2>
+  <p>Three taxonomies, totaling 147 elements, live in the <code>docs.dtpr.io</code> standard. They are the semantic content of the icon library.</p>
+
+  <div class="grid-3">
+    <div class="mark-tile">
+      <div style="font-family: var(--font-mono); font-weight: 800; font-size: 2.4rem; color: var(--navy)">51</div>
+      <div style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-500)">Device elements</div>
+      <div class="label">What the technology is — the sensor / device taxonomy</div>
+    </div>
+    <div class="mark-tile">
+      <div style="font-family: var(--font-mono); font-weight: 800; font-size: 2.4rem; color: var(--navy)">23</div>
+      <div style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-500)">Processing elements</div>
+      <div class="label">What it does to the data — the cryptography / processing taxonomy</div>
+    </div>
+    <div class="mark-tile">
+      <div style="font-family: var(--font-mono); font-weight: 800; font-size: 2.4rem; color: var(--navy)">73</div>
+      <div style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-500)">AI elements (beta)</div>
+      <div class="label">What the AI system does — the AI / algorithm taxonomy</div>
+    </div>
+  </div>
+
+  <h2>The icon library — captured in the live taxonomy page</h2>
+
+  <figure>
+    <img src="assets/screenshots/dtpr-io-hero/dtpr-io-taxonomy-hires.png" alt="dtpr.io/taxonomy/device showing the 51-element device icon library in a grid with hex-prefixed icons">
+    <figcaption>
+      <strong>dtpr.io/taxonomy/device.</strong> A grid of 51 hex-prefixed device icons. Every element is a populated hexagon. This is the public-facing icon library. The page is the primary QR-scan landing for residents — see <a href="02-dtpr-io.html">page 02 (dtpr.io)</a> for the dead-end analysis.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="assets/screenshots/dtpr-io-hero/dtpr-io-taxonomy-scrolled.png" alt="dtpr.io/taxonomy/device scrolled to show more device icons">
+    <figcaption>
+      <strong>Icon library scrolled view.</strong> Continuing the device taxonomy. The grid is consistent — every icon is a hex prefix with a line-art icon inside.
+    </figcaption>
+  </figure>
+
+  <h2>Hexagon as a tessellation</h2>
+  <p>The hexagons tessellate. This is what makes DTPR a <em>language</em> rather than a <em>label</em>. A complete disclosure is a small cluster of hexagons, not a single icon.</p>
+
+  <div class="callout">
+    <p><strong>Composition logic, observed in <code>vision.dtpr.io</code> scenarios:</strong></p>
+    <ul style="margin: 0.4rem 0 0 1.2rem; line-height: 1.7">
+      <li>Each scenario card is a vertical stack of hexagons — one per data point being disclosed.</li>
+      <li>Each hexagon hosts one taxonomy element (e.g. "Mobility", "Bikeshare Co.", "Hands free").</li>
+      <li>Reading order: top-to-bottom, like a recipe. The first hexagon is the context, the last is the result.</li>
+    </ul>
+  </div>
+
+  <h2>High-picturability vs. low-picturability (heuristic recommendation)</h2>
+  <p>The heuristics synthesis recommends a two-tier icon treatment for processing elements:</p>
+
+  <table>
+    <tr><th>Picturability</th><th>Treatment</th><th>Examples</th></tr>
+    <tr>
+      <td><strong>High</strong></td>
+      <td>Standalone cross-cultural symbol per ISO&nbsp;3864-3 criteria</td>
+      <td>Video camera, microphone, GPS</td>
+    </tr>
+    <tr>
+      <td><strong>Low</strong></td>
+      <td>QR-extended — minimal physical-sign icon that functions as a placeholder, with full disclosure on scan</td>
+      <td>Homomorphic encryption, Zero-Knowledge Proofs, Differential privacy</td>
+    </tr>
+  </table>
+
+  <p class="small">Source: <code>dtpr-respectful-heuristics-synthesis-v2.md</code> §7, recommendation 13. <span class="tag proposed">PROPOSED</span></p>
+
+  <h2>Iconographic rules <span class="tag open">OPEN</span></h2>
+
+  <div class="do-dont">
+    <div class="card do">
+      <div class="tag">Recommended</div>
+      <ul style="line-height: 1.8; padding-left: 1.2rem">
+        <li>Use the hexagon as the container. Always. The system is built on tessellation.</li>
+        <li>Match the icon style to the container — the inner icon should occupy the inner-circle area.</li>
+      </ul>
+    </div>
+    <div class="card dont">
+      <div class="tag">Avoid</div>
+      <ul style="line-height: 1.8; padding-left: 1.2rem">
+        <li>Place taxonomy elements in non-hexagonal containers. The shape <em>is</em> the grammar.</li>
+        <li>Render low-picturability processing elements as standalone pictograms expecting cross-cultural comprehension.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Seals (vision-era proposal assets)</h2>
+  <p>Three "seal" PNGs are referenced from the <code>vision.dtpr.io</code> image server. They read as 2020-era context seals. Status: archival, kept for reference.</p>
+
+  <div class="grid-3">
+    <div class="mark-tile">
+      <img src="assets/marks/seal_place.png" alt="Seal of Place" style="width: 130px;">
+      <div class="label">Seal_Place.png</div>
+    </div>
+    <div class="mark-tile">
+      <img src="assets/marks/seal_sensor.png" alt="Seal of Sensor" style="width: 130px;">
+      <div class="label">Seal_Sensor.png</div>
+    </div>
+    <div class="mark-tile">
+      <img src="assets/marks/seal_system.png" alt="Seal of System" style="width: 130px;">
+      <div class="label">Seal_System.png</div>
+    </div>
+  </div>
+
+  <div class="page-nav">
+    <a href="08-typography.html">← 08 Typography</a>
+    <a href="10-illustrations.html">10 Illustrations →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.2 · June 2026 · Superbloom Design</p>
+</footer>
+
+</body>
+</html>

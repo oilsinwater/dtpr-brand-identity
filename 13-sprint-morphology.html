@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>13 Sprint Morphology — DTPR Brand Identity Audit</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Extra styling for the sprint table */
+  .sprint-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--r-md);
+    overflow: hidden;
+  }
+  .sprint-table th {
+    background: var(--navy);
+    color: var(--white);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    padding: 1rem;
+    text-align: center;
+  }
+  .sprint-table td {
+    padding: 1.2rem 1rem;
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: 1px solid var(--gray-200);
+    background: var(--white);
+    transition: background 0.15s;
+  }
+  .sprint-table tr:hover td {
+    background: rgba(198, 233, 61, 0.04); /* Subtle chartreuse highlight */
+  }
+  .sprint-table td.var-col {
+    background: var(--gray-50);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: var(--navy);
+    text-align: left;
+    padding-left: 1.5rem;
+    border-right: 2px solid var(--gray-200);
+  }
+  .sprint-table .cell-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .sprint-table svg {
+    border: 1px solid var(--gray-200);
+    border-radius: var(--r-md);
+    background: var(--gray-50);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .sprint-table td:hover svg {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+    border-color: var(--royal-blue);
+  }
+  .sprint-table .cell-title {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .sprint-table .cell-desc {
+    font-size: 0.78rem;
+    color: var(--gray-600);
+    line-height: 1.35;
+    max-width: 22ch;
+  }
+  .sprint-legend {
+    background: rgba(198, 233, 61, 0.07);
+    border-left: 5px solid var(--chartreuse);
+    padding: 1.5rem;
+    border-radius: 0 var(--r-md) var(--r-md) 0;
+    margin: 2.5rem 0;
+  }
+  .sprint-legend h4 {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+  }
+  .sprint-legend ol {
+    margin-left: 1.2rem;
+    font-size: 0.92rem;
+    color: var(--gray-800);
+    line-height: 1.65;
+  }
+  .sprint-legend li {
+    margin-bottom: 0.4rem;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="sprint-index.html"><span class="dot"></span>DTPR · Visual System Prep</a>
+  <nav>
+    <a href="index.html" class="nav-split-link">← Brand Audit</a>
+    <a href="sprint-index.html">Cover</a>
+    <a href="13-sprint-morphology.html" aria-current="page">13 Form Box</a>
+    <a href="14-transformation-morphology.html">14 Process Box</a>
+    <a href="15-semantic-morphology.html">15 Semantic Box</a>
+    <a href="16-sprint-recipes.html">16 Recipes</a>
+    <a href="17-geometric-blueprint.html">17 Blueprint</a>
+    <a href="18-core-caa-assets.html">18 CAA Assets</a>
+    <a href="19-iso-3864-matrix.html">19 ISO Matrix</a>
+    <a href="20-responsive-specs.html">20 Responsive</a>
+  </nav>
+  <span class="badge-draft">v0.3 · system prep</span>
+</header>
+
+<main>
+  <span class="eyebrow">13 · Sprint Morphology</span>
+  <h1>Visual Morphological Box</h1>
+  <p class="lede">The <strong>morphological box</strong> — invented by astrophysicist Fritz Zwicky and brought into visual communication by Karl Gerstner (<em>Designing Programmes</em>, 1964), the focus tool Lorenz adopts in <em>Flexible Visual Systems</em> — lays every design variable along one axis and its options along the other, "to limit your options and keep an overview about them at the same time." Below, tracing the visual parameters of the DTPR design sprint: select one pathway from Option A to Option D in each row to establish a unified visual grammar.</p>
+
+  <table class="sprint-table">
+    <thead>
+      <tr>
+        <th style="width: 20%;">Variable</th>
+        <th style="width: 20%;">Option A (Flat/Minimal)</th>
+        <th style="width: 20%;">Option B (Speculative/Maker)</th>
+        <th style="width: 20%;">Option C (Human/Ecosystem)</th>
+        <th style="width: 20%;">Option D (Regulated/Standard)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Row 1: Shape Primitive -->
+      <tr>
+        <td class="var-col">1. Shape Primitive</td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <polygon points="50,15 80,32.5 80,67.5 50,85 20,67.5 20,32.5" fill="#002684" />
+            </svg>
+            <div class="cell-title">Solid Flat Hexagon</div>
+            <div class="cell-desc">Standard clean flat visual language.</div>
+          </div>
+        </td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <polygon points="50,15 80,32.5 50,50 20,32.5" fill="#3b85d4" />
+              <polygon points="20,32.5 50,50 50,85 20,67.5" fill="#0d1c75" />
+              <polygon points="50,50 80,32.5 80,67.5 50,85" fill="#002684" />
+            </svg>
+            <div class="cell-title">Isometric 3D Hexagon</div>
+            <div class="cell-desc">Structural blocks representing building.</div>
+          </div>
+        </td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <line x1="30" y1="35" x2="70" y2="35" stroke="#002684" stroke-width="2.5" />
+              <line x1="30" y1="35" x2="50" y2="70" stroke="#002684" stroke-width="2.5" />
+              <line x1="70" y1="35" x2="50" y2="70" stroke="#002684" stroke-width="2.5" />
+              <polygon points="30,23 38,27 38,37 30,41 22,37 22,27" fill="#c6e93d" stroke="#002684" stroke-width="2" />
+              <polygon points="70,23 78,27 78,37 70,41 62,37 62,27" fill="#c6e93d" stroke="#002684" stroke-width="2" />
+              <polygon points="50,58 58,62 58,72 50,76 42,72 42,62" fill="#c6e93d" stroke="#002684" stroke-width="2" />
+            </svg>
+            <div class="cell-title">Wireframe Node Network</div>
+            <div class="cell-desc">Decentralized network connections.</div>
+          </div>
+        </td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <path d="M 50,17 L 76,32 A 4,4 0 0,1 78,35.5 L 78,64.5 A 4,4 0 0,1 76,68 L 50,83 A 4,4 0 0,1 46,83 L 20,68 A 4,4 0 0,1 18,64.5 L 18,35.5 A 4,4 0 0,1 20,32 L 46,17 A 4,4 0 0,1 50,17 Z" fill="url(#grad-hex)" />
+              <defs>
+                <linearGradient id="grad-hex" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#3b85d4" />
+                  <stop offset="100%" stop-color="#001a5c" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="cell-title">Rounded/Beveled Hex</div>
+            <div class="cell-desc">Softened corners for modern UI elements.</div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- Row 2: Grid Tiling -->
+      <tr>
+        <td class="var-col">2. Grid Tiling</td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <polygon points="50,35 65,43.5 65,61.5 50,70 35,61.5 35,43.5" fill="none" stroke="#002684" stroke-width="1.5" />
+              <polygon points="50,0 65,8.5 65,26.5 50,35 35,26.5 35,8.5" fill="none" stroke="#3b85d4" stroke-width="1.5" />
+              <polygon points="20,52.5 35,61 35,79 20,87.5 5,79 5,61" fill="none" stroke="#3b85d4" stroke-width="1.5" />
+              <polygon points="80,52.5 95,61 95,79 80,87.5 65,79 65,61" fill="none" stroke="#3b85d4" stroke-width="1.5" />
+            </svg>
+            <div class="cell-title">Dense Honeycomb Grid</div>
+            <div class="cell-desc">Strictly nested adjacent hexagonal tiling.</div>
+          </div>
+        </td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <line x1="25" y1="25" x2="75" y2="25" stroke="#adb5bd" stroke-dasharray="2,2" />
+              <line x1="75" y1="25" x2="75" y2="75" stroke="#adb5bd" stroke-dasharray="2,2" />
+              <line x1="25" y1="25" x2="25" y2="75" stroke="#adb5bd" stroke-dasharray="2,2" />
+              <line x1="25" y1="75" x2="75" y2="75" stroke="#adb5bd" stroke-dasharray="2,2" />
+              <polygon points="25,17.5 31.5,21.25 31.5,28.75 25,32.5 18.5,28.75 18.5,21.25" fill="#002684" />
+              <polygon points="75,17.5 81.5,21.25 81.5,28.75 75,32.5 68.5,28.75 68.5,21.25" fill="#002684" />
+              <polygon points="25,67.5 31.5,71.25 31.5,78.75 25,82.5 18.5,78.75 18.5,71.25" fill="#002684" />
+              <polygon points="75,67.5 81.5,71.25 81.5,78.75 75,82.5 68.5,78.75 68.5,71.25" fill="#002684" />
+            </svg>
+            <div class="cell-title">Sparse Connective Network</div>
+            <div class="cell-desc">Nodes linked across open spatial fields.</div>
+          </div>
+        </td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <rect x="10" y="10" width="80" height="80" fill="none" stroke="#ced4da" stroke-width="1.5" />
+              <line x1="40" y1="10" x2="40" y2="90" stroke="#ced4da" stroke-width="1.5" />
+              <line x1="10" y1="50" x2="90" y2="50" stroke="#ced4da" stroke-width="1.5" />
+              <polygon points="25,22.5 31.5,26.25 31.5,33.75 25,37.5 18.5,33.75 18.5,26.25" fill="#002684" />
+              <rect x="50" y="25" width="30" height="6" fill="#0f5153" />
+              <rect x="50" y="37" width="20" height="4" fill="#6b7280" />
+            </svg>
+            <div class="cell-title">Linear / Axis-aligned</div>
+            <div class="cell-desc">Clean, partitioned layouts on flat grid bounds.</div>
+          </div>
+        </td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <polygon points="30,20 45,28.5 45,46.5 30,55 15,46.5 15,28.5" fill="#002684" opacity="0.8" />
+              <polygon points="65,45 85,56.5 85,80 65,91.5 45,80 45,56.5" fill="#3b85d4" opacity="0.45" />
+              <polygon points="70,10 80,15.8 80,27.5 70,33.3 60,27.5 60,15.8" fill="#bae6ed" opacity="0.7" />
+            </svg>
+            <div class="cell-title">Offset Floating</div>
+            <div class="cell-desc">Dynamic scrollytelling background bubbles.</div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- Row 3: Color Logic -->
+      <tr>
+        <td class="var-col">3. Color Logic</td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <rect x="10" y="15" width="80" height="30" fill="#002684" rx="4" />
+              <rect x="10" y="55" width="80" height="30" fill="#0f5153" rx="4" />
+            </svg>
+            <div class="cell-title">Legacy Navy/Teal Flat</div>
+            <div class="cell-desc">Classic flat two-tone brand identity.</div>
+          </div>
+        </td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <rect x="5" y="5" width="90" height="90" fill="#001a5c" rx="6" />
+              <rect x="20" y="20" width="60" height="60" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" rx="4" />
+              <circle cx="50" cy="50" r="10" fill="#c6e93d" />
+              <path d="M 50,45 L 50,55 M 45,50 L 55,50" stroke="#001a5c" stroke-width="2" />
+            </svg>
+            <div class="cell-title">Staged Hierarchy</div>
+            <div class="cell-desc">Scene, Surface, Signal (contrast layering).</div>
+          </div>
+        </td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <polygon points="50,5 92,30 92,80 50,97 8,80 8,30" fill="#ffffff" stroke="#ced4da" stroke-width="2" />
+              <polygon points="50,11 86,33 86,77 50,91 14,77 14,33" fill="#0072d9" />
+              <polygon points="50,25 70,36.5 70,60 50,71.5 30,60 30,36.5" fill="#ffffff" />
+            </svg>
+            <div class="cell-title">ISO-3864 Safe Shield</div>
+            <div class="cell-desc">Warning shapes isolate brand identifiers.</div>
+          </div>
+        </td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <rect x="10" y="15" width="80" height="30" fill="#2D2BFF" rx="4" />
+              <rect x="10" y="55" width="80" height="30" fill="#FFC107" rx="4" />
+            </svg>
+            <div class="cell-title">Assembly Cobalt/Amber</div>
+            <div class="cell-desc">nsf POSE convening highlight elements.</div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- Row 4: Illustration Style -->
+      <tr>
+        <td class="var-col">4. Illustration Style</td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <polygon points="50,15 80,32.5 80,67.5 50,85 20,67.5 20,32.5" fill="none" stroke="#002684" stroke-width="2" />
+              <rect x="36" y="42" width="18" height="14" rx="2" fill="#002684" />
+              <polygon points="54,46 64,40 64,56 54,50" fill="#002684" />
+            </svg>
+            <div class="cell-title">Pictographic Icons Only</div>
+            <div class="cell-desc">Pure minimal design language with no cities.</div>
+          </div>
+        </td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <path d="M 10,50 L 50,30 L 90,50 L 50,70 Z" fill="none" stroke="#ced4da" stroke-width="1.5" />
+              <path d="M 10,70 L 50,50 L 90,70 L 50,90 Z" fill="none" stroke="#ced4da" stroke-width="1.5" />
+              <polygon points="50,30 70,20 50,10 30,20" fill="#3b85d4" stroke="#ffffff" stroke-width="1" />
+              <polygon points="30,20 50,30 50,55 30,45" fill="#0d1c75" stroke="#ffffff" stroke-width="1" />
+              <polygon points="50,30 70,20 70,45 50,55" fill="#002684" stroke="#ffffff" stroke-width="1" />
+            </svg>
+            <div class="cell-title">Isometric Block Scenes</div>
+            <div class="cell-desc">Technical schematics built from tiles.</div>
+          </div>
+        </td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <circle cx="75" cy="30" r="12" fill="#FFC107" />
+              <rect x="15" y="40" width="30" height="45" fill="#002684" rx="1" />
+              <rect x="22" y="48" width="6" height="8" fill="#bae6ed" />
+              <rect x="32" y="48" width="6" height="8" fill="#bae6ed" />
+              <rect x="22" y="62" width="6" height="8" fill="#bae6ed" />
+              <rect x="32" y="62" width="6" height="8" fill="#bae6ed" />
+              <rect x="62" y="60" width="4" height="25" fill="#7a5900" />
+              <circle cx="64" cy="52" r="16" fill="#0f5153" />
+            </svg>
+            <div class="cell-title">Refined Memphis City</div>
+            <div class="cell-desc">Refined human cities from Assembly Day.</div>
+          </div>
+        </td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <circle cx="50" cy="50" r="40" fill="none" stroke="#002684" stroke-width="1" />
+              <circle cx="50" cy="50" r="32" fill="none" stroke="#3b85d4" stroke-width="1" />
+              <circle cx="50" cy="50" r="24" fill="none" stroke="#bae6ed" stroke-width="1.5" />
+              <circle cx="50" cy="50" r="16" fill="none" stroke="#002684" stroke-width="2" />
+              <line x1="10" y1="50" x2="90" y2="50" stroke="#ced4da" stroke-width="1" />
+              <line x1="50" y1="10" x2="50" y2="90" stroke="#ced4da" stroke-width="1" />
+            </svg>
+            <div class="cell-title">Parametric / Generative</div>
+            <div class="cell-desc">Math-derived intersecting circle lines.</div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- Row 5: Typographic Grammar -->
+      <tr>
+        <td class="var-col">5. Typographic Grammar</td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <rect x="5" y="5" width="90" height="90" fill="#f8f9fa" rx="4" />
+              <text x="50" y="48" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#111" text-anchor="middle">DTPR</text>
+              <text x="50" y="70" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#666" text-anchor="middle">sans-serif system</text>
+            </svg>
+            <div class="cell-title">System Stack</div>
+            <div class="cell-desc">Neutral default fonts (Arial/Helvetica).</div>
+          </div>
+        </td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <rect x="5" y="5" width="90" height="90" fill="#111" rx="4" />
+              <text x="50" y="48" font-family="monospace" font-size="18" font-weight="bold" fill="#c6e93d" text-anchor="middle">[DTPR]</text>
+              <text x="50" y="72" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">terminal-mono</text>
+            </svg>
+            <div class="cell-title">Monospace Mono-stack</div>
+            <div class="cell-desc">Pure code-like JetBrains developer layout.</div>
+          </div>
+        </td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <rect x="5" y="5" width="90" height="90" fill="#fff" stroke="#ced4da" stroke-width="1" rx="4" />
+              <text x="50" y="40" font-family="Georgia, serif" font-style="italic" font-weight="bold" font-size="20" fill="#002684" text-anchor="middle">DTPR</text>
+              <text x="50" y="68" font-family="monospace" font-size="10" font-weight="bold" fill="#002684" text-anchor="middle">makeshift.26</text>
+            </svg>
+            <div class="cell-title">Monospace + Serif</div>
+            <div class="cell-desc">Contrast pairing from Makeshift event layout.</div>
+          </div>
+        </td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <rect x="5" y="5" width="90" height="90" fill="#f4f3ff" rx="4" />
+              <text x="50" y="46" font-family="'Source Sans 3', sans-serif" font-weight="900" font-size="22" fill="#002684" text-anchor="middle">DTPR</text>
+              <text x="50" y="68" font-family="'Source Sans 3', sans-serif" font-size="10" fill="#4b5563" text-anchor="middle">standards hub</text>
+            </svg>
+            <div class="cell-title">Sans + Sans-Serif</div>
+            <div class="cell-desc">Standard clean corporate type scale.</div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- Row 6: Motion Behavior -->
+      <tr>
+        <td class="var-col">6. Motion Behavior</td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <polygon points="50,20 75,34.5 75,65.5 50,80 25,65.5 25,34.5" fill="none" stroke="#6b7280" stroke-width="2" />
+              <circle cx="50" cy="50" r="8" fill="#6b7280" />
+              <line x1="38" y1="38" x2="62" y2="62" stroke="#ffffff" stroke-width="2" />
+            </svg>
+            <div class="cell-title">Static-Only</div>
+            <div class="cell-desc">Zero web motion overhead, stable printing.</div>
+          </div>
+        </td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <path d="M 20,40 L 40,28.5 L 40,51.5 L 20,63 Z" fill="#bae6ed" opacity="0.6" />
+              <path d="M 40,40 L 60,28.5 L 60,51.5 L 40,63 Z" fill="#3b85d4" opacity="0.8" />
+              <path d="M 60,40 L 80,28.5 L 80,51.5 L 60,63 Z" fill="#002684" />
+              <path d="M 15,35 L 75,35 M 65,28 L 75,35 L 65,42" fill="none" stroke="#c6e93d" stroke-width="2" />
+            </svg>
+            <div class="cell-title">Kinetic Sliding/Tiling</div>
+            <div class="cell-desc">Nesting cells sliding into place dynamically.</div>
+          </div>
+        </td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <circle cx="50" cy="50" r="30" fill="none" stroke="#bae6ed" stroke-width="1" />
+              <path d="M 50,5 L 50,15 M 46,12 L 50,15 L 54,12" fill="none" stroke="#002684" stroke-width="1.5" />
+              <path d="M 50,95 L 50,85 M 46,88 L 50,85 L 54,88" fill="none" stroke="#002684" stroke-width="1.5" />
+              <circle cx="50" cy="50" r="18" fill="#002684" />
+              <circle cx="50" cy="50" r="12" fill="#c6e93d" />
+            </svg>
+            <div class="cell-title">Spring-Damping Elastic</div>
+            <div class="cell-desc">Organic bouncy node scaling on interaction.</div>
+          </div>
+        </td>
+        <td>
+          <div class="cell-container">
+            <svg viewBox="0 0 100 100" width="80" height="80">
+              <polygon points="50,20 75,34.5 75,65.5 50,80 25,65.5 25,34.5" fill="none" stroke="#002684" stroke-width="2" />
+              <line x1="20" y1="40" x2="80" y2="40" stroke="#c6e93d" stroke-width="2" />
+              <line x1="20" y1="60" x2="80" y2="60" stroke="#c6e93d" stroke-width="1" />
+              <line x1="15" y1="30" x2="85" y2="30" stroke="#ced4da" stroke-width="0.5" />
+              <line x1="15" y1="70" x2="85" y2="70" stroke="#ced4da" stroke-width="0.5" />
+            </svg>
+            <div class="cell-title">Glitch/Signal Scan</div>
+            <div class="cell-desc">Digital raster lines indicating scanning state.</div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sprint-legend">
+    <h4>How to conduct this sprint:</h4>
+    <ol>
+      <li><strong>Select one option per row:</strong> Lock a combination of options (A to D) down to create your sprint recipe (e.g., "B-C-B-B-C-B").</li>
+      <li><strong>Sketch Assets:</strong> Use the chosen geometry, color rules, and typographic pairing to construct the 5 FVS assets (Symbol, Line, Frame, Label, Letters).</li>
+      <li><strong>Test applications:</strong> Place the assets on the three target layout formats (square sign, mobile scan layout, and wide desktop page) to verify responsiveness.</li>
+    </ol>
+  </div>
+
+  <div class="page-nav">
+    <a href="sprint-index.html">← System Prep Cover</a>
+    <a href="sprint-index.html">↑ System Prep Cover</a>
+    <a href="14-transformation-morphology.html">14 Process Box →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.3 · June 2026 · Superbloom Design · <a href="https://github.com/superbloom/dtpr-brand-identity" target="_blank" rel="noopener">view on GitHub</a> (forthcoming)</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>17 Geometric Blueprint — DTPR Brand Identity Audit</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .blueprint-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2.5rem 0;
+  }
+  @media (max-width: 840px) { .blueprint-grid { grid-template-columns: 1fr; } }
+
+  .blueprint-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+  .blueprint-card-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.85rem 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .blueprint-card-header .tag-code {
+    font-size: 0.65rem;
+    opacity: 0.6;
+  }
+  .blueprint-card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .blueprint-card-body svg {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--r-md);
+    background: #f8fbff;
+    padding: 1rem;
+  }
+  .blueprint-card-specs {
+    margin-top: 1.25rem;
+    width: 100%;
+  }
+  .blueprint-card-specs table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+  }
+  .blueprint-card-specs th {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gray-500);
+    text-align: left;
+    padding: 0.3rem 0.5rem;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .blueprint-card-specs td {
+    padding: 0.35rem 0.5rem;
+    border-bottom: 1px solid var(--gray-100);
+    color: var(--gray-700);
+    vertical-align: middle;
+  }
+  .blueprint-card-specs td:first-child {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+  .spec-value {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .full-width-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 2rem;
+  }
+
+  .annotation-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    fill: #002684;
+    font-weight: 700;
+  }
+  .annotation-dim {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8px;
+    fill: #6b7280;
+  }
+  .dim-line {
+    stroke: #9ca3af;
+    stroke-width: 0.5;
+    stroke-dasharray: 3,2;
+  }
+  .grid-line {
+    stroke: rgba(65,105,225,0.12);
+    stroke-width: 0.5;
+  }
+
+  .formula-block {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--r-md);
+    padding: 1.25rem 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--navy);
+    margin: 1rem 0;
+    line-height: 2;
+  }
+  .formula-block .comment {
+    color: var(--gray-400);
+  }
+  .formula-block .keyword {
+    color: var(--teal);
+    font-weight: 700;
+  }
+  .formula-block .value {
+    color: #856404;
+  }
+
+  .sprint-legend {
+    background: rgba(198, 233, 61, 0.07);
+    border-left: 5px solid var(--chartreuse);
+    padding: 1.5rem;
+    border-radius: 0 var(--r-md) var(--r-md) 0;
+    margin: 2.5rem 0;
+  }
+  .sprint-legend h4 {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+  }
+  .sprint-legend ol {
+    margin-left: 1.2rem;
+    font-size: 0.92rem;
+    color: var(--gray-800);
+    line-height: 1.65;
+  }
+  .sprint-legend li { margin-bottom: 0.4rem; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="sprint-index.html"><span class="dot"></span>DTPR · Visual System Prep</a>
+  <nav>
+    <a href="index.html" class="nav-split-link">← Brand Audit</a>
+    <a href="sprint-index.html">Cover</a>
+    <a href="13-sprint-morphology.html">13 Form Box</a>
+    <a href="14-transformation-morphology.html">14 Process Box</a>
+    <a href="15-semantic-morphology.html">15 Semantic Box</a>
+    <a href="16-sprint-recipes.html">16 Recipes</a>
+    <a href="17-geometric-blueprint.html" aria-current="page">17 Blueprint</a>
+    <a href="18-core-caa-assets.html">18 CAA Assets</a>
+    <a href="19-iso-3864-matrix.html">19 ISO Matrix</a>
+    <a href="20-responsive-specs.html">20 Responsive</a>
+  </nav>
+  <span class="badge-draft">v0.3 · system prep</span>
+</header>
+
+<main>
+  <span class="eyebrow">17 · Geometric Blueprint</span>
+  <h1>DTPR Hexagon: Geometric Blueprint</h1>
+  <p class="lede">The DTPR Hexagon Unit is the foundational geometry of the entire visual system — the atom from which signage panels, icon sets, grid structures, and digital layouts are derived. This document specifies the mathematical constraints that ensure consistency across all three sprint tracks.</p>
+
+  <!-- Master unit diagram -->
+  <div class="full-width-card">
+    <div class="blueprint-card-header">
+      Master Unit — Flat-Top Hexagon <span class="tag-code">HEX-UNIT-01 · Scale-Agnostic</span>
+    </div>
+    <div class="blueprint-card-body">
+      <svg viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg">
+        <!-- Graph paper grid -->
+        <defs>
+          <pattern id="grid-sm" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(65,105,225,0.1)" stroke-width="0.5"/>
+          </pattern>
+          <pattern id="grid-lg" width="50" height="50" patternUnits="userSpaceOnUse">
+            <rect width="50" height="50" fill="url(#grid-sm)"/>
+            <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(65,105,225,0.18)" stroke-width="0.8"/>
+          </pattern>
+        </defs>
+        <rect width="500" height="360" fill="url(#grid-lg)"/>
+
+        <!-- Center reference cross -->
+        <line x1="250" y1="0" x2="250" y2="360" stroke="rgba(65,105,225,0.15)" stroke-width="0.8"/>
+        <line x1="0" y1="180" x2="500" y2="180" stroke="rgba(65,105,225,0.15)" stroke-width="0.8"/>
+
+        <!-- Primary hex — flat-top, R=100 -->
+        <!-- Vertices: top-right=(350,93.4), right=(350,266.6), bottom-right=(250,333.2)... -->
+        <!-- Flat-top hex with R=100: cx=250,cy=180 -->
+        <!-- Vertices of flat-top hex: 
+             (cx+R, cy) = (350,180)
+             (cx+R/2, cy-R*√3/2) = (300, 93.4)
+             (cx-R/2, cy-R*√3/2) = (200, 93.4)
+             (cx-R, cy) = (150, 180)
+             (cx-R/2, cy+R*√3/2) = (200, 266.6)
+             (cx+R/2, cy+R*√3/2) = (300, 266.6)
+        -->
+        <polygon 
+          points="350,180 300,93.4 200,93.4 150,180 200,266.6 300,266.6"
+          fill="rgba(0,38,132,0.05)"
+          stroke="#002684"
+          stroke-width="2"
+        />
+
+        <!-- Inner content zone — safe area (inset 16%) -->
+        <!-- R_inner = 100*0.84 = 84 -->
+        <polygon 
+          points="334,180 292,107 208,107 166,180 208,253 292,253"
+          fill="none"
+          stroke="rgba(198,233,61,0.8)"
+          stroke-width="1"
+          stroke-dasharray="4,3"
+        />
+
+        <!-- Center point -->
+        <circle cx="250" cy="180" r="3" fill="#002684"/>
+        <!-- Center label -->
+        <text x="255" y="175" class="annotation-label">cx</text>
+
+        <!-- Dimension: width (flat-to-flat = 2R = 200) -->
+        <line x1="150" y1="290" x2="350" y2="290" stroke="#9ca3af" stroke-width="0.8" stroke-dasharray="3,2"/>
+        <line x1="150" y1="286" x2="150" y2="294" stroke="#9ca3af" stroke-width="1.2"/>
+        <line x1="350" y1="286" x2="350" y2="294" stroke="#9ca3af" stroke-width="1.2"/>
+        <text x="250" y="306" text-anchor="middle" class="annotation-dim">width = 2R (flat edge)</text>
+
+        <!-- Dimension: height (point-to-point = R√3 ≈ 173.2) -->
+        <line x1="120" y1="93.4" x2="120" y2="266.6" stroke="#9ca3af" stroke-width="0.8" stroke-dasharray="3,2"/>
+        <line x1="116" y1="93.4" x2="124" y2="93.4" stroke="#9ca3af" stroke-width="1.2"/>
+        <line x1="116" y1="266.6" x2="124" y2="266.6" stroke="#9ca3af" stroke-width="1.2"/>
+        <text x="105" y="186" text-anchor="middle" class="annotation-dim" transform="rotate(-90 105 186)">height = R√3</text>
+
+        <!-- Radius annotation -->
+        <line x1="250" y1="180" x2="350" y2="180" stroke="#3b85d4" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="295" y="172" text-anchor="middle" class="annotation-label" fill="#3b85d4">R</text>
+
+        <!-- Corner radius annotation -->
+        <!-- Corner at top-right (300, 93.4) -->
+        <circle cx="300" cy="93.4" r="4" fill="none" stroke="#c6e93d" stroke-width="1.5"/>
+        <line x1="305" y1="83" x2="320" y2="60" stroke="#c6e93d" stroke-width="0.8"/>
+        <text x="322" y="58" class="annotation-dim" fill="#4d5c00">r = R×0.04</text>
+
+        <!-- Safe area label -->
+        <text x="250" y="220" text-anchor="middle" class="annotation-dim" fill="#4d5c00">content safe area</text>
+        <text x="250" y="232" text-anchor="middle" class="annotation-dim" fill="#4d5c00">inset = R×0.16</text>
+
+        <!-- Stroke width annotation -->
+        <line x1="340" y1="155" x2="360" y2="130" stroke="#9ca3af" stroke-width="0.8"/>
+        <text x="362" y="128" class="annotation-dim">stroke = R×0.02</text>
+      </svg>
+
+      <div class="blueprint-card-specs" style="margin-top:1.5rem;">
+        <div class="formula-block">
+<span class="comment">/* DTPR Hex Unit — Scale-Agnostic Formula */</span>
+<span class="keyword">const</span> R = unit_radius; <span class="comment">// base unit — set per context</span>
+width  = <span class="value">2</span> × R;            <span class="comment">// flat-to-flat diameter</span>
+height = R × <span class="value">√3</span>;          <span class="comment">// ≈ R × 1.732 (point-to-point)</span>
+stroke = R × <span class="value">0.02</span>;         <span class="comment">// border stroke weight</span>
+corner = R × <span class="value">0.04</span>;         <span class="comment">// vertex softening radius</span>
+inset  = R × <span class="value">0.16</span>;         <span class="comment">// content safe area margin</span>
+gap    = R × <span class="value">0.08</span>;         <span class="comment">// inter-hex spacing in grid</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scale contexts -->
+  <div class="blueprint-grid">
+
+    <!-- Physical signage scale -->
+    <div class="blueprint-card">
+      <div class="blueprint-card-header">
+        Physical Signage — Standard Panel <span class="tag-code">R = 45mm</span>
+      </div>
+      <div class="blueprint-card-body">
+        <svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
+          <!-- Background panel -->
+          <rect x="10" y="10" width="280" height="240" rx="6" fill="#f8f9fa" stroke="#d1d5db" stroke-width="1.5"/>
+          <!-- Panel label -->
+          <text x="150" y="30" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="8" fill="#6b7280" text-transform="uppercase" letter-spacing="0.1em">DTPR SIGNAGE PANEL — 210×180mm</text>
+
+          <!-- Three hexes in a row (main content area) -->
+          <!-- R=45mm scaled to SVG: R=45 → use 55px for display -->
+          <!-- Hex 1 centered at 80,130 -->
+          <polygon points="135,130 121.25,106.7 93.75,106.7 80,130 93.75,153.3 121.25,153.3"
+            fill="rgba(0,38,132,0.08)" stroke="#002684" stroke-width="1.5"/>
+          <!-- Icon placeholder in hex 1 -->
+          <circle cx="107.5" cy="130" r="10" fill="#002684" opacity="0.6"/>
+          <text x="107.5" y="134" text-anchor="middle" font-size="10" fill="white">👁</text>
+          <text x="107.5" y="165" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#002684">VIDEO</text>
+
+          <!-- Hex 2 centered at 150, 130 -->
+          <polygon points="205,130 191.25,106.7 163.75,106.7 150,130 163.75,153.3 191.25,153.3"
+            fill="rgba(0,38,132,0.08)" stroke="#002684" stroke-width="1.5"/>
+          <circle cx="177.5" cy="130" r="10" fill="#002684" opacity="0.6"/>
+          <text x="177.5" y="134" text-anchor="middle" font-size="10" fill="white">🔊</text>
+          <text x="177.5" y="165" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#002684">AUDIO</text>
+
+          <!-- Hex 3 centered at 220, 130 -->
+          <polygon points="275,130 261.25,106.7 233.75,106.7 220,130 233.75,153.3 261.25,153.3"
+            fill="rgba(0,38,132,0.08)" stroke="#002684" stroke-width="1.5"/>
+          <circle cx="247.5" cy="130" r="10" fill="#002684" opacity="0.6"/>
+          <text x="247.5" y="134" text-anchor="middle" font-size="10" fill="white">📡</text>
+          <text x="247.5" y="165" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#002684">NETWORK</text>
+
+          <!-- QR code placeholder -->
+          <rect x="25" y="100" width="40" height="40" rx="2" fill="none" stroke="#002684" stroke-width="1.2"/>
+          <rect x="29" y="104" width="8" height="8" fill="#002684"/>
+          <rect x="49" y="104" width="8" height="8" fill="#002684"/>
+          <rect x="29" y="124" width="8" height="8" fill="#002684"/>
+          <rect x="39" y="114" width="8" height="6" fill="#002684"/>
+          <rect x="49" y="120" width="8" height="12" fill="#002684"/>
+          <text x="45" y="155" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">QR CODE</text>
+
+          <!-- DTPR wordmark placeholder -->
+          <text x="45" y="90" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" font-weight="bold" fill="#002684">DTPR</text>
+
+          <!-- Dimension callouts -->
+          <text x="150" y="200" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#856404">R = 45mm · width = 90mm · height ≈ 77.9mm</text>
+          <text x="150" y="212" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">stroke = 0.9mm · inset = 7.2mm · gap = 3.6mm</text>
+          <text x="150" y="224" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">min viewing distance: 0.5m</text>
+        </svg>
+
+        <table class="blueprint-card-specs" style="margin-top:1rem;">
+          <thead><tr><th>Parameter</th><th>Value</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>R</td><td><span class="spec-value">45mm</span></td><td>Standard panel unit</td></tr>
+            <tr><td>Width</td><td><span class="spec-value">90mm</span></td><td>Per icon cell</td></tr>
+            <tr><td>Height</td><td><span class="spec-value">≈ 77.9mm</span></td><td>R × √3</td></tr>
+            <tr><td>Stroke</td><td><span class="spec-value">0.9mm</span></td><td>R × 0.02</td></tr>
+            <tr><td>Corner r</td><td><span class="spec-value">1.8mm</span></td><td>R × 0.04</td></tr>
+            <tr><td>Safe inset</td><td><span class="spec-value">7.2mm</span></td><td>R × 0.16</td></tr>
+            <tr><td>Gap</td><td><span class="spec-value">3.6mm</span></td><td>R × 0.08</td></tr>
+            <tr><td>Min. distance</td><td><span class="spec-value">0.5m</span></td><td>Touch/read</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Digital icon (32px) -->
+    <div class="blueprint-card">
+      <div class="blueprint-card-header">
+        Digital Icon — UI Component <span class="tag-code">R = 16px</span>
+      </div>
+      <div class="blueprint-card-body">
+        <svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid-icon" width="8" height="8" patternUnits="userSpaceOnUse">
+              <path d="M 8 0 L 0 0 0 8" fill="none" stroke="rgba(65,105,225,0.12)" stroke-width="0.5"/>
+            </pattern>
+          </defs>
+          <rect width="300" height="260" fill="url(#grid-icon)"/>
+
+          <!-- Scale comparison row: 16px, 24px, 32px, 48px, 64px -->
+          <!-- 16px icon (R=8, display as R=16 for visibility) -->
+          <text x="150" y="25" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="8" fill="#6b7280">ICON SCALE COMPARISON — Digital UI</text>
+
+          <!-- 16px -->
+          <polygon points="58,70 53.1,61.5 43.4,61.5 38.5,70 43.4,78.5 53.1,78.5" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1"/>
+          <text x="48" y="90" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">16px</text>
+
+          <!-- 24px (R=12 → display R=20) -->
+          <polygon points="110,70 103.2,58.4 89.7,58.4 82.8,70 89.7,81.6 103.2,81.6" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1.2"/>
+          <text x="96" y="95" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">24px</text>
+
+          <!-- 32px (R=16 → display R=28) -->
+          <polygon points="165,70 155.7,54 137.3,54 128,70 137.3,86 155.7,86" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1.5"/>
+          <text x="146.5" y="102" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">32px</text>
+
+          <!-- 48px (display R=40) -->
+          <polygon points="232,70 218.3,46.2 191,46.2 177.2,70 191,93.8 218.3,93.8" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1.8"/>
+          <text x="204.7" y="110" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">48px</text>
+
+          <!-- 64px (display R=52) -->
+          <polygon points="285,70 267,40 231,40 213,70 231,100 267,100" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="2"/>
+          <text x="249" y="116" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">64px</text>
+
+          <!-- Stroke weight demo -->
+          <text x="10" y="138" font-family="'JetBrains Mono',monospace" font-size="8" fill="#002684" font-weight="bold">Stroke scaling rule:</text>
+          <!-- 16px stroke -->
+          <polygon points="45,165 39.7,156 29.3,156 24,165 29.3,174 39.7,174" fill="none" stroke="#002684" stroke-width="0.32"/>
+          <text x="35" y="185" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">0.32px</text>
+          <!-- 32px stroke -->
+          <polygon points="100,162 90.7,146 72.3,146 63,162 72.3,178 90.7,178" fill="none" stroke="#002684" stroke-width="0.64"/>
+          <text x="81.5" y="190" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">0.64px</text>
+          <!-- 64px stroke -->
+          <polygon points="175,160 161.3,136 134,136 120.3,160 134,184 161.3,184" fill="none" stroke="#002684" stroke-width="1.28"/>
+          <text x="147.5" y="198" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">1.28px</text>
+          <!-- 128px stroke -->
+          <polygon points="255,158 234.8,122 194.5,122 174.3,158 194.5,194 234.8,194" fill="none" stroke="#002684" stroke-width="2.56"/>
+          <text x="214.5" y="208" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">2.56px</text>
+
+          <text x="150" y="235" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#856404">stroke = R × 0.02 at all sizes</text>
+          <text x="150" y="248" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">Never use stroke-width &lt; 0.3px in digital</text>
+        </svg>
+
+        <table class="blueprint-card-specs" style="margin-top:1rem;">
+          <thead><tr><th>Size</th><th>R</th><th>Stroke</th><th>Use context</th></tr></thead>
+          <tbody>
+            <tr><td>16px</td><td><span class="spec-value">8px</span></td><td>0.3px*</td><td>Dense data table</td></tr>
+            <tr><td>24px</td><td><span class="spec-value">12px</span></td><td>0.48px</td><td>Nav / label</td></tr>
+            <tr><td>32px</td><td><span class="spec-value">16px</span></td><td>0.64px</td><td>Standard UI icon</td></tr>
+            <tr><td>48px</td><td><span class="spec-value">24px</span></td><td>0.96px</td><td>Card / feature</td></tr>
+            <tr><td>64px</td><td><span class="spec-value">32px</span></td><td>1.28px</td><td>Hero / display</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.72rem; color:var(--gray-500); margin-top:0.5rem; font-family: var(--font-mono);">*Min 0.3px to avoid aliasing. Fill-only acceptable at 16px.</p>
+      </div>
+    </div>
+
+    <!-- Grid tiling -->
+    <div class="blueprint-card">
+      <div class="blueprint-card-header">
+        Grid Tiling — Honeycomb Layout <span class="tag-code">HEX-GRID-01</span>
+      </div>
+      <div class="blueprint-card-body">
+        <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid-tile" width="8" height="8" patternUnits="userSpaceOnUse">
+              <path d="M 8 0 L 0 0 0 8" fill="none" stroke="rgba(65,105,225,0.08)" stroke-width="0.4"/>
+            </pattern>
+          </defs>
+          <rect width="300" height="240" fill="url(#grid-tile)"/>
+
+          <!-- Honeycomb grid — flat-top hexes, R=35, gap=3 -->
+          <!-- Row 1: 4 hexes starting at cx=50, cy=65 -->
+          <!-- dx = 2R+gap = 73, offset row = R*√3/2 +gap/2 -->
+          <!-- R=35: width=70, height=60.6, gap=3 -->
+          <!-- Row 1 centers: 50,65 | 123,65 | 196,65 | 269,65 -->
+          <!-- Row 2 centers (offset): 86.5,95.3 | 159.5,95.3 | 232.5,95.3 -->
+          <!-- Row 3 centers: 50,125.6 | 123,125.6 | 196,125.6 | 269,125.6 -->
+          <!-- Row 4 centers offset: 86.5,155.9 | 159.5,155.9 | 232.5,155.9 -->
+
+          <!-- Helper: hex at cx,cy R=33 -->
+          <!-- Flat top vertices: (cx+R,cy), (cx+R/2,cy-R√3/2), (cx-R/2,cy-R√3/2), (cx-R,cy), (cx-R/2,cy+R√3/2), (cx+R/2,cy+R√3/2) -->
+
+          <!-- Row 1 -->
+          <polygon points="83,65 66.5,36.4 33.5,36.4 17,65 33.5,93.6 66.5,93.6" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/>
+          <polygon points="156,65 139.5,36.4 106.5,36.4 90,65 106.5,93.6 139.5,93.6" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/>
+          <polygon points="229,65 212.5,36.4 179.5,36.4 163,65 179.5,93.6 212.5,93.6" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/>
+
+          <!-- Row 2 (offset) -->
+          <polygon points="119.5,122.6 103,94 70,94 53.5,122.6 70,151.2 103,151.2" fill="rgba(0,38,132,0.04)" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/>
+          <polygon points="192.5,122.6 176,94 143,94 126.5,122.6 143,151.2 176,151.2" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/>
+          <polygon points="265.5,122.6 249,94 216,94 199.5,122.6 216,151.2 249,151.2" fill="rgba(0,38,132,0.04)" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/>
+
+          <!-- Row 3 -->
+          <polygon points="83,180.2 66.5,151.6 33.5,151.6 17,180.2 33.5,208.8 66.5,208.8" fill="rgba(198,233,61,0.12)" stroke="#c6e93d" stroke-width="1.2"/>
+          <polygon points="156,180.2 139.5,151.6 106.5,151.6 90,180.2 106.5,208.8 139.5,208.8" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/>
+          <polygon points="229,180.2 212.5,151.6 179.5,151.6 163,180.2 179.5,208.8 212.5,208.8" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/>
+
+          <!-- Gap annotation -->
+          <line x1="83" y1="65" x2="90" y2="65" stroke="#c6e93d" stroke-width="1"/>
+          <line x1="83" y1="60" x2="83" y2="70" stroke="#c6e93d" stroke-width="1"/>
+          <line x1="90" y1="60" x2="90" y2="70" stroke="#c6e93d" stroke-width="1"/>
+          <text x="86.5" y="55" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#4d5c00">gap</text>
+
+          <!-- Offset row label -->
+          <text x="28" y="122.6" font-family="'JetBrains Mono',monospace" font-size="6" fill="#3b85d4" text-anchor="middle">offset</text>
+          <text x="28" y="130" font-family="'JetBrains Mono',monospace" font-size="6" fill="#3b85d4" text-anchor="middle">½ width</text>
+
+          <!-- Highlighted cell label -->
+          <text x="50" y="180.2" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#4d5c00">active</text>
+
+          <text x="150" y="228" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">row offset = R × √3 / 2</text>
+        </svg>
+
+        <div class="formula-block" style="margin-top:1rem;">
+<span class="comment">/* Tiling offsets */</span>
+col_step  = <span class="value">2</span>×R + gap;
+row_step  = R × <span class="value">√3</span>;
+odd_offset = col_step / <span class="value">2</span>; <span class="comment">// right shift on odd rows</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clear space rules -->
+    <div class="blueprint-card">
+      <div class="blueprint-card-header">
+        Clear Space &amp; Exclusion Zone <span class="tag-code">HEX-CLEAR-01</span>
+      </div>
+      <div class="blueprint-card-body">
+        <svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="clear-grid" width="8" height="8" patternUnits="userSpaceOnUse">
+              <path d="M 8 0 L 0 0 0 8" fill="none" stroke="rgba(65,105,225,0.08)" stroke-width="0.4"/>
+            </pattern>
+          </defs>
+          <rect width="300" height="260" fill="url(#clear-grid)"/>
+
+          <!-- Primary hex R=70 centered at 150,130 -->
+          <polygon points="220,130 185,69.2 115,69.2 80,130 115,190.8 185,190.8"
+            fill="rgba(0,38,132,0.07)" stroke="#002684" stroke-width="2"/>
+
+          <!-- Clear space ring (R=70 × 1.2 = 84) -->
+          <!-- Vertices: R=84 -->
+          <polygon points="234,130 192,57 108,57 66,130 108,203 192,203"
+            fill="none" stroke="rgba(240,74,74,0.4)" stroke-width="1" stroke-dasharray="5,4"/>
+
+          <!-- Exclusion zone fill -->
+          <polygon points="234,130 192,57 108,57 66,130 108,203 192,203"
+            fill="rgba(240,74,74,0.04)"/>
+
+          <!-- Primary hex content icon -->
+          <text x="150" y="138" text-anchor="middle" font-size="28" fill="#002684" opacity="0.5">⬡</text>
+
+          <!-- Clear space label arrows -->
+          <line x1="220" y1="130" x2="234" y2="130" stroke="#f04a4a" stroke-width="1"/>
+          <text x="240" y="134" font-family="'JetBrains Mono',monospace" font-size="7" fill="#f04a4a">R×0.2</text>
+          <text x="240" y="144" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">clear</text>
+
+          <!-- Label: nothing inside exclusion -->
+          <text x="195" y="70" font-family="'JetBrains Mono',monospace" font-size="6.5" fill="#f04a4a">exclusion zone</text>
+          <text x="195" y="80" font-family="'JetBrains Mono',monospace" font-size="6.5" fill="#6b7280">no text, no icons</text>
+          <text x="195" y="90" font-family="'JetBrains Mono',monospace" font-size="6.5" fill="#6b7280">no competing shapes</text>
+
+          <!-- Stroke zone label -->
+          <text x="150" y="200" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#002684">primary unit</text>
+
+          <!-- QR code proximity -->
+          <rect x="10" y="95" width="40" height="40" rx="2" fill="none" stroke="#002684" stroke-width="1"/>
+          <text x="30" y="112" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#002684">QR</text>
+          <line x1="50" y1="115" x2="66" y2="115" stroke="#6b7280" stroke-width="0.8" stroke-dasharray="2,2"/>
+          <text x="58" y="111" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">R×0.5 min</text>
+          <text x="58" y="121" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">from hex edge</text>
+
+          <text x="150" y="240" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">clear space = R × 0.2 on all sides</text>
+          <text x="150" y="252" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">QR placement min R × 0.5 from any hex</text>
+        </svg>
+
+        <table class="blueprint-card-specs" style="margin-top:1rem;">
+          <thead><tr><th>Zone</th><th>Distance</th><th>Rule</th></tr></thead>
+          <tbody>
+            <tr><td>Clear space</td><td><span class="spec-value">R × 0.2</span></td><td>All sides, all contexts</td></tr>
+            <tr><td>QR from hex</td><td><span class="spec-value">R × 0.5</span></td><td>Minimum, physical panel</td></tr>
+            <tr><td>Text baseline</td><td><span class="spec-value">R × 0.25</span></td><td>Below hex bottom vertex</td></tr>
+            <tr><td>Logo mark</td><td><span class="spec-value">R × 1.0</span></td><td>From nearest hex edge</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div><!-- /blueprint-grid -->
+
+  <div class="sprint-legend">
+    <h4>Blueprint Rationale</h4>
+    <ol>
+      <li><strong>Scale-agnostic formula:</strong> All values are expressed as R multiples. This means a single spec governs everything from a 16px favicon to a 500mm outdoor sign — the ratio relationships stay constant.</li>
+      <li><strong>Flat-top orientation:</strong> DTPR hexes are flat-top (not pointy-top) following the ISO 3864 sign shape convention and the existing Makeshift visual language. This keeps horizontal icon rows consistent.</li>
+      <li><strong>Stroke ≠ border:</strong> The stroke is part of the form, not a container. At small sizes (&lt;16px), use fill-only with no stroke. At large physical sizes (&gt;100mm), stroke weight should not exceed 2mm regardless of R×0.02 calculation.</li>
+      <li><strong>Grid inheritance:</strong> Sprint Recipe B (Maker Track) uses a fluid grid overlay from this tiling spec. Recipe A (Regulatory) locks the tiling to a fixed ISO modular grid. Recipe C (Commons) uses single-column with no tiling.</li>
+    </ol>
+  </div>
+
+  <div class="page-nav">
+    <a href="16-sprint-recipes.html">← 16 Recipes</a>
+    <a href="index.html">↑ Cover</a>
+    <a href="18-core-caa-assets.html">18 CAA Assets →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.3 · June 2026 · Superbloom Design · <a href="https://github.com/superbloom/dtpr-brand-identity" target="_blank" rel="noopener">view on GitHub</a> (forthcoming)</p>
+</footer>
+
+</body>
+</html>

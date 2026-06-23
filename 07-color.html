@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>07 Color — DTPR Brand Identity Audit</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="dot"></span>DTPR · Brand Identity Audit</a>
+  <nav>
+    <a href="index.html">Cover</a>
+    <a href="01-evolution.html">01 Evolution</a>
+    <a href="02-dtpr-io.html">02 dtpr.io</a>
+    <a href="03-vision.html">03 vision</a>
+    <a href="04-makeshift.html">04 Makeshift</a>
+    <a href="05-docs.html">05 docs.dtpr</a>
+    <a href="06-marks.html">06 Marks</a>
+    <a href="07-color.html" aria-current="page">07 Color</a>
+    <a href="08-typography.html">08 Type</a>
+    <a href="09-iconography.html">09 Icons</a>
+    <a href="10-illustrations.html">10 Illustrations</a>
+    <a href="11-voice.html">11 Voice</a>
+    <a href="12-findings.html">12 Findings</a>
+    <a href="sprint-index.html" class="nav-split-link">Visual System Prep →</a>
+  </nav>
+  <span class="badge-draft">v0.3 · audit</span>
+</header>
+
+<main>
+  <span class="eyebrow">07 · Color</span>
+  <h1>The DTPR palette, fully catalogued</h1>
+  <p class="lede">A study in blue. Navy is the brand and the only constant across all four light-mode surfaces. Teal is the "identifiability" semantic — a signal color, not a brand color. Lime is a 2026-era accent introduced with Makeshift. The Assembly Day deck adds a cobalt blue for "Communication" callouts that does not appear on any live site. The ISO 3864 collision is real and unresolved.</p>
+
+  <div class="tag-row">
+    <span class="tag observed">OBSERVED</span>
+    <span class="tag proposed">PROPOSED</span>
+    <span class="tag memo">MEMO</span>
+    <span class="tag source-vision">vision.dtpr.io</span>
+    <span class="tag source-dtpr">dtpr.io</span>
+    <span class="tag source-makeshift">Makeshift</span>
+    <span class="tag source-asmday">Assembly Day</span>
+  </div>
+
+  <hr>
+
+  <h2>Primary</h2>
+  <p>The brand-mark color. Present in all three light-mode sites at the same hex value. <span class="tag observed">OBSERVED</span></p>
+
+  <div class="grid-3">
+    <div class="swatch">
+      <div class="chip" style="background: #002684"></div>
+      <div class="body">
+        <div class="name">Navy</div>
+        <div class="token">--navy · --primary</div>
+        <div class="hex">#002684</div>
+        <div class="use">The brand mark, body text on light backgrounds, section backgrounds, primary link color. Used in all three light-mode sites.</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #0d1c75"></div>
+      <div class="body">
+        <div class="name">Navy alt</div>
+        <div class="token">--navy (makeshift alt)</div>
+        <div class="hex">#0d1c75</div>
+        <div class="use">A slightly darker navy used in the MakeShift 2026 event-specific mark. Subtle enough to read as a tonal shift rather than a separate color.</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #0f5153"></div>
+      <div class="body">
+        <div class="name">Teal <span class="tag proposed" style="font-size: 0.55rem">SEMANTIC</span></div>
+        <div class="token">--green · --success · "identifiability"</div>
+        <div class="hex">#0f5153</div>
+        <div class="use">The "data is identifiable" signal in the taxonomy. Doubles as text and section accent on vision.dtpr.io. Carries over to dtpr.io's "Our Proposal" card. (Bootstrap class: <code>.text-green</code>.)</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Secondary</h2>
+  <p>Used for section backgrounds and the gradient between primary and pale. Full token set extracted from <code>vision.dtpr.io/main.css</code> (Bootstrap vars) and <code>makeshift2026.dtpr.io/style.css</code>.</p>
+
+  <div class="grid-3">
+    <div class="swatch">
+      <div class="chip" style="background: #1952a8"></div>
+      <div class="body">
+        <div class="name">Government blue</div>
+        <div class="token">--gov-blue</div>
+        <div class="hex">#1952a8</div>
+        <div class="use">Section background on MakeShift 2026. Reads as institutional.</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #3b85d4"></div>
+      <div class="body">
+        <div class="name">Royal blue</div>
+        <div class="token">--royal-blue · "Breakout" label</div>
+        <div class="hex">#3b85d4</div>
+        <div class="use">Section background and "Breakout" session label on MakeShift 2026.</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #c2ddf5"></div>
+      <div class="body">
+        <div class="name">Pale blue</div>
+        <div class="token">--pale-blue</div>
+        <div class="hex">#c2ddf5</div>
+        <div class="use">Section background and grid-line color. Pairs with deep navy text.</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Accent</h2>
+  <p>The lime is a 2026-era accent, introduced with MakeShift. Before that, no comparable accent existed.</p>
+
+  <div class="grid-3">
+    <div class="swatch">
+      <div class="chip" style="background: #c6e93d">
+        <span class="chip-label">CTA · #c6e93d</span>
+      </div>
+      <div class="body">
+        <div class="name">Lime</div>
+        <div class="token">--lime</div>
+        <div class="hex">#c6e93d</div>
+        <div class="use">CTAs ("Register Now"), accent stripes between theme blocks. Should not appear on body surfaces.</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #0072d9"></div>
+      <div class="body">
+        <div class="name">Bright blue</div>
+        <div class="token">--bright-blue</div>
+        <div class="hex">#0072d9</div>
+        <div class="use">Inner hex layer on the MakeShift 2026 mark. Tonal family of royal-blue, used for in-mark detail only.</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #bae6ed"></div>
+      <div class="body">
+        <div class="name">Pale teal</div>
+        <div class="token">--secondary</div>
+        <div class="hex">#bae6ed</div>
+        <div class="use">vision.dtpr.io secondary color. Tonal pair to teal — not currently used on dtpr.io or makeshift.</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Assembly Day addition — cobalt (not on any live site)</h2>
+  <p>The Assembly Day deck introduces an additional brand layer not currently on the web:</p>
+
+  <div class="grid-3">
+    <div class="swatch">
+      <div class="chip" style="background: #2D2BFF">
+        <span class="chip-label">COMMUNICATION · #2D2BFF</span>
+      </div>
+      <div class="body">
+        <div class="name">Cobalt</div>
+        <div class="token">--communication (Assembly Day)</div>
+        <div class="hex">#2D2BFF</div>
+        <div class="use">Used for "Communication" callout cards in the Assembly Day deck. Not present on any live site. The brand book should decide whether to adopt this as a fourth brand color or to retire it.</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #ffc107">
+        <span class="chip-label">CAPACITY BUILDING · #FFC107</span>
+      </div>
+      <div class="body">
+        <div class="name">Amber</div>
+        <div class="token">--capacity-building (Assembly Day)</div>
+        <div class="hex">#FFC107</div>
+        <div class="use">"Capacity Building" callout cards in the Assembly Day deck. <strong>Same hex as Bootstrap --warning.</strong> See ISO 3864 collision below.</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #0f5153"></div>
+      <div class="body">
+        <div class="name">Teal vertical rule</div>
+        <div class="token">(no token, used as layout element)</div>
+        <div class="hex">#0f5153</div>
+        <div class="use">Vertical column dividers in the Assembly Day journey-map layouts. A 1-2px teal rule between columns.</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Status &amp; signal palette (vision.dtpr.io Bootstrap)</h2>
+  <p>These colors exist in <code>vision.dtpr.io/main.css</code> as Bootstrap variables. Not currently used as brand colors on dtpr.io or makeshift, but available for status messaging, taxonomy category fills, or processing-element semantics.</p>
+
+  <div class="grid-4">
+    <div class="swatch"><div class="chip" style="background: #fd7e14"></div><div class="body"><div class="name">Orange</div><div class="hex">#fd7e14</div></div></div>
+    <div class="swatch"><div class="chip" style="background: #ffc107"></div><div class="body"><div class="name">Yellow <span class="tag open" style="font-size: 0.55rem">ISO 3864</span></div><div class="hex">#ffc107</div></div></div>
+    <div class="swatch"><div class="chip" style="background: #17a2b8"></div><div class="body"><div class="name">Cyan / Info</div><div class="hex">#17a2b8</div></div></div>
+    <div class="swatch"><div class="chip" style="background: #20c997"></div><div class="body"><div class="name">Teal-bright</div><div class="hex">#20c997</div></div></div>
+    <div class="swatch"><div class="chip" style="background: #e83e8c"></div><div class="body"><div class="name">Pink</div><div class="hex">#e83e8c</div></div></div>
+    <div class="swatch"><div class="chip" style="background: #6610f2"></div><div class="body"><div class="name">Indigo</div><div class="hex">#6610f2</div></div></div>
+    <div class="swatch"><div class="chip" style="background: #6f42c1"></div><div class="body"><div class="name">Purple</div><div class="hex">#6f42c1</div></div></div>
+    <div class="swatch"><div class="chip" style="background: #f04a4a"></div><div class="body"><div class="name">Red / Danger</div><div class="hex">#f04a4a</div></div></div>
+  </div>
+
+  <h2>Neutrals &amp; surfaces</h2>
+  <div class="grid-3">
+    <div class="swatch"><div class="chip" style="background: #111111"></div><div class="body"><div class="name">Ink</div><div class="hex">#111111</div><div class="use">Body text on light backgrounds. The makeshift body color.</div></div></div>
+    <div class="swatch"><div class="chip" style="background: #f3f4f6"></div><div class="body"><div class="name">Gray 100</div><div class="hex">#f3f4f6</div><div class="use">Surface tints, table stripes.</div></div></div>
+    <div class="swatch"><div class="chip" style="background: #6b7280"></div><div class="body"><div class="name">Gray 500</div><div class="hex">#6b7280</div><div class="use">Secondary text, captions.</div></div></div>
+  </div>
+
+  <h2>docs.dtpr.io — link accent + neutral palette</h2>
+  <p>docs.dtpr.io is light mode (corrected in v0.2.1 — earlier versions of this audit incorrectly described it as dark mode). The teal link accent is the <em>same</em> identifiability color from the Bootstrap palette. The hex mark, the body text, and the link accents all sit on a white background.</p>
+  <div class="grid-3">
+    <div class="swatch"><div class="chip" style="background: #ffffff; border: 1px solid var(--gray-200)"><span class="chip-label dark">SURFACE · #FFFFFF</span></div><div class="body"><div class="name">White</div><div class="hex">#ffffff</div><div class="use">docs.dtpr.io background. Light mode by default. <span class="tag open">OPEN</span> whether the toggle reveals a dark variant — not observed in this audit.</div></div></div>
+    <div class="swatch"><div class="chip" style="background: #111111"><span class="chip-label">TEXT · #111111</span></div><div class="body"><div class="name">Near-black</div><div class="hex">#111111</div><div class="use">Body text and headings. Same role as <code>--ink</code> in the makeshift system.</div></div></div>
+    <div class="swatch"><div class="chip" style="background: #0f5153"><span class="chip-label">LINK · #0F5153</span></div><div class="body"><div class="name">Teal identifiability</div><div class="hex">#0f5153</div><div class="use">docs.dtpr.io link accent. <strong>Same color as the identifiability semantic in the system</strong> — not a Mintlify default. Active sidebar items are also teal.</div></div></div>
+  </div>
+
+  <hr>
+
+  <h2>The ISO 3864 collision — unresolved</h2>
+
+  <div class="callout warn">
+    <p><strong>Problem.</strong> The heuristics synthesis (<code>dtpr-respectful-heuristics-synthesis-v2.md</code> §6) flags that the visual ecology of DTPR's sign system collides with ISO&nbsp;3864 public-safety color grammar:</p>
+    <ul style="margin: 0.4rem 0 0 1.2rem; line-height: 1.7">
+      <li>DTPR's <em>identifiability</em> signal is the teal <code>#0f5153</code> — currently paired with pale-teal <code>#bae6ed</code> in the system. In ISO&nbsp;3864, teal/blue reads as "mandatory action" (think safety helmets, "you must wear this").</li>
+      <li>The Bootstrap-extracted yellow <code>#ffc107</code> exists in the system (and appears in the Assembly Day cobalt + amber palette) but is <em>not</em> the identifiability color. If a future taxonomy uses it, it will collide with ISO's "warning / hazard" semantics.</li>
+      <li>There are no written co-placement rules for DTPR signs alongside ISO&nbsp;7010 safety signs. The heuristic audit rates this as <strong>High risk</strong> for Pragmatic Deployers.</li>
+    </ul>
+    <p style="margin-top: 0.8rem"><strong>Options being considered in the heuristics synthesis:</strong></p>
+    <ol style="margin: 0.4rem 0 0 1.4rem; line-height: 1.7">
+      <li>Remap the identifiability signal to a non-ISO hue.</li>
+      <li>Mandate a DTPR-branded shape surround that visually differentiates DTPR marks from ISO safety shapes.</li>
+      <li>Establish a two-tier icon treatment (high-picturability as standalone, low-picturability as QR-extended).</li>
+    </ol>
+    <p style="margin-top: 0.8rem">The brand book cannot lock color tokens without a decision here. <span class="tag open">OPEN</span></p>
+    <div style="margin-top: 1rem; padding: 0.8rem 1.2rem; background: rgba(198, 233, 61, 0.12); border-radius: 4px">
+      <p style="margin: 0"><span class="tag proposed">PROPOSED</span> <span class="tag memo">MEMO</span> <strong>Chartreuse as candidate resolution:</strong> The brand foundation memo v2 (§5) notes that the MakeShift chartreuse (<code>#c6e93d</code>) sits outside ISO 3864 reserved hue families (red/orange/yellow/green). It could serve as the non-colliding accent while teal is remapped or given a mandatory shape surround. This is not a decision — it is a viable path worth evaluating.</p>
+    </div>
+  </div>
+
+  <h2>MakeShift candidate palette <span class="tag proposed" style="vertical-align: middle; margin-left: 0.4rem">PROPOSED</span></h2>
+
+  <p>Per brand foundation memo v2 §5, the MakeShift 2026 color token set is the strongest Phase 3 candidate. These five values are the core palette: one primary, three harmonic blues forming the layered hex gradient, and one chartreuse accent. All sourced from the MakeShift <code>:root</code> block.</p>
+
+  <div class="grid-3">
+    <div class="swatch">
+      <div class="chip" style="background: #002684"><span class="chip-label">#002684</span></div>
+      <div class="body">
+        <div class="name">Brand navy</div>
+        <div class="token">--navy (locked)</div>
+        <div class="use">Primary brand color. The one constant across all surfaces. The brand book must lock this or <code>#0d1c75</code> — not both.</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #3b85d4"><span class="chip-label">#3b85d4</span></div>
+      <div class="body">
+        <div class="name">Royal blue</div>
+        <div class="token">--royal-blue</div>
+        <div class="use">Layered hex second plane. Section backgrounds. Visual bridge between navy and pale-blue.</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #c2ddf5"><span class="chip-label dark">#c2ddf5</span></div>
+      <div class="body">
+        <div class="name">Pale blue</div>
+        <div class="token">--pale-blue</div>
+        <div class="use">Layered hex third plane. Info section. Grid line color. The lightest value in the system.</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #c6e93d"><span class="chip-label dark">#c6e93d</span></div>
+      <div class="body">
+        <div class="name">Chartreuse</div>
+        <div class="token">--chartreuse (formerly --lime)</div>
+        <div class="use">CTA accent, section divider. The only warm note in the system. ISO 3864 candidate resolution path — see above.</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background: #0f5153"><span class="chip-label">#0f5153</span></div>
+      <div class="body">
+        <div class="name">Teal</div>
+        <div class="token">--teal (identifiability semantic)</div>
+        <div class="use">"Data is identifiable" signal. Docs link accent. Pending ISO 3864 decision on whether this can remain or must be remapped.</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Consolidated color-token table</h2>
+
+  <table>
+    <tr><th>Token</th><th>Value</th><th>Source</th><th>Role</th></tr>
+    <tr><td><code>--navy</code></td><td><code>#002684</code></td><td>All three light-mode sites</td><td>Brand mark, primary text, link color</td></tr>
+    <tr><td><code>--navy-2</code></td><td><code>#0d1c75</code></td><td>Makeshift alt</td><td>Event-mark alt navy</td></tr>
+    <tr><td><code>--gov-blue</code></td><td><code>#1952a8</code></td><td>Makeshift</td><td>Hero / institutional section</td></tr>
+    <tr><td><code>--royal-blue</code></td><td><code>#3b85d4</code></td><td>Makeshift</td><td>Alternating section, "Breakout" label</td></tr>
+    <tr><td><code>--pale-blue</code></td><td><code>#c2ddf5</code></td><td>Makeshift</td><td>Info section, grid line</td></tr>
+    <tr><td><code>--lime</code></td><td><code>#c6e93d</code></td><td>Makeshift (2026)</td><td>CTA, accent stripe</td></tr>
+    <tr><td><code>--bright-blue</code></td><td><code>#0072d9</code></td><td>Makeshift mark</td><td>Inner-hex detail, event-specific</td></tr>
+    <tr><td><code>--green / --teal</code></td><td><code>#0f5153</code></td><td>vision.dtpr.io Bootstrap</td><td>Identifiability semantic</td></tr>
+    <tr><td><code>--secondary</code></td><td><code>#bae6ed</code></td><td>vision.dtpr.io Bootstrap</td><td>Pale-teal tonal pair</td></tr>
+    <tr><td><code>--cobalt</code></td><td><code>#2D2BFF</code></td><td>Assembly Day</td><td>Communication callouts — not on live sites</td></tr>
+    <tr><td><code>--amber</code></td><td><code>#FFC107</code></td><td>Assembly Day · Bootstrap</td><td>Capacity-building callouts; ISO 3864 collision</td></tr>
+    <tr><td><code>--ink</code></td><td><code>#111111</code></td><td>Makeshift · docs.dtpr.io</td><td>Body text</td></tr>
+    <tr><td><code>--grid</code></td><td><code>rgba(65,105,225,0.11)</code></td><td>Makeshift</td><td>Background grid</td></tr>
+  </table>
+
+  <div class="page-nav">
+    <a href="06-marks.html">← 06 Marks</a>
+    <a href="08-typography.html">08 Typography →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.3 · June 2026 · Superbloom Design</p>
+</footer>
+
+</body>
+</html>

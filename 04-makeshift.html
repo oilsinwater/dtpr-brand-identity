@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>04 Makeshift — DTPR Brand Identity Audit</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="dot"></span>DTPR · Brand Identity Audit</a>
+  <nav>
+    <a href="index.html">Cover</a>
+    <a href="01-evolution.html">01 Evolution</a>
+    <a href="02-dtpr-io.html">02 dtpr.io</a>
+    <a href="03-vision.html">03 vision</a>
+    <a href="04-makeshift.html" aria-current="page">04 Makeshift</a>
+    <a href="05-docs.html">05 docs.dtpr</a>
+    <a href="06-marks.html">06 Marks</a>
+    <a href="07-color.html">07 Color</a>
+    <a href="08-typography.html">08 Type</a>
+    <a href="09-iconography.html">09 Icons</a>
+    <a href="10-illustrations.html">10 Illustrations</a>
+    <a href="11-voice.html">11 Voice</a>
+    <a href="12-findings.html">12 Findings</a>
+    <a href="sprint-index.html" class="nav-split-link">Visual System Prep →</a>
+  </nav>
+  <span class="badge-draft">v0.3 · audit</span>
+</header>
+
+<main>
+  <span class="eyebrow">04 · Makeshift 2026</span>
+  <h1>The contemporary visual baseline</h1>
+  <p class="lede">The 2026 MakeShift event site (Accountable Tech by Design). The cleanest, most disciplined visual surface in the entire DTPR ecosystem — and, per the brand foundation memo v2, one of the two designated reference points for Phase 3 visual development alongside <a href="03-vision.html">vision.dtpr.io</a>. Single CSS file, no framework, no build pipeline.</p>
+
+  <div class="tag-row">
+    <span class="tag observed">OBSERVED</span>
+    <span class="tag source-makeshift">makeshift</span>
+    <a class="tag source-makeshift" href="https://makeshift2026.dtpr.io/" target="_blank" rel="noopener">makeshift2026.dtpr.io ↗</a>
+  </div>
+
+  <hr>
+
+  <h2>Hero / badge</h2>
+
+  <figure>
+    <img src="assets/screenshots/makeshift-hero/makeshift-section1.png" alt="Makeshift 2026 hero — the MAKE shift hexagonal badge, the nav with mono labels, the date and venue info, and the partners strip">
+    <figcaption>
+      <strong>Hero.</strong> The "MAKE shift" hexagonal badge sits at the top of the page. The badge is a layered hexagonal mark (see page 06) with "MAKE shift" set in a sans + script combination. The nav is uppercase mono (JetBrains Mono ExtraBold) with wide letter-spacing. The date "TUESDAY, APRIL 21, 2026" is set in Source Sans Variable at weight 900. The partners strip at the bottom shows Helpful Places, SVA, and the Superbloom starburst.
+    </figcaption>
+  </figure>
+
+  <h2>Exploratory Themes — color-token sections</h2>
+
+  <figure>
+    <img src="assets/screenshots/makeshift-hero/makeshift-section2-themes.png" alt="Makeshift Exploratory Themes — three colored sections (gov-blue, royal-blue, pale-blue) with theme titles and body copy">
+    <figcaption>
+      <strong>Color-token sections.</strong> Three themes are presented as full-width color sections in the makeshift token system: gov-blue <code>#1952a8</code> (Government &amp; Industry), royal-blue <code>#3b85d4</code> (Critical &amp; Civic Tech), pale-blue <code>#c2ddf5</code> (Community &amp; Conversation). Each section has a lime accent stripe above it. This is the explicit-token system that dtpr.io and vision.dtpr.io lack.
+    </figcaption>
+  </figure>
+
+  <h2>Schedule — the table block</h2>
+
+  <figure>
+    <img src="assets/screenshots/makeshift-hero/makeshift-section3-schedule.png" alt="Makeshift schedule — a clean table with time, session, location columns, day labels in uppercase mono, and color-coded session labels">
+    <figcaption>
+      <strong>Schedule block.</strong> A clean Source Sans table with day labels in uppercase mono (JetBrains Mono, JetBrainsMono-ExtraBold.ttf). Session labels are color-coded: BREAK (gray), PLENARY (black), BREAKOUT (royal-blue). Schedule is the most information-dense surface on the site, and the typographic discipline carries it cleanly.
+    </figcaption>
+  </figure>
+
+  <h2>Footer — partner lockup</h2>
+
+  <figure>
+    <img src="assets/screenshots/makeshift-hero/makeshift-section4-footer.png" alt="Makeshift footer — partners strip with Helpful Places hexagon, Superbloom, and IxDA in monochrome black">
+    <figcaption>
+      <strong>Footer.</strong> Three partner logos in monochrome black: Helpful Places (hexagonal grid mark), Superbloom (starburst + wordmark), and IxDA. This is the same partner lockup pattern that dtpr.io uses, executed with more restraint.
+    </figcaption>
+  </figure>
+
+  <h2>Source-code analysis</h2>
+
+  <p>The makeshift stylesheet is a single 10,776-byte file at <code>https://makeshift2026.dtpr.io/style.css</code>. The :root block defines an explicit color-token system that should be the model for the brand book:</p>
+
+  <div class="callout audit">
+    <p><strong>From <code>makeshift2026.dtpr.io/style.css</code> :root block:</strong></p>
+    <pre style="background: var(--gray-100); padding: 1rem; font-family: var(--font-mono); font-size: 0.78rem; overflow-x: auto; border-radius: 4px; margin: 0.5rem 0 0">
+:root {
+    --navy:       #0d1c75;   /* darker alt of brand navy */
+    --gov-blue:   #1952a8;
+    --royal-blue: #3b85d4;
+    --pale-blue:  #c2ddf5;
+    --lime:       #c6e93d;
+    --ink:        #111111;
+    --grid:       rgba(65, 105, 225, 0.11);
+}
+
+body {
+    font-family: 'Source Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    background-color: #ffffff;
+    background-image:
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 28px 28px;
+    color: var(--ink);
+    min-height: 100vh;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('Fonts/JetBrainsMono-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Source Sans';
+    src: url('Fonts/SourceSansVariable-Roman.otf') format('opentype');
+    font-weight: 100 900;
+}
+    </pre>
+  </div>
+
+  <h2>The layered hexagonal mark</h2>
+
+  <figure>
+    <img src="assets/marks/makeshift_hexagon.svg" alt="The MakeShift 2026 layered hexagonal mark" style="max-width: 400px; margin: 0 auto">
+    <figcaption>
+      <strong>makeshift_hexagon.svg.</strong> A 29KB SVG with a 7-layer hexagonal "city map" composition: outer hex, inner hex, bright-blue <code>#0072d9</code> connectors, lime <code>#b7ff08</code> accents, pale-blue <code>#cfedff</code> fills, and the "MAKE shift" wordmark set in a sans + script combination in the center. The script italic is a bespoke drawn form, not a licensed font. This is the event-specific mark — not a replacement for the canonical DTPR hex.
+    </figcaption>
+  </figure>
+
+  <h2>Audit findings specific to Makeshift</h2>
+
+  <div class="findings">
+    <div class="finding">
+      <h4>The cleanest discipline in the system</h4>
+      <p>Single CSS file. Explicit token system. Self-hosted fonts. Source Sans for body, JetBrains Mono for UI. Sticky nav with backdrop blur. Color-coded session labels. The most disciplined visual surface in the ecosystem.</p>
+      <p class="src">makeshift2026.dtpr.io/style.css</p>
+    </div>
+    <div class="finding">
+      <h4>The only site that uses an explicit color-token system</h4>
+      <p>Seven CSS custom properties (<code>--navy</code>, <code>--gov-blue</code>, <code>--royal-blue</code>, <code>--pale-blue</code>, <code>--lime</code>, <code>--ink</code>, <code>--grid</code>) plus explicit font-family declarations. The brand book should adopt this pattern.</p>
+      <p class="src">makeshift2026.dtpr.io/style.css :root</p>
+    </div>
+    <div class="finding">
+      <h4>JetBrains Mono as UI labels is a strong discipline</h4>
+      <p>All navigation, links, buttons, and labels are JetBrains Mono ExtraBold uppercase with wide letter-spacing. This makes the UI layer visually distinct from the Source Sans body and gives the system a recognisable "technical document" feel.</p>
+      <p class="src">makeshift2026.dtpr.io/style.css</p>
+    </div>
+    <div class="finding">
+      <h4>Sticky nav with backdrop blur</h4>
+      <p>Nav has <code>backdrop-filter: blur(6px)</code> and a 92% white background. Reads as a modern web product convention. Currently neither dtpr.io nor vision.dtpr.io use this pattern.</p>
+      <p class="src">makeshift2026.dtpr.io/style.css nav</p>
+    </div>
+    <div class="finding">
+      <h4>Lime is a 2026-era accent</h4>
+      <p>No comparable accent existed on vision.dtpr.io or dtpr.io. The lime functions as a CTA color (REGISTER NOW) and as a section-divider accent stripe. It should not appear on body surfaces.</p>
+      <p class="src">makeshift2026.dtpr.io/theme blocks</p>
+    </div>
+    <div class="finding">
+      <h4>The "MAKE shift" script is a one-off, not a type direction</h4>
+      <p>The script italic on the badge is a bespoke drawn form, not a licensed font. It does not appear elsewhere and is not a typographic direction for the brand.</p>
+      <p class="src">makeshift_hexagon.svg</p>
+    </div>
+    <div class="finding">
+      <h4>The layered hex mark is event-specific</h4>
+      <p>Not a replacement for the canonical DTPR hex. The brand book should make this explicit to prevent the mark from being mis-applied to a non-event surface.</p>
+      <p class="src">makeshift_hexagon.svg</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Contemporary baseline designation</h2>
+
+  <div class="callout find">
+    <p><span class="tag memo">MEMO</span> <strong>Brand foundation memo v2, §5:</strong> The visual system has two complementary reference points. <strong>vision.dtpr.io</strong> = the classic/baseline digital expression. <strong>MakeShift 2026</strong> = the contemporary expression, with internal traction with the DTPR team. Phase 3 should treat both together as the visual canon — MakeShift advancing, not replacing, the vision.dtpr.io baseline.</p>
+  </div>
+
+  <h2>The layered hexagon as semantic device</h2>
+
+  <p>The MakeShift mark extends the three-layer hierarchy from a UI pattern into a brand-level visual device. The three stacked hexagonal planes map directly onto the DTPR Scene/Surface/Signal model:</p>
+
+  <div class="hex-info-box">
+    <div class="hex-mini" aria-hidden="true">
+      <div class="hex-layer hex-layer-1"></div>
+      <div class="hex-layer hex-layer-2"></div>
+      <div class="hex-layer hex-layer-3"></div>
+    </div>
+    <div class="layer-legend">
+      <div class="layer-item">
+        <div class="layer-swatch" style="background: #0d1c75"></div>
+        <div><strong>Governance</strong> — top / dark navy → maps to Scene (context layer)</div>
+      </div>
+      <div class="layer-item">
+        <div class="layer-swatch" style="background: #3b85d4"></div>
+        <div><strong>Community + Power</strong> — middle / royal blue → maps to Surface (content layer)</div>
+      </div>
+      <div class="layer-item">
+        <div class="layer-swatch" style="background: #c2ddf5"></div>
+        <div><strong>Infrastructure</strong> — bottom / pale blue → maps to Signal (action layer)</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="small"><span class="tag proposed">PROPOSED</span> The isometric-stack treatment is a strong candidate for encoding the Scene/Surface/Signal hierarchy at the brand level, not just the UI level. The brand book should evaluate whether to adopt this device on dtpr.io surfaces.</p>
+
+  <h2>Candidate type system <span class="tag proposed" style="vertical-align: middle; margin-left: 0.4rem">PROPOSED</span></h2>
+
+  <p>The MakeShift files use a consistent three-role type system across all formats (self-hosted fonts, banner signage, program booklet, social media). This is the strongest candidate for the DTPR type stack going forward.</p>
+
+  <table>
+    <thead>
+      <tr><th>Role</th><th>Typeface</th><th>Weight / Style</th><th>Where used in Makeshift</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Display / editorial headline</strong></td>
+        <td>Baskerville Display PT</td>
+        <td>Italic</td>
+        <td>Large editorial wordmark ("<em>shift</em>"); high contrast with sans</td>
+      </tr>
+      <tr>
+        <td><strong>UI / body / labels</strong></td>
+        <td>Source Sans Variable</td>
+        <td>Regular → Black (variable axis, 100–900)</td>
+        <td>All running copy, UI labels, navigation, body text, weight-900 date display</td>
+      </tr>
+      <tr>
+        <td><strong>Technical / code labels</strong></td>
+        <td>JetBrains Mono</td>
+        <td>ExtraBold (800)</td>
+        <td>Nav links, schedule day labels, badge call-outs, uppercase mono labels throughout</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout open">
+    <p><span class="tag open">OPEN</span> This three-role system needs explicit adoption as the canonical DTPR type stack. Currently <em>observable</em> in MakeShift and sourced from the brand foundation memo, but not yet formally decided. See <a href="08-typography.html">page 08</a>.</p>
+  </div>
+
+  <h2>Candidate color palette <span class="tag proposed" style="vertical-align: middle; margin-left: 0.4rem">PROPOSED</span></h2>
+
+  <p>The MakeShift <code>:root</code> block defines the most explicit token system in the DTPR ecosystem. These are the candidates for the Phase 3 color token set:</p>
+
+  <table>
+    <thead>
+      <tr><th>Role</th><th>Token</th><th>Observed value</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Primary / brand</strong></td><td><code>--navy</code></td><td><code>#0d1c75</code></td><td>Slightly darker than dtpr.io navy (<code>#002684</code>). Both are brand navy — the brand book should lock one.</td></tr>
+      <tr><td><strong>Secondary / layer 2</strong></td><td><code>--gov-blue</code></td><td><code>#1952a8</code></td><td>Theme section: Governance</td></tr>
+      <tr><td><strong>Secondary / layer 3</strong></td><td><code>--royal-blue</code></td><td><code>#3b85d4</code></td><td>Theme section: Community + Power</td></tr>
+      <tr><td><strong>Tertiary / layer 4</strong></td><td><code>--pale-blue</code></td><td><code>#c2ddf5</code></td><td>Theme section: Infrastructure. Also grid lines.</td></tr>
+      <tr><td><strong>Accent / signal</strong></td><td><code>--lime</code></td><td><code>#c6e93d</code></td><td>CTA accent, section divider stripe. ISO 3864 candidate resolution — see <a href="07-color.html">page 07</a>.</td></tr>
+      <tr><td><strong>Text / ink</strong></td><td><code>--ink</code></td><td><code>#111111</code></td><td>Near-black body text. Consistent with dtpr.io.</td></tr>
+      <tr><td><strong>Grid / field texture</strong></td><td><code>--grid</code></td><td><code>rgba(65,105,225,0.11)</code></td><td>Graph-paper background rule. Signature "maker" aesthetic.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-nav">
+    <a href="03-vision.html">← 03 vision</a>
+    <a href="05-docs.html">05 docs.dtpr.io →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.3 · June 2026 · Superbloom Design</p>
+</footer>
+
+</body>
+</html>

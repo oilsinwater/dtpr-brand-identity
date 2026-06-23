@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>01 Evolution — DTPR Brand Identity Audit</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="dot"></span>DTPR · Brand Identity Audit</a>
+  <nav>
+    <a href="index.html">Cover</a>
+    <a href="01-evolution.html" aria-current="page">01 Evolution</a>
+    <a href="02-dtpr-io.html">02 dtpr.io</a>
+    <a href="03-vision.html">03 vision</a>
+    <a href="04-makeshift.html">04 Makeshift</a>
+    <a href="05-docs.html">05 docs.dtpr</a>
+    <a href="06-marks.html">06 Marks</a>
+    <a href="07-color.html">07 Color</a>
+    <a href="08-typography.html">08 Type</a>
+    <a href="09-iconography.html">09 Icons</a>
+    <a href="10-illustrations.html">10 Illustrations</a>
+    <a href="11-voice.html">11 Voice</a>
+    <a href="12-findings.html">12 Findings</a>
+    <a href="sprint-index.html" class="nav-split-link">Visual System Prep →</a>
+  </nav>
+  <span class="badge-draft">v0.3 · audit</span>
+</header>
+
+<main>
+  <span class="eyebrow">01 · Evolution</span>
+  <h1>How the visual identity got here</h1>
+  <p class="lede">Six years of design work, four major surfaces, two visual systems in tension. This page is the timeline — what was made when, what each version contributed to the brand, and what the trajectory tells us about where it should go next.</p>
+
+  <div class="tag-row">
+    <span class="tag source-asmday">Assembly Day</span>
+    <span class="tag source-vision">vision.dtpr.io</span>
+    <span class="tag source-dtpr">dtpr.io</span>
+    <span class="tag source-makeshift">Makeshift</span>
+    <span class="tag source-docs">docs.dtpr.io</span>
+  </div>
+
+  <hr>
+
+  <h2>Timeline</h2>
+  <div class="timeline">
+
+    <div class="entry">
+      <div class="when">2020 · Sidewalk Labs / Alphabet era</div>
+      <div class="what">vision.dtpr.io</div>
+      <div class="desc">
+        A speculative co-design prototype developed during DTPR's time inside Sidewalk Labs. Long horizontal-scrollytelling page, seven "How might we..." questions, each opening into a scenario where a person interacts with a place where DTPR is deployed. The hex mark, the data chain composition, the 147-element taxonomy UI, and the teal "identifiability" color all originate here.
+        <ul>
+          <li><strong>Mark:</strong> canonical hexagon — three SVG variants (blue, black, outline)</li>
+          <li><strong>Color:</strong> Bootstrap-extracted palette; navy primary, teal identifiability, pale teal secondary</li>
+          <li><strong>Type:</strong> system stack, no custom body font</li>
+          <li><strong>Layout:</strong> horizontal-scroll scrollytelling with floating UI mockups</li>
+          <li><strong>Footer:</strong> minimal — no stewardship signature</li>
+        </ul>
+        <p style="margin-top: 0.5rem"><span class="tag observed">OBSERVED</span> <span class="small">Live at <a href="https://vision.dtpr.io/">vision.dtpr.io</a> · source CSS at <code>vision.dtpr.io/main.css</code></span></p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2024–2026 · Public standard site</div>
+      <div class="what">dtpr.io</div>
+      <div class="desc">
+        The current public-facing site. Problem → Proposal → Mission narrative. Built in Nuxt + Tailwind. The most-trafficked of the surfaces (2,300+ unique visitors/year) but with a 35s / 49% scroll-depth bounce on the homepage and a critical QR-scan dead-end on <code>/taxonomy/device</code>. The Corporate Memphis flat-illustration hero is the Sidewalk Labs / Alphabet holdover that Phase 2 deprioritized for new work.
+        <ul>
+          <li><strong>Type:</strong> Red Hat Text, Google Fonts at 400/500/700</li>
+          <li><strong>Color:</strong> navy primary, teal accent; Bootstrap yellow/red/orange available but unused as brand colors</li>
+          <li><strong>Mark:</strong> small dark hexagon in header (Nuxt-rendered)</li>
+          <li><strong>Hero:</strong> Corporate Memphis cityscape illustration</li>
+          <li><strong>Footer:</strong> CC BY 4.0 + Helpful Places stewardship</li>
+        </ul>
+        <p style="margin-top: 0.5rem"><span class="tag observed">OBSERVED</span> <span class="small">Live at <a href="https://dtpr.io/">dtpr.io</a></span></p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">May 19, 2026 · Assembly Day convening</div>
+      <div class="what">DTPR Assembly Day deck</div>
+      <div class="desc">
+        A 31-page internal brand + strategy presentation created for the post-grant POSE convening. Most material evidence: the canonical Corporate Memphis cityscape as the *most complete* in the system (a transit/bike/storefront scene with recycling station, lampposts, restaurant — used in the "DTPR for AI Community Conversation Kit" cover). Also surfaces an additional cobalt-blue accent color (<code>#2D2BFF</code>) used for "Communication" callout cards, and teal vertical column dividers in the journey-mapping layouts. This is a brand layer the web surfaces do not currently show.
+        <ul>
+          <li><strong>Color additions:</strong> cobalt <code>#2D2BFF</code> for "Communication" tags; amber for "Capacity Building"</li>
+          <li><strong>Layout grammar:</strong> 3-column journey maps with vertical teal rules</li>
+          <li><strong>Hero:</strong> the most-refined Corporate Memphis cityscape in the system</li>
+          <li><strong>Format:</strong> presentation deck — not a live site</li>
+        </ul>
+        <p style="margin-top: 0.5rem"><span class="tag source-asmday">SOURCE</span> <span class="small"><code>DTPR Assembly Day - Ecosystem .pdf</code> (1.6MB, 31 pages)</span></p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2026 · MakeShift event</div>
+      <div class="what">makeshift2026.dtpr.io</div>
+      <div class="desc">
+        The 2026 MakeShift event site (Accountable Tech by Design). The newest expression of the visual identity — and the cleanest. Built for a one-week convening in NYC. Single CSS file, no framework, no build pipeline. The reference for "what DTPR could look like if we built it from scratch today."
+        <ul>
+          <li><strong>Type:</strong> JetBrains Mono (display, UI) + Source Sans (body), both self-hosted</li>
+          <li><strong>Color:</strong> explicit token system — <code>--navy</code>, <code>--gov-blue</code>, <code>--royal-blue</code>, <code>--pale-blue</code>, <code>--lime</code>, <code>--ink</code></li>
+          <li><strong>Mark:</strong> layered hexagonal "city map" with axis labels — event-specific</li>
+          <li><strong>Background:</strong> subtle blue grid pattern (<code>rgba(65,105,225,0.11)</code>)</li>
+          <li><strong>Layout:</strong> explicit color-token sections; sticky nav with backdrop blur; parallax</li>
+        </ul>
+        <p style="margin-top: 0.5rem"><span class="tag observed">OBSERVED</span> <span class="small">Live at <a href="https://makeshift2026.dtpr.io/">makeshift2026.dtpr.io</a></span></p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2024–2026 · Documentation</div>
+      <div class="what">docs.dtpr.io</div>
+      <div class="desc">
+        The standard's documentation site. Built on Mintlify. <strong>Light mode by default</strong> — white background, dark text, teal link accents (the same <code>#0f5153</code> identifiability color from the Bootstrap palette, not a Mintlify default). Different layout from the marketing sites — three-column with left sidebar, main content, right rail — but the same hex mark in the header and the same brand palette.
+        <ul>
+          <li><strong>Type:</strong> Mintlify's system font stack</li>
+          <li><strong>Color:</strong> white background, near-black text, teal <code>#0f5153</code> link accent</li>
+          <li><strong>Layout:</strong> left-sidebar nav with sectioned content; "On this page" right rail</li>
+          <li><strong>Mark:</strong> the canonical DTPR hex mark in the top header (dark-on-white)</li>
+        </ul>
+        <p style="margin-top: 0.5rem"><span class="tag observed">OBSERVED</span> <span class="small">Live at <a href="https://docs.dtpr.io/">docs.dtpr.io</a></span></p>
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <h2>What the trajectory tells us</h2>
+
+  <div class="grid-2">
+    <div class="callout find">
+      <p><strong>Pattern: each site picked up one layer and dropped the others.</strong></p>
+      <p>vision.dtpr.io brought the hex mark and the taxonomy. dtpr.io brought the stewardship footer and the Public Sector trust signals. Makeshift brought explicit color tokens and a JetBrains-Mono-as-UI discipline. No single site carries the full system. The brand book has to combine them.</p>
+    </div>
+    <div class="callout audit">
+      <p><strong>Pattern: visual systems multiplied, never consolidated.</strong></p>
+      <p>Corporate Memphis (dtpr.io, Assembly Day) coexists with hex-based scenarios (vision) and the layered hex mark (Makeshift). The brand book has to pick — or to name which goes where.</p>
+    </div>
+    <div class="callout warn">
+      <p><strong>Pattern: the most disciplined design is the one with the fewest constraints.</strong></p>
+      <p>Makeshift is a single-CSS-file event site. It is the most carefully designed surface in the ecosystem. The lesson: constraint produces coherence.</p>
+    </div>
+    <div class="callout ok">
+      <p><strong>Pattern: navy is the only constant.</strong></p>
+      <p><code>#002684</code> appears in all four light-mode sites. It is the brand. Everything else is negotiable.</p>
+    </div>
+  </div>
+
+  <h2>Recommended reading order</h2>
+  <p>If you only have 15 minutes with this audit, read in this order:</p>
+  <ol style="margin-left: 1.4rem; line-height: 1.9">
+    <li><a href="12-findings.html">Findings (page 12)</a> — the conclusion</li>
+    <li><a href="06-marks.html">Marks (page 06)</a> — the one thing everyone agrees on</li>
+    <li><a href="07-color.html">Color (page 07)</a> — including the ISO 3864 collision</li>
+    <li><a href="02-dtpr-io.html">dtpr.io (page 02)</a> — the most-visited surface</li>
+  </ol>
+
+  <div class="page-nav">
+    <a href="index.html">← Cover</a>
+    <a href="02-dtpr-io.html">02 dtpr.io →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.2 · June 2026 · Superbloom Design</p>
+</footer>
+
+</body>
+</html>

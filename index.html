@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DTPR — Brand Identity Audit</title>
+<meta name="description" content="DTPR brand identity audit v0.3 — visual identity inventory across all surfaces, with findings and Phase 3 sprint recommendations.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="dot"></span>DTPR · Brand Identity Audit</a>
+  <nav>
+    <a href="index.html" aria-current="page">Cover</a>
+    <a href="01-evolution.html">01 Evolution</a>
+    <a href="02-dtpr-io.html">02 dtpr.io</a>
+    <a href="03-vision.html">03 vision</a>
+    <a href="04-makeshift.html">04 Makeshift</a>
+    <a href="05-docs.html">05 docs.dtpr</a>
+    <a href="06-marks.html">06 Marks</a>
+    <a href="07-color.html">07 Color</a>
+    <a href="08-typography.html">08 Type</a>
+    <a href="09-iconography.html">09 Icons</a>
+    <a href="10-illustrations.html">10 Illustrations</a>
+    <a href="11-voice.html">11 Voice</a>
+    <a href="12-findings.html">12 Findings</a>
+    <a href="sprint-index.html" class="nav-split-link">Visual System Prep →</a>
+  </nav>
+  <span class="badge-draft">v0.3 · audit</span>
+</header>
+
+<section class="cover">
+  <div class="container">
+    <div class="cover-text">
+      <span class="eyebrow">Brand Identity Audit · v0.3</span>
+      <h1>DTPR<br><em>Brand Identity</em></h1>
+      <p class="subhead">Digital Trust for Places &amp; Routines. What the brand identity actually is — observed across every visible surface, in source code, print collateral, and on the page.</p>
+
+      <div class="meta">
+        <div><strong>Status</strong>v0.3 · audit draft</div>
+        <div><strong>Scope</strong>Visual identity audit (not prescriptive guidelines)</div>
+        <div><strong>Sources</strong>5 live sites · Assembly Day deck · Message Map · MakeShift print collateral · Phase 1 screenshots</div>
+        <div><strong>Steward</strong>Helpful Places · CC BY 4.0</div>
+        <div><strong>Authors</strong>Superbloom Design · June 2026</div>
+      </div>
+
+      <div class="scope-summary">
+        <strong>What this is.</strong> An inventory of the DTPR visual identity as it exists in the wild — across <a href="02-dtpr-io.html">dtpr.io</a>, <a href="03-vision.html">vision.dtpr.io</a>, <a href="04-makeshift.html">makeshift2026.dtpr.io</a>, <a href="05-docs.html">docs.dtpr.io</a>, the Assembly Day deck, the Message Map, and MakeShift print assets — with screenshots, source-code citations, and analysis. <strong>What it is not.</strong> A prescriptive brand book. Decisions and color-token lockups are <em>observed</em> or <em>inferred</em>, never invented. Every open question is named; nothing is silently resolved.
+      </div>
+    </div>
+
+    <!-- Layered hexagon mark — mirrors the MakeShift 2026 visual motif -->
+    <div class="cover-hex" aria-hidden="true">
+      <div class="hex-layer hex-layer-1">
+        <div class="hex-inner-text">DTPR<br>Brand<br>Audit</div>
+      </div>
+      <div class="hex-layer hex-layer-2"></div>
+      <div class="hex-layer hex-layer-3"></div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <h2>How to read this audit</h2>
+  <p class="lede">Twelve pages, organized from the meta-question (where did the brand come from?) through each surface (per-site breakdowns) to the visual building blocks (marks, color, type, icons, illustration, voice) to a final findings page that names what's load-bearing and what isn't.</p>
+
+  <h3>Tags used throughout</h3>
+  <div class="tag-row" style="margin-top: 0.5rem">
+    <span class="tag observed">OBSERVED</span>
+    <span class="tag inferred">INFERRED</span>
+    <span class="tag proposed">PROPOSED</span>
+    <span class="tag memo">MEMO</span>
+    <span class="tag open">OPEN</span>
+    <span class="tag source-vision">vision.dtpr.io</span>
+    <span class="tag source-dtpr">dtpr.io</span>
+    <span class="tag source-makeshift">makeshift</span>
+    <span class="tag source-docs">docs.dtpr.io</span>
+    <span class="tag source-asmday">Assembly Day</span>
+  </div>
+  <p class="small" style="margin-top: 0.8rem"><strong>OBSERVED</strong> = empirically present in source code or visible on a live page. <strong>INFERRED</strong> = derived from how the assets are deployed, not from a written rule. <strong>PROPOSED</strong> = recommended direction, not yet decided. <strong>MEMO</strong> = sourced from the brand foundation memo (v2), not from a live surface — epistemic distinction maintained. <strong>OPEN</strong> = a decision the brand book has to surface for the team.</p>
+
+  <hr>
+
+  <h2>Table of contents</h2>
+
+  <nav class="toc">
+    <a href="01-evolution.html">
+      <span class="num">01</span>
+      <span class="title">Evolution</span>
+      <span class="desc">vision → dtpr.io → Makeshift → Assembly Day. The 2020–2026 arc of the visual identity.</span>
+    </a>
+    <a href="02-dtpr-io.html">
+      <span class="num">02</span>
+      <span class="title">dtpr.io (current)</span>
+      <span class="desc">Hero, problem/proposal/mission cards, taxonomy page, footer. Screenshot evidence per section.</span>
+    </a>
+    <a href="03-vision.html">
+      <span class="num">03</span>
+      <span class="title">vision.dtpr.io</span>
+      <span class="desc">2020 co-design prototype. Scrollytelling, 7 chapters, scenario cards, full color system origin.</span>
+    </a>
+    <a href="04-makeshift.html">
+      <span class="num">04</span>
+      <span class="title">Makeshift 2026</span>
+      <span class="desc">The contemporary visual baseline. Explicit color tokens, three-role type system, layered hex mark.</span>
+    </a>
+    <a href="05-docs.html">
+      <span class="num">05</span>
+      <span class="title">docs.dtpr.io</span>
+      <span class="desc">Documentation site in light mode — same teal/navy palette as the other three, different layout.</span>
+    </a>
+    <a href="06-marks.html">
+      <span class="num">06</span>
+      <span class="title">Marks &amp; seals</span>
+      <span class="desc">The canonical hexagon, three lockup variants, three seals, event-specific layered mark.</span>
+    </a>
+    <a href="07-color.html">
+      <span class="num">07</span>
+      <span class="title">Color tokens</span>
+      <span class="desc">Primary, secondary, semantic, status, neutrals — all observed values. ISO 3864 collision flagged. MakeShift candidate palette.</span>
+    </a>
+    <a href="08-typography.html">
+      <span class="num">08</span>
+      <span class="title">Typography</span>
+      <span class="desc">Three type systems, six specimens, MakeShift three-role candidate stack.</span>
+    </a>
+    <a href="09-iconography.html">
+      <span class="num">09</span>
+      <span class="title">Iconography</span>
+      <span class="desc">Hexagon container, taxonomy icon library, picturability tiers, processing element treatment.</span>
+    </a>
+    <a href="10-illustrations.html">
+      <span class="num">10</span>
+      <span class="title">Illustrations</span>
+      <span class="desc">Two systems in play: Corporate Memphis cityscapes vs. hex-based scenarios (vision). Fork decision.</span>
+    </a>
+    <a href="11-voice.html">
+      <span class="num">11</span>
+      <span class="title">Voice &amp; tone</span>
+      <span class="desc">Five principles, organizational values, the Message Map two-track fork.</span>
+    </a>
+    <a href="12-findings.html">
+      <span class="num">12</span>
+      <span class="title">Findings &amp; next steps</span>
+      <span class="desc">What survived, what's fragile, what the Phase 3 brand sprint has to address.</span>
+    </a>
+  </nav>
+
+  <div class="sprint-legend" style="margin-top: 2rem;">
+    <h4>Part 2: Visual System Prep</h4>
+    <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--gray-800);">A generative design prep outlining structural variables, morphological matrix paths, design recipes, geometric blueprints, ISO co-placement guidelines, and viewport transformation rules.</p>
+    <a href="sprint-index.html" class="src" style="display: inline-block; font-weight: bold; text-decoration: underline;">Open DTPR - Visual System Prep →</a>
+  </div>
+
+  <hr>
+
+  <h2>Sources catalogued</h2>
+
+  <div class="grid-3">
+    <div class="finding">
+      <h4>dtpr.io (current)</h4>
+      <p>Public standard site. Nuxt + Tailwind. The 2024–2026 expression of the brand.</p>
+      <a class="src" href="https://dtpr.io/" target="_blank" rel="noopener">dtpr.io →</a>
+    </div>
+    <div class="finding">
+      <h4>vision.dtpr.io</h4>
+      <p>2020 co-design prototype. Scrollytelling. Origin of the hex mark, color tokens, and taxonomy UI.</p>
+      <a class="src" href="https://vision.dtpr.io/" target="_blank" rel="noopener">vision.dtpr.io →</a>
+    </div>
+    <div class="finding">
+      <h4>makeshift2026.dtpr.io</h4>
+      <p>2026 event site. Contemporary visual baseline. Explicit color-token system. Reference for "what DTPR could be."</p>
+      <a class="src" href="https://makeshift2026.dtpr.io/" target="_blank" rel="noopener">makeshift2026.dtpr.io →</a>
+    </div>
+    <div class="finding">
+      <h4>docs.dtpr.io</h4>
+      <p>Documentation site. <strong>Light mode</strong> with the teal <code>#0f5153</code> identifiability color as the link accent. Three-column layout with left sidebar. Built on Mintlify.</p>
+      <a class="src" href="https://docs.dtpr.io/" target="_blank" rel="noopener">docs.dtpr.io →</a>
+    </div>
+    <div class="finding">
+      <h4>Assembly Day deck (May 2026)</h4>
+      <p>The internal brand work from the NSF POSE convening. 31-page PDF. Ecosystem research findings, stakeholder model, journey map exercise.</p>
+      <p class="src">31-page PDF · <code>DTPR Assembly Day - Ecosystem .pdf</code></p>
+    </div>
+    <div class="finding">
+      <h4>Message Map (June 2026)</h4>
+      <p>The brand messaging framework. Three-stakeholder model (Public Sector / Social Sector / General Public). Two-track voice direction ("status quo" and "stronger opinion").</p>
+      <p class="src"><span class="tag memo">MEMO</span> <code>DTPR-message-map-0622.pdf</code></p>
+    </div>
+  </div>
+
+  <h2>Quantitative scope</h2>
+  <div class="stat-row">
+    <div class="stat"><div class="num">5</div><div class="lbl">Live sites audited</div><div class="ctx">dtpr.io, vision.dtpr.io, makeshift2026.dtpr.io, docs.dtpr.io, dtpr.guide/landing</div></div>
+    <div class="stat"><div class="num">76+</div><div class="lbl">Pages observed</div><div class="ctx">Across the four most-active sites, including localized and taxonomy pages</div></div>
+    <div class="stat"><div class="num">12</div><div class="lbl">Hex colors extracted</div><div class="ctx">Brand primary, secondary, accent, status, neutrals — all from source CSS</div></div>
+    <div class="stat"><div class="num">147</div><div class="lbl">Taxonomy elements</div><div class="ctx">51 device + 23 processing + 73 AI elements across three taxonomies</div></div>
+    <div class="stat"><div class="num">3</div><div class="lbl">Stakeholder tiers</div><div class="ctx">Public Sector · Social Sector · General Public — from Assembly Day ecosystem research</div></div>
+    <div class="stat"><div class="num">5</div><div class="lbl">Org values</div><div class="ctx">Openness · Legibility · Agency · Accountability · Community — from Message Map</div></div>
+  </div>
+
+  <div class="page-nav">
+    <span></span>
+    <a href="01-evolution.html">01 Evolution →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>DTPR is stewarded by <a href="https://www.helpfulplaces.com" target="_blank" rel="noopener">Helpful Places</a>. DTPR assets licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.<br>
+  This audit is a Superbloom Design artifact (v0.3, June 2026). Sources: project screenshots, Assembly Day deck, Message Map, MakeShift print collateral, live sites, and extracted source CSS.</p>
+</footer>
+
+</body>
+</html>

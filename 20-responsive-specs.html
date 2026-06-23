@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>20 Responsive Application Specs — DTPR Brand Identity Audit</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .scale-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--r-md);
+    overflow: hidden;
+  }
+  .scale-table th {
+    background: var(--navy);
+    color: var(--white);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    padding: 0.85rem 1rem;
+    text-align: center;
+  }
+  .scale-table th.row-head { text-align: left; padding-left: 1.25rem; width: 18%; }
+  .scale-table td {
+    padding: 0.85rem 0.8rem;
+    vertical-align: top;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-200);
+    background: var(--white);
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+  .scale-table td.context-label {
+    background: var(--gray-50);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--navy);
+    border-right: 2px solid var(--gray-200);
+    white-space: nowrap;
+  }
+  .scale-table tr:hover td { background: rgba(198, 233, 61, 0.04); }
+  .scale-table tr:hover td.context-label { background: rgba(198, 233, 61, 0.08); }
+
+  .spec-chip {
+    display: inline-block;
+    background: var(--gray-100);
+    color: var(--navy);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 0.15rem 0.45rem;
+    border-radius: var(--r-sm);
+    margin: 0.1rem;
+  }
+
+  /* Viewport preview cards */
+  .viewport-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+  }
+  @media (max-width: 1000px) { .viewport-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .viewport-grid { grid-template-columns: 1fr; } }
+
+  .viewport-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+  }
+  .viewport-card-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.6rem 0.85rem;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: space-between;
+  }
+  .viewport-preview {
+    padding: 1rem;
+    background: #f8fbff;
+    border-bottom: 1px solid var(--gray-100);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 200px;
+  }
+  .viewport-specs {
+    padding: 0.85rem;
+    flex: 1;
+  }
+  .viewport-specs dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.25rem 0.75rem;
+    font-size: 0.74rem;
+  }
+  .viewport-specs dt {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding-top: 0.05rem;
+  }
+  .viewport-specs dd {
+    font-weight: 600;
+    color: var(--navy);
+    border-bottom: 1px solid var(--gray-100);
+    padding-bottom: 0.25rem;
+  }
+
+  /* Physical distance section */
+  .distance-section {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    margin: 2.5rem 0;
+  }
+  .distance-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.85rem 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .distance-body {
+    padding: 1.5rem;
+  }
+
+  /* Sprint legend */
+  .sprint-legend {
+    background: rgba(198, 233, 61, 0.07);
+    border-left: 5px solid var(--chartreuse);
+    padding: 1.5rem;
+    border-radius: 0 var(--r-md) var(--r-md) 0;
+    margin: 2.5rem 0;
+  }
+  .sprint-legend h4 {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+  }
+  .sprint-legend ol {
+    margin-left: 1.2rem;
+    font-size: 0.92rem;
+    color: var(--gray-800);
+    line-height: 1.65;
+  }
+  .sprint-legend li { margin-bottom: 0.4rem; }
+
+  .transformation-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--r-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 1.5rem;
+  }
+  .transformation-card h3 {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  .transformation-card p {
+    font-size: 0.83rem;
+    color: var(--gray-700);
+    line-height: 1.55;
+    margin-bottom: 0.75rem;
+  }
+  .rule-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .rule-list li {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--gray-100);
+    font-size: 0.8rem;
+    color: var(--gray-700);
+  }
+  .rule-list li:last-child { border-bottom: none; }
+  .rule-trigger {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.1rem 0.45rem;
+    border-radius: var(--r-sm);
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="sprint-index.html"><span class="dot"></span>DTPR · Visual System Prep</a>
+  <nav>
+    <a href="index.html" class="nav-split-link">← Brand Audit</a>
+    <a href="sprint-index.html">Cover</a>
+    <a href="13-sprint-morphology.html">13 Form Box</a>
+    <a href="14-transformation-morphology.html">14 Process Box</a>
+    <a href="15-semantic-morphology.html">15 Semantic Box</a>
+    <a href="16-sprint-recipes.html">16 Recipes</a>
+    <a href="17-geometric-blueprint.html">17 Blueprint</a>
+    <a href="18-core-caa-assets.html">18 CAA Assets</a>
+    <a href="19-iso-3864-matrix.html">19 ISO Matrix</a>
+    <a href="20-responsive-specs.html" aria-current="page">20 Responsive</a>
+  </nav>
+  <span class="badge-draft">v0.3 · system prep</span>
+</header>
+
+<main>
+  <span class="eyebrow">20 · Responsive Application Specs</span>
+  <h1>Responsive Application Specs</h1>
+  <p class="lede">DTPR operates across an unusual range of contexts — from 10-meter viewing distances at outdoor installations to 320px mobile screens accessed via QR scan seconds after encountering a physical sign. This document specifies how the visual system transforms across that full range, following the Process Box transformation rules from the three Sprint Recipes.</p>
+
+  <!-- Physical distance scale -->
+  <div class="distance-section">
+    <div class="distance-header">Physical Viewing Distance — Scale Rules (Regulatory Track)</div>
+    <div class="distance-body">
+      <p style="font-size:0.88rem; color:var(--gray-700); margin-bottom:1.5rem;">Physical signage operates across three standard viewing zones. Each zone has a distinct minimum readable element size derived from the hexagon blueprint formula.</p>
+      <svg viewBox="0 0 760 200" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrowhead" markerWidth="6" markerHeight="4" refX="3" refY="2" orient="auto">
+            <polygon points="0 0, 6 2, 0 4" fill="#6b7280"/>
+          </marker>
+        </defs>
+
+        <!-- Ground line -->
+        <line x1="30" y1="160" x2="740" y2="160" stroke="#d1d5db" stroke-width="1.5"/>
+
+        <!-- Zone 1: 10m+ — Awareness -->
+        <!-- Person silhouette at left -->
+        <circle cx="60" cy="130" r="8" fill="#9ca3af"/>
+        <line x1="60" y1="138" x2="60" y2="158" stroke="#9ca3af" stroke-width="2"/>
+        <line x1="52" y1="145" x2="68" y2="145" stroke="#9ca3af" stroke-width="2"/>
+
+        <!-- Sign at 10m mark (scaled small) -->
+        <rect x="215" y="120" width="28" height="35" rx="2" fill="#f8f9fa" stroke="#002684" stroke-width="1"/>
+        <rect x="215" y="120" width="28" height="8" rx="2" fill="#002684"/>
+        <!-- tiny hex -->
+        <polygon points="229,142 225.7,136.2 219.3,136.2 216,142 219.3,147.8 225.7,147.8" fill="rgba(0,38,132,0.2)" stroke="#002684" stroke-width="0.5"/>
+        <!-- Ground post -->
+        <line x1="229" y1="155" x2="229" y2="160" stroke="#9ca3af" stroke-width="1.5"/>
+
+        <!-- Distance line zone 1 -->
+        <line x1="60" y1="170" x2="229" y2="170" stroke="#6b7280" stroke-width="0.8" stroke-dasharray="4,3" marker-end="url(#arrowhead)"/>
+        <text x="145" y="184" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#374151" font-weight="bold">10m</text>
+        <text x="145" y="196" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">Awareness zone</text>
+
+        <!-- Zone label -->
+        <text x="229" y="112" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#002684" font-weight="bold">R = 90mm</text>
+        <text x="229" y="105" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">hex min size</text>
+
+        <!-- Zone 2: 2m — Engagement -->
+        <circle cx="370" cy="130" r="9" fill="#6b7280"/>
+        <line x1="370" y1="139" x2="370" y2="158" stroke="#6b7280" stroke-width="2"/>
+        <line x1="362" y1="146" x2="378" y2="146" stroke="#6b7280" stroke-width="2"/>
+
+        <!-- Sign at 2m mark -->
+        <rect x="480" y="110" width="50" height="50" rx="3" fill="#f8f9fa" stroke="#002684" stroke-width="1.5"/>
+        <rect x="480" y="110" width="50" height="12" rx="3" fill="#002684"/>
+        <text x="505" y="119.5" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="5.5" fill="white" font-weight="bold">DTPR</text>
+        <polygon points="505,143 499,132.6 487,132.6 481,143 487,153.4 499,153.4" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1"/>
+        <text x="493" y="147" text-anchor="middle" font-size="7">📷</text>
+        <line x1="505" y1="160" x2="505" y2="160" stroke="#9ca3af" stroke-width="1.5"/>
+        <!-- Post -->
+        <line x1="505" y1="160" x2="505" y2="160" stroke="#9ca3af" stroke-width="1.5"/>
+
+        <!-- Distance line zone 2 -->
+        <line x1="370" y1="170" x2="505" y2="170" stroke="#6b7280" stroke-width="0.8" stroke-dasharray="4,3" marker-end="url(#arrowhead)"/>
+        <text x="437" y="184" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#374151" font-weight="bold">2m</text>
+        <text x="437" y="196" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">Engagement zone</text>
+
+        <!-- Zone label -->
+        <text x="505" y="103" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#002684" font-weight="bold">R = 36mm</text>
+        <text x="505" y="96" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">hex min size</text>
+
+        <!-- Zone 3: 0.5m — Scan -->
+        <circle cx="610" cy="130" r="10" fill="#374151"/>
+        <line x1="610" y1="140" x2="610" y2="158" stroke="#374151" stroke-width="2"/>
+        <line x1="602" y1="147" x2="618" y2="147" stroke="#374151" stroke-width="2"/>
+        <!-- Phone in hand -->
+        <rect x="620" y="140" width="12" height="18" rx="2" fill="#111" stroke="#6b7280" stroke-width="0.8"/>
+        <rect x="621" y="142" width="10" height="14" rx="1" fill="#bae6ed" opacity="0.8"/>
+
+        <!-- Full detail sign at 0.5m -->
+        <rect x="680" y="95" width="65" height="65" rx="4" fill="#f8f9fa" stroke="#002684" stroke-width="2"/>
+        <rect x="680" y="95" width="65" height="18" rx="4" fill="#002684"/>
+        <rect x="680" y="104" width="65" height="9" fill="#002684"/>
+        <text x="712.5" y="107" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="white" font-weight="bold">DTPR</text>
+        <!-- Two hexes -->
+        <polygon points="700,131 695.7,123.5 687.3,123.5 683,131 687.3,138.5 695.7,138.5" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1"/>
+        <text x="691.5" y="135" text-anchor="middle" font-size="7">📷</text>
+        <polygon points="722,131 717.7,123.5 709.3,123.5 705,131 709.3,138.5 717.7,138.5" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1"/>
+        <text x="713.5" y="135" text-anchor="middle" font-size="7">🔊</text>
+        <!-- QR -->
+        <rect x="728" y="122" width="13" height="13" rx="1" fill="none" stroke="#002684" stroke-width="0.8"/>
+        <rect x="730" y="124" width="3" height="3" fill="#002684"/>
+        <rect x="736" y="124" width="3" height="3" fill="#002684"/>
+        <rect x="730" y="130" width="3" height="3" fill="#002684"/>
+        <!-- Chartreuse strip -->
+        <rect x="680" y="156" width="65" height="4" fill="#c6e93d"/>
+
+        <!-- Distance line zone 3 -->
+        <line x1="610" y1="170" x2="680" y2="170" stroke="#6b7280" stroke-width="0.8" stroke-dasharray="4,3" marker-end="url(#arrowhead)"/>
+        <text x="645" y="184" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#374151" font-weight="bold">0.5m</text>
+        <text x="645" y="196" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">Scan / Read zone</text>
+
+        <!-- Zone label -->
+        <text x="712.5" y="88" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#002684" font-weight="bold">R = 22mm</text>
+        <text x="712.5" y="81" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">standard panel</text>
+      </svg>
+
+      <table class="scale-table" style="margin-top:1.5rem;">
+        <thead>
+          <tr>
+            <th class="row-head">Zone</th>
+            <th>Distance</th>
+            <th>Hex R min</th>
+            <th>Icon size min</th>
+            <th>Text min size</th>
+            <th>QR code min</th>
+            <th>What must be readable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="context-label">Awareness</td>
+            <td>10m+</td>
+            <td><span class="spec-chip">90mm</span></td>
+            <td>60mm</td>
+            <td>18pt / 6mm x-height</td>
+            <td>Not required</td>
+            <td>DTPR wordmark, number of hexes present, primary icon silhouettes</td>
+          </tr>
+          <tr>
+            <td class="context-label">Engagement</td>
+            <td>1–2m</td>
+            <td><span class="spec-chip">36mm</span></td>
+            <td>24mm</td>
+            <td>9pt / 3mm x-height</td>
+            <td>70×70mm min</td>
+            <td>Icon labels, category text, QR code scannable, operator brief text</td>
+          </tr>
+          <tr>
+            <td class="context-label">Read / Scan</td>
+            <td>0.3–0.5m</td>
+            <td><span class="spec-chip">22mm</span></td>
+            <td>15mm</td>
+            <td>7pt / 2.3mm x-height</td>
+            <td>35×35mm min</td>
+            <td>All footer text, data retention, purpose statement, operator name</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Digital viewport grid -->
+  <h2 style="font-family:var(--font-serif); font-size:1.5rem; color:var(--navy); margin:2rem 0 0.5rem;">Digital Viewport Transformations</h2>
+  <p style="color:var(--gray-600); margin-bottom:1rem;">How DTPR's visual system adapts across four canonical digital breakpoints, from QR-scan mobile entry to desktop documentation.</p>
+
+  <div class="viewport-grid">
+    <!-- 320px — Mobile S (QR scan landing) -->
+    <div class="viewport-card">
+      <div class="viewport-card-header">
+        Mobile S <span>320px</span>
+      </div>
+      <div class="viewport-preview">
+        <svg viewBox="0 0 100 200" width="100" height="200" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="96" height="196" rx="8" fill="#111" stroke="#374151" stroke-width="1.5"/>
+          <rect x="5" y="12" width="90" height="178" rx="4" fill="#fff"/>
+          <rect x="35" y="4" width="30" height="5" rx="2.5" fill="#374151"/>
+          <!-- Header -->
+          <rect x="5" y="12" width="90" height="16" rx="4" fill="#002684"/>
+          <text x="50" y="23" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="5" fill="white" font-weight="bold">DTPR Icon Guide</text>
+          <!-- Single hex, large -->
+          <polygon points="50,65 41.4,50.5 24.2,50.5 15.6,65 24.2,79.5 41.4,79.5" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1.2"/>
+          <circle cx="33" cy="65" r="8" fill="#002684" opacity="0.7"/>
+          <text x="33" y="68.5" text-anchor="middle" font-size="7" fill="white">📷</text>
+          <!-- Headline -->
+          <text x="50" y="92" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="5.5" fill="#002684" font-weight="bold">You scanned a DTPR sign</text>
+          <!-- Body text -->
+          <text x="50" y="102" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="4.5" fill="#6b7280">A camera records video here.</text>
+          <text x="50" y="110" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="4.5" fill="#6b7280">You have a right to know.</text>
+          <!-- CTA -->
+          <rect x="12" y="116" width="76" height="12" rx="2" fill="#c6e93d"/>
+          <text x="50" y="125" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4.5" fill="#002684" font-weight="bold">See all 7 questions →</text>
+          <!-- Rating -->
+          <text x="20" y="145" font-size="9">😟</text>
+          <text x="34" y="145" font-size="9">😐</text>
+          <text x="48" y="145" font-size="9">😊</text>
+          <text x="62" y="145" font-size="9">🎉</text>
+          <text x="50" y="155" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4" fill="#9ca3af">How do you feel?</text>
+          <!-- Bottom link -->
+          <text x="50" y="175" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4" fill="#3b85d4">What is DTPR? →</text>
+          <!-- Home bar -->
+          <rect x="30" y="183" width="40" height="3" rx="1.5" fill="#374151"/>
+        </svg>
+      </div>
+      <div class="viewport-specs">
+        <dl>
+          <dt>Recipe</dt><dd>C — Commons</dd>
+          <dt>Layout</dt><dd>Single column</dd>
+          <dt>Hex R</dt><dd>16px UI</dd>
+          <dt>Nav</dt><dd>Hidden (back button)</dd>
+          <dt>Font</dt><dd>Source Sans 3, 16px body</dd>
+          <dt>Columns</dt><dd>1 col, 16px gutter</dd>
+          <dt>CAA</dt><dd>CAA-02 Icon Guide</dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- 428px — Mobile L (QR expanded) -->
+    <div class="viewport-card">
+      <div class="viewport-card-header">
+        Mobile L <span>428px</span>
+      </div>
+      <div class="viewport-preview">
+        <svg viewBox="0 0 130 200" width="130" height="200" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="126" height="196" rx="8" fill="#111" stroke="#374151" stroke-width="1.5"/>
+          <rect x="5" y="12" width="120" height="178" rx="4" fill="#fff"/>
+          <rect x="45" y="4" width="40" height="5" rx="2.5" fill="#374151"/>
+          <!-- Header -->
+          <rect x="5" y="12" width="120" height="16" rx="4" fill="#002684"/>
+          <text x="65" y="23" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="5" fill="white" font-weight="bold">DTPR · Icon Guide</text>
+          <!-- Two hexes side by side -->
+          <polygon points="45,60 38,47.9 24,47.9 17,60 24,72.1 38,72.1" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1.2"/>
+          <circle cx="31" cy="60" r="7" fill="#002684" opacity="0.7"/>
+          <text x="31" y="63.5" text-anchor="middle" font-size="6" fill="white">📷</text>
+          <text x="31" y="80" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4" fill="#002684">VIDEO</text>
+          <polygon points="85,60 78,47.9 64,47.9 57,60 64,72.1 78,72.1" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1.2"/>
+          <circle cx="71" cy="60" r="7" fill="#002684" opacity="0.7"/>
+          <text x="71" y="63.5" text-anchor="middle" font-size="6" fill="white">🔊</text>
+          <text x="71" y="80" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4" fill="#002684">AUDIO</text>
+          <!-- Headline -->
+          <text x="65" y="92" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="5.5" fill="#002684" font-weight="bold">Technology in this space</text>
+          <text x="65" y="100" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="5.5" fill="#002684" font-weight="bold">is collecting this data:</text>
+          <text x="65" y="112" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="4.5" fill="#6b7280">Operated by: City of Boston</text>
+          <text x="65" y="120" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="4.5" fill="#6b7280">Purpose: Transit safety monitoring</text>
+          <!-- Detail expand -->
+          <rect x="10" y="128" width="110" height="22" rx="3" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="0.8"/>
+          <text x="65" y="139" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="4.5" fill="#002684">📷 Video — Face blurred, 30-day retention</text>
+          <text x="65" y="147" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4" fill="#3b85d4">See full datachain →</text>
+          <!-- CTA -->
+          <rect x="10" y="155" width="110" height="12" rx="2" fill="#c6e93d"/>
+          <text x="65" y="163.5" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4.5" fill="#002684" font-weight="bold">Submit anonymous feedback →</text>
+          <!-- Home bar -->
+          <rect x="40" y="183" width="50" height="3" rx="1.5" fill="#374151"/>
+        </svg>
+      </div>
+      <div class="viewport-specs">
+        <dl>
+          <dt>Recipe</dt><dd>C — Commons</dd>
+          <dt>Layout</dt><dd>1 col, 2-hex row</dd>
+          <dt>Hex R</dt><dd>24px (icon grid)</dd>
+          <dt>Nav</dt><dd>Minimal top bar</dd>
+          <dt>Font</dt><dd>Source Sans 3, 17px body</dd>
+          <dt>Columns</dt><dd>1 col, 20px gutter</dd>
+          <dt>CAA</dt><dd>CAA-02 expanded</dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- 768px — Tablet (Taxonomy explorer / Deployer) -->
+    <div class="viewport-card">
+      <div class="viewport-card-header">
+        Tablet <span>768px</span>
+      </div>
+      <div class="viewport-preview">
+        <svg viewBox="0 0 200 160" width="200" height="160" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="196" height="156" rx="6" fill="#d1d5db" stroke="#9ca3af" stroke-width="1"/>
+          <rect x="6" y="6" width="188" height="148" rx="4" fill="#fff"/>
+          <!-- Nav bar -->
+          <rect x="6" y="6" width="188" height="18" rx="4" fill="#002684"/>
+          <text x="20" y="18" font-family="'JetBrains Mono',monospace" font-size="6" fill="white" font-weight="bold">DTPR</text>
+          <text x="60" y="18" font-family="'JetBrains Mono',monospace" font-size="5" fill="rgba(255,255,255,0.7)">Taxonomy · Deploy · Developer</text>
+          <!-- Sidebar -->
+          <rect x="6" y="24" width="46" height="130" rx="0" fill="#f9fafb" stroke="none"/>
+          <line x1="52" y1="24" x2="52" y2="154" stroke="#e5e7eb" stroke-width="0.8"/>
+          <text x="29" y="36" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="5" fill="#002684" font-weight="bold">DEVICE</text>
+          <text x="29" y="46" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4.5" fill="#6b7280">Video</text>
+          <text x="29" y="54" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4.5" fill="#6b7280">Audio</text>
+          <text x="29" y="62" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4.5" fill="#6b7280">Network</text>
+          <text x="29" y="70" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4.5" fill="#6b7280">Sensor</text>
+          <line x1="8" y1="75" x2="50" y2="75" stroke="#e5e7eb" stroke-width="0.6"/>
+          <text x="29" y="83" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="5" fill="#002684" font-weight="bold">AI</text>
+          <text x="29" y="91" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4.5" fill="#6b7280">Decision</text>
+          <text x="29" y="99" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4.5" fill="#6b7280">Inference</text>
+          <!-- Main content: hex grid -->
+          <polygon points="90,52 84,41.6 72,41.6 66,52 72,62.4 84,62.4" fill="rgba(0,38,132,0.08)" stroke="#002684" stroke-width="0.8"/>
+          <text x="78" y="55.5" text-anchor="middle" font-size="6">📷</text>
+          <polygon points="115,52 109,41.6 97,41.6 91,52 97,62.4 109,62.4" fill="rgba(198,233,61,0.2)" stroke="#c6e93d" stroke-width="1"/>
+          <text x="103" y="55.5" text-anchor="middle" font-size="6">🔊</text>
+          <polygon points="140,52 134,41.6 122,41.6 116,52 122,62.4 134,62.4" fill="rgba(0,38,132,0.08)" stroke="#002684" stroke-width="0.8"/>
+          <text x="128" y="55.5" text-anchor="middle" font-size="6">🌡️</text>
+          <polygon points="165,52 159,41.6 147,41.6 141,52 147,62.4 159,62.4" fill="rgba(0,38,132,0.08)" stroke="#002684" stroke-width="0.8"/>
+          <text x="153" y="55.5" text-anchor="middle" font-size="6">🤖</text>
+          <!-- Detail panel -->
+          <rect x="58" y="72" width="135" height="50" rx="3" fill="#f8f9fa" stroke="#c6e93d" stroke-width="1"/>
+          <text x="65" y="82" font-family="'JetBrains Mono',monospace" font-size="5" fill="#002684" font-weight="bold">🔊 AUDIO — Active</text>
+          <text x="65" y="92" font-family="'Source Sans 3',sans-serif" font-size="4.5" fill="#4b5563">Microphone array. Voice data anonymized</text>
+          <text x="65" y="100" font-family="'Source Sans 3',sans-serif" font-size="4.5" fill="#4b5563">at source. Operator: City of Boston</text>
+          <text x="65" y="110" font-family="'JetBrains Mono',monospace" font-size="4.5" fill="#3b85d4">View full datachain · API record</text>
+          <!-- Filter bar -->
+          <text x="58" y="130" font-family="'JetBrains Mono',monospace" font-size="4.5" fill="#6b7280">Filter:</text>
+          <rect x="72" y="124" width="20" height="8" rx="2" fill="#002684"/>
+          <text x="82" y="130" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4" fill="white">All</text>
+          <rect x="95" y="124" width="22" height="8" rx="2" fill="#f3f4f6"/>
+          <text x="106" y="130" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4" fill="#6b7280">Video</text>
+          <rect x="120" y="124" width="22" height="8" rx="2" fill="#f3f4f6"/>
+          <text x="131" y="130" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4" fill="#6b7280">Audio</text>
+        </svg>
+      </div>
+      <div class="viewport-specs">
+        <dl>
+          <dt>Recipe</dt><dd>B — Maker</dd>
+          <dt>Layout</dt><dd>Sidebar + main</dd>
+          <dt>Hex R</dt><dd>24px icon grid</dd>
+          <dt>Nav</dt><dd>Top bar + sidebar</dd>
+          <dt>Font</dt><dd>JetBrains Mono headers</dd>
+          <dt>Columns</dt><dd>2 col (200+fluid)</dd>
+          <dt>CAA</dt><dd>CAA-03 Taxonomy Explorer</dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- 1280px — Desktop (documentation / deployer) -->
+    <div class="viewport-card">
+      <div class="viewport-card-header">
+        Desktop <span>1280px</span>
+      </div>
+      <div class="viewport-preview">
+        <svg viewBox="0 0 260 180" width="260" height="180" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="256" height="165" rx="4" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+          <rect x="5" y="5" width="250" height="155" rx="3" fill="#fff"/>
+          <!-- Monitor stand -->
+          <line x1="130" y1="167" x2="130" y2="178" stroke="#9ca3af" stroke-width="2"/>
+          <rect x="100" y="175" width="60" height="5" rx="2" fill="#9ca3af"/>
+          <!-- Nav -->
+          <rect x="5" y="5" width="250" height="16" rx="3" fill="#002684"/>
+          <text x="15" y="15.5" font-family="'JetBrains Mono',monospace" font-size="5.5" fill="white" font-weight="bold">DTPR</text>
+          <text x="48" y="15.5" font-family="'Source Sans 3',sans-serif" font-size="4.5" fill="rgba(255,255,255,0.7)">Taxonomy   Deploy Guide   Developer   Governance   About</text>
+          <text x="245" y="15.5" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="4" fill="rgba(255,255,255,0.5)">dtpr.io</text>
+
+          <!-- Three column layout -->
+          <!-- Left sidebar -->
+          <rect x="5" y="21" width="50" height="139" fill="#f9fafb"/>
+          <line x1="55" y1="21" x2="55" y2="160" stroke="#e5e7eb" stroke-width="0.8"/>
+          <text x="30" y="31" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4.5" fill="#002684" font-weight="bold">Deployment Guide</text>
+          <text x="30" y="40" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4" fill="#6b7280">Overview</text>
+          <text x="30" y="48" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4" fill="#3b85d4">→ Assess tech type</text>
+          <text x="30" y="56" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4" fill="#6b7280">Map to taxonomy</text>
+          <text x="30" y="64" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4" fill="#6b7280">Order signage</text>
+          <text x="30" y="72" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4" fill="#6b7280">ISO co-placement</text>
+          <text x="30" y="80" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4" fill="#6b7280">Feedback portal</text>
+
+          <!-- Main content -->
+          <text x="65" y="33" font-family="'Playfair Display',serif" font-size="8" fill="#002684" font-weight="bold">Step 2: Map your technology to the taxonomy</text>
+          <text x="65" y="44" font-family="'Source Sans 3',sans-serif" font-size="4.5" fill="#4b5563">Select the categories that apply to your deployment. Each category maps to one of the 7 core DTPR taxonomy questions.</text>
+
+          <!-- Hex grid in main -->
+          <polygon points="80,72 75.7,64.5 67.3,64.5 63,72 67.3,79.5 75.7,79.5" fill="rgba(0,38,132,0.08)" stroke="#002684" stroke-width="0.8"/>
+          <text x="71.5" y="75" text-anchor="middle" font-size="5">📷</text>
+          <text x="71.5" y="83" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="3.5" fill="#002684">VIDEO</text>
+
+          <polygon points="100,72 95.7,64.5 87.3,64.5 83,72 87.3,79.5 95.7,79.5" fill="rgba(198,233,61,0.25)" stroke="#c6e93d" stroke-width="1"/>
+          <text x="91.5" y="75" text-anchor="middle" font-size="5">🔊</text>
+          <text x="91.5" y="83" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="3.5" fill="#4d5c00">AUDIO ✓</text>
+
+          <polygon points="120,72 115.7,64.5 107.3,64.5 103,72 107.3,79.5 115.7,79.5" fill="rgba(0,38,132,0.08)" stroke="#002684" stroke-width="0.8"/>
+          <text x="111.5" y="75" text-anchor="middle" font-size="5">🌡️</text>
+          <text x="111.5" y="83" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="3.5" fill="#002684">SENSOR</text>
+
+          <polygon points="140,72 135.7,64.5 127.3,64.5 123,72 127.3,79.5 135.7,79.5" fill="rgba(0,38,132,0.08)" stroke="#002684" stroke-width="0.8"/>
+          <text x="131.5" y="75" text-anchor="middle" font-size="5">🤖</text>
+          <text x="131.5" y="83" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="3.5" fill="#002684">AI</text>
+
+          <!-- Progress and CTA -->
+          <rect x="63" y="95" width="120" height="4" rx="2" fill="#e5e7eb"/>
+          <rect x="63" y="95" width="72" height="4" rx="2" fill="#c6e93d"/>
+          <text x="63" y="106" font-family="'JetBrains Mono',monospace" font-size="3.5" fill="#6b7280">60% — 3 of 5 steps complete</text>
+          <rect x="63" y="110" width="55" height="9" rx="2" fill="#002684"/>
+          <text x="90.5" y="117" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4" fill="white">Next: Order Signage →</text>
+
+          <!-- Right sidebar: context / help -->
+          <line x1="200" y1="21" x2="200" y2="160" stroke="#e5e7eb" stroke-width="0.8"/>
+          <text x="228" y="31" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4.5" fill="#002684" font-weight="bold">Quick Links</text>
+          <text x="228" y="40" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="3.5" fill="#3b85d4">Taxonomy builder →</text>
+          <text x="228" y="48" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="3.5" fill="#3b85d4">ISO co-placement guide →</text>
+          <text x="228" y="56" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="3.5" fill="#3b85d4">Order sign panels →</text>
+          <line x1="202" y1="62" x2="253" y2="62" stroke="#e5e7eb" stroke-width="0.6"/>
+          <text x="228" y="70" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="4" fill="#002684" font-weight="bold">Need Help?</text>
+          <text x="228" y="78" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="3.5" fill="#6b7280">Join the DTPR Slack →</text>
+        </svg>
+      </div>
+      <div class="viewport-specs">
+        <dl>
+          <dt>Recipe</dt><dd>A — Regulatory</dd>
+          <dt>Layout</dt><dd>3-col (nav+main+context)</dd>
+          <dt>Hex R</dt><dd>32px+ icon grid</dd>
+          <dt>Nav</dt><dd>Full top bar + left sidebar</dd>
+          <dt>Font</dt><dd>Playfair headings, Source Sans body</dd>
+          <dt>Columns</dt><dd>3 col (200+fluid+200)</dd>
+          <dt>CAA</dt><dd>CAA-04 Deployment Playbook</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <!-- Transformation rules -->
+  <h2 style="font-family:var(--font-serif); font-size:1.5rem; color:var(--navy); margin:2rem 0 0.5rem;">Transformation Rules by Sprint Recipe</h2>
+  <p style="color:var(--gray-600); margin-bottom:1.5rem;">Each recipe defines its own transformation envelope — the specific rules for how form elements respond to context. These are not just breakpoints; they are semantic shifts in how the system presents itself.</p>
+
+  <div class="transformation-card">
+    <h3>Recipe A — Regulatory Track: Strict Cascade</h3>
+    <p>Regulatory contexts require predictability above flexibility. The grid never breaks — it compresses to accommodate fewer items, not to create new layouts.</p>
+    <ul class="rule-list">
+      <li><span class="rule-trigger">≥ 1280px</span>Full 3-column doc layout. Persistent sidebar. All hex icons at 32px+. Full footer with operator metadata.</li>
+      <li><span class="rule-trigger">768–1279px</span>2-column layout (sidebar collapses to top nav). Hex icons at 24px. Footer remains full.</li>
+      <li><span class="rule-trigger">428–767px</span>Single column. Sidebar becomes accordion. Hex icons at 20px. QR code moves above footer.</li>
+      <li><span class="rule-trigger">≤ 427px</span>Single column. No sidebar. Hex icons at 16px. Body text 16px minimum. All non-essential chrome removed. "Survival mode" — only data disclosure and feedback CTA visible.</li>
+    </ul>
+  </div>
+
+  <div class="transformation-card">
+    <h3>Recipe B — Maker Track: Fluid Overlay</h3>
+    <p>Developer and taxonomy contexts prioritize content density and interaction. The grid expands to fill available space; sidebar is always present on 768px+.</p>
+    <ul class="rule-list">
+      <li><span class="rule-trigger">≥ 1280px</span>Full taxonomy explorer. 4+ hex columns. Filter bar always visible. Detail panel right-rail. Code blocks full-width.</li>
+      <li><span class="rule-trigger">768–1279px</span>Left sidebar + 3-column hex grid. Detail panel slides up from bottom. Code blocks responsive-scroll.</li>
+      <li><span class="rule-trigger">428–767px</span>No sidebar (filter becomes dropdown). 2-column hex grid. Detail panel full-screen overlay on tap.</li>
+      <li><span class="rule-trigger">≤ 427px</span>1-column hex list (not grid). Tap to expand detail. Code blocks horizontal-scroll. Graph-paper texture removed.</li>
+    </ul>
+  </div>
+
+  <div class="transformation-card">
+    <h3>Recipe C — Commons Track: Progressive Disclosure</h3>
+    <p>Citizen-facing contexts operate mobile-first by definition (QR scan arrivals). Desktop is never the primary context — desktop views should redirect to the deployer or developer entry.</p>
+    <ul class="rule-list">
+      <li><span class="rule-trigger">≤ 427px</span>Primary context. Single column. One hex icon prominent. Plain-language disclosure. Rating CTA above fold. No nav chrome.</li>
+      <li><span class="rule-trigger">428–767px</span>2-hex row possible. Expand to show second technology type. Feedback form inline.</li>
+      <li><span class="rule-trigger">≥ 768px</span>Redirect notice: "You're on a large screen. This page is designed for mobile QR-scan access. Are you a deployer or developer?" → route to correct persona entry.</li>
+    </ul>
+  </div>
+
+  <div class="sprint-legend">
+    <h4>FVS Transformation-Based Vocabulary — Summary</h4>
+    <ol>
+      <li><strong>Transformation ≠ just breakpoints:</strong> In FVS terms, the Process Box is transformation-based vocabulary — identification through a distinctive <em>process</em>, not a fixed form. Its variables map to semantic shifts (what the system says), not just visual ones. Recipe C at desktop redirects to a different recipe entirely: the transformation is a persona handoff, not a layout reflow.</li>
+      <li><strong>Physical-to-digital continuity:</strong> DTPR is unique in that the same brand system must operate at 10m outdoor viewing distance and 320px mobile. The hexagon unit's scale-agnostic formula (p.17) is what makes this coherent — the R formula is the bridge between physical and digital specs.</li>
+      <li><strong>Chartreuse as the constant:</strong> The chartreuse CTA accent is present at every breakpoint and in every recipe because it is the action-signal in the system. Residents tap it. Deployers click it. Developers see it as the selected state. It never disappears — even at minimum survival breakpoints.</li>
+      <li><strong>QR as the inflection point:</strong> The moment a citizen scans a QR code, the system switches from Recipe A (the physical sign's recipe) to Recipe C (the mobile landing's recipe). This deliberate recipe switch at the QR gateway is the most critical interaction handoff in the system and must be tested in all deployment scenarios.</li>
+    </ol>
+  </div>
+
+  <div class="page-nav">
+    <a href="19-iso-3864-matrix.html">← 19 ISO Matrix</a>
+    <a href="sprint-index.html">↑ System Prep Cover</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.3 · June 2026 · Superbloom Design · <a href="https://github.com/superbloom/dtpr-brand-identity" target="_blank" rel="noopener">view on GitHub</a> (forthcoming)</p>
+</footer>
+
+</body>
+</html>

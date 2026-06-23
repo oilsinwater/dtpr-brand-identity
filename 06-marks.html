@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>06 Marks &amp; Seals — DTPR Brand Identity Audit</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="dot"></span>DTPR · Brand Identity Audit</a>
+  <nav>
+    <a href="index.html">Cover</a>
+    <a href="01-evolution.html">01 Evolution</a>
+    <a href="02-dtpr-io.html">02 dtpr.io</a>
+    <a href="03-vision.html">03 vision</a>
+    <a href="04-makeshift.html">04 Makeshift</a>
+    <a href="05-docs.html">05 docs.dtpr</a>
+    <a href="06-marks.html" aria-current="page">06 Marks</a>
+    <a href="07-color.html">07 Color</a>
+    <a href="08-typography.html">08 Type</a>
+    <a href="09-iconography.html">09 Icons</a>
+    <a href="10-illustrations.html">10 Illustrations</a>
+    <a href="11-voice.html">11 Voice</a>
+    <a href="12-findings.html">12 Findings</a>
+    <a href="sprint-index.html" class="nav-split-link">Visual System Prep →</a>
+  </nav>
+  <span class="badge-draft">v0.3 · audit</span>
+</header>
+
+<main>
+  <span class="eyebrow">06 · Marks &amp; seals</span>
+  <h1>The DTPR mark, in all its forms</h1>
+  <p class="lede">The hexagon is the brand's atomic unit. The canonical mark is a hexagon with an inner circle and a small offset square. Three SVG variants (blue, black, outline) live on vision.dtpr.io. Plus three 2020-era proposal seals, plus an event-specific layered mark for Makeshift. This is the visual element everyone agrees on — the rest of the brand is in tension around it.</p>
+
+  <div class="tag-row">
+    <span class="tag observed">OBSERVED</span>
+    <span class="tag source-vision">vision.dtpr.io</span>
+    <span class="tag source-makeshift">Makeshift</span>
+  </div>
+
+  <hr>
+
+  <h2>Canonical mark — three lockup variants</h2>
+
+  <p>Extracted directly from <code>vision.dtpr.io/images/</code>:</p>
+
+  <div class="grid-3">
+    <div class="mark-tile">
+      <img src="assets/marks/dtpr_logo_blue.svg" alt="DTPR mark — blue solid" style="width: 120px;">
+      <div class="label">DTPR_Logo_Blue.svg<br>28 × 32 viewBox<br><code>fill: #002684</code></div>
+    </div>
+    <div class="mark-tile">
+      <img src="assets/marks/dtpr_logo_black.svg" alt="DTPR mark — black solid" style="width: 120px;">
+      <div class="label">DTPR_Logo_Black.svg<br>36 × 36 viewBox<br><code>fill: #000000</code></div>
+    </div>
+    <div class="mark-tile on-light">
+      <img src="assets/marks/dtpr_logo_outline.svg" alt="DTPR mark — outline" style="width: 120px;">
+      <div class="label">DTPR_Logo_Outline.svg<br>28 × 32 viewBox<br>1.5px stroke, no fill</div>
+    </div>
+  </div>
+
+  <h3>Geometry breakdown</h3>
+
+  <p>Each variant is a hexagon with an inner circle and a small offset square inside the lower-right of the inner circle. The geometry is identical across the three; only the fill/stroke differs.</p>
+
+  <pre style="background: var(--gray-100); padding: 1rem; font-family: var(--font-mono); font-size: 0.75rem; overflow-x: auto; border-radius: 4px; line-height: 1.5">
+DTPR_Logo_Blue.svg (28×32 viewBox, blue solid):
+  Outer hexagon path:  M14,0 L28,8 L28,24 L14,32 L0,24 L0,8 Z
+  Inner circle:         r=8, centered at (14, 16) — visible as a "hole" via even-odd fill rule
+  Offset square:        7×8 unit, positioned at (10, 12) inside the lower-right of the circle
+
+DTPR_Logo_Black.svg (36×36 viewBox, black solid):
+  Same construction; the larger viewBox is the legacy of the Sketch-era source
+
+DTPR_Logo_Outline.svg (28×32 viewBox, stroke only):
+  Same construction; no fill, 1.5px black stroke
+  </pre>
+
+  <h2>Mark in context</h2>
+
+  <div class="grid-2">
+    <div class="mark-tile">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.6rem">
+        <img src="assets/marks/dtpr_logo_blue.svg" alt="" style="width: 36px;">
+        <span style="font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; color: var(--navy); letter-spacing: -0.01em">DTPR</span>
+      </div>
+      <div class="label">dtpr.io header lockup</div>
+    </div>
+    <div class="mark-tile dark">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.6rem">
+        <span style="font-family: var(--font-mono); font-weight: 800; font-size: 0.95rem; color: #fff; letter-spacing: 0.12em; text-transform: uppercase">MAKESHIFT 2026</span>
+      </div>
+      <div class="label" style="color: rgba(255,255,255,0.7)">makeshift2026 wordmark (mono uppercase)</div>
+    </div>
+  </div>
+
+  <h2>Hexagon as container — the design system primitive</h2>
+
+  <figure>
+    <img src="assets/marks/hexagon.svg" alt="The DTPR hexagon container — the atomic unit of the design system" style="max-width: 200px;">
+    <figcaption>
+      <strong>dtpr_icons / container / hexagon.svg</strong>. The SVG metadata names it: <code>dtpr_icons / container / hexagon</code>. This is a deliberate architectural choice — the hexagon is not a logo, it is a <em>container</em>. The brand mark is a populated instance of this container. Source: Sketch 53 (2020). 36×36 viewBox with 4px translate offset. Stroke is 2px at <code>#000000</code>.
+    </figcaption>
+  </figure>
+
+  <h2>The three DTPR seals</h2>
+
+  <p>Three seal PNGs are referenced from the <code>vision.dtpr.io</code> image server. They read as 2020-era deployment-context seals, not as the brand mark. Status: archival, kept for reference.</p>
+
+  <div class="grid-3">
+    <div class="mark-tile">
+      <img src="assets/marks/seal_place.png" alt="Seal of Place" style="width: 130px;">
+      <div class="label">Seal_Place.png<br>~30KB · a place context</div>
+    </div>
+    <div class="mark-tile">
+      <img src="assets/marks/seal_sensor.png" alt="Seal of Sensor" style="width: 130px;">
+      <div class="label">Seal_Sensor.png<br>~30KB · a sensor context</div>
+    </div>
+    <div class="mark-tile">
+      <img src="assets/marks/seal_system.png" alt="Seal of System" style="width: 130px;">
+      <div class="label">Seal_System.png<br>~30KB · a system context</div>
+    </div>
+  </div>
+
+  <h2>Event-specific mark — Makeshift 2026</h2>
+
+  <figure>
+    <img src="assets/marks/makeshift_hexagon.svg" alt="The MakeShift 2026 layered hexagonal mark" style="max-width: 480px; margin: 0 auto;">
+    <figcaption>
+      <strong>makeshift_hexagon.svg</strong> · 29KB · event-specific layered mark. A 7-layer hexagonal "city map" composition with axis labels (governance / community · power / infrastructure) and the "MAKE shift" wordmark in a sans + script combination. The script form is a bespoke drawn form — not a licensed font. <span class="tag proposed">PROPOSED</span> the brand book should explicitly mark this as event-specific and prevent it being mis-applied to a non-event surface.
+    </figcaption>
+  </figure>
+
+  <h2>Stewardship signatures</h2>
+
+  <p>DTPR is stewarded by Helpful Places. The stewardship signature appears in the footer of every page. It is not a co-brand — it is a trust signal.</p>
+
+  <div class="grid-2" style="align-items: center">
+    <div class="mark-tile">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.8rem">
+        <img src="assets/logos-partners/hp-black.png" alt="Helpful Places" style="height: 50px;">
+      </div>
+      <div class="label">helpful-places black monochrome</div>
+    </div>
+    <div>
+      <p>The Helpful Places mark on dtpr.io is the hexagonal grid "H E L P F U L P L A C E S" arrangement — a typographic mark, not a logo in the conventional sense. It appears in the dtpr.io footer block as the steward of the standard.</p>
+      <p class="small">Co-brand rules are pending the Stewardship Model sign-off. <span class="tag open">OPEN</span> — see foundation memo §6</p>
+    </div>
+  </div>
+
+  <h2>What the brand book has to decide</h2>
+
+  <div class="do-dont">
+    <div class="card do">
+      <div class="tag">Recommended</div>
+      <ul style="line-height: 1.8; padding-left: 1.2rem">
+        <li>Use the navy solid as the default mark</li>
+        <li>Adopt a 0.4× mark-height clearspace rule</li>
+        <li>Use the outline variant only on dark or busy backgrounds</li>
+        <li>Treat the layered hex as event-specific (not for general use)</li>
+      </ul>
+    </div>
+    <div class="card dont">
+      <div class="tag">Avoid</div>
+      <ul style="line-height: 1.8; padding-left: 1.2rem">
+        <li>Recolor the mark in arbitrary hues</li>
+        <li>Add drop shadows, bevels, or 3D effects</li>
+        <li>Containerize the mark in shapes that fight its geometry</li>
+        <li>Use the event-specific MakeShift mark on a non-event surface</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout open">
+    <p><strong>OPEN: canonical mark + wordmark lockup SVG.</strong> No formal lockup file exists. Each site constructs it by hand. The brand book should specify.</p>
+  </div>
+
+  <div class="callout open">
+    <p><strong>OPEN: clearspace and minimum size rules.</strong> No written rules exist. The 0.4× mark-height clearspace and 24px digital / 8mm print minimums are <span class="tag proposed">PROPOSED</span> in the previous version of this audit; they need team sign-off.</p>
+  </div>
+
+  <div class="page-nav">
+    <a href="05-docs.html">← 05 docs.dtpr.io</a>
+    <a href="07-color.html">07 Color →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.2 · June 2026 · Superbloom Design</p>
+</footer>
+
+</body>
+</html>

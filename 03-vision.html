@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>03 vision.dtpr.io — DTPR Brand Identity Audit</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="dot"></span>DTPR · Brand Identity Audit</a>
+  <nav>
+    <a href="index.html">Cover</a>
+    <a href="01-evolution.html">01 Evolution</a>
+    <a href="02-dtpr-io.html">02 dtpr.io</a>
+    <a href="03-vision.html" aria-current="page">03 vision</a>
+    <a href="04-makeshift.html">04 Makeshift</a>
+    <a href="05-docs.html">05 docs.dtpr</a>
+    <a href="06-marks.html">06 Marks</a>
+    <a href="07-color.html">07 Color</a>
+    <a href="08-typography.html">08 Type</a>
+    <a href="09-iconography.html">09 Icons</a>
+    <a href="10-illustrations.html">10 Illustrations</a>
+    <a href="11-voice.html">11 Voice</a>
+    <a href="12-findings.html">12 Findings</a>
+    <a href="sprint-index.html" class="nav-split-link">Visual System Prep →</a>
+  </nav>
+  <span class="badge-draft">v0.3 · audit</span>
+</header>
+
+<main>
+  <span class="eyebrow">03 · vision.dtpr.io</span>
+  <h1>The 2020 co-design prototype</h1>
+  <p class="lede">The origin of the hex mark, the data chain, the 147-element taxonomy, and the teal identifiability color. A speculative scrollytelling prototype from the Sidewalk Labs era. Now archival, but the most important source for the standard's actual visual language — the hex-based scenarios are the alternative the dtpr.io Corporate Memphis hero is competing against.</p>
+
+  <div class="tag-row">
+    <span class="tag observed">OBSERVED</span>
+    <span class="tag source-vision">vision.dtpr.io</span>
+    <a class="tag source-vision" href="https://vision.dtpr.io/" target="_blank" rel="noopener">vision.dtpr.io ↗</a>
+  </div>
+
+  <hr>
+
+  <h2>Hero / opening chapter</h2>
+
+  <figure>
+    <img src="assets/screenshots/vision-hero/vision-section1-hero.png" alt="vision.dtpr.io hero — dark navy band, large white display heading A Vision, the manifesto copy Join us on a journey that rejects the false dichotomy between privacy & convenience">
+    <figcaption>
+      <strong>Hero.</strong> A dark navy band at the top of the page with the display heading "A Vision" in white. Below the band, the manifesto copy reads: "Join us on a journey that rejects the false dichotomy between privacy &amp; convenience." This is one of the few places in the DTPR ecosystem where the brand makes a clear, value-stating claim. Tone here is closer to the foundation memo's "stronger opinion" direction than to "status quo."
+    </figcaption>
+  </figure>
+
+  <h2>The seven "How might we..." questions</h2>
+
+  <figure>
+    <img src="assets/screenshots/vision-hero/vision-section2-questions.png" alt="vision.dtpr.io 7 how-might-we questions, each with a small character illustration in teal and navy">
+    <figcaption>
+      <strong>Seven chapters.</strong> Each chapter is a "How might we..." question with a small character illustration in the standard's teal/navy palette. The seven questions are: (1) move seamlessly through places we love, and seamfully in places new to us; (2) understand how sensors work, and what they do for people; (3) look up from our phones, and strengthen the social fabric; (4) gain agency over technology, and enhance our experiences of a place; (5) get help from the built environment, and leave it better than we found it; (6) offer eyes on the street, with humans in the loop; (7) offer time-bound data sharing with ongoing control of choices.
+    </figcaption>
+  </figure>
+
+  <h2>Scenario cards — the hex-based grammar</h2>
+
+  <figure>
+    <img src="assets/screenshots/vision-hero/vision-section3-scenarios.png" alt="vision.dtpr.io scenario cards — vertical stacks of hexagons on light blue panels, each hexagon containing one taxonomy element">
+    <figcaption>
+      <strong>Scenario cards.</strong> Each scenario unfolds as a vertical stack of hexagons on a light-blue panel. Each hexagon hosts one taxonomy element (e.g. "Mobility", "Bikeshare Co.", "Hands free", "Membership"). The data chain composition is the same pattern reused for the taxonomy disclosure. This is the alternative visual grammar the brand book has to choose between — hex-based scenarios (vision) vs. Corporate Memphis cityscapes (dtpr.io).
+    </figcaption>
+  </figure>
+
+  <h2>Mid-page — full design system in use</h2>
+
+  <figure>
+    <img src="assets/screenshots/vision-hero/vision-section4-mid.png" alt="vision.dtpr.io mid-page showing scenario cards with character illustrations, hex icons inside hex containers, and the digital personal assistant mockup">
+    <figcaption>
+      <strong>Mid-page composition.</strong> A complete DTPR scenario laid out as a series of hex cards with character illustrations, hex-prefixed icons, and a "Your Digital Personal Assistant" mockup in the corner. The illustration style here is the standard's own — flat 2D characters, soft fills, no shadows — distinct from the Corporate Memphis aesthetic.
+    </figcaption>
+  </figure>
+
+  <h2>Source-code analysis</h2>
+
+  <p>The vision.dtpr.io source is a 196KB <code>main.css</code> that contains the full Bootstrap v4.6.2 distribution plus a custom theme. The color tokens are:</p>
+
+  <div class="callout audit">
+    <p><strong>From <code>vision.dtpr.io/main.css</code> :root block:</strong></p>
+    <pre style="background: var(--gray-100); padding: 1rem; font-family: var(--font-mono); font-size: 0.78rem; overflow-x: auto; border-radius: 4px; margin: 0.5rem 0 0">
+--blue:    #002684;   /* primary */
+--indigo:  #6610f2;
+--purple:  #6f42c1;
+--pink:    #e83e8c;
+--red:     #f04a4a;
+--orange:  #fd7e14;
+--yellow:  #ffc107;
+--green:   #0f5153;   /* success, identifiability, .text-green */
+--teal:    #20c997;
+--cyan:    #17a2b8;
+--secondary: #bae6ed;
+--white:   #fff;
+--gray:    #6c757d;
+--gray-dark: #343a40;
+--primary: #002684;
+--success: #0f5153;
+--info:    #17a2b8;
+--warning: #ffc107;
+--danger:  #f04a4a;
+--light:   #f8f9fa;
+--dark:    #343a40;
+    </pre>
+  </div>
+
+  <h2>What the brand book should keep from vision.dtpr.io</h2>
+
+  <div class="findings">
+    <div class="finding">
+      <h4>The canonical hexagon mark</h4>
+      <p>Three SVG variants (blue, black, outline) live at <code>vision.dtpr.io/images/DTPR_Logo_*.svg</code>. The blue solid is the default. See <a href="06-marks.html">page 06</a> for analysis.</p>
+      <p class="src">vision.dtpr.io/images/</p>
+    </div>
+    <div class="finding">
+      <h4>The hex container grammar</h4>
+      <p>The hexagon is not a logo — it is a container. <code>dtpr_icons / container / hexagon.svg</code> is the design-system primitive. Every scenario card is a stack of these. Every icon is one of these with content inside.</p>
+      <p class="src">vision.dtpr.io SVG metadata</p>
+    </div>
+    <div class="finding">
+      <h4>The teal identifiability color</h4>
+      <p><code>#0f5153</code> is the "identifiability" semantic in the taxonomy. It also functions as a text and section accent on vision.dtpr.io. This is the original use of teal in the system — the dtpr.io teal section is a downstream adoption of this same token.</p>
+      <p class="src">vision.dtpr.io Bootstrap vars</p>
+    </div>
+    <div class="finding">
+      <h4>The pale-teal secondary</h4>
+      <p><code>#bae6ed</code> is the tonal pair to teal. Currently only used on vision.dtpr.io. The brand book should decide whether to keep this or replace it with the makeshift pale-blue <code>#c2ddf5</code>.</p>
+      <p class="src">vision.dtpr.io Bootstrap vars</p>
+    </div>
+    <div class="finding">
+      <h4>The three seals</h4>
+      <p><code>Seal_Place</code>, <code>Seal_Sensor</code>, <code>Seal_System</code> are 2020-era proposal assets. They read as context seals, not as the brand mark. Status: archival, kept for reference.</p>
+      <p class="src">vision.dtpr.io/images/</p>
+    </div>
+    <div class="finding">
+      <h4>The seven "How might we..." questions</h4>
+      <p>Each chapter is a use-case for DTPR. Even if the scrollytelling mechanic is archival, the seven questions are a strong organizing principle for the standard's content strategy.</p>
+      <p class="src">vision.dtpr.io scrollytelling</p>
+    </div>
+  </div>
+
+  <h2>What the brand book should leave behind</h2>
+
+  <ul style="line-height: 1.9; margin-left: 1.4rem">
+    <li><strong>Horizontal-scroll scrollytelling.</strong> A 2020-era pattern that is now archival. Hard to navigate on mobile, no fallback, accessibility cost. The content can survive the pattern change.</li>
+    <li><strong>System-stack typography for body.</strong> Works as a fallback; not a brand choice. Red Hat Text (dtpr.io) or Source Sans (Makeshift) is a more deliberate choice.</li>
+    <li><strong>Minimal footer.</strong> No stewardship signature. The current dtpr.io footer is a clear improvement on this.</li>
+  </ul>
+
+  <div class="page-nav">
+    <a href="02-dtpr-io.html">← 02 dtpr.io</a>
+    <a href="04-makeshift.html">04 Makeshift →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.2 · June 2026 · Superbloom Design</p>
+</footer>
+
+</body>
+</html>

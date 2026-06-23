@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>19 ISO 3864 Integration Matrix — DTPR Brand Identity Audit</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .iso-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--r-md);
+    overflow: hidden;
+  }
+  .iso-matrix-table th {
+    background: var(--navy);
+    color: var(--white);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    padding: 0.85rem 1rem;
+    text-align: center;
+  }
+  .iso-matrix-table th.row-head {
+    text-align: left;
+    padding-left: 1.25rem;
+    width: 22%;
+  }
+  .iso-matrix-table td {
+    padding: 0.9rem 0.8rem;
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: 1px solid var(--gray-200);
+    background: var(--white);
+    font-size: 0.82rem;
+  }
+  .iso-matrix-table td.row-label {
+    background: var(--gray-50);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.82rem;
+    color: var(--navy);
+    text-align: left;
+    padding-left: 1.25rem;
+    border-right: 2px solid var(--gray-200);
+  }
+  .iso-matrix-table tr:hover td {
+    background: rgba(198, 233, 61, 0.04);
+  }
+  .iso-matrix-table tr:hover td.row-label {
+    background: rgba(198, 233, 61, 0.08);
+  }
+
+  /* Status indicators */
+  .status-badge {
+    display: inline-block;
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--r-sm);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  .status-ok { background: #dcfce7; color: #166534; }
+  .status-caution { background: #fef9c3; color: #854d0e; }
+  .status-conflict { background: #fee2e2; color: #991b1b; }
+  .status-defer { background: #f3f4f6; color: #6b7280; }
+
+  .color-swatch-row {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+  }
+  .color-swatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .swatch-rect {
+    width: 60px;
+    height: 40px;
+    border-radius: var(--r-sm);
+    border: 1px solid var(--gray-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+  }
+  .swatch-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--gray-600);
+    text-align: center;
+    max-width: 70px;
+  }
+
+  .iso-section {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 2.5rem;
+  }
+  .iso-section-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.85rem 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .iso-section-body {
+    padding: 1.5rem;
+  }
+  .iso-section-body p {
+    font-size: 0.88rem;
+    color: var(--gray-700);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .placement-diagram {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+  }
+  .placement-diagram svg {
+    flex-shrink: 0;
+  }
+  .placement-notes {
+    flex: 1;
+    min-width: 200px;
+  }
+  .placement-notes h4 {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  .placement-notes ul {
+    margin-left: 1.1rem;
+    font-size: 0.83rem;
+    color: var(--gray-700);
+    line-height: 1.7;
+  }
+
+  .sprint-legend {
+    background: rgba(198, 233, 61, 0.07);
+    border-left: 5px solid var(--chartreuse);
+    padding: 1.5rem;
+    border-radius: 0 var(--r-md) var(--r-md) 0;
+    margin: 2.5rem 0;
+  }
+  .sprint-legend h4 {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+  }
+  .sprint-legend ol {
+    margin-left: 1.2rem;
+    font-size: 0.92rem;
+    color: var(--gray-800);
+    line-height: 1.65;
+  }
+  .sprint-legend li { margin-bottom: 0.4rem; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="sprint-index.html"><span class="dot"></span>DTPR · Visual System Prep</a>
+  <nav>
+    <a href="index.html" class="nav-split-link">← Brand Audit</a>
+    <a href="sprint-index.html">Cover</a>
+    <a href="13-sprint-morphology.html">13 Form Box</a>
+    <a href="14-transformation-morphology.html">14 Process Box</a>
+    <a href="15-semantic-morphology.html">15 Semantic Box</a>
+    <a href="16-sprint-recipes.html">16 Recipes</a>
+    <a href="17-geometric-blueprint.html">17 Blueprint</a>
+    <a href="18-core-caa-assets.html">18 CAA Assets</a>
+    <a href="19-iso-3864-matrix.html" aria-current="page">19 ISO Matrix</a>
+    <a href="20-responsive-specs.html">20 Responsive</a>
+  </nav>
+  <span class="badge-draft">v0.3 · system prep</span>
+</header>
+
+<main>
+  <span class="eyebrow">19 · ISO 3864 Integration Matrix</span>
+  <h1>ISO 3864 Integration Matrix</h1>
+  <p class="lede">DTPR signs are placed in public spaces that already carry ISO 3864 safety signage. This matrix maps the relationship between DTPR's visual language and the ISO safety sign system — identifying where the systems align, where they need separation rules, and where conflicts must be resolved before physical deployment.</p>
+
+  <!-- Color Compatibility -->
+  <div class="iso-section">
+    <div class="iso-section-header">
+      Section 1 — Color System Compatibility
+      <span style="font-size:0.65rem; opacity:0.7;">ISO 3864-1:2011 · DTPR Brand System</span>
+    </div>
+    <div class="iso-section-body">
+      <p>ISO 3864 reserves four colors as signal colors with defined semantic meaning in public safety contexts. DTPR's brand palette must be mapped against these to avoid accidental semantic conflicts in co-placement scenarios.</p>
+
+      <div class="color-swatch-row">
+        <!-- ISO safety red -->
+        <div class="color-swatch">
+          <div class="swatch-rect" style="background:#D0021B; color:white;">ISO RED</div>
+          <div class="swatch-label">Prohibition / Fire equipment</div>
+        </div>
+        <!-- ISO safety yellow -->
+        <div class="color-swatch">
+          <div class="swatch-rect" style="background:#F5A623; color:#111;">ISO YELLOW</div>
+          <div class="swatch-label">Warning / Caution</div>
+        </div>
+        <!-- ISO safety green -->
+        <div class="color-swatch">
+          <div class="swatch-rect" style="background:#417505; color:white;">ISO GREEN</div>
+          <div class="swatch-label">Safe condition / Emergency</div>
+        </div>
+        <!-- ISO safety blue -->
+        <div class="color-swatch">
+          <div class="swatch-rect" style="background:#0057A8; color:white;">ISO BLUE</div>
+          <div class="swatch-label">Mandatory action</div>
+        </div>
+        <div style="width:2px; height:50px; background:var(--gray-200); align-self:center;"></div>
+        <!-- DTPR Navy -->
+        <div class="color-swatch">
+          <div class="swatch-rect" style="background:#002684; color:white;">#002684</div>
+          <div class="swatch-label">DTPR Navy (primary)</div>
+        </div>
+        <!-- DTPR Chartreuse -->
+        <div class="color-swatch">
+          <div class="swatch-rect" style="background:#c6e93d; color:#111;">#C6E93D</div>
+          <div class="swatch-label">DTPR Chartreuse (CTA)</div>
+        </div>
+        <!-- DTPR Amber -->
+        <div class="color-swatch">
+          <div class="swatch-rect" style="background:#FFC107; color:#111;">#FFC107</div>
+          <div class="swatch-label">DTPR Amber (accent)</div>
+        </div>
+      </div>
+
+      <table class="iso-matrix-table">
+        <thead>
+          <tr>
+            <th class="row-head">DTPR Color</th>
+            <th>ISO Safety Conflict?</th>
+            <th>Risk Level</th>
+            <th>Guidance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-label">#002684 Navy</td>
+            <td>Near ISO blue (#0057A8) — Mandatory action</td>
+            <td><span class="status-badge status-caution">⚠ Caution</span></td>
+            <td style="text-align:left; font-size:0.8rem;">Distinguish via saturation contrast (DTPR navy is darker, more saturated). Keep 50mm clear separation from ISO blue mandatory signs.</td>
+          </tr>
+          <tr>
+            <td class="row-label">#C6E93D Chartreuse</td>
+            <td>Not reserved by ISO 3864</td>
+            <td><span class="status-badge status-ok">✓ Safe</span></td>
+            <td style="text-align:left; font-size:0.8rem;">No ISO color conflict. Maintain role as CTA accent only — avoid using as a background field in signage contexts to prevent being read as a safety background.</td>
+          </tr>
+          <tr>
+            <td class="row-label">#FFC107 Amber</td>
+            <td>Adjacent to ISO yellow (#F5A623) — Warning</td>
+            <td><span class="status-badge status-conflict">✗ Conflict</span></td>
+            <td style="text-align:left; font-size:0.8rem;"><strong>Prohibited as a fill color in any physical DTPR sign component.</strong> Amber may appear as small icon accents (e.g. lamppost icon) inside the hex safe area only. Never use as a hex background or border.</td>
+          </tr>
+          <tr>
+            <td class="row-label">#f04a4a Red</td>
+            <td>ISO 3864 fire/prohibition red — Reserved</td>
+            <td><span class="status-badge status-conflict">✗ Conflict</span></td>
+            <td style="text-align:left; font-size:0.8rem;"><strong>Prohibited on physical signs.</strong> Use only in digital UI contexts for error states. Never use on printed or outdoor DTPR assets.</td>
+          </tr>
+          <tr>
+            <td class="row-label">#0f5153 Teal</td>
+            <td>Not reserved — distinguishable from ISO green</td>
+            <td><span class="status-badge status-ok">✓ Safe</span></td>
+            <td style="text-align:left; font-size:0.8rem;">Teal is dark enough to be distinct from ISO green (bright medium green). Safe for use as secondary text or icon accent in physical contexts.</td>
+          </tr>
+          <tr>
+            <td class="row-label">#bae6ed Pale Teal</td>
+            <td>Very light — not confused with ISO colors</td>
+            <td><span class="status-badge status-ok">✓ Safe</span></td>
+            <td style="text-align:left; font-size:0.8rem;">Safe as a background tint. Ensure contrast ratio ≥ 4.5:1 against text per WCAG AA / ISO 3864 legibility requirements.</td>
+          </tr>
+          <tr>
+            <td class="row-label">White #ffffff</td>
+            <td>ISO uses white for sign backgrounds</td>
+            <td><span class="status-badge status-caution">⚠ Caution</span></td>
+            <td style="text-align:left; font-size:0.8rem;">White DTPR panels may be read as general-purpose ISO sign backgrounds. Ensure DTPR wordmark is always present and well-separated from safety sign areas.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Shape Compatibility -->
+  <div class="iso-section">
+    <div class="iso-section-header">
+      Section 2 — Shape System Compatibility
+      <span style="font-size:0.65rem; opacity:0.7;">ISO 3864-1 Geometric Shapes</span>
+    </div>
+    <div class="iso-section-body">
+      <p>ISO 3864-1 defines geometric shape-meaning conventions for safety signs. DTPR's hexagon unit is not in the ISO reserved shape set but must observe minimum separation to avoid visual confusion with safety shapes in co-placement scenarios.</p>
+
+      <table class="iso-matrix-table">
+        <thead>
+          <tr>
+            <th class="row-head">ISO Shape</th>
+            <th>ISO Meaning</th>
+            <th>DTPR Conflict?</th>
+            <th>Status</th>
+            <th>Guidance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-label">Circle</td>
+            <td>Prohibition (red ring) or Mandatory (blue disc)</td>
+            <td>DTPR uses circles as icon fills inside hexes only</td>
+            <td><span class="status-badge status-caution">⚠ Caution</span></td>
+            <td style="text-align:left; font-size:0.8rem;">Never use standalone filled or bordered circles as DTPR panel shapes. Circles confined within hexagonal safe area are acceptable.</td>
+          </tr>
+          <tr>
+            <td class="row-label">Triangle</td>
+            <td>Warning / Hazard (yellow/black)</td>
+            <td>Not used by DTPR brand system</td>
+            <td><span class="status-badge status-ok">✓ Safe</span></td>
+            <td style="text-align:left; font-size:0.8rem;">No conflict. Triangles are available to DTPR for decorative elements if needed in the future, provided they are not yellow and do not resemble ISO warning triangles.</td>
+          </tr>
+          <tr>
+            <td class="row-label">Rectangle (Green)</td>
+            <td>Safe condition / Evacuation route</td>
+            <td>DTPR uses gray/white rectangles for text fields and labels</td>
+            <td><span class="status-badge status-ok">✓ Safe</span></td>
+            <td style="text-align:left; font-size:0.8rem;">DTPR rectangle text fields are white or light gray — no conflict with ISO green rectangles, which are a distinct hue.</td>
+          </tr>
+          <tr>
+            <td class="row-label">Hexagon</td>
+            <td>Not reserved by ISO 3864</td>
+            <td><span style="font-weight:700; color:#002684;">DTPR primary shape</span></td>
+            <td><span class="status-badge status-ok">✓ Safe</span></td>
+            <td style="text-align:left; font-size:0.8rem;">The hexagon is not an ISO reserved shape. DTPR has exclusive semantic claim to this shape in public digital trust signage. This is a strategic advantage — maintain shape purity.</td>
+          </tr>
+          <tr>
+            <td class="row-label">Square</td>
+            <td>Supplementary / Fire equipment (some standards)</td>
+            <td>DTPR uses squares for QR codes and panel backgrounds only</td>
+            <td><span class="status-badge status-ok">✓ Safe</span></td>
+            <td style="text-align:left; font-size:0.8rem;">QR code squares are standard and universally recognized. No semantic conflict in this specific application.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Physical Co-placement Rules -->
+  <div class="iso-section">
+    <div class="iso-section-header">
+      Section 3 — Physical Co-placement Rules
+      <span style="font-size:0.65rem; opacity:0.7;">Spatial Guidelines for Mounted Signage</span>
+    </div>
+    <div class="iso-section-body">
+      <p>When DTPR signs share a physical mounting surface (door frame, wall, post) with ISO 3864 safety signs, specific spatial rules apply to prevent the sign systems from being visually conflated.</p>
+
+      <div class="placement-diagram">
+        <svg viewBox="0 0 360 280" width="360" height="280" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="wall-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+              <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.05)" stroke-width="0.5"/>
+            </pattern>
+          </defs>
+          <!-- Wall background -->
+          <rect width="360" height="280" fill="#f3f4f6"/>
+          <rect width="360" height="280" fill="url(#wall-grid)"/>
+
+          <!-- Wall surface -->
+          <text x="180" y="22" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="8" fill="#9ca3af" letter-spacing="0.1em">WALL SURFACE</text>
+
+          <!-- ISO EXIT sign (green rectangle) -->
+          <rect x="30" y="40" width="80" height="50" rx="3" fill="#417505"/>
+          <text x="70" y="62" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="11" font-weight="bold" fill="white">EXIT</text>
+          <text x="70" y="76" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="rgba(255,255,255,0.8)">ISO Safe Condition</text>
+
+          <!-- Clear zone arrow from ISO sign right edge to DTPR left edge -->
+          <!-- DTPR panel at x=200 -->
+          <!-- ISO right edge: x=110, DTPR left edge: x=200, gap=90px → label 150mm -->
+          <line x1="110" y1="65" x2="200" y2="65" stroke="#f04a4a" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="110" y1="60" x2="110" y2="70" stroke="#f04a4a" stroke-width="1.5"/>
+          <line x1="200" y1="60" x2="200" y2="70" stroke="#f04a4a" stroke-width="1.5"/>
+          <text x="155" y="58" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#991b1b">min 150mm</text>
+          <text x="155" y="80" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#991b1b">clear zone</text>
+
+          <!-- DTPR panel -->
+          <rect x="200" y="35" width="130" height="90" rx="5" fill="#f8f9fa" stroke="#002684" stroke-width="1.5"/>
+          <rect x="200" y="35" width="130" height="22" rx="5" fill="#002684"/>
+          <rect x="200" y="47" width="130" height="10" fill="#002684"/>
+          <text x="215" y="50" font-family="'JetBrains Mono',monospace" font-size="7" font-weight="bold" fill="white">DTPR</text>
+          <text x="240" y="50" font-family="'Source Sans 3',sans-serif" font-size="6" fill="rgba(255,255,255,0.7)">Digital Trust</text>
+          <!-- Two hex icons -->
+          <polygon points="240,87 233,75.9 219,75.9 212,87 219,98.1 233,98.1" fill="rgba(0,38,132,0.08)" stroke="#002684" stroke-width="1"/>
+          <text x="226" y="90" text-anchor="middle" font-size="7" fill="#002684">📷</text>
+          <polygon points="290,87 283,75.9 269,75.9 262,87 269,98.1 283,98.1" fill="rgba(0,38,132,0.08)" stroke="#002684" stroke-width="1"/>
+          <text x="276" y="90" text-anchor="middle" font-size="7" fill="#002684">🔊</text>
+          <!-- QR -->
+          <rect x="302" y="60" width="22" height="22" rx="1" fill="none" stroke="#002684" stroke-width="0.8"/>
+          <rect x="304" y="62" width="4" height="4" fill="#002684"/>
+          <rect x="316" y="62" width="4" height="4" fill="#002684"/>
+          <rect x="304" y="74" width="4" height="4" fill="#002684"/>
+          <!-- Chartreuse strip -->
+          <rect x="200" y="120" width="130" height="5" rx="0" fill="#c6e93d"/>
+
+          <!-- ISO Warning sign below -->
+          <polygon points="75,175 105,225 45,225" fill="#F5A623" stroke="#111" stroke-width="2"/>
+          <text x="75" y="215" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="11" font-weight="bold" fill="#111">!</text>
+          <text x="75" y="238" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">ISO Warning</text>
+
+          <!-- Vertical separation from ISO sign above -->
+          <line x1="75" y1="92" x2="75" y2="165" stroke="#f04a4a" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="70" y1="92" x2="80" y2="92" stroke="#f04a4a" stroke-width="1.5"/>
+          <line x1="70" y1="165" x2="80" y2="165" stroke="#f04a4a" stroke-width="1.5"/>
+          <text x="95" y="130" font-family="'JetBrains Mono',monospace" font-size="7" fill="#991b1b">min 100mm</text>
+          <text x="95" y="140" font-family="'JetBrains Mono',monospace" font-size="6" fill="#991b1b">vertical gap</text>
+
+          <!-- DTPR Mandatory note area -->
+          <rect x="200" y="145" width="130" height="60" rx="5" fill="rgba(0,38,132,0.04)" stroke="#bae6ed" stroke-width="1.2" stroke-dasharray="4,3"/>
+          <text x="265" y="162" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#002684" font-weight="bold">PREFERRED ZONE</text>
+          <text x="265" y="172" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="6" fill="#6b7280">Place DTPR signs in</text>
+          <text x="265" y="181" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="6" fill="#6b7280">neutral wall zones, away</text>
+          <text x="265" y="190" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="6" fill="#6b7280">from concentrated safety</text>
+          <text x="265" y="199" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="6" fill="#6b7280">sign clusters.</text>
+
+          <!-- Legend -->
+          <line x1="30" y1="255" x2="50" y2="255" stroke="#f04a4a" stroke-width="1" stroke-dasharray="4,3"/>
+          <text x="55" y="258" font-family="'JetBrains Mono',monospace" font-size="6.5" fill="#991b1b">Required clear zone</text>
+          <line x1="170" y1="255" x2="190" y2="255" stroke="#bae6ed" stroke-width="1.2" stroke-dasharray="4,3"/>
+          <text x="195" y="258" font-family="'JetBrains Mono',monospace" font-size="6.5" fill="#002684">Preferred DTPR zone</text>
+        </svg>
+
+        <div class="placement-notes">
+          <h4>Horizontal Separation (Side-by-Side)</h4>
+          <ul>
+            <li>Minimum <strong>150mm</strong> clear between ISO sign right edge and DTPR panel left edge</li>
+            <li>Applies to all ISO color categories (red, yellow, green, blue)</li>
+            <li>At 10m+ viewing distance, increase to <strong>300mm</strong></li>
+          </ul>
+          <br>
+          <h4>Vertical Separation (Stacked)</h4>
+          <ul>
+            <li>Minimum <strong>100mm</strong> clear between ISO sign bottom edge and DTPR panel top edge</li>
+            <li>If DTPR is mounted above ISO sign: minimum <strong>200mm</strong> (viewer reads top-to-bottom, must not conflate)</li>
+          </ul>
+          <br>
+          <h4>Preferred Placement Zones</h4>
+          <ul>
+            <li>Door frames (left or right, not competing with egress signs)</li>
+            <li>Adjacent column or pillar surfaces — separated by physical break</li>
+            <li>Floor-level kiosks at 0.5–1.0m height (well below ISO sign mounting at 1.8–2.4m)</li>
+            <li>Avoid: fire equipment mounting surfaces, emergency route walls, and areas with ISO density &gt; 3 signs/m²</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Decision matrix -->
+  <div class="iso-section">
+    <div class="iso-section-header">
+      Section 4 — Deployment Decision Matrix
+      <span style="font-size:0.65rem; opacity:0.7;">Context-by-Context Guidance</span>
+    </div>
+    <div class="iso-section-body">
+      <table class="iso-matrix-table">
+        <thead>
+          <tr>
+            <th class="row-head">Deployment Context</th>
+            <th>ISO Density</th>
+            <th>DTPR Approach</th>
+            <th>Color Mode</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-label">Transit Station / Platform</td>
+            <td>High (egress + hazard signs)</td>
+            <td>Mount on kiosk at 1.0m height or pillar-face opposite egress signs</td>
+            <td>Navy + White (no amber)</td>
+            <td><span class="status-badge status-caution">⚠ Plan required</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Office Building Lobby</td>
+            <td>Low-medium (mandatory + fire)</td>
+            <td>Standard wall mount with 150mm clearance</td>
+            <td>Full brand palette</td>
+            <td><span class="status-badge status-ok">✓ Straightforward</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Outdoor Public Square</td>
+            <td>Variable — depends on local code</td>
+            <td>Standalone post mount preferred; lamppost attachment with authority approval</td>
+            <td>Navy + White + Chartreuse accent</td>
+            <td><span class="status-badge status-caution">⚠ Verify local code</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Hospital / Healthcare</td>
+            <td>Very High (all ISO categories)</td>
+            <td>Floor-level kiosk only; no wall mounting in clinical corridors</td>
+            <td>Navy + White only</td>
+            <td><span class="status-badge status-conflict">✗ Restricted zones</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Retail / Commercial Interior</td>
+            <td>Low (fire exits only)</td>
+            <td>Standard wall mount; eye-level preferred</td>
+            <td>Full brand palette</td>
+            <td><span class="status-badge status-ok">✓ Straightforward</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Industrial / Manufacturing</td>
+            <td>Very High (all ISO categories, dense)</td>
+            <td>Not recommended without specialist signage consultant review</td>
+            <td>Navy + White only</td>
+            <td><span class="status-badge status-defer">— Defer to specialist</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Digital Display / Screen</td>
+            <td>Not applicable (digital context)</td>
+            <td>Standard digital UI — all ISO constraints do not apply</td>
+            <td>Full brand palette incl. Amber</td>
+            <td><span class="status-badge status-ok">✓ No ISO constraint</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="sprint-legend">
+    <h4>ISO 3864 Integration Rationale</h4>
+    <ol>
+      <li><strong>Why this matters for DTPR:</strong> DTPR is explicitly designed to appear in public spaces alongside existing safety infrastructure. Ignoring ISO 3864 creates legal and perception risk — a DTPR panel that looks like a safety sign (due to color proximity) could be legally challenged in some jurisdictions.</li>
+      <li><strong>The hexagon as strategic asset:</strong> DTPR's flat-top hexagon is not in the ISO 3864 reserved shape vocabulary. This is a structural advantage: it means DTPR has a legally and visually distinct shape that cannot be confused with ISO mandated/prohibited/warning shapes. This should be protected vigorously.</li>
+      <li><strong>Amber prohibition on physical signs:</strong> The prohibition on using DTPR amber (#FFC107) as a fill in physical signage is non-negotiable. The ISO hazard yellow is spectrally adjacent and would create an immediate visual conflict with warning signs in transit or industrial contexts.</li>
+      <li><strong>Chartreuse is clear:</strong> The chartreuse accent (#C6E93D) is the only DTPR brand color with no ISO equivalent. It is the safest color to use as a distinguishing mark across all deployment contexts, making it strategically valuable beyond its current CTA role.</li>
+    </ol>
+  </div>
+
+  <div class="page-nav">
+    <a href="18-core-caa-assets.html">← 18 CAA Assets</a>
+    <a href="index.html">↑ Cover</a>
+    <a href="20-responsive-specs.html">20 Responsive →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.3 · June 2026 · Superbloom Design · <a href="https://github.com/superbloom/dtpr-brand-identity" target="_blank" rel="noopener">view on GitHub</a> (forthcoming)</p>
+</footer>
+
+</body>
+</html>
