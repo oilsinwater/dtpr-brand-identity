@@ -120,11 +120,9 @@ The distinction matters. OBSERVED is reproducible from the source; INFERRED is t
 ## Stewardship & license
 
 - **Standard steward:** [Helpful Places](https://www.helpfulplaces.com)
-- **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-- **Author:** Superbloom Design · June 2026
+- **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — applies to both this audit deck and the DTPR standard assets it documents
+- **Audit author:** Superbloom Design · June 2026 — attribution requested on redistribution
 - **Status:** v0.3 — audit draft + system prep draft
-
-DTPR assets themselves are CC BY 4.0; this audit cites those assets and the brand foundation memo under fair-use terms. Superbloom retains authorship of the audit's analysis and the Visual System Prep parameters.
 
 ---
 
