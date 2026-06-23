@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>19 ISO 3864 Integration Matrix — DTPR Brand Identity Audit</title>
+<title>20 ISO 3864 Integration Matrix — DTPR Visual System Prep</title>
 <link rel="stylesheet" href="styles.css">
 <style>
   .iso-matrix-table {
@@ -140,6 +140,9 @@
     margin: 1.5rem 0;
   }
   .placement-diagram svg {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
     flex-shrink: 0;
   }
   .placement-notes {
@@ -192,20 +195,21 @@
   <nav>
     <a href="index.html" class="nav-split-link">← Brand Audit</a>
     <a href="sprint-index.html">Cover</a>
-    <a href="13-sprint-morphology.html">13 Form Box</a>
-    <a href="14-transformation-morphology.html">14 Process Box</a>
-    <a href="15-semantic-morphology.html">15 Semantic Box</a>
-    <a href="16-sprint-recipes.html">16 Recipes</a>
-    <a href="17-geometric-blueprint.html">17 Blueprint</a>
-    <a href="18-core-caa-assets.html">18 CAA Assets</a>
-    <a href="19-iso-3864-matrix.html" aria-current="page">19 ISO Matrix</a>
-    <a href="20-responsive-specs.html">20 Responsive</a>
+    <a href="13-strategic-postures.html">13 Postures</a>
+    <a href="14-sprint-morphology.html">14 Form Box</a>
+    <a href="15-transformation-morphology.html">15 Process Box</a>
+    <a href="16-semantic-morphology.html">16 Semantic Box</a>
+    <a href="17-sprint-recipes.html">17 Recipes</a>
+    <a href="18-geometric-blueprint.html">18 Blueprint</a>
+    <a href="19-core-caa-assets.html">19 CAA Assets</a>
+    <a href="20-iso-3864-matrix.html" aria-current="page">20 ISO Matrix</a>
+    <a href="21-responsive-specs.html">21 Responsive</a>
   </nav>
   <span class="badge-draft">v0.3 · system prep</span>
 </header>
 
 <main>
-  <span class="eyebrow">19 · ISO 3864 Integration Matrix</span>
+  <span class="eyebrow">20 · ISO 3864 Integration Matrix</span>
   <h1>ISO 3864 Integration Matrix</h1>
   <p class="lede">DTPR signs are placed in public spaces that already carry ISO 3864 safety signage. This matrix maps the relationship between DTPR's visual language and the ISO safety sign system — identifying where the systems align, where they need separation rules, and where conflicts must be resolved before physical deployment.</p>
 
@@ -395,28 +399,28 @@
           <rect width="360" height="280" fill="url(#wall-grid)"/>
 
           <!-- Wall surface -->
-          <text x="180" y="22" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="8" fill="#9ca3af" letter-spacing="0.1em">WALL SURFACE</text>
+          <text x="180" y="22" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9.5" fill="#9ca3af" letter-spacing="0.1em">WALL SURFACE</text>
 
           <!-- ISO EXIT sign (green rectangle) -->
           <rect x="30" y="40" width="80" height="50" rx="3" fill="#417505"/>
           <text x="70" y="62" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="11" font-weight="bold" fill="white">EXIT</text>
-          <text x="70" y="76" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="rgba(255,255,255,0.8)">ISO Safe Condition</text>
+          <text x="70" y="76" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="8.5" fill="rgba(255,255,255,0.8)">ISO Safe Condition</text>
 
           <!-- Clear zone arrow from ISO sign right edge to DTPR left edge -->
           <!-- DTPR panel at x=200 -->
           <!-- ISO right edge: x=110, DTPR left edge: x=200, gap=90px → label 150mm -->
-          <line x1="110" y1="65" x2="200" y2="65" stroke="#f04a4a" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="110" y1="65" x2="200" y2="65" stroke="#f04a4a" stroke-width="1.2" stroke-dasharray="4,3"/>
           <line x1="110" y1="60" x2="110" y2="70" stroke="#f04a4a" stroke-width="1.5"/>
           <line x1="200" y1="60" x2="200" y2="70" stroke="#f04a4a" stroke-width="1.5"/>
-          <text x="155" y="58" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#991b1b">min 150mm</text>
-          <text x="155" y="80" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#991b1b">clear zone</text>
+          <text x="155" y="58" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#991b1b" font-weight="bold">min 150mm</text>
+          <text x="155" y="80" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="8" fill="#991b1b">clear zone</text>
 
           <!-- DTPR panel -->
           <rect x="200" y="35" width="130" height="90" rx="5" fill="#f8f9fa" stroke="#002684" stroke-width="1.5"/>
           <rect x="200" y="35" width="130" height="22" rx="5" fill="#002684"/>
           <rect x="200" y="47" width="130" height="10" fill="#002684"/>
-          <text x="215" y="50" font-family="'JetBrains Mono',monospace" font-size="7" font-weight="bold" fill="white">DTPR</text>
-          <text x="240" y="50" font-family="'Source Sans 3',sans-serif" font-size="6" fill="rgba(255,255,255,0.7)">Digital Trust</text>
+          <text x="215" y="50" font-family="'JetBrains Mono',monospace" font-size="9" font-weight="bold" fill="white">DTPR</text>
+          <text x="245" y="49" font-family="'Source Sans 3',sans-serif" font-size="7.5" fill="rgba(255,255,255,0.7)">Digital Trust</text>
           <!-- Two hex icons -->
           <polygon points="240,87 233,75.9 219,75.9 212,87 219,98.1 233,98.1" fill="rgba(0,38,132,0.08)" stroke="#002684" stroke-width="1"/>
           <text x="226" y="90" text-anchor="middle" font-size="7" fill="#002684">📷</text>
@@ -427,34 +431,37 @@
           <rect x="304" y="62" width="4" height="4" fill="#002684"/>
           <rect x="316" y="62" width="4" height="4" fill="#002684"/>
           <rect x="304" y="74" width="4" height="4" fill="#002684"/>
+          <rect x="316" y="74" width="4" height="4" fill="#002684"/>
+          <text x="313" y="91" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">QR</text>
+
           <!-- Chartreuse strip -->
           <rect x="200" y="120" width="130" height="5" rx="0" fill="#c6e93d"/>
 
           <!-- ISO Warning sign below -->
           <polygon points="75,175 105,225 45,225" fill="#F5A623" stroke="#111" stroke-width="2"/>
           <text x="75" y="215" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="11" font-weight="bold" fill="#111">!</text>
-          <text x="75" y="238" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">ISO Warning</text>
+          <text x="75" y="238" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="8.5" fill="#6b7280">ISO Warning</text>
 
           <!-- Vertical separation from ISO sign above -->
-          <line x1="75" y1="92" x2="75" y2="165" stroke="#f04a4a" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="75" y1="92" x2="75" y2="165" stroke="#f04a4a" stroke-width="1.2" stroke-dasharray="4,3"/>
           <line x1="70" y1="92" x2="80" y2="92" stroke="#f04a4a" stroke-width="1.5"/>
           <line x1="70" y1="165" x2="80" y2="165" stroke="#f04a4a" stroke-width="1.5"/>
-          <text x="95" y="130" font-family="'JetBrains Mono',monospace" font-size="7" fill="#991b1b">min 100mm</text>
-          <text x="95" y="140" font-family="'JetBrains Mono',monospace" font-size="6" fill="#991b1b">vertical gap</text>
+          <text x="95" y="130" font-family="'JetBrains Mono',monospace" font-size="9" fill="#991b1b" font-weight="bold">min 100mm</text>
+          <text x="95" y="141" font-family="'JetBrains Mono',monospace" font-size="8" fill="#991b1b">vertical gap</text>
 
           <!-- DTPR Mandatory note area -->
           <rect x="200" y="145" width="130" height="60" rx="5" fill="rgba(0,38,132,0.04)" stroke="#bae6ed" stroke-width="1.2" stroke-dasharray="4,3"/>
-          <text x="265" y="162" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#002684" font-weight="bold">PREFERRED ZONE</text>
-          <text x="265" y="172" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="6" fill="#6b7280">Place DTPR signs in</text>
-          <text x="265" y="181" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="6" fill="#6b7280">neutral wall zones, away</text>
-          <text x="265" y="190" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="6" fill="#6b7280">from concentrated safety</text>
-          <text x="265" y="199" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="6" fill="#6b7280">sign clusters.</text>
+          <text x="265" y="158" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="8" fill="#002684" font-weight="bold">PREFERRED ZONE</text>
+          <text x="265" y="169" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="7.5" fill="#6b7280">Place DTPR signs in</text>
+          <text x="265" y="179" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="7.5" fill="#6b7280">neutral wall zones, away</text>
+          <text x="265" y="189" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="7.5" fill="#6b7280">from concentrated safety</text>
+          <text x="265" y="199" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="7.5" fill="#6b7280">sign clusters.</text>
 
           <!-- Legend -->
-          <line x1="30" y1="255" x2="50" y2="255" stroke="#f04a4a" stroke-width="1" stroke-dasharray="4,3"/>
-          <text x="55" y="258" font-family="'JetBrains Mono',monospace" font-size="6.5" fill="#991b1b">Required clear zone</text>
+          <line x1="30" y1="255" x2="50" y2="255" stroke="#f04a4a" stroke-width="1.2" stroke-dasharray="4,3"/>
+          <text x="55" y="258" font-family="'JetBrains Mono',monospace" font-size="8" fill="#991b1b">Required clear zone</text>
           <line x1="170" y1="255" x2="190" y2="255" stroke="#bae6ed" stroke-width="1.2" stroke-dasharray="4,3"/>
-          <text x="195" y="258" font-family="'JetBrains Mono',monospace" font-size="6.5" fill="#002684">Preferred DTPR zone</text>
+          <text x="195" y="258" font-family="'JetBrains Mono',monospace" font-size="8" fill="#002684">Preferred DTPR zone</text>
         </svg>
 
         <div class="placement-notes">
@@ -566,9 +573,9 @@
   </div>
 
   <div class="page-nav">
-    <a href="18-core-caa-assets.html">← 18 CAA Assets</a>
-    <a href="index.html">↑ Cover</a>
-    <a href="20-responsive-specs.html">20 Responsive →</a>
+    <a href="19-core-caa-assets.html">← 19 CAA Assets</a>
+    <a href="sprint-index.html">↑ Cover</a>
+    <a href="21-responsive-specs.html">21 Responsive →</a>
   </div>
 </main>
 

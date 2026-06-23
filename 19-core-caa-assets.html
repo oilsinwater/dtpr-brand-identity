@@ -1,0 +1,1015 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>19 Core CAA Assets — DTPR Visual System Prep</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .caa-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin: 2.5rem 0;
+  }
+
+  .caa-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  .caa-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  .caa-card-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.6rem 0.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: span 2;
+  }
+  .caa-number {
+    font-size: 0.75rem;
+    font-weight: 700;
+    opacity: 0.7;
+  }
+  .caa-visual {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8fbff;
+    border-right: 1px solid var(--gray-100);
+    min-height: 280px;
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .caa-visual svg {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+  .caa-body {
+    padding: 1.5rem 2rem;
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  @media (max-width: 768px) {
+    .caa-card {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+    }
+    .caa-card-header {
+      grid-column: span 1;
+    }
+    .caa-visual {
+      grid-column: 1;
+      grid-row: 2;
+      border-right: none;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .caa-body {
+      grid-column: 1;
+      grid-row: 3;
+      padding: 1.25rem;
+    }
+  }
+  .caa-body h3 {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  .caa-body p {
+    font-size: 0.88rem;
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+  .caa-specs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .caa-specs li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--gray-100);
+    color: var(--gray-700);
+  }
+  .caa-specs li:last-child { border-bottom: none; }
+  .caa-specs li span:first-child {
+    font-family: var(--font-mono);
+    color: var(--gray-500);
+    font-size: 0.75rem;
+  }
+  .caa-specs li span:last-child {
+    font-weight: 600;
+    color: var(--navy);
+    text-align: right;
+    max-width: 55%;
+  }
+
+  .track-badge {
+    display: inline-block;
+    padding: 0.1rem 0.45rem;
+    border-radius: var(--r-sm);
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.5rem;
+  }
+  .track-reg { background: #fef3c7; color: #92400e; }
+  .track-maker { background: rgba(198,233,61,0.25); color: #4d5c00; }
+  .track-commons { background: #dbeafe; color: #1e40af; }
+  .track-all { background: #f3e8ff; color: #5b21b6; }
+
+  /* Full-width panel mockup section */
+  .panel-section {
+    margin: 3rem 0;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+  .panel-section-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.85rem 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .panel-section-body {
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .panel-section-body svg {
+    flex: 0 0 auto;
+  }
+  .panel-section-notes {
+    flex: 1;
+    min-width: 240px;
+  }
+  .panel-section-notes h4 {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  .panel-section-notes ul {
+    margin-left: 1.1rem;
+    font-size: 0.85rem;
+    color: var(--gray-700);
+    line-height: 1.7;
+  }
+
+  .sprint-legend {
+    background: rgba(198, 233, 61, 0.07);
+    border-left: 5px solid var(--chartreuse);
+    padding: 1.5rem;
+    border-radius: 0 var(--r-md) var(--r-md) 0;
+    margin: 2.5rem 0;
+  }
+  .sprint-legend h4 {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+  }
+  .sprint-legend ol {
+    margin-left: 1.2rem;
+    font-size: 0.92rem;
+    color: var(--gray-800);
+    line-height: 1.65;
+  }
+  .sprint-legend li { margin-bottom: 0.4rem; }
+
+  /* Real HTML/CSS Viewport/Sign Mockups */
+  .mockup-hex-cell {
+    position: relative;
+    width: 48px;
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .mockup-hex-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 41.5px;
+    z-index: 1;
+  }
+  .mockup-hex-icon {
+    position: relative;
+    font-size: 14px;
+    z-index: 2;
+    margin-top: -12px;
+  }
+  .mockup-hex-label {
+    position: relative;
+    font-family: var(--font-mono);
+    font-size: 6px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-top: 14px;
+    z-index: 2;
+  }
+  .mockup-sign-panel {
+    background: #ffffff;
+    border: 1.5px solid var(--gray-300);
+    border-radius: 8px;
+    width: 220px;
+    height: 180px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .mockup-sign-header {
+    background: var(--navy);
+    color: #ffffff;
+    padding: 6px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--gray-200);
+  }
+  .mockup-sign-logo {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .mockup-sign-sub {
+    font-size: 6px;
+    opacity: 0.8;
+  }
+  .mockup-sign-hexes {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 6px;
+    flex: 1;
+    align-items: center;
+  }
+  .mockup-sign-footer {
+    display: flex;
+    padding: 6px 12px 12px;
+    align-items: center;
+    gap: 8px;
+    border-top: 1px solid var(--gray-100);
+  }
+  .mockup-sign-qr {
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--navy);
+    padding: 2px;
+    border-radius: 2px;
+  }
+  .mockup-sign-qr svg {
+    width: 100%;
+    height: 100%;
+  }
+  .mockup-sign-desc {
+    display: flex;
+    flex-direction: column;
+  }
+  .mockup-sign-tag {
+    font-family: var(--font-mono);
+    font-size: 5px;
+    color: var(--gray-500);
+    font-weight: 700;
+  }
+  .mockup-sign-domain {
+    font-family: var(--font-mono);
+    font-size: 6px;
+    color: var(--navy);
+    font-weight: bold;
+  }
+  .mockup-sign-stripe {
+    height: 4px;
+    background: var(--chartreuse);
+    width: 100%;
+  }
+
+  /* Phone Frame Mockup */
+  .mockup-phone {
+    width: 130px;
+    height: 240px;
+    background: #111;
+    border: 3px solid #374151;
+    border-radius: 18px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .mockup-phone::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 8px;
+    background: #374151;
+    border-radius: 4px;
+    z-index: 10;
+  }
+  .mockup-phone-screen {
+    flex: 1;
+    background: #fff;
+    margin: 14px 4px 4px;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-sans);
+    font-size: 6px;
+    color: var(--gray-800);
+    position: relative;
+  }
+  
+  /* Mockup Components */
+  .mockup-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 3px 5px;
+    font-family: var(--font-mono);
+    font-size: 6px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .mockup-screen-body {
+    padding: 6px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+  }
+  .mockup-headline {
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 7px;
+    text-align: center;
+    margin-top: 2px;
+  }
+  .mockup-text {
+    font-size: 5px;
+    color: var(--gray-600);
+    text-align: center;
+    line-height: 1.4;
+  }
+  .mockup-btn {
+    background: var(--chartreuse);
+    color: var(--navy);
+    padding: 3px 6px;
+    border-radius: 2px;
+    font-family: var(--font-mono);
+    font-size: 5px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    width: 80%;
+    margin-top: 2px;
+  }
+  .mockup-rating {
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    margin-top: 4px;
+  }
+  .mockup-rating span {
+    font-size: 8px;
+  }
+  .mockup-rating-label {
+    font-family: var(--font-mono);
+    font-size: 4.5px;
+    color: var(--gray-400);
+  }
+  .mockup-home-indicator {
+    width: 30px;
+    height: 2px;
+    background: #374151;
+    border-radius: 1px;
+    margin: 2px auto;
+  }
+
+  /* Tablet Browser Mockup */
+  .mockup-browser {
+    width: 200px;
+    height: 150px;
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .mockup-browser-chrome {
+    background: #f3f4f6;
+    padding: 4px 6px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .mockup-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+  }
+  .mockup-dot.red { background: #f04a4a; }
+  .mockup-dot.yellow { background: #ffc107; }
+  .mockup-dot.green { background: #27ae60; }
+  .mockup-url-bar {
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-radius: 3px;
+    height: 8px;
+    flex: 1;
+    margin-left: 6px;
+    font-family: var(--font-mono);
+    font-size: 5px;
+    color: var(--gray-500);
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+  }
+  .mockup-browser-nav {
+    background: var(--navy);
+    color: #fff;
+    padding: 3px 8px;
+    font-family: var(--font-mono);
+    font-size: 6px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .mockup-browser-nav span:first-child { font-weight: 700; }
+  .mockup-browser-nav span:last-child { opacity: 0.8; }
+  
+  .mockup-browser-body {
+    flex: 1;
+    display: flex;
+  }
+  .mockup-sidebar {
+    width: 40px;
+    background: #f9fafb;
+    border-right: 1px solid var(--gray-200);
+    padding: 6px 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .mockup-sidebar-title {
+    font-family: var(--font-mono);
+    font-size: 5px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .mockup-sidebar-link {
+    font-size: 4.5px;
+    color: var(--gray-500);
+  }
+  .mockup-browser-content {
+    flex: 1;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .mockup-filter-bar {
+    background: rgba(0,38,132,0.05);
+    padding: 2px 4px;
+    font-family: var(--font-mono);
+    font-size: 5px;
+    border-radius: 2px;
+  }
+  .mockup-hex-grid {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    margin: 4px 0;
+  }
+  .mockup-active-detail {
+    border: 1px solid var(--chartreuse);
+    background: rgba(198,233,61,0.05);
+    padding: 4px;
+    border-radius: 3px;
+    text-align: left;
+  }
+  .mockup-progress-bar {
+    width: 100%;
+    height: 3px;
+    background: #e5e7eb;
+    border-radius: 1.5px;
+    position: relative;
+  }
+  .mockup-progress-fill {
+    height: 100%;
+    background: var(--chartreuse);
+    border-radius: 1.5px;
+  }
+
+  .mockup-terminal {
+    background: #0d1e1f;
+    border: 1px solid #374151;
+    border-radius: 6px;
+    width: 220px;
+    height: 180px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: var(--font-mono);
+  }
+  .mockup-terminal-header {
+    background: #1f2937;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-bottom: 1px solid #111827;
+  }
+  .mockup-terminal-title {
+    font-size: 5px;
+    color: var(--gray-400);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mockup-terminal-body {
+    padding: 10px;
+    flex: 1;
+    color: #e5e7eb;
+    font-size: 6px;
+    line-height: 1.4;
+    position: relative;
+    text-align: left;
+  }
+  .cmd-prompt { color: var(--chartreuse); }
+  .cmd-text { color: #bae6ed; }
+  .mockup-terminal-line.response {
+    color: #27ae60;
+    margin-top: 4px;
+    font-weight: bold;
+  }
+  .mockup-terminal-code {
+    color: #9ca3af;
+    margin-top: 2px;
+  }
+  .code-val { color: #bae6ed; }
+  .mockup-terminal-hex {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.3);
+    padding: 4px;
+    border-radius: 4px;
+    border: 0.5px solid #374151;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="sprint-index.html"><span class="dot"></span>DTPR · Visual System Prep</a>
+  <nav>
+    <a href="index.html" class="nav-split-link">← Brand Audit</a>
+    <a href="sprint-index.html">Cover</a>
+    <a href="13-strategic-postures.html">13 Postures</a>
+    <a href="14-sprint-morphology.html">14 Form Box</a>
+    <a href="15-transformation-morphology.html">15 Process Box</a>
+    <a href="16-semantic-morphology.html">16 Semantic Box</a>
+    <a href="17-sprint-recipes.html">17 Recipes</a>
+    <a href="18-geometric-blueprint.html">18 Blueprint</a>
+    <a href="19-core-caa-assets.html" aria-current="page">19 CAA Assets</a>
+    <a href="20-iso-3864-matrix.html">20 ISO Matrix</a>
+    <a href="21-responsive-specs.html">21 Responsive</a>
+  </nav>
+  <span class="badge-draft">v0.3 · system prep</span>
+</header>
+
+<main>
+  <span class="eyebrow">19 · Core CAA Assets</span>
+  <h1>5 Core Application Assets</h1>
+  <p class="lede">In the <strong>CAA method</strong> — <strong>C</strong>omponents → <strong>A</strong>ssets → <strong>A</strong>pplication — the final stage applies assembled assets (Symbol, Line, Frame, Label) onto real formats and mediums. These five assets are DTPR's highest-impact <em>Application</em> deliverables: the physical and digital touchpoints where the system reaches its audiences and where design decisions matter most. Each is derived from a Sprint Recipe (p.17) and constrained by the Geometric Blueprint (p.18).</p>
+
+  <div class="recipe-legend-note" style="background: rgba(198,233,61,0.07); border-left: 5px solid var(--chartreuse); padding: 1.25rem 1.5rem; border-radius: 0 var(--r-md) var(--r-md) 0; margin: 0 0 2.5rem;">
+    <p style="font-size: 0.9rem; color: var(--gray-800); line-height: 1.6; margin: 0;"><strong>A note on "CAA":</strong> The acronym refers to the <em>Components / Assets / Application</em> workflow. The <code>CAA-01…CAA-05</code> identifiers below name the Application-stage outputs — DTPR's core <em>communication &amp; action</em> touchpoints. The workflow represents a structured path for adapting dynamic assets into real-world applications, rather than referring to a separate "Communication &amp; Action Assets" standard.</p>
+  </div>
+
+  <div class="caa-grid">
+
+    <!-- CAA 1: Physical Sign Panel -->
+    <div class="caa-card">
+      <div class="caa-card-header">
+        CAA-01 <span class="caa-number">#1</span>
+      </div>
+      <div class="caa-visual">
+        <div class="mockup-sign-panel">
+          <div class="mockup-sign-header">
+            <span class="mockup-sign-logo">DTPR</span>
+            <span class="mockup-sign-sub">Digital Trust</span>
+          </div>
+          <div class="mockup-sign-hexes">
+            <!-- Hex 1 -->
+            <div class="mockup-hex-cell">
+              <svg class="mockup-hex-bg" viewBox="0 0 100 86.6">
+                <polygon points="75,86.6 25,86.6 0,43.3 25,0 75,0 100,43.3" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="4"/>
+              </svg>
+              <span class="mockup-hex-icon">📷</span>
+              <span class="mockup-hex-label">VIDEO</span>
+            </div>
+            <!-- Hex 2 -->
+            <div class="mockup-hex-cell">
+              <svg class="mockup-hex-bg" viewBox="0 0 100 86.6">
+                <polygon points="75,86.6 25,86.6 0,43.3 25,0 75,0 100,43.3" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="4"/>
+              </svg>
+              <span class="mockup-hex-icon">🔊</span>
+              <span class="mockup-hex-label">AUDIO</span>
+            </div>
+            <!-- Hex 3 -->
+            <div class="mockup-hex-cell">
+              <svg class="mockup-hex-bg" viewBox="0 0 100 86.6">
+                <polygon points="75,86.6 25,86.6 0,43.3 25,0 75,0 100,43.3" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="4"/>
+              </svg>
+              <span class="mockup-hex-icon">📡</span>
+              <span class="mockup-hex-label">NET</span>
+            </div>
+          </div>
+          <div class="mockup-sign-footer">
+            <div class="mockup-sign-qr">
+              <svg viewBox="0 0 100 100" class="qr-svg">
+                <rect width="100" height="100" fill="none" stroke="#002684" stroke-width="6"/>
+                <rect x="10" y="10" width="30" height="30" fill="#002684"/>
+                <rect x="60" y="10" width="30" height="30" fill="#002684"/>
+                <rect x="10" y="60" width="30" height="30" fill="#002684"/>
+                <rect x="50" y="50" width="20" height="20" fill="#002684"/>
+                <rect x="70" y="70" width="20" height="20" fill="#002684"/>
+              </svg>
+            </div>
+            <div class="mockup-sign-desc">
+              <span class="mockup-sign-tag">SCAN TO LEARN</span>
+              <span class="mockup-sign-domain">dtpr.io</span>
+            </div>
+          </div>
+          <div class="mockup-sign-stripe"></div>
+        </div>
+      </div>
+      <div class="caa-body">
+        <h3>Physical Sign Panel</h3>
+        <p>The primary wayfinding artifact. Mounted near technology in public space. QR-scannable. Designed for outdoor and indoor physical contexts.</p>
+        <ul class="caa-specs">
+          <li><span>Format</span><span>200×140mm standard</span></li>
+          <li><span>Hex R</span><span>22mm (print)</span></li>
+          <li><span>Min dist.</span><span>0.5m read</span></li>
+          <li><span>Material</span><span>Weatherproof vinyl / aluminum</span></li>
+          <li><span>Recipe</span><span>A (Regulatory)</span></li>
+        </ul>
+        <span class="track-badge track-reg">Regulatory Track</span>
+      </div>
+    </div>
+
+    <!-- CAA 2: QR → Icon Guide Mobile Landing -->
+    <div class="caa-card">
+      <div class="caa-card-header">
+        CAA-02 <span class="caa-number">#2</span>
+      </div>
+      <div class="caa-visual">
+        <div class="mockup-phone">
+          <div class="mockup-phone-screen">
+            <div class="mockup-header">DTPR Icon Guide</div>
+            <div class="mockup-screen-body">
+              <span class="mockup-headline">You scanned a DTPR sign</span>
+              <div class="mockup-hex-cell" style="width: 32px; height: 36px; margin: 4px 0;">
+                <svg class="mockup-hex-bg" viewBox="0 0 100 86.6">
+                  <polygon points="75,86.6 25,86.6 0,43.3 25,0 75,0 100,43.3" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="4"/>
+                </svg>
+                <span class="mockup-hex-icon" style="font-size: 10px; margin-top: -3px;">📷</span>
+                <span class="mockup-hex-label" style="font-size: 5px; margin-top: 10px;">VIDEO</span>
+              </div>
+              <p class="mockup-text">A camera is recording video in this space. You have a right to know.</p>
+              <div class="mockup-btn">See 7 questions →</div>
+              <div style="border-bottom: 0.5px solid var(--gray-200); width: 80%; margin: 4px 0;"></div>
+              <span class="mockup-rating-label">How do you feel?</span>
+              <div class="mockup-rating">
+                <span>😟</span><span>😐</span><span>😊</span><span>🎉</span>
+              </div>
+            </div>
+            <div class="mockup-home-indicator"></div>
+          </div>
+        </div>
+      </div>
+      <div class="caa-body">
+        <h3>QR → Icon Guide</h3>
+        <p>Mobile-first landing for citizens arriving via QR scan. Plain-language, icon-first, with anonymous feedback and rights information.</p>
+        <ul class="caa-specs">
+          <li><span>Breakpoint</span><span>320px — 428px primary</span></li>
+          <li><span>Entry</span><span>dtpr.io/icon-guide</span></li>
+          <li><span>Hex R</span><span>16px UI icon</span></li>
+          <li><span>Feedback</span><span>Anonymous rating</span></li>
+          <li><span>Recipe</span><span>C (Commons)</span></li>
+        </ul>
+        <span class="track-badge track-commons">Commons Track</span>
+      </div>
+    </div>
+
+    <!-- CAA 3: Taxonomy Explorer -->
+    <div class="caa-card">
+      <div class="caa-card-header">
+        CAA-03 <span class="caa-number">#3</span>
+      </div>
+      <div class="caa-visual">
+        <div class="mockup-browser">
+          <div class="mockup-browser-chrome">
+            <span class="mockup-dot red"></span>
+            <span class="mockup-dot yellow"></span>
+            <span class="mockup-dot green"></span>
+            <div class="mockup-url-bar">dtpr.io/taxonomy</div>
+          </div>
+          <div class="mockup-browser-nav">
+            <span>DTPR Taxonomy</span>
+            <span>v2.0</span>
+          </div>
+          <div class="mockup-browser-body">
+            <div class="mockup-sidebar">
+              <span class="mockup-sidebar-title">DEVICE</span>
+              <span class="mockup-sidebar-link" style="color: var(--navy); font-weight: 700;">• Video</span>
+              <span class="mockup-sidebar-link">• Audio</span>
+              <span class="mockup-sidebar-link">• Network</span>
+            </div>
+            <div class="mockup-browser-content">
+              <div class="mockup-filter-bar">Filter: <strong>Video</strong></div>
+              <div class="mockup-hex-grid">
+                <div class="mockup-hex-cell" style="width: 24px; height: 28px;">
+                  <svg class="mockup-hex-bg" viewBox="0 0 100 86.6">
+                    <polygon points="75,86.6 25,86.6 0,43.3 25,0 75,0 100,43.3" fill="rgba(0,38,132,0.15)" stroke="#002684" stroke-width="4"/>
+                  </svg>
+                  <span class="mockup-hex-icon" style="font-size: 8px; margin-top:-2px;">📷</span>
+                </div>
+                <div class="mockup-hex-cell" style="width: 24px; height: 28px;">
+                  <svg class="mockup-hex-bg" viewBox="0 0 100 86.6">
+                    <polygon points="75,86.6 25,86.6 0,43.3 25,0 75,0 100,43.3" fill="rgba(0,38,132,0.05)" stroke="#002684" stroke-width="3"/>
+                  </svg>
+                  <span class="mockup-hex-icon" style="font-size: 8px; margin-top:-2px;">🚁</span>
+                </div>
+              </div>
+              <div class="mockup-active-detail">
+                <div style="font-family: var(--font-mono); font-size: 5px; font-weight: 700; color: var(--navy);">📷 VIDEO CAMERA</div>
+                <p style="font-size: 4px; color: var(--gray-600); margin: 1px 0;">Microphone array. Face blurred at source.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="caa-body">
+        <h3>Taxonomy Explorer</h3>
+        <p>Interactive hex-grid browser for all DTPR icon types. Supports filtering by category, expanded detail panel, and deeplinks to the full API record.</p>
+        <ul class="caa-specs">
+          <li><span>Entry</span><span>dtpr.io/taxonomy/device</span></li>
+          <li><span>Hex R</span><span>18px grid unit</span></li>
+          <li><span>Filter</span><span>Category + text search</span></li>
+          <li><span>API</span><span>Live DTPR API v2</span></li>
+          <li><span>Recipe</span><span>B (Maker)</span></li>
+        </ul>
+        <span class="track-badge track-maker">Maker Track</span>
+      </div>
+    </div>
+
+    <!-- CAA 4: Deployment Playbook -->
+    <div class="caa-card">
+      <div class="caa-card-header">
+        CAA-04 <span class="caa-number">#4</span>
+      </div>
+      <div class="caa-visual">
+        <div class="mockup-browser">
+          <div class="mockup-browser-chrome">
+            <span class="mockup-dot red"></span>
+            <span class="mockup-dot yellow"></span>
+            <span class="mockup-dot green"></span>
+            <div class="mockup-url-bar">docs.dtpr.io/deploy</div>
+          </div>
+          <div class="mockup-browser-nav">
+            <span>DTPR Deployment Playbook</span>
+            <span>Docs</span>
+          </div>
+          <div class="mockup-browser-body">
+            <div class="mockup-sidebar" style="width: 45px;">
+              <span class="mockup-sidebar-title">STEPS</span>
+              <span class="mockup-sidebar-link" style="color: var(--navy); font-weight: 700;">1. Assess Tech</span>
+              <span class="mockup-sidebar-link">2. Map Questions</span>
+              <span class="mockup-sidebar-link">3. Order Signage</span>
+            </div>
+            <div class="mockup-browser-content" style="padding: 8px;">
+              <span class="mockup-headline" style="text-align: left; font-size: 8px; align-self: flex-start;">1. Assess Tech Type</span>
+              <p style="font-size: 4.5px; color: var(--gray-600); line-height: 1.4; margin: 2px 0;">Determine device capabilities: video, audio, or metadata storage.</p>
+              <div class="mockup-progress-bar" style="width: 100%; margin-top: 4px;">
+                <div class="mockup-progress-fill" style="width: 33%;"></div>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 4.5px; color: var(--gray-400); margin-top: 2px;">Step 1 of 3 (33%)</span>
+              <div class="mockup-btn" style="width: 55%; font-size: 4.5px; padding: 2px; align-self: flex-end; margin-top: 6px; background: var(--navy); color: #fff;">Next Step →</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="caa-body">
+        <h3>Deployment Playbook</h3>
+        <p>Step-by-step implementation guide for public sector deployers. Restructured into a tracked, checklist-driven format.</p>
+        <ul class="caa-specs">
+          <li><span>Entry</span><span>docs.dtpr.io/deploy</span></li>
+          <li><span>Format</span><span>Docs sidebar pattern</span></li>
+          <li><span>Progress</span><span>Checklist with state</span></li>
+          <li><span>Persona</span><span>Pragmatic Deployer</span></li>
+          <li><span>Recipe</span><span>A (Regulatory)</span></li>
+        </ul>
+        <span class="track-badge track-reg">Regulatory Track</span>
+        <span class="track-badge track-all" style="margin-left:0.3rem;">All Tracks</span>
+      </div>
+    </div>
+
+    <!-- CAA 5: Developer API Portal -->
+    <div class="caa-card">
+      <div class="caa-card-header">
+        CAA-05 <span class="caa-number">#5</span>
+      </div>
+      <div class="caa-visual">
+        <div class="mockup-terminal">
+          <div class="mockup-terminal-header">
+            <span class="mockup-dot red"></span>
+            <span class="mockup-dot yellow"></span>
+            <span class="mockup-dot green"></span>
+            <span class="mockup-terminal-title">developer@dtpr: ~</span>
+          </div>
+          <div class="mockup-terminal-body">
+            <div class="mockup-terminal-line"><span class="cmd-prompt">$</span> <span class="cmd-text">curl -X GET api.dtpr.io/v2/icons</span></div>
+            <div class="mockup-terminal-line response">200 OK</div>
+            <div class="mockup-terminal-code">
+              {<br>
+              &nbsp;&nbsp;"data": [<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;{"id": <span class="code-val">"video"</span>,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"label": <span class="code-val">"Camera"</span>}<br>
+              &nbsp;&nbsp;]<br>
+              }
+            </div>
+            <div class="mockup-terminal-hex">
+              <div class="mockup-hex-cell" style="width: 20px; height: 24px;">
+                <svg class="mockup-hex-bg" viewBox="0 0 100 86.6">
+                  <polygon points="75,86.6 25,86.6 0,43.3 25,0 75,0 100,43.3" fill="none" stroke="#c6e93d" stroke-width="6"/>
+                </svg>
+                <span class="mockup-hex-icon" style="font-size: 8px; margin-top:-2px;">📷</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="caa-body">
+        <h3>Developer API Portal</h3>
+        <p>Technical documentation hub for REST + MCP integration. Dark-mode, code-first UI. Consolidates dtpr.ai under developer.dtpr.io.</p>
+        <ul class="caa-specs">
+          <li><span>Entry</span><span>developer.dtpr.io</span></li>
+          <li><span>Theme</span><span>Dark mode / mono</span></li>
+          <li><span>API</span><span>REST v2 + MCP</span></li>
+          <li><span>Persona</span><span>Technical Evaluator</span></li>
+          <li><span>Recipe</span><span>B (Maker)</span></li>
+        </ul>
+        <span class="track-badge track-maker">Maker Track</span>
+      </div>
+    </div>
+
+  </div><!-- /caa-grid -->
+
+  <!-- Full panel mockup -->
+  <div class="panel-section">
+    <div class="panel-section-header">Assembled Panel — CAA-01 at Full Specification</div>
+    <div class="panel-section-body">
+      <svg viewBox="0 0 420 280" width="420" height="280" xmlns="http://www.w3.org/2000/svg">
+        <!-- Full panel -->
+        <rect x="5" y="5" width="410" height="270" rx="8" fill="#f8f9fa" stroke="#d1d5db" stroke-width="2"/>
+        <!-- Top brand bar -->
+        <rect x="5" y="5" width="410" height="35" rx="8" fill="#002684"/>
+        <rect x="5" y="30" width="410" height="10" fill="#002684"/>
+        <text x="30" y="27" font-family="'JetBrains Mono',monospace" font-size="11" font-weight="bold" fill="white">DTPR</text>
+        <text x="85" y="27" font-family="'Source Sans 3',sans-serif" font-size="8" fill="rgba(255,255,255,0.7)">Digital Trust for Places and Routines</text>
+        <text x="390" y="27" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="7" fill="rgba(255,255,255,0.6)">dtpr.io</text>
+
+        <!-- Hex icons: 5 across -->
+        <!-- R=36, spacing = 80px, start at x=62 -->
+        <!-- H1: cx=62, cy=140 -->
+        <polygon points="98,140 80,108.8 44,108.8 26,140 44,171.2 80,171.2" fill="rgba(0,38,132,0.07)" stroke="#002684" stroke-width="1.5"/>
+        <circle cx="62" cy="140" r="15" fill="#002684" opacity="0.7"/>
+        <text x="62" y="145" text-anchor="middle" font-size="13" fill="white">📷</text>
+        <text x="62" y="183" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7.5" fill="#002684" font-weight="bold">VIDEO</text>
+
+        <!-- H2: cx=142, cy=140 -->
+        <polygon points="178,140 160,108.8 124,108.8 106,140 124,171.2 160,171.2" fill="rgba(0,38,132,0.07)" stroke="#002684" stroke-width="1.5"/>
+        <circle cx="142" cy="140" r="15" fill="#002684" opacity="0.7"/>
+        <text x="142" y="145" text-anchor="middle" font-size="13" fill="white">🔊</text>
+        <text x="142" y="183" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7.5" fill="#002684" font-weight="bold">AUDIO</text>
+
+        <!-- H3: cx=222, cy=140 -->
+        <polygon points="258,140 240,108.8 204,108.8 186,140 204,171.2 240,171.2" fill="rgba(0,38,132,0.07)" stroke="#002684" stroke-width="1.5"/>
+        <circle cx="222" cy="140" r="15" fill="#002684" opacity="0.7"/>
+        <text x="222" y="145" text-anchor="middle" font-size="13" fill="white">🌡️</text>
+        <text x="222" y="183" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7.5" fill="#002684" font-weight="bold">SENSOR</text>
+
+        <!-- H4: cx=302, cy=140 -->
+        <polygon points="338,140 320,108.8 284,108.8 266,140 284,171.2 320,171.2" fill="rgba(0,38,132,0.07)" stroke="#002684" stroke-width="1.5"/>
+        <circle cx="302" cy="140" r="15" fill="#002684" opacity="0.7"/>
+        <text x="302" y="145" text-anchor="middle" font-size="13" fill="white">🤖</text>
+        <text x="302" y="183" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7.5" fill="#002684" font-weight="bold">AI DECISION</text>
+
+        <!-- QR column on right -->
+        <rect x="358" y="95" width="48" height="48" rx="3" fill="none" stroke="#002684" stroke-width="1.5"/>
+        <rect x="362" y="99" width="8" height="8" fill="#002684"/>
+        <rect x="390" y="99" width="8" height="8" fill="#002684"/>
+        <rect x="362" y="127" width="8" height="8" fill="#002684"/>
+        <rect x="376" y="110" width="6" height="4" fill="#002684"/>
+        <rect x="385" y="115" width="6" height="10" fill="#002684"/>
+        <rect x="370" y="120" width="8" height="4" fill="#002684"/>
+        <text x="382" y="155" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">SCAN TO LEARN</text>
+
+        <!-- Bottom strip -->
+        <rect x="5" y="245" width="410" height="30" rx="0" fill="#f3f4f6"/>
+        <rect x="5" y="265" width="410" height="10" rx="8" fill="#f3f4f6"/>
+        <text x="20" y="258" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">Operated by: City of Example · Purpose: Public safety monitoring</text>
+        <text x="20" y="268" font-family="'JetBrains Mono',monospace" font-size="6" fill="#3b85d4">dtpr.io/showcase/boston-example · Data retained: 30 days</text>
+        <text x="390" y="258" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">Helpful Places</text>
+        <!-- Chartreuse accent bottom -->
+        <rect x="5" y="270" width="410" height="5" rx="8" fill="#c6e93d"/>
+      </svg>
+      <div class="panel-section-notes">
+        <h4>Panel Assembly Notes</h4>
+        <ul>
+          <li>Top bar: DTPR wordmark + full name + domain — always navy, always present</li>
+          <li>Hex grid: 1–5 icons depending on technology count. Grid scales to fill width.</li>
+          <li>QR code: always right-aligned, minimum 48×48mm at 0.5m reading distance</li>
+          <li>Footer: operator identity + purpose statement + data retention + stewardship attribution</li>
+          <li>Chartreuse accent strip: 5mm, bottom edge — signal color, always present, cross-track consistent</li>
+          <li>Total min. panel size: 120×80mm (2 hex icons). Standard: 210×140mm (5 hex icons)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="sprint-legend">
+    <h4>CAA Design Rationale</h4>
+    <ol>
+      <li><strong>Five not twelve:</strong> The consolidation plan identifies 24 high-priority items across 84 assets. These 5 CAA assets address the top 4 Q1 matrix gaps (QR onboarding, deployment playbook, developer portal, feedback portal) plus the physical sign — the universal anchor across all tracks.</li>
+      <li><strong>Recipe inheritance:</strong> Each CAA inherits its full design spec from a Sprint Recipe. CAA-01 and CAA-04 use Recipe A (Regulatory). CAA-02 and the feedback portal extension use Recipe C (Commons). CAA-03 and CAA-05 use Recipe B (Maker). This prevents visual fragmentation without forcing one system on all contexts.</li>
+      <li><strong>Chartreuse as universal thread:</strong> The accent strip on CAA-01 appears as the CTA button on CAA-02 and the selected state on CAA-03. It is the one visual element that crosses all tracks — the "signal" in the system.</li>
+    </ol>
+  </div>
+
+  <div class="page-nav">
+    <a href="18-geometric-blueprint.html">← 18 Blueprint</a>
+    <a href="sprint-index.html">↑ Cover</a>
+    <a href="20-iso-3864-matrix.html">20 ISO Matrix →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.3 · June 2026 · Superbloom Design · <a href="https://github.com/superbloom/dtpr-brand-identity" target="_blank" rel="noopener">view on GitHub</a> (forthcoming)</p>
+</footer>
+
+</body>
+</html>

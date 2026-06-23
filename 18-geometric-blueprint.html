@@ -3,16 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>17 Geometric Blueprint — DTPR Brand Identity Audit</title>
+<title>18 Geometric Blueprint — DTPR Visual System Prep</title>
 <link rel="stylesheet" href="styles.css">
 <style>
   .blueprint-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
     margin: 2.5rem 0;
   }
-  @media (max-width: 840px) { .blueprint-grid { grid-template-columns: 1fr; } }
 
   .blueprint-card {
     background: var(--white);
@@ -45,12 +44,12 @@
   }
   .blueprint-card-body svg {
     width: 100%;
-    max-width: 340px;
+    max-width: 540px;
     height: auto;
     border: 1px solid var(--gray-200);
     border-radius: var(--r-md);
     background: #f8fbff;
-    padding: 1rem;
+    padding: 1.5rem;
   }
   .blueprint-card-specs {
     margin-top: 1.25rem;
@@ -101,13 +100,13 @@
 
   .annotation-label {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
+    font-size: 12px;
     fill: #002684;
     font-weight: 700;
   }
   .annotation-dim {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 8px;
+    font-size: 11px;
     fill: #6b7280;
   }
   .dim-line {
@@ -173,20 +172,21 @@
   <nav>
     <a href="index.html" class="nav-split-link">← Brand Audit</a>
     <a href="sprint-index.html">Cover</a>
-    <a href="13-sprint-morphology.html">13 Form Box</a>
-    <a href="14-transformation-morphology.html">14 Process Box</a>
-    <a href="15-semantic-morphology.html">15 Semantic Box</a>
-    <a href="16-sprint-recipes.html">16 Recipes</a>
-    <a href="17-geometric-blueprint.html" aria-current="page">17 Blueprint</a>
-    <a href="18-core-caa-assets.html">18 CAA Assets</a>
-    <a href="19-iso-3864-matrix.html">19 ISO Matrix</a>
-    <a href="20-responsive-specs.html">20 Responsive</a>
+    <a href="13-strategic-postures.html">13 Postures</a>
+    <a href="14-sprint-morphology.html">14 Form Box</a>
+    <a href="15-transformation-morphology.html">15 Process Box</a>
+    <a href="16-semantic-morphology.html">16 Semantic Box</a>
+    <a href="17-sprint-recipes.html">17 Recipes</a>
+    <a href="18-geometric-blueprint.html" aria-current="page">18 Blueprint</a>
+    <a href="19-core-caa-assets.html">19 CAA Assets</a>
+    <a href="20-iso-3864-matrix.html">20 ISO Matrix</a>
+    <a href="21-responsive-specs.html">21 Responsive</a>
   </nav>
   <span class="badge-draft">v0.3 · system prep</span>
 </header>
 
 <main>
-  <span class="eyebrow">17 · Geometric Blueprint</span>
+  <span class="eyebrow">18 · Geometric Blueprint</span>
   <h1>DTPR Hexagon: Geometric Blueprint</h1>
   <p class="lede">The DTPR Hexagon Unit is the foundational geometry of the entire visual system — the atom from which signage panels, icon sets, grid structures, and digital layouts are derived. This document specifies the mathematical constraints that ensure consistency across all three sprint tracks.</p>
 
@@ -371,55 +371,54 @@ gap    = R × <span class="value">0.08</span>;         <span class="comment">// 
         Digital Icon — UI Component <span class="tag-code">R = 16px</span>
       </div>
       <div class="blueprint-card-body">
-        <svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="grid-icon" width="8" height="8" patternUnits="userSpaceOnUse">
               <path d="M 8 0 L 0 0 0 8" fill="none" stroke="rgba(65,105,225,0.12)" stroke-width="0.5"/>
             </pattern>
           </defs>
-          <rect width="300" height="260" fill="url(#grid-icon)"/>
+          <rect width="420" height="320" fill="url(#grid-icon)"/>
 
           <!-- Scale comparison row: 16px, 24px, 32px, 48px, 64px -->
-          <!-- 16px icon (R=8, display as R=16 for visibility) -->
-          <text x="150" y="25" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="8" fill="#6b7280">ICON SCALE COMPARISON — Digital UI</text>
+          <text x="210" y="25" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#6b7280">ICON SCALE COMPARISON — Digital UI</text>
 
           <!-- 16px -->
-          <polygon points="58,70 53.1,61.5 43.4,61.5 38.5,70 43.4,78.5 53.1,78.5" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1"/>
-          <text x="48" y="90" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">16px</text>
+          <polygon points="50,70 45,61.3 35,61.3 30,70 35,78.7 45,78.7" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1"/>
+          <text x="40" y="94" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#6b7280">16px</text>
 
-          <!-- 24px (R=12 → display R=20) -->
-          <polygon points="110,70 103.2,58.4 89.7,58.4 82.8,70 89.7,81.6 103.2,81.6" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1.2"/>
-          <text x="96" y="95" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">24px</text>
+          <!-- 24px -->
+          <polygon points="114,70 107,57.9 93,57.9 86,70 93,82.1 107,82.1" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1.2"/>
+          <text x="100" y="98" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#6b7280">24px</text>
 
-          <!-- 32px (R=16 → display R=28) -->
-          <polygon points="165,70 155.7,54 137.3,54 128,70 137.3,86 155.7,86" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1.5"/>
-          <text x="146.5" y="102" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">32px</text>
+          <!-- 32px -->
+          <polygon points="190,70 180,52.7 160,52.7 150,70 160,87.3 180,87.3" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1.5"/>
+          <text x="170" y="104" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#6b7280">32px</text>
 
-          <!-- 48px (display R=40) -->
-          <polygon points="232,70 218.3,46.2 191,46.2 177.2,70 191,93.8 218.3,93.8" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1.8"/>
-          <text x="204.7" y="110" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">48px</text>
+          <!-- 48px -->
+          <polygon points="283,70 269,45.8 241,45.8 227,70 241,94.2 269,94.2" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1.8"/>
+          <text x="255" y="112" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#6b7280">48px</text>
 
-          <!-- 64px (display R=52) -->
-          <polygon points="285,70 267,40 231,40 213,70 231,100 267,100" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="2"/>
-          <text x="249" y="116" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">64px</text>
+          <!-- 64px -->
+          <polygon points="391,70 373,38.8 337,38.8 319,70 337,101.2 373,101.2" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="2"/>
+          <text x="355" y="120" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#6b7280">64px</text>
 
           <!-- Stroke weight demo -->
-          <text x="10" y="138" font-family="'JetBrains Mono',monospace" font-size="8" fill="#002684" font-weight="bold">Stroke scaling rule:</text>
+          <text x="15" y="180" font-family="'JetBrains Mono',monospace" font-size="10" fill="#002684" font-weight="bold">Stroke scaling rule:</text>
           <!-- 16px stroke -->
-          <polygon points="45,165 39.7,156 29.3,156 24,165 29.3,174 39.7,174" fill="none" stroke="#002684" stroke-width="0.32"/>
-          <text x="35" y="185" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">0.32px</text>
+          <polygon points="50,220 45,211.3 35,211.3 30,220 35,228.7 45,228.7" fill="none" stroke="#002684" stroke-width="0.32"/>
+          <text x="40" y="242" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="8" fill="#6b7280">0.32px</text>
           <!-- 32px stroke -->
-          <polygon points="100,162 90.7,146 72.3,146 63,162 72.3,178 90.7,178" fill="none" stroke="#002684" stroke-width="0.64"/>
-          <text x="81.5" y="190" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">0.64px</text>
+          <polygon points="133,220 124,204.4 106,204.4 97,220 106,235.6 124,235.6" fill="none" stroke="#002684" stroke-width="0.64"/>
+          <text x="115" y="248" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="8" fill="#6b7280">0.64px</text>
           <!-- 64px stroke -->
-          <polygon points="175,160 161.3,136 134,136 120.3,160 134,184 161.3,184" fill="none" stroke="#002684" stroke-width="1.28"/>
-          <text x="147.5" y="198" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">1.28px</text>
+          <polygon points="235,220 220,194 190,194 175,220 190,246 220,246" fill="none" stroke="#002684" stroke-width="1.28"/>
+          <text x="205" y="257" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="8" fill="#6b7280">1.28px</text>
           <!-- 128px stroke -->
-          <polygon points="255,158 234.8,122 194.5,122 174.3,158 194.5,194 234.8,194" fill="none" stroke="#002684" stroke-width="2.56"/>
-          <text x="214.5" y="208" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">2.56px</text>
+          <polygon points="373,220 349,178.4 301,178.4 277,220 301,261.6 349,261.6" fill="none" stroke="#002684" stroke-width="2.56"/>
+          <text x="325" y="273" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="8" fill="#6b7280">2.56px</text>
 
-          <text x="150" y="235" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#856404">stroke = R × 0.02 at all sizes</text>
-          <text x="150" y="248" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">Never use stroke-width &lt; 0.3px in digital</text>
+          <text x="210" y="295" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9.5" fill="#856404">stroke = R × 0.02 at all sizes</text>
+          <text x="210" y="307" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#6b7280">Never use stroke-width &lt; 0.3px in digital</text>
         </svg>
 
         <table class="blueprint-card-specs" style="margin-top:1rem;">
@@ -451,17 +450,6 @@ gap    = R × <span class="value">0.08</span>;         <span class="comment">// 
           <rect width="300" height="240" fill="url(#grid-tile)"/>
 
           <!-- Honeycomb grid — flat-top hexes, R=35, gap=3 -->
-          <!-- Row 1: 4 hexes starting at cx=50, cy=65 -->
-          <!-- dx = 2R+gap = 73, offset row = R*√3/2 +gap/2 -->
-          <!-- R=35: width=70, height=60.6, gap=3 -->
-          <!-- Row 1 centers: 50,65 | 123,65 | 196,65 | 269,65 -->
-          <!-- Row 2 centers (offset): 86.5,95.3 | 159.5,95.3 | 232.5,95.3 -->
-          <!-- Row 3 centers: 50,125.6 | 123,125.6 | 196,125.6 | 269,125.6 -->
-          <!-- Row 4 centers offset: 86.5,155.9 | 159.5,155.9 | 232.5,155.9 -->
-
-          <!-- Helper: hex at cx,cy R=33 -->
-          <!-- Flat top vertices: (cx+R,cy), (cx+R/2,cy-R√3/2), (cx-R/2,cy-R√3/2), (cx-R,cy), (cx-R/2,cy+R√3/2), (cx+R/2,cy+R√3/2) -->
-
           <!-- Row 1 -->
           <polygon points="83,65 66.5,36.4 33.5,36.4 17,65 33.5,93.6 66.5,93.6" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/>
           <polygon points="156,65 139.5,36.4 106.5,36.4 90,65 106.5,93.6 139.5,93.6" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/>
@@ -477,20 +465,20 @@ gap    = R × <span class="value">0.08</span>;         <span class="comment">// 
           <polygon points="156,180.2 139.5,151.6 106.5,151.6 90,180.2 106.5,208.8 139.5,208.8" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/>
           <polygon points="229,180.2 212.5,151.6 179.5,151.6 163,180.2 179.5,208.8 212.5,208.8" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/>
 
-          <!-- Gap annotation -->
-          <line x1="83" y1="65" x2="90" y2="65" stroke="#c6e93d" stroke-width="1"/>
-          <line x1="83" y1="60" x2="83" y2="70" stroke="#c6e93d" stroke-width="1"/>
-          <line x1="90" y1="60" x2="90" y2="70" stroke="#c6e93d" stroke-width="1"/>
-          <text x="86.5" y="55" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#4d5c00">gap</text>
+          <!-- Gap annotation (High contrast red) -->
+          <line x1="83" y1="65" x2="90" y2="65" stroke="#f04a4a" stroke-width="1.5"/>
+          <line x1="83" y1="60" x2="83" y2="70" stroke="#f04a4a" stroke-width="1.5"/>
+          <line x1="90" y1="60" x2="90" y2="70" stroke="#f04a4a" stroke-width="1.5"/>
+          <text x="86.5" y="52" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#991b1b" font-weight="bold">gap</text>
 
           <!-- Offset row label -->
-          <text x="28" y="122.6" font-family="'JetBrains Mono',monospace" font-size="6" fill="#3b85d4" text-anchor="middle">offset</text>
-          <text x="28" y="130" font-family="'JetBrains Mono',monospace" font-size="6" fill="#3b85d4" text-anchor="middle">½ width</text>
+          <text x="28" y="122.6" font-family="'JetBrains Mono',monospace" font-size="9" fill="#3b85d4" text-anchor="middle">offset</text>
+          <text x="28" y="132" font-family="'JetBrains Mono',monospace" font-size="9" fill="#3b85d4" text-anchor="middle">½ width</text>
 
           <!-- Highlighted cell label -->
-          <text x="50" y="180.2" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#4d5c00">active</text>
+          <text x="50" y="183" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9.5" fill="#4d5c00" font-weight="bold">active</text>
 
-          <text x="150" y="228" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">row offset = R × √3 / 2</text>
+          <text x="150" y="228" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9.5" fill="#6b7280">row offset = R × √3 / 2</text>
         </svg>
 
         <div class="formula-block" style="margin-top:1rem;">
@@ -508,20 +496,19 @@ odd_offset = col_step / <span class="value">2</span>; <span class="comment">// r
         Clear Space &amp; Exclusion Zone <span class="tag-code">HEX-CLEAR-01</span>
       </div>
       <div class="blueprint-card-body">
-        <svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 340 260" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="clear-grid" width="8" height="8" patternUnits="userSpaceOnUse">
               <path d="M 8 0 L 0 0 0 8" fill="none" stroke="rgba(65,105,225,0.08)" stroke-width="0.4"/>
             </pattern>
           </defs>
-          <rect width="300" height="260" fill="url(#clear-grid)"/>
+          <rect width="340" height="260" fill="url(#clear-grid)"/>
 
           <!-- Primary hex R=70 centered at 150,130 -->
           <polygon points="220,130 185,69.2 115,69.2 80,130 115,190.8 185,190.8"
             fill="rgba(0,38,132,0.07)" stroke="#002684" stroke-width="2"/>
 
           <!-- Clear space ring (R=70 × 1.2 = 84) -->
-          <!-- Vertices: R=84 -->
           <polygon points="234,130 192,57 108,57 66,130 108,203 192,203"
             fill="none" stroke="rgba(240,74,74,0.4)" stroke-width="1" stroke-dasharray="5,4"/>
 
@@ -534,26 +521,26 @@ odd_offset = col_step / <span class="value">2</span>; <span class="comment">// r
 
           <!-- Clear space label arrows -->
           <line x1="220" y1="130" x2="234" y2="130" stroke="#f04a4a" stroke-width="1"/>
-          <text x="240" y="134" font-family="'JetBrains Mono',monospace" font-size="7" fill="#f04a4a">R×0.2</text>
-          <text x="240" y="144" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">clear</text>
+          <text x="240" y="128" font-family="'JetBrains Mono',monospace" font-size="9" fill="#f04a4a" font-weight="bold">R×0.2</text>
+          <text x="240" y="138" font-family="'JetBrains Mono',monospace" font-size="8.5" fill="#6b7280">clear</text>
 
-          <!-- Label: nothing inside exclusion -->
-          <text x="195" y="70" font-family="'JetBrains Mono',monospace" font-size="6.5" fill="#f04a4a">exclusion zone</text>
-          <text x="195" y="80" font-family="'JetBrains Mono',monospace" font-size="6.5" fill="#6b7280">no text, no icons</text>
-          <text x="195" y="90" font-family="'JetBrains Mono',monospace" font-size="6.5" fill="#6b7280">no competing shapes</text>
+          <!-- Label: relocated outside exclusion zone -->
+          <text x="238" y="72" font-family="'JetBrains Mono',monospace" font-size="9" fill="#f04a4a" font-weight="bold">exclusion zone</text>
+          <text x="238" y="82" font-family="'JetBrains Mono',monospace" font-size="8" fill="#6b7280">no text, no icons</text>
+          <text x="238" y="92" font-family="'JetBrains Mono',monospace" font-size="8" fill="#6b7280">no competing shapes</text>
 
           <!-- Stroke zone label -->
-          <text x="150" y="200" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#002684">primary unit</text>
+          <text x="150" y="202" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9.5" fill="#002684">primary unit</text>
 
           <!-- QR code proximity -->
-          <rect x="10" y="95" width="40" height="40" rx="2" fill="none" stroke="#002684" stroke-width="1"/>
-          <text x="30" y="112" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#002684">QR</text>
+          <rect x="10" y="95" width="40" height="40" rx="2" fill="none" stroke="#002684" stroke-width="1.2"/>
+          <text x="30" y="118" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="8.5" fill="#002684" font-weight="bold">QR</text>
           <line x1="50" y1="115" x2="66" y2="115" stroke="#6b7280" stroke-width="0.8" stroke-dasharray="2,2"/>
-          <text x="58" y="111" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">R×0.5 min</text>
-          <text x="58" y="121" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">from hex edge</text>
+          <text x="58" y="108" font-family="'JetBrains Mono',monospace" font-size="8" fill="#6b7280">R×0.5 min</text>
+          <text x="58" y="126" font-family="'JetBrains Mono',monospace" font-size="8" fill="#6b7280">from edge</text>
 
-          <text x="150" y="240" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">clear space = R × 0.2 on all sides</text>
-          <text x="150" y="252" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="7" fill="#6b7280">QR placement min R × 0.5 from any hex</text>
+          <text x="170" y="240" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9.5" fill="#6b7280">clear space = R × 0.2 on all sides</text>
+          <text x="170" y="252" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9.5" fill="#6b7280">QR placement min R × 0.5 from any hex</text>
         </svg>
 
         <table class="blueprint-card-specs" style="margin-top:1rem;">
@@ -581,9 +568,9 @@ odd_offset = col_step / <span class="value">2</span>; <span class="comment">// r
   </div>
 
   <div class="page-nav">
-    <a href="16-sprint-recipes.html">← 16 Recipes</a>
-    <a href="index.html">↑ Cover</a>
-    <a href="18-core-caa-assets.html">18 CAA Assets →</a>
+    <a href="17-sprint-recipes.html">← 17 Recipes</a>
+    <a href="sprint-index.html">↑ Cover</a>
+    <a href="19-core-caa-assets.html">19 CAA Assets →</a>
   </div>
 </main>
 

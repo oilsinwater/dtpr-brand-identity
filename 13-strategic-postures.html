@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>13 Strategic Brand Postures — DTPR Visual System Prep</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .posture-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-top: 4px solid var(--navy);
+    border-radius: var(--r-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .posture-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .posture-card.posture-a { border-top-color: var(--navy); }
+  .posture-card.posture-b { border-top-color: var(--royal-blue); }
+  .posture-card.posture-c { border-top-color: var(--teal); }
+  .posture-card.posture-d { border-top-color: var(--orange); }
+
+  .posture-meta {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed var(--gray-200);
+    padding-bottom: 0.6rem;
+  }
+  .posture-meta span {
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+  .posture-meta strong {
+    color: var(--navy);
+  }
+  .posture-desc {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--gray-700);
+  }
+  .posture-spec-table {
+    width: 100%;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    border-collapse: collapse;
+  }
+  .posture-spec-table td {
+    padding: 0.4rem 0.6rem;
+    border-bottom: 1px solid var(--gray-100);
+  }
+  .posture-spec-table td:first-child {
+    font-weight: 700;
+    color: var(--navy);
+    width: 35%;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="sprint-index.html"><span class="dot"></span>DTPR · Visual System Prep</a>
+  <nav>
+    <a href="index.html" class="nav-split-link">← Brand Audit</a>
+    <a href="sprint-index.html">Cover</a>
+    <a href="13-strategic-postures.html" aria-current="page">13 Postures</a>
+    <a href="14-sprint-morphology.html">14 Form Box</a>
+    <a href="15-transformation-morphology.html">15 Process Box</a>
+    <a href="16-semantic-morphology.html">16 Semantic Box</a>
+    <a href="17-sprint-recipes.html">17 Recipes</a>
+    <a href="18-geometric-blueprint.html">18 Blueprint</a>
+    <a href="19-core-caa-assets.html">19 CAA Assets</a>
+    <a href="20-iso-3864-matrix.html">20 ISO Matrix</a>
+    <a href="21-responsive-specs.html">21 Responsive</a>
+  </nav>
+  <span class="badge-draft">v0.3 · system prep</span>
+</header>
+
+<main>
+  <span class="eyebrow">13 · Strategic Brand Postures</span>
+  <h1>Four Conceptual Axes</h1>
+  <p class="lede">The columns of the DTPR morphological boxes (Option A through Option D) are not arbitrary design variations. They represent four distinct, intentional <strong>strategic brand postures</strong>. Each posture aligns a specific stakeholder persona from our user research with a corresponding structural system design model for dynamic visual identities.</p>
+
+  <div class="grid-2">
+    <div class="callout open">
+      <h4>Why Brand Postures Matter</h4>
+      <p>A single, monolithic brand cannot communicate with smart city administrators, developers, privacy advocates, and scanning residents at the same time without losing identity or creating friction. By structuring our design parameters into four distinct visual axes, we can synthesize unified configurations (sprint recipes) that adapt to the target context while maintaining the core standards identity.</p>
+    </div>
+    <div class="callout">
+      <h4>Epistemic Grounding</h4>
+      <p>These postures translate raw co-design insights from the MakeShift 2026 convening and the DTPR content inventory into visual grammar rules. Rather than letting the brand drift, these options establish explicit, testable boundaries for implementation.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>The Four Axes at a Glance</h2>
+
+  <div class="grid-4">
+    <!-- Posture A -->
+    <div class="posture-card posture-a">
+      <h4>Option A<br>Flat / Minimal</h4>
+      <div class="posture-meta">
+        <span>Target: <strong>Impacted Citizen</strong></span>
+        <span>Identity Model: <strong>Form-Based (Static)</strong></span>
+        <span>Motive: <strong>Plain Legibility</strong></span>
+      </div>
+      <p class="posture-desc">DTPR as a simple public utility. Minimalist 2D geometry, flat icon sets, and system-default fonts to deliver maximum speed and zero jargon for residents scanning signs on the street.</p>
+    </div>
+
+    <!-- Posture B -->
+    <div class="posture-card posture-b">
+      <h4>Option B<br>Speculative / Maker</h4>
+      <div class="posture-meta">
+        <span>Target: <strong>Technical Evaluator</strong></span>
+        <span>Identity Model: <strong>Transformation/Process</strong></span>
+        <span>Motive: <strong>Tactile Blueprint</strong></span>
+      </div>
+      <p class="posture-desc">DTPR as an open-source builder framework. Isometric layered planes, graph-paper grids, monospaced tech stacks, and active sliding layouts designed for developers and system architects.</p>
+    </div>
+
+    <!-- Posture C -->
+    <div class="posture-card posture-c">
+      <h4>Option C<br>Human / Ecosystem</h4>
+      <div class="posture-meta">
+        <span>Target: <strong>Vigilant Advocate</strong></span>
+        <span>Identity Model: <strong>Interaction-Based</strong></span>
+        <span>Motive: <strong>Decentralized Power</strong></span>
+      </div>
+      <p class="posture-desc">DTPR as a community trust standard. Focuses on wireframe networks, refined cities, collective neighborhood voting boards, and educational syllabus modules for local community audits.</p>
+    </div>
+
+    <!-- Posture D -->
+    <div class="posture-card posture-d">
+      <h4>Option D<br>Regulated / Standard</h4>
+      <div class="posture-meta">
+        <span>Target: <strong>Pragmatic Deployer</strong></span>
+        <span>Identity Model: <strong>Rules-Based Closed</strong></span>
+        <span>Motive: <strong>Risk Compliance</strong></span>
+      </div>
+      <p class="posture-desc">DTPR as civic compliance infrastructure. Structured around ISO 3864 safety check templates, corporate pitch checklists, issue reporting ticket systems, and federated city chapters.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Detailed Posture Mappings</h2>
+
+  <div class="grid-2">
+    <div>
+      <h3>Option A: Flat &amp; Minimal (Citizen Utility)</h3>
+      <p>Designed to mitigate public <strong>AI &amp; consent fatigue</strong>. It addresses the <em>Impacted Citizen's</em> low tolerance for legal jargon or complex layout shifts by stripping the interface down to static, highly legible visual facts.</p>
+      
+      <table class="posture-spec-table">
+        <tr>
+          <td>Form Variable</td>
+          <td>Solid Flat Hexagon geometry; Legacy Navy/Teal Flat palette</td>
+        </tr>
+        <tr>
+          <td>Process Variable</td>
+          <td>Static-only motion behavior (optimized for physical sign prints)</td>
+        </tr>
+        <tr>
+          <td>Semantic Variable</td>
+          <td>Physical sensors focus; plain resident register; binary presence data</td>
+        </tr>
+        <tr>
+          <td>Feedback Loop</td>
+          <td>Anonymous smiley/emoji rating interface</td>
+        </tr>
+        <tr>
+          <td>Core Analogy</td>
+          <td>The standard nutrition label (Data Facts)</td>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <h3>Option B: Speculative &amp; Maker (Developer Blueprint)</h3>
+      <p>Designed to unblock <strong>developer integration friction</strong>. It frames the standard as a set of developer tools and open modular systems. Grounded in the SVA MakeShift 2026 visual assets and typewriter/grid textures.</p>
+      
+      <table class="posture-spec-table">
+        <tr>
+          <td>Form Variable</td>
+          <td>Isometric 3D Hexagon; Sparse connective networks; Layered navy/pale-blue</td>
+        </tr>
+        <tr>
+          <td>Process Variable</td>
+          <td>Kinetic sliding/tiling cell transitions; Monospace + Serif type stack</td>
+        </tr>
+        <tr>
+          <td>Semantic Variable</td>
+          <td>Digital channels focus; advocate register; categorical 7-questions depth</td>
+        </tr>
+        <tr>
+          <td>Feedback Loop</td>
+          <td>Spatial public comment map pinning</td>
+        </tr>
+        <tr>
+          <td>Core Analogy</td>
+          <td>Interactive scrollytelling playground tour</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-top: 2rem;">
+    <div>
+      <h3>Option C: Human &amp; Ecosystem (Advocate Commons)</h3>
+      <p>Designed for non-profit and civic tech groups who act as the translation layer between city hall and the community. Grounded in the <strong>Vigilant Advocate's</strong> need for decentralized trust and collective agency.</p>
+      
+      <table class="posture-spec-table">
+        <tr>
+          <td>Form Variable</td>
+          <td>Wireframe node network geometry; ISO 3864 safe shield isolation coloring</td>
+        </tr>
+        <tr>
+          <td>Process Variable</td>
+          <td>Elastic spring-damping motion; Refined Memphis city illustration style</td>
+        </tr>
+        <tr>
+          <td>Semantic Variable</td>
+          <td>AI &amp; Algorithmic decision engines focus; deployer register; database schema</td>
+        </tr>
+        <tr>
+          <td>Feedback Loop</td>
+          <td>Collective neighborhood polling &amp; ballot voting</td>
+        </tr>
+        <tr>
+          <td>Core Analogy</td>
+          <td>Decentralized academic/workshop syllabus modules</td>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <h3>Option D: Regulated &amp; Standard (Deployer Compliance)</h3>
+      <p>Designed to resolve the <strong>fear of public backlash</strong> for city leaders. Focuses on procedural safety, regulatory alignment (ISO/IEC compliance), and standardized procurement tools.</p>
+      
+      <table class="posture-spec-table">
+        <tr>
+          <td>Form Variable</td>
+          <td>Rounded/beveled hexagons; Offset floating layers; Assembly Cobalt/Amber palette</td>
+        </tr>
+        <tr>
+          <td>Process Variable</td>
+          <td>Glitch/signal scan indicators; Sans-Serif standard typography stack</td>
+        </tr>
+        <tr>
+          <td>Semantic Variable</td>
+          <td>Connected physical-digital-AI hybrid focus; developer register; search database</td>
+        </tr>
+        <tr>
+          <td>Feedback Loop</td>
+          <td>Formal issue ticket filing &amp; discrepancy logs</td>
+        </tr>
+        <tr>
+          <td>Core Analogy</td>
+          <td>City pitch-deck checklists &amp; federated municipal chapters</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="page-nav">
+    <a href="sprint-index.html">← Cover</a>
+    <a href="14-sprint-morphology.html">14 Form Box →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>DTPR is stewarded by <a href="https://www.helpfulplaces.com" target="_blank" rel="noopener">Helpful Places</a>. The DTPR standard and this visual system prep are licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.<br>
+  This visual system prep is a Superbloom Design artifact (v0.3, June 2026).</p>
+</footer>
+
+</body>
+</html>

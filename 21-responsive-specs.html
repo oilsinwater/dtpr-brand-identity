@@ -1,0 +1,1094 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>21 Responsive Application Specs — DTPR Visual System Prep</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .scale-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--r-md);
+    overflow: hidden;
+  }
+  .scale-table th {
+    background: var(--navy);
+    color: var(--white);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    padding: 0.85rem 1rem;
+    text-align: center;
+  }
+  .scale-table th.row-head { text-align: left; padding-left: 1.25rem; width: 18%; }
+  .scale-table td {
+    padding: 0.85rem 0.8rem;
+    vertical-align: top;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-200);
+    background: var(--white);
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+  .scale-table td.context-label {
+    background: var(--gray-50);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--navy);
+    border-right: 2px solid var(--gray-200);
+    white-space: nowrap;
+  }
+  .scale-table tr:hover td { background: rgba(198, 233, 61, 0.04); }
+  .scale-table tr:hover td.context-label { background: rgba(198, 233, 61, 0.08); }
+
+  .spec-chip {
+    display: inline-block;
+    background: var(--gray-100);
+    color: var(--navy);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 0.15rem 0.45rem;
+    border-radius: var(--r-sm);
+    margin: 0.1rem;
+  }
+
+  /* Viewport preview cards */
+  .viewport-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2.5rem 0;
+  }
+
+  .viewport-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  .viewport-card-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.6rem 0.85rem;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: space-between;
+    grid-column: span 2;
+  }
+  .viewport-preview {
+    padding: 1.5rem;
+    background: #f8fbff;
+    border-right: 1px solid var(--gray-100);
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 280px;
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .viewport-specs {
+    padding: 1.5rem 2rem;
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  @media (max-width: 768px) {
+    .viewport-card {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+    }
+    .viewport-card-header {
+      grid-column: span 1;
+    }
+    .viewport-preview {
+      grid-column: 1;
+      grid-row: 2;
+      border-right: none;
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .viewport-specs {
+      grid-column: 1;
+      grid-row: 3;
+      padding: 1.25rem;
+    }
+  }
+
+  .caa-specs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .caa-specs li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--gray-100);
+    color: var(--gray-700);
+  }
+  .caa-specs li:last-child { border-bottom: none; }
+  .caa-specs li span:first-child {
+    font-family: var(--font-mono);
+    color: var(--gray-500);
+    font-size: 0.75rem;
+  }
+  .caa-specs li span:last-child {
+    font-weight: 600;
+    color: var(--navy);
+    text-align: right;
+    max-width: 60%;
+  }
+
+  /* HTML/CSS Mockups for Viewports */
+  .mockup-hex-cell {
+    position: relative;
+    width: 48px;
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .mockup-hex-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 41.5px;
+    z-index: 1;
+  }
+  .mockup-hex-icon {
+    position: relative;
+    font-size: 14px;
+    z-index: 2;
+    margin-top: -12px;
+  }
+  .mockup-hex-label {
+    position: relative;
+    font-family: var(--font-mono);
+    font-size: 6px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-top: 14px;
+    z-index: 2;
+  }
+
+  /* Phone Frame Mockup */
+  .mockup-phone {
+    width: 130px;
+    height: 240px;
+    background: #111;
+    border: 3px solid #374151;
+    border-radius: 18px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .mockup-phone::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 8px;
+    background: #374151;
+    border-radius: 4px;
+    z-index: 10;
+  }
+  .mockup-phone-screen {
+    flex: 1;
+    background: #fff;
+    margin: 14px 4px 4px;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-sans);
+    font-size: 6px;
+    color: var(--gray-800);
+    position: relative;
+  }
+  
+  /* Mockup Components */
+  .mockup-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 3px 5px;
+    font-family: var(--font-mono);
+    font-size: 6px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .mockup-screen-body {
+    padding: 6px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+  }
+  .mockup-headline {
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 7px;
+    text-align: center;
+    margin-top: 2px;
+  }
+  .mockup-text {
+    font-size: 5px;
+    color: var(--gray-600);
+    text-align: center;
+    line-height: 1.4;
+  }
+  .mockup-btn {
+    background: var(--chartreuse);
+    color: var(--navy);
+    padding: 3px 6px;
+    border-radius: 2px;
+    font-family: var(--font-mono);
+    font-size: 5px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    width: 80%;
+    margin-top: 2px;
+  }
+  .mockup-rating {
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    margin-top: 4px;
+  }
+  .mockup-rating span {
+    font-size: 8px;
+  }
+  .mockup-rating-label {
+    font-family: var(--font-mono);
+    font-size: 4.5px;
+    color: var(--gray-400);
+  }
+  .mockup-home-indicator {
+    width: 30px;
+    height: 2px;
+    background: #374151;
+    border-radius: 1px;
+    margin: 2px auto;
+  }
+
+  /* Tablet Browser Mockup */
+  .mockup-browser {
+    width: 200px;
+    height: 150px;
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .mockup-browser-chrome {
+    background: #f3f4f6;
+    padding: 4px 6px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .mockup-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+  }
+  .mockup-dot.red { background: #f04a4a; }
+  .mockup-dot.yellow { background: #ffc107; }
+  .mockup-dot.green { background: #27ae60; }
+  .mockup-url-bar {
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-radius: 3px;
+    height: 8px;
+    flex: 1;
+    margin-left: 6px;
+    font-family: var(--font-mono);
+    font-size: 5px;
+    color: var(--gray-500);
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+  }
+  .mockup-browser-nav {
+    background: var(--navy);
+    color: #fff;
+    padding: 3px 8px;
+    font-family: var(--font-mono);
+    font-size: 6px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .mockup-browser-nav span:first-child { font-weight: 700; }
+  .mockup-browser-nav span:last-child { opacity: 0.8; }
+  
+  .mockup-browser-body {
+    flex: 1;
+    display: flex;
+  }
+  .mockup-sidebar {
+    width: 40px;
+    background: #f9fafb;
+    border-right: 1px solid var(--gray-200);
+    padding: 6px 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .mockup-sidebar-title {
+    font-family: var(--font-mono);
+    font-size: 5px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .mockup-sidebar-link {
+    font-size: 4.5px;
+    color: var(--gray-500);
+  }
+  .mockup-browser-content {
+    flex: 1;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .mockup-filter-bar {
+    background: rgba(0,38,132,0.05);
+    padding: 2px 4px;
+    font-family: var(--font-mono);
+    font-size: 5px;
+    border-radius: 2px;
+  }
+  .mockup-hex-grid {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    margin: 4px 0;
+  }
+  .mockup-active-detail {
+    border: 1px solid var(--chartreuse);
+    background: rgba(198,233,61,0.05);
+    padding: 4px;
+    border-radius: 3px;
+    text-align: left;
+  }
+  .mockup-progress-bar {
+    width: 100%;
+    height: 3px;
+    background: #e5e7eb;
+    border-radius: 1.5px;
+    position: relative;
+  }
+  .mockup-progress-fill {
+    height: 100%;
+    background: var(--chartreuse);
+    border-radius: 1.5px;
+  }
+
+  /* Desktop Monitor Mockup */
+  .mockup-desktop-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+  }
+  .mockup-monitor {
+    width: 220px;
+    height: 140px;
+    background: #fff;
+    border: 4px solid #d1d5db;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .mockup-stand {
+    width: 16px;
+    height: 12px;
+    background: #9ca3af;
+  }
+  .mockup-base {
+    width: 50px;
+    height: 4px;
+    background: #9ca3af;
+    border-radius: 2px 2px 0 0;
+  }
+  .mockup-desktop-body {
+    flex: 1;
+    display: flex;
+  }
+  .mockup-desktop-main {
+    flex: 1;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5px;
+    text-align: left;
+  }
+
+  /* Physical distance section */
+  .distance-section {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    margin: 2.5rem 0;
+  }
+  .distance-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.85rem 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .distance-body {
+    padding: 0;
+  }
+  .distance-row {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+    border-bottom: 1px solid var(--gray-200);
+    align-items: center;
+  }
+  .distance-row:last-child {
+    border-bottom: none;
+  }
+  .distance-row-desc {
+    display: flex;
+    flex-direction: column;
+  }
+  .distance-row-desc h4 {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  .distance-row-desc p {
+    font-size: 0.88rem;
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+  .distance-row-visual {
+    background: #f8fbff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--r-md);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .distance-row-visual svg {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+  }
+  @media (max-width: 768px) {
+    .distance-row {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  /* Sprint legend */
+  .sprint-legend {
+    background: rgba(198, 233, 61, 0.07);
+    border-left: 5px solid var(--chartreuse);
+    padding: 1.5rem;
+    border-radius: 0 var(--r-md) var(--r-md) 0;
+    margin: 2.5rem 0;
+  }
+  .sprint-legend h4 {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+  }
+  .sprint-legend ol {
+    margin-left: 1.2rem;
+    font-size: 0.92rem;
+    color: var(--gray-800);
+    line-height: 1.65;
+  }
+  .sprint-legend li { margin-bottom: 0.4rem; }
+
+  .transformation-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--r-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 1.5rem;
+  }
+  .transformation-card h3 {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  .transformation-card p {
+    font-size: 0.83rem;
+    color: var(--gray-700);
+    line-height: 1.55;
+    margin-bottom: 0.75rem;
+  }
+  .rule-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .rule-list li {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--gray-100);
+    font-size: 0.8rem;
+    color: var(--gray-700);
+  }
+  .rule-list li:last-child { border-bottom: none; }
+  .rule-trigger {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.1rem 0.45rem;
+    border-radius: var(--r-sm);
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="sprint-index.html"><span class="dot"></span>DTPR · Visual System Prep</a>
+  <nav>
+    <a href="index.html" class="nav-split-link">← Brand Audit</a>
+    <a href="sprint-index.html">Cover</a>
+    <a href="13-strategic-postures.html">13 Postures</a>
+    <a href="14-sprint-morphology.html">14 Form Box</a>
+    <a href="15-transformation-morphology.html">15 Process Box</a>
+    <a href="16-semantic-morphology.html">16 Semantic Box</a>
+    <a href="17-sprint-recipes.html">17 Recipes</a>
+    <a href="18-geometric-blueprint.html">18 Blueprint</a>
+    <a href="19-core-caa-assets.html">19 CAA Assets</a>
+    <a href="20-iso-3864-matrix.html">20 ISO Matrix</a>
+    <a href="21-responsive-specs.html" aria-current="page">21 Responsive</a>
+  </nav>
+  <span class="badge-draft">v0.3 · system prep</span>
+</header>
+
+<main>
+  <span class="eyebrow">21 · Responsive Application Specs</span>
+  <h1>Responsive Application Specs</h1>
+  <p class="lede">DTPR operates across an unusual range of contexts — from 10-meter viewing distances at outdoor installations to 320px mobile screens accessed via QR scan seconds after encountering a physical sign. This document specifies how the visual system transforms across that full range, following the Process Box transformation rules from the three Sprint Recipes.</p>
+
+  <!-- Physical distance scale -->
+  <!-- Physical distance scale -->
+  <div class="distance-section">
+    <div class="distance-header">Physical Viewing Distance — Scale Rules (Regulatory Track)</div>
+    <div class="distance-body">
+      <p style="font-size:0.88rem; color:var(--gray-700); padding: 1.5rem 1.5rem 0.5rem; margin: 0;">Physical signage operates across three standard viewing zones. Each zone has a distinct minimum readable element size derived from the hexagon blueprint formula.</p>
+      
+      <!-- Row 1: Awareness Zone -->
+      <div class="distance-row">
+        <div class="distance-row-desc">
+          <h4>Awareness Zone (10m+)</h4>
+          <p>Designed to capture attention from a distance in public environments. In this zone, citizens can identify the presence of DTPR signs, count the active categories, and see primary silhouettes.</p>
+          <p><strong>Minimum Hexagon Size:</strong> R = 90mm (Width = 180mm)</p>
+        </div>
+        <div class="distance-row-visual">
+          <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="arrowhead" markerWidth="6" markerHeight="4" refX="3" refY="2" orient="auto">
+                <polygon points="0 0, 6 2, 0 4" fill="#6b7280"/>
+              </marker>
+            </defs>
+            <rect width="320" height="180" fill="#f8fbff"/>
+            <line x1="15" y1="140" x2="305" y2="140" stroke="#d1d5db" stroke-width="1.5"/>
+            
+            <!-- Person standing at left (cx=40, y=140 ground) -->
+            <circle cx="40" cy="30" r="7" fill="#6b7280" />
+            <path d="M28,42 C28,39 52,39 52,42 L50,85 H45 V140 H35 V85 H30 Z" fill="#6b7280"/>
+
+            <!-- Physical Sign panel at right (x=280, y=140 ground). Top of sign at chest level y=50. Height=12px (strictly 1:10 scale) -->
+            <line x1="280" y1="50" x2="280" y2="140" stroke="#9ca3af" stroke-width="1.5"/>
+            <rect x="274" y="45" width="12" height="10" rx="1" fill="#f8f9fa" stroke="#002684" stroke-width="0.8"/>
+            <rect x="274" y="45" width="12" height="2.5" rx="0.5" fill="#002684"/>
+            <line x1="274" y1="55" x2="286" y2="55" stroke="#c6e93d" stroke-width="0.5"/>
+
+            <!-- Distance Dimension -->
+            <line x1="40" y1="150" x2="280" y2="150" stroke="#6b7280" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#arrowhead)"/>
+            <text x="160" y="165" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#374151" font-weight="bold">10m Awareness (Strict 1:10 Scale)</text>
+            
+            <!-- Magnified Zoom Detail callout (cx=160, cy=70, r=32) -->
+            <circle cx="160" cy="70" r="32" fill="none" stroke="#3b85d4" stroke-dasharray="3,2" stroke-width="1"/>
+            <path d="M 274 50 L 192 70 M 274 50 L 160 102" stroke="#3b85d4" stroke-width="0.5" stroke-dasharray="2,2" opacity="0.6"/>
+            <!-- Zoom contents -->
+            <circle cx="160" cy="70" r="31" fill="#ffffff" />
+            <rect x="136" y="50" width="48" height="40" rx="3" fill="#f8f9fa" stroke="#002684" stroke-width="1.5"/>
+            <rect x="136" y="50" width="48" height="10" rx="1.5" fill="#002684"/>
+            <polygon points="160,78 155,70 145,70 140,78 145,86 155,86" fill="rgba(0,38,132,0.2)" stroke="#002684" stroke-width="0.8"/>
+            <text x="160" y="60" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6.5" fill="#002684" font-weight="bold">R=90mm</text>
+            <text x="160" y="96" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">10m Zoom</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Row 2: Engagement Zone -->
+      <div class="distance-row">
+        <div class="distance-row-desc">
+          <h4>Engagement Zone (1–2m)</h4>
+          <p>The standard reading distance for pedestrians. Icon labels, category descriptions, DTPR taxonomy headings, and primary QR code targets are clearly visible and legible.</p>
+          <p><strong>Minimum Hexagon Size:</strong> R = 36mm (Width = 72mm)</p>
+        </div>
+        <div class="distance-row-visual">
+          <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="arrowhead2" markerWidth="6" markerHeight="4" refX="3" refY="2" orient="auto">
+                <polygon points="0 0, 6 2, 0 4" fill="#6b7280"/>
+              </marker>
+            </defs>
+            <rect width="320" height="180" fill="#f8fbff"/>
+            <line x1="15" y1="140" x2="305" y2="140" stroke="#d1d5db" stroke-width="1.5"/>
+            
+            <!-- Person standing closer at x=60 -->
+            <circle cx="60" cy="30" r="7" fill="#4b5563" />
+            <path d="M48,42 C48,39 72,39 72,42 L70,85 H65 V140 H55 V85 H50 Z" fill="#4b5563"/>
+
+            <!-- Physical Sign panel at right (x=200, y=140 ground). Height=12px (strictly 1:10 scale) -->
+            <line x1="200" y1="50" x2="200" y2="140" stroke="#9ca3af" stroke-width="1.5"/>
+            <rect x="194" y="45" width="12" height="10" rx="1" fill="#f8f9fa" stroke="#002684" stroke-width="0.8"/>
+            <rect x="194" y="45" width="12" height="2.5" rx="0.5" fill="#002684"/>
+            <line x1="194" y1="55" x2="206" y2="55" stroke="#c6e93d" stroke-width="0.5"/>
+
+            <!-- Distance Dimension -->
+            <line x1="60" y1="150" x2="200" y2="150" stroke="#6b7280" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#arrowhead2)"/>
+            <text x="130" y="165" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#374151" font-weight="bold">2m Engagement (Strict 1:10 Scale)</text>
+            
+            <!-- Magnified Zoom Detail callout (cx=260, cy=70, r=32) -->
+            <circle cx="260" cy="70" r="32" fill="none" stroke="#3b85d4" stroke-dasharray="3,2" stroke-width="1"/>
+            <path d="M 194 50 L 228 70 M 194 50 L 260 102" stroke="#3b85d4" stroke-width="0.5" stroke-dasharray="2,2" opacity="0.6"/>
+            <!-- Zoom contents -->
+            <circle cx="260" cy="70" r="31" fill="#ffffff" />
+            <rect x="236" y="50" width="48" height="40" rx="3" fill="#f8f9fa" stroke="#002684" stroke-width="1.5"/>
+            <rect x="236" y="50" width="48" height="10" rx="1.5" fill="#002684"/>
+            <polygon points="250,74 246,68 240,68 238,74 240,80 246,80" fill="rgba(0,38,132,0.2)" stroke="#002684" stroke-width="0.6"/>
+            <polygon points="266,74 262,68 256,68 254,74 256,80 262,80" fill="rgba(0,38,132,0.2)" stroke="#002684" stroke-width="0.6"/>
+            <polygon points="282,74 278,68 272,68 270,74 272,80 278,80" fill="rgba(0,38,132,0.2)" stroke="#002684" stroke-width="0.6"/>
+            <text x="260" y="60" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6.5" fill="#002684" font-weight="bold">R=36mm</text>
+            <text x="260" y="96" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#6b7280">2m Zoom</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Row 3: Scan / Read Zone -->
+      <div class="distance-row">
+        <div class="distance-row-desc">
+          <h4>Scan / Read Zone (0.3–0.5m)</h4>
+          <p>Interactive touch and scan distance. Citizens are actively reading footer details, purpose statements, data retention specifications, and scanning the QR code using mobile viewports.</p>
+          <p><strong>Minimum Hexagon Size:</strong> R = 22mm (Standard Panel)</p>
+        </div>
+        <div class="distance-row-visual">
+          <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="arrowhead3" markerWidth="6" markerHeight="4" refX="3" refY="2" orient="auto">
+                <polygon points="0 0, 6 2, 0 4" fill="#6b7280"/>
+              </marker>
+            </defs>
+            <rect width="320" height="180" fill="#f8fbff"/>
+            <line x1="15" y1="140" x2="305" y2="140" stroke="#d1d5db" stroke-width="1.5"/>
+
+            <!-- Phone camera close up (1:1 scale context) -->
+            <rect x="40" y="30" width="50" height="100" rx="8" fill="#111" stroke="#4b5563" stroke-width="2"/>
+            <rect x="43" y="38" width="44" height="84" rx="4" fill="#ffffff"/>
+            <rect x="43" y="38" width="44" height="15" rx="4" fill="#002684"/>
+            <circle cx="65" cy="45" r="4" fill="#ffffff" opacity="0.8"/>
+            <text x="65" y="80" text-anchor="middle" font-family="'Source Sans 3',sans-serif" font-size="8" fill="#002684" font-weight="bold">CAMERA VIEW</text>
+            <rect x="48" y="60" width="34" height="28" rx="2" fill="#f8f9fa" stroke="#002684" stroke-width="0.5"/>
+            <rect x="48" y="60" width="34" height="5" fill="#002684"/>
+
+            <!-- Detailed sign panel on the right (1:1 scale context) -->
+            <rect x="190" y="20" width="100" height="120" rx="6" fill="#f8f9fa" stroke="#002684" stroke-width="2"/>
+            <rect x="190" y="20" width="100" height="25" rx="6" fill="#002684"/>
+            <rect x="190" y="35" width="100" height="10" fill="#002684"/>
+            <text x="240" y="37" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="white" font-weight="bold">DTPR</text>
+            
+            <!-- Hexagons on physical sign -->
+            <polygon points="224,75 218,64.6 206,64.6 200,75 206,85.4 218,85.4" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1"/>
+            <polygon points="252,75 246,64.6 234,64.6 228,75 234,85.4 246,85.4" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1"/>
+            <polygon points="280,75 274,64.6 262,64.6 256,75 262,85.4 274,85.4" fill="rgba(0,38,132,0.1)" stroke="#002684" stroke-width="1"/>
+            <text x="212" y="93" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#002684">VIDEO</text>
+            <text x="240" y="93" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#002684">AUDIO</text>
+            <text x="268" y="93" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6" fill="#002684">NET</text>
+            
+            <rect x="200" y="102" width="22" height="22" rx="1" fill="none" stroke="#002684" stroke-width="1"/>
+            <rect x="202" y="104" width="5" height="5" fill="#002684"/>
+            <rect x="215" y="104" width="5" height="5" fill="#002684"/>
+            <rect x="202" y="117" width="5" height="5" fill="#002684"/>
+            <rect x="190" y="135" width="100" height="5" fill="#c6e93d"/>
+
+            <!-- Distance Dimension -->
+            <line x1="90" y1="80" x2="190" y2="80" stroke="#6b7280" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#arrowhead3)"/>
+            <text x="140" y="95" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="#374151" font-weight="bold">0.3–0.5m Scan</text>
+            <text x="240" y="12" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="#002684" font-weight="bold">R = 22mm</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Specs Table Wrapper -->
+      <div style="padding: 1.5rem; border-top: 1px solid var(--gray-200);">
+        <table class="scale-table" style="margin: 0;">
+          <thead>
+            <tr>
+              <th class="row-head">Zone</th>
+              <th>Distance</th>
+              <th>Hex R min</th>
+              <th>Icon size min</th>
+              <th>Text min size</th>
+              <th>QR code min</th>
+              <th>What must be readable</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="context-label">Awareness</td>
+              <td>10m+</td>
+              <td><span class="spec-chip">90mm</span></td>
+              <td>60mm</td>
+              <td>18pt / 6mm x-height</td>
+              <td>Not required</td>
+              <td>DTPR wordmark, number of hexes present, primary icon silhouettes</td>
+            </tr>
+            <tr>
+              <td class="context-label">Engagement</td>
+              <td>1–2m</td>
+              <td><span class="spec-chip">36mm</span></td>
+              <td>24mm</td>
+              <td>9pt / 3mm x-height</td>
+              <td>70×70mm min</td>
+              <td>Icon labels, category text, QR code scannable, operator brief text</td>
+            </tr>
+            <tr>
+              <td class="context-label">Read / Scan</td>
+              <td>0.3–0.5m</td>
+              <td><span class="spec-chip">22mm</span></td>
+              <td>15mm</td>
+              <td>7pt / 2.3mm x-height</td>
+              <td>35×35mm min</td>
+              <td>All footer text, data retention, purpose statement, operator name</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Digital viewport grid -->
+  <h2 style="font-family:var(--font-serif); font-size:1.5rem; color:var(--navy); margin:2rem 0 0.5rem;">Digital Viewport Transformations</h2>
+  <p style="color:var(--gray-600); margin-bottom:1rem;">How DTPR's visual system adapts across four canonical digital breakpoints, from QR-scan mobile entry to desktop documentation.</p>
+
+  <div class="viewport-grid">
+    <!-- 320px — Mobile S (QR scan landing) - Placeholder -->
+    <div class="viewport-card">
+      <div class="viewport-card-header">
+        Mobile S - Placeholder <span>320px</span>
+      </div>
+      <div class="viewport-preview">
+        <div class="mockup-phone">
+          <div class="mockup-phone-screen">
+            <div class="mockup-header">DTPR Icon Guide</div>
+            <div class="mockup-screen-body">
+              <span class="mockup-headline">You scanned a sign</span>
+              <div class="mockup-hex-cell" style="width: 32px; height: 36px; margin: 4px 0;">
+                <svg class="mockup-hex-bg" viewBox="0 0 100 86.6">
+                  <polygon points="75,86.6 25,86.6 0,43.3 25,0 75,0 100,43.3" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="4"/>
+                </svg>
+                <span class="mockup-hex-icon" style="font-size: 10px; margin-top: -3px;">📷</span>
+                <span class="mockup-hex-label" style="font-size: 5px; margin-top: 10px;">VIDEO</span>
+              </div>
+              <p class="mockup-text">A camera records video. You have a right to know.</p>
+              <div class="mockup-btn">See 7 questions →</div>
+              <span class="mockup-rating-label" style="margin-top: 4px;">How do you feel?</span>
+              <div class="mockup-rating">
+                <span>😟</span><span>😐</span><span>😊</span><span>🎉</span>
+              </div>
+            </div>
+            <div class="mockup-home-indicator"></div>
+          </div>
+        </div>
+      </div>
+      <div class="viewport-specs">
+        <ul class="caa-specs">
+          <li><span>Recipe</span><span>C — Commons</span></li>
+          <li><span>Layout</span><span>Single column</span></li>
+          <li><span>Hex R</span><span>16px UI</span></li>
+          <li><span>Nav</span><span>Hidden (back button)</span></li>
+          <li><span>Font</span><span>Source Sans 3, 16px body</span></li>
+          <li><span>Columns</span><span>1 col, 16px gutter</span></li>
+          <li><span>CAA</span><span>CAA-02 Icon Guide</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 428px — Mobile L (QR expanded) - Placeholder -->
+    <div class="viewport-card">
+      <div class="viewport-card-header">
+        Mobile L - Placeholder <span>428px</span>
+      </div>
+      <div class="viewport-preview">
+        <div class="mockup-phone" style="width: 140px;">
+          <div class="mockup-phone-screen">
+            <div class="mockup-header">DTPR · Icon Guide</div>
+            <div class="mockup-screen-body">
+              <span class="mockup-headline">Technology in this space</span>
+              <div class="mockup-hex-grid" style="margin: 4px 0;">
+                <div class="mockup-hex-cell" style="width: 24px; height: 28px;">
+                  <svg class="mockup-hex-bg" viewBox="0 0 100 86.6">
+                    <polygon points="75,86.6 25,86.6 0,43.3 25,0 75,0 100,43.3" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="4"/>
+                  </svg>
+                  <span class="mockup-hex-icon" style="font-size: 8px; margin-top:-2px;">📷</span>
+                </div>
+                <div class="mockup-hex-cell" style="width: 24px; height: 28px;">
+                  <svg class="mockup-hex-bg" viewBox="0 0 100 86.6">
+                    <polygon points="75,86.6 25,86.6 0,43.3 25,0 75,0 100,43.3" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="4"/>
+                  </svg>
+                  <span class="mockup-hex-icon" style="font-size: 8px; margin-top:-2px;">🔊</span>
+                </div>
+              </div>
+              <p class="mockup-text" style="font-size: 4.5px;">Operated by City. Purpose: Transit monitoring.</p>
+              <div class="mockup-active-detail" style="width: 90%; padding: 3px;">
+                <div style="font-family: var(--font-mono); font-size: 4.5px; font-weight: 700; color: var(--navy);">📷 Video — face blurred</div>
+              </div>
+              <div class="mockup-btn" style="width: 90%; font-size: 4.5px;">Submit Feedback →</div>
+            </div>
+            <div class="mockup-home-indicator"></div>
+          </div>
+        </div>
+      </div>
+      <div class="viewport-specs">
+        <ul class="caa-specs">
+          <li><span>Recipe</span><span>C — Commons</span></li>
+          <li><span>Layout</span><span>1 col, 2-hex row</span></li>
+          <li><span>Hex R</span><span>24px (icon grid)</span></li>
+          <li><span>Nav</span><span>Minimal top bar</span></li>
+          <li><span>Font</span><span>Source Sans 3, 17px body</span></li>
+          <li><span>Columns</span><span>1 col, 20px gutter</span></li>
+          <li><span>CAA</span><span>CAA-02 expanded</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 768px — Tablet (Taxonomy explorer / Deployer) - Placeholder -->
+    <div class="viewport-card">
+      <div class="viewport-card-header">
+        Tablet - Placeholder <span>768px</span>
+      </div>
+      <div class="viewport-preview">
+        <div class="mockup-browser">
+          <div class="mockup-browser-chrome">
+            <span class="mockup-dot red"></span>
+            <span class="mockup-dot yellow"></span>
+            <span class="mockup-dot green"></span>
+            <div class="mockup-url-bar">dtpr.io/taxonomy</div>
+          </div>
+          <div class="mockup-browser-nav">
+            <span>DTPR Taxonomy</span>
+            <span>v2.0</span>
+          </div>
+          <div class="mockup-browser-body">
+            <div class="mockup-sidebar">
+              <span class="mockup-sidebar-title">DEVICE</span>
+              <span class="mockup-sidebar-link" style="color: var(--navy); font-weight: 700;">• Video</span>
+              <span class="mockup-sidebar-link">• Audio</span>
+            </div>
+            <div class="mockup-browser-content">
+              <div class="mockup-filter-bar">Filter: <strong>Video</strong></div>
+              <div class="mockup-hex-grid">
+                <div class="mockup-hex-cell" style="width: 24px; height: 28px;">
+                  <svg class="mockup-hex-bg" viewBox="0 0 100 86.6">
+                    <polygon points="75,86.6 25,86.6 0,43.3 25,0 75,0 100,43.3" fill="rgba(0,38,132,0.15)" stroke="#002684" stroke-width="4"/>
+                  </svg>
+                  <span class="mockup-hex-icon" style="font-size: 8px; margin-top:-2px;">📷</span>
+                </div>
+                <div class="mockup-hex-cell" style="width: 24px; height: 28px;">
+                  <svg class="mockup-hex-bg" viewBox="0 0 100 86.6">
+                    <polygon points="75,86.6 25,86.6 0,43.3 25,0 75,0 100,43.3" fill="rgba(0,38,132,0.05)" stroke="#002684" stroke-width="3"/>
+                  </svg>
+                  <span class="mockup-hex-icon" style="font-size: 8px; margin-top:-2px;">🚁</span>
+                </div>
+              </div>
+              <div class="mockup-active-detail">
+                <div style="font-family: var(--font-mono); font-size: 5px; font-weight: 700; color: var(--navy);">📷 VIDEO CAMERA</div>
+                <p style="font-size: 4px; color: var(--gray-600); margin: 1px 0;">Microphone array. Face blurred at source.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="viewport-specs">
+        <ul class="caa-specs">
+          <li><span>Recipe</span><span>B — Maker</span></li>
+          <li><span>Layout</span><span>Sidebar + main</span></li>
+          <li><span>Hex R</span><span>24px icon grid</span></li>
+          <li><span>Nav</span><span>Top bar + sidebar</span></li>
+          <li><span>Font</span><span>JetBrains Mono headers</span></li>
+          <li><span>Columns</span><span>2 col (200+fluid)</span></li>
+          <li><span>CAA</span><span>CAA-03 Taxonomy Explorer</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 1280px — Desktop (documentation / deployer) - Placeholder -->
+    <div class="viewport-card">
+      <div class="viewport-card-header">
+        Desktop - Placeholder <span>1280px</span>
+      </div>
+      <div class="viewport-preview">
+        <div class="mockup-desktop-wrapper">
+          <div class="mockup-monitor">
+            <div class="mockup-browser-chrome" style="padding: 2px 4px;">
+              <span class="mockup-dot red" style="width:3px; height:3px;"></span>
+              <span class="mockup-dot yellow" style="width:3px; height:3px;"></span>
+              <span class="mockup-dot green" style="width:3px; height:3px;"></span>
+              <div class="mockup-url-bar" style="height:6px; font-size:4px;">docs.dtpr.io/deploy</div>
+            </div>
+            <div class="mockup-browser-nav" style="padding: 2px 6px; font-size: 5px;">
+              <span>DTPR Playbook</span>
+              <span>v1.0</span>
+            </div>
+            <div class="mockup-desktop-body">
+              <div class="mockup-sidebar" style="width: 35px; padding: 4px 2px; gap: 2px;">
+                <span class="mockup-sidebar-title" style="font-size:4px;">STEPS</span>
+                <span class="mockup-sidebar-link" style="font-size:3.5px; color: var(--navy); font-weight:700;">1. Tech type</span>
+                <span class="mockup-sidebar-link" style="font-size:3.5px;">2. Map Qs</span>
+                <span class="mockup-sidebar-link" style="font-size:3.5px;">3. Signs</span>
+              </div>
+              <div class="mockup-desktop-main">
+                <span class="mockup-headline" style="font-size:6px; margin:0;">1. Assess Technology</span>
+                <p style="font-size:3.8px; color: var(--gray-600); line-height:1.2; margin: 0;">Determine sensor capabilities: cameras, microphones, or BLE beacons.</p>
+                <div class="mockup-progress-bar" style="height:2px; margin-top:2px;">
+                  <div class="mockup-progress-fill" style="width:33%;"></div>
+                </div>
+                <div class="mockup-btn" style="width: 50%; font-size: 3.5px; padding: 1.5px; margin-top: 2px; background: var(--navy); color: #fff; border-radius: 1px; align-self: flex-end;">Next Step →</div>
+              </div>
+            </div>
+          </div>
+          <div class="mockup-stand"></div>
+          <div class="mockup-base"></div>
+        </div>
+      </div>
+      <div class="viewport-specs">
+        <ul class="caa-specs">
+          <li><span>Recipe</span><span>A — Regulatory</span></li>
+          <li><span>Layout</span><span>3-col (nav+main+context)</span></li>
+          <li><span>Hex R</span><span>32px+ icon grid</span></li>
+          <li><span>Nav</span><span>Full top bar + left sidebar</span></li>
+          <li><span>Font</span><span>Playfair headings, Source Sans body</span></li>
+          <li><span>Columns</span><span>3 col (200+fluid+200)</span></li>
+          <li><span>CAA</span><span>CAA-04 Deployment Playbook</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Transformation rules -->
+  <h2 style="font-family:var(--font-serif); font-size:1.5rem; color:var(--navy); margin:2rem 0 0.5rem;">Transformation Rules by Sprint Recipe</h2>
+  <p style="color:var(--gray-600); margin-bottom:1.5rem;">Each recipe defines its own transformation envelope — the specific rules for how form elements respond to context. These are not just breakpoints; they are semantic shifts in how the system presents itself.</p>
+
+  <div class="transformation-card">
+    <h3>Recipe A — Regulatory Track: Strict Cascade</h3>
+    <p>Regulatory contexts require predictability above flexibility. The grid never breaks — it compresses to accommodate fewer items, not to create new layouts.</p>
+    <ul class="rule-list">
+      <li><span class="rule-trigger">≥ 1280px</span>Full 3-column doc layout. Persistent sidebar. All hex icons at 32px+. Full footer with operator metadata.</li>
+      <li><span class="rule-trigger">768–1279px</span>2-column layout (sidebar collapses to top nav). Hex icons at 24px. Footer remains full.</li>
+      <li><span class="rule-trigger">428–767px</span>Single column. Sidebar becomes accordion. Hex icons at 20px. QR code moves above footer.</li>
+      <li><span class="rule-trigger">≤ 427px</span>Single column. No sidebar. Hex icons at 16px. Body text 16px minimum. All non-essential chrome removed. "Survival mode" — only data disclosure and feedback CTA visible.</li>
+    </ul>
+  </div>
+
+  <div class="transformation-card">
+    <h3>Recipe B — Maker Track: Fluid Overlay</h3>
+    <p>Developer and taxonomy contexts prioritize content density and interaction. The grid expands to fill available space; sidebar is always present on 768px+.</p>
+    <ul class="rule-list">
+      <li><span class="rule-trigger">≥ 1280px</span>Full taxonomy explorer. 4+ hex columns. Filter bar always visible. Detail panel right-rail. Code blocks full-width.</li>
+      <li><span class="rule-trigger">768–1279px</span>Left sidebar + 3-column hex grid. Detail panel slides up from bottom. Code blocks responsive-scroll.</li>
+      <li><span class="rule-trigger">428–767px</span>No sidebar (filter becomes dropdown). 2-column hex grid. Detail panel full-screen overlay on tap.</li>
+      <li><span class="rule-trigger">≤ 427px</span>1-column hex list (not grid). Tap to expand detail. Code blocks horizontal-scroll. Graph-paper texture removed.</li>
+    </ul>
+  </div>
+
+  <div class="transformation-card">
+    <h3>Recipe C — Commons Track: Progressive Disclosure</h3>
+    <p>Citizen-facing contexts operate mobile-first by definition (QR scan arrivals). Desktop is never the primary context — desktop views should redirect to the deployer or developer entry.</p>
+    <ul class="rule-list">
+      <li><span class="rule-trigger">≤ 427px</span>Primary context. Single column. One hex icon prominent. Plain-language disclosure. Rating CTA above fold. No nav chrome.</li>
+      <li><span class="rule-trigger">428–767px</span>2-hex row possible. Expand to show second technology type. Feedback form inline.</li>
+      <li><span class="rule-trigger">≥ 768px</span>Redirect notice: "You're on a large screen. This page is designed for mobile QR-scan access. Are you a deployer or developer?" → route to correct persona entry.</li>
+    </ul>
+  </div>
+
+  <div class="sprint-legend">
+    <h4>Dynamic Visual Identity — Transformation Summary</h4>
+    <ol>
+      <li><strong>Transformation ≠ just breakpoints:</strong> In dynamic visual identity terms, the Process Box is transformation-based vocabulary — identification through a distinctive <em>process</em>, not a fixed form. Its variables map to semantic shifts (what the system says), not just visual ones. Recipe C at desktop redirects to a different recipe entirely: the transformation is a persona handoff, not a layout reflow.</li>
+      <li><strong>Physical-to-digital continuity:</strong> DTPR is unique in that the same brand system must operate at 10m outdoor viewing distance and 320px mobile. The hexagon unit's scale-agnostic formula (p.18) is what makes this coherent — the R formula is the bridge between physical and digital specs.</li>
+      <li><strong>Chartreuse as the constant:</strong> The chartreuse CTA accent is present at every breakpoint and in every recipe because it is the action-signal in the system. Residents tap it. Deployers click it. Developers see it as the selected state. It never disappears — even at minimum survival breakpoints.</li>
+      <li><strong>QR as the inflection point:</strong> The moment a citizen scans a QR code, the system switches from Recipe A (the physical sign's recipe) to Recipe C (the mobile landing's recipe). This deliberate recipe switch at the QR gateway is the most critical interaction handoff in the system and must be tested in all deployment scenarios.</li>
+    </ol>
+  </div>
+
+  <div class="page-nav">
+    <a href="20-iso-3864-matrix.html">← 20 ISO Matrix</a>
+    <a href="sprint-index.html">↑ System Prep Cover</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.3 · June 2026 · Superbloom Design · <a href="https://github.com/superbloom/dtpr-brand-identity" target="_blank" rel="noopener">view on GitHub</a> (forthcoming)</p>
+</footer>
+
+</body>
+</html>

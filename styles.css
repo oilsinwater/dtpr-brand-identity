@@ -522,10 +522,11 @@ figure img {
 }
 
 figure figcaption {
-  font-size: 0.82rem;
-  color: var(--gray-500);
+  font-size: 1.05rem;
+  color: var(--gray-600);
+  font-style: italic;
   padding: 0.6rem 0.2rem 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 figure figcaption strong { color: var(--navy); }
@@ -551,9 +552,10 @@ figure figcaption strong { color: var(--navy); }
 
 .shot .caption {
   padding: 0.8rem 1rem;
-  font-size: 0.84rem;
-  color: var(--gray-700);
-  line-height: 1.45;
+  font-size: 1.05rem;
+  color: var(--gray-600);
+  font-style: italic;
+  line-height: 1.6;
 }
 
 .shot .caption strong {
