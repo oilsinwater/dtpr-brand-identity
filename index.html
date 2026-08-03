@@ -6,6 +6,15 @@
 <title>DTPR — Brand Book</title>
 <meta name="description" content="DTPR brand book — three sections: brand audit (observation), visual system prep (parameters), and brand identity guidelines (rules).">
 <link rel="stylesheet" href="styles.css">
+<style>
+  .section-card { position: relative; transition: transform 0.18s ease-out, border-color 0.18s ease-out; border-color: var(--gray-200); }
+  .section-card:hover { transform: translateY(-2px); border-color: var(--navy); }
+  .section-card .card-heading-link { color: var(--navy); text-decoration: none; display: block; }
+  .section-card .card-heading-link h4 { margin: 0.25rem 0; transition: color 0.18s ease-out; }
+  .section-card:hover .card-heading-link h4 { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; }
+  .section-card .card-arrow { position: absolute; top: 1rem; right: 1rem; font-family: 'Source Sans 3', sans-serif; font-weight: 700; color: var(--navy); opacity: 0; transition: opacity 0.18s ease-out; font-size: 1.1rem; }
+  .section-card:hover .card-arrow { opacity: 1; }
+</style>
 </head>
 <body>
 
@@ -13,8 +22,8 @@
   <a class="brand" href="index.html"><span class="dot"></span>DTPR · Brand Book</a>
   <nav>
     <a href="index.html" aria-current="page">Cover</a>
-    <a href="#brand-audit">Brand Audit</a>
-    <a href="#visual-system-prep">Visual System Prep</a>
+    <a href="index.html#table-of-contents">Brand Audit</a>
+    <a href="sprint-index.html">Visual System Prep</a>
     <a href="guidelines/index.html">Guidelines</a>
   </nav>
   <span class="badge-draft">v0.4 · brand book</span>
@@ -54,34 +63,37 @@
 
   <div class="grid-3" style="margin-top: 1.5rem;">
 
-    <div class="finding" id="brand-audit">
+    <div class="finding section-card">
       <span class="tag observed">OBSERVED</span>
-      <h4>Section 1 · Brand Audit</h4>
+      <a class="card-heading-link" href="index.html#table-of-contents">
+        <h4>Section 1 · Brand Audit <span class="card-arrow" aria-hidden="true">→</span></h4>
+      </a>
       <p>An inventory of the DTPR visual identity as it exists in the wild — across <code>dtpr.io</code>, <code>vision.dtpr.io</code>, <code>makeshift2026.dtpr.io</code>, <code>docs.dtpr.io</code>, the Assembly Day deck, the Message Map, and MakeShift print assets.</p>
       <p><strong>What it is:</strong> observation, screenshots, source-code citations, analysis.</p>
       <p><strong>What it is not:</strong> prescriptive rules. Decisions and color-token lockups are observed or inferred, never invented.</p>
       <p><strong>Pages:</strong> 12 (01 Evolution → 12 Findings).</p>
-      <a class="src" href="index.html#table-of-contents" style="font-weight: 700; display: inline-block; margin-top: 0.75rem;">Open the Brand Audit →</a>
     </div>
 
-    <div class="finding" id="visual-system-prep">
+    <div class="finding section-card">
       <span class="tag proposed">PROPOSED</span>
-      <h4>Section 2 · Visual System Prep</h4>
+      <a class="card-heading-link" href="sprint-index.html">
+        <h4>Section 2 · Visual System Prep <span class="card-arrow" aria-hidden="true">→</span></h4>
+      </a>
       <p>A structured set of rules and parameters defining how DTPR assets behave. Morphological parameter boxes (Form, Process, Semantic), Sprint Recipes (Regulatory, Maker, Commons), honeycomb blueprinting, ISO 3864 check, responsive specifications.</p>
       <p><strong>What it is:</strong> the prescriptive engine that dictates how symbols, layouts, and warning matrices scale in the field.</p>
       <p><strong>What it is not:</strong> static brand history.</p>
       <p><strong>Pages:</strong> 10 (13 Postures → 22 Derivation).</p>
-      <a class="src" href="sprint-index.html" style="font-weight: 700; display: inline-block; margin-top: 0.75rem;">Open Visual System Prep →</a>
     </div>
 
-    <div class="finding" id="brand-guidelines">
+    <div class="finding section-card">
       <span class="tag memo">MEMO</span>
-      <h4>Section 3 · Brand Identity Guidelines</h4>
+      <a class="card-heading-link" href="guidelines/index.html">
+        <h4>Section 3 · Brand Identity Guidelines <span class="card-arrow" aria-hidden="true">→</span></h4>
+      </a>
       <p>A prescriptive reference for how the DTPR identity is built and used — values, logo, color, type, photography, and visual language in one place. Authoritative for color and fonts going forward; supersedes the audit's color and typography pages.</p>
       <p><strong>What it is:</strong> the rules for the identity.</p>
       <p><strong>What it is not:</strong> observation (Section 1) or parameters (Section 2).</p>
       <p><strong>Pages:</strong> 11 (Cover + 10 content).</p>
-      <a class="src" href="guidelines/index.html" style="font-weight: 700; display: inline-block; margin-top: 0.75rem;">Open Guidelines →</a>
     </div>
 
   </div>
