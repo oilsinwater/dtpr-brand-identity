@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>09 Font Protocol — DTPR Brand Identity Guidelines</title>
+<meta name="description" content="DTPR Font Protocol — do's and don'ts. Where Source Serif 4 Italic may appear (once per page, hero). Where Source Code Pro may appear (code, taxonomy only). Mono is not for UI.">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="dot"></span>DTPR · Brand Identity Guidelines</a>
+  <nav>
+    <a href="../index.html" class="nav-split-link">← Brand Audit</a>
+    <a href="index.html">Cover</a>
+    <a href="../sprint-index.html" class="nav-split-link">Visual System Prep →</a>
+  </nav>
+  <span class="badge-draft">v0.4 · guidelines</span>
+</header>
+
+<main>
+  <span class="eyebrow">09 · Font Protocol</span>
+  <h1>Where each family may and may not appear</h1>
+  <p class="lede">Three families, one job each. The font protocol is the rule book — every visual decision that involves type is tested against it. The protocol is the page most often violated; treat it as the test for the type system.</p>
+
+  <div class="tag-row">
+    <span class="tag memo">MEMO</span>
+  </div>
+
+  <hr>
+
+  <h2>Source Sans 3 — the working voice</h2>
+
+  <p>Source Sans 3 owns display, body, labels, button text, navigation, captions, and live-data indicator labels. If it is not editorial italic and it is not code, it is Source Sans 3.</p>
+
+  <div class="do-dont">
+    <div class="card do">
+      <div class="tag">Recommended</div>
+      <ul style="line-height: 1.8; padding-left: 1.2rem">
+        <li>Headlines (h1–h3): <strong>Bold 700</strong>, 22–33px, 1.30 line-height.</li>
+        <li>Body copy: <strong>Regular 400</strong>, 17px, 1.64 line-height, 65–75ch max.</li>
+        <li>Labels (nav, button): <strong>SemiBold 600</strong>, 14px, 1.30 line-height.</li>
+        <li>Captions (timestamps, fine print): <strong>Regular 400</strong>, 12px, 1.40 line-height.</li>
+        <li>Live-data indicator label: <strong>SemiBold 600</strong>, 12px.</li>
+      </ul>
+    </div>
+    <div class="card dont">
+      <div class="tag">Avoid</div>
+      <ul style="line-height: 1.8; padding-left: 1.2rem">
+        <li>Using Source Sans 3 <em>Italic</em> for body emphasis. Use <code>&lt;em&gt;</code> tags for semantic emphasis; the visual default remains Regular.</li>
+        <li>Setting body copy below 16px or above 19px. Both ranges reduce legibility.</li>
+        <li>Setting headline weights below 600. Bold 700 is the minimum for h1–h3.</li>
+        <li>Tracking Source Sans 3 above <code>+0.02em</code> in body. The font is designed for tight tracking.</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Source Serif 4 Italic — the editorial moment</h2>
+
+  <p>Source Serif 4 Italic appears <strong>exactly once per page</strong>, in the hero headline. This is the cadence rule.</p>
+
+  <div class="do-dont">
+    <div class="card do">
+      <div class="tag">Recommended</div>
+      <ul style="line-height: 1.8; padding-left: 1.2rem">
+        <li>Hero headline only, 48px desktop / 36px mobile, line-height 1.15.</li>
+        <li><strong>Italic 400</strong> weight. The italic is the voice — not the weight.</li>
+        <li>Navy <code>#1B2B80</code> on paper surfaces. White on dark surfaces.</li>
+        <li>One line if possible; two lines maximum.</li>
+      </ul>
+    </div>
+    <div class="card dont">
+      <div class="tag">Avoid</div>
+      <ul style="line-height: 1.8; padding-left: 1.2rem">
+        <li><strong>Using Source Serif 4 Italic in any other element on the page.</strong> Not in section headers. Not in CTAs. Not in cards. Not in the hero subhead. Not in navigation. Not in body copy.</li>
+        <li>Using Source Serif 4 in Roman (non-italic) style. The Roman is not part of the identity.</li>
+        <li>Combining Source Serif 4 Italic with another serif font. There is no second serif.</li>
+        <li>Setting the italic headline below 36px. Below this size, the italic loses its character.</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Source Code Pro — code and taxonomy only</h2>
+
+  <p>Source Code Pro is reserved for code blocks, schema identifiers, and taxonomy codes. Anywhere else, use Source Sans 3.</p>
+
+  <div class="do-dont">
+    <div class="card do">
+      <div class="tag">Recommended</div>
+      <ul style="line-height: 1.8; padding-left: 1.2rem">
+        <li>Code blocks: <strong>Regular 400</strong>, 14px, 1.55 line-height, on Terminal Dark surface.</li>
+        <li>Schema identifiers (e.g., <code>AI@2026-05-06-BETA</code>): inline, 12–14px.</li>
+        <li>Taxonomy codes (e.g., <code>11 DATACHAIN LAYERS</code>, <code>108 ELEMENTS</code>): uppercase, JetBrains Mono or Source Code Pro.</li>
+        <li>Filename headers in code blocks: 12px, muted <code>#94A3B8</code>.</li>
+        <li>Copy-button label inside code blocks: 12px.</li>
+      </ul>
+    </div>
+    <div class="card dont">
+      <div class="tag">Avoid</div>
+      <ul style="line-height: 1.8; padding-left: 1.2rem">
+        <li><strong>Using Source Code Pro in navigation, button text, section headers, captions, or body prose.</strong></li>
+        <li>Setting Source Code Pro below 11px. Below this, code is unreadable.</li>
+        <li>Applying Source Code Pro to non-code technical content. Live-data indicator labels, for example, use Source Sans 3 SemiBold — they are UI labels, not code.</li>
+        <li>Mixing Source Code Pro with another monospace font. There is no second mono.</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Cross-recipe protocol</h2>
+
+  <p>Recipe B is the canonical direction. Recipes A (Regulatory) and C (Commons) are archived as experimental recipes; elements from them may inform Recipe B where they serve the Technical Evaluator, but they are no longer separate recipes in their own right. The recipes have been folded into Recipe B as optional registers (communications that read with some flavor of C or A), and supporting corpus material lives under <code>recipes/b/corpus/</code>.</p>
+
+  <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem;">
+    <thead>
+      <tr style="background: var(--gray-100); text-align: left;">
+        <th style="padding: 0.6rem; border-bottom: 2px solid var(--gray-300);">Surface register</th>
+        <th style="padding: 0.6rem; border-bottom: 2px solid var(--gray-300);">Source</th>
+        <th style="padding: 0.6rem; border-bottom: 2px solid var(--gray-300);">Use when</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);"><strong>B · Maker (this page)</strong></td><td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);">Source Sans 3 + Source Serif 4 Italic + Source Code Pro</td><td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);">Default. Technical Evaluator surfaces — homepage, docs, quickstart.</td></tr>
+      <tr><td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);"><strong>C-flavored B</strong></td><td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);">Recipe B + C motifs from corpus</td><td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);">A Recipe B surface that needs humanist warmth without departing from the B lockup. Use sparingly.</td></tr>
+      <tr><td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);"><strong>A-flavored B</strong></td><td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);">Recipe B + A motifs from corpus</td><td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);">A Recipe B surface that needs procurement or compliance framing without departing from the B lockup. Use sparingly.</td></tr>
+    </tbody>
+  </table>
+
+  <p style="font-size: 0.85rem; margin-top: 1rem; color: var(--gray-700);">See <a href="recipe-a-reference.html">Recipe A reference</a> and <a href="recipe-c-reference.html">Recipe C reference</a> for the archived visual systems, available as optional registers within Recipe B.</p>
+
+  <div class="page-nav">
+    <a href="08-fonts.html">← 08 Fonts</a>
+    <a href="10-photography.html">10 Photography →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="../assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="../assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.4 · August 2026 · Superbloom Design</p>
+</footer>
+
+</body>
+</html>

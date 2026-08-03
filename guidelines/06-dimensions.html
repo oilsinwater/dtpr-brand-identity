@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>06 Dimensions &amp; Clear Space — DTPR Brand Identity Guidelines</title>
+<meta name="description" content="DTPR Dimensions and Clear Space — minimum sizes for digital and print, the 0.4× mark-height clearspace rule, and forbidden modifications.">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="dot"></span>DTPR · Brand Identity Guidelines</a>
+  <nav>
+    <a href="../index.html" class="nav-split-link">← Brand Audit</a>
+    <a href="index.html">Cover</a>
+    <a href="../sprint-index.html" class="nav-split-link">Visual System Prep →</a>
+  </nav>
+  <span class="badge-draft">v0.4 · guidelines</span>
+</header>
+
+<main>
+  <span class="eyebrow">06 · Dimensions &amp; Clear Space</span>
+  <h1>How much room the identity needs</h1>
+  <p class="lede">Every mark has a minimum size below which it becomes unreadable, and a clearspace around which no other element may intrude. The DTPR mark is no exception. These rules protect the mark's legibility across every surface.</p>
+
+  <div class="tag-row">
+    <span class="tag proposed">PROPOSED</span>
+  </div>
+
+  <hr>
+
+  <h2>The clearspace rule</h2>
+
+  <p>Maintain a clearspace of <strong>0.4× the mark's height</strong> on all sides. No other element — text, image, container edge — may enter this space.</p>
+
+  <div class="mark-tile" style="padding: 3rem;">
+    <div style="position: relative; display: inline-block; padding: 2rem;">
+      <img src="../assets/marks/dtpr_logo_blue.svg" alt="" style="width: 80px; display: block;">
+      <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: 1px dashed var(--chartreuse); pointer-events: none;"></div>
+    </div>
+    <div class="label">The dashed chartreuse border shows the <strong>0.4× mark-height</strong> clearspace on all four sides.</div>
+  </div>
+
+  <h3>Why 0.4× and not 0.5× or 1×</h3>
+  <p>The DTPR mark is geometrically compact (hexagon + inner circle + small offset square). 0.4× is the smallest ratio that still reads as "protected zone" without crowding the mark. Smaller ratios (0.2×, 0.3×) cause the mark to visually merge with adjacent elements. Larger ratios (0.5×, 1×) waste layout real estate on surfaces where space is at a premium (signage, mobile).</p>
+
+  <hr>
+
+  <h2>Minimum sizes</h2>
+
+  <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem;">
+    <thead>
+      <tr style="background: var(--gray-100); text-align: left;">
+        <th style="padding: 0.6rem; border-bottom: 2px solid var(--gray-300);">Surface</th>
+        <th style="padding: 0.6rem; border-bottom: 2px solid var(--gray-300);">Mark height</th>
+        <th style="padding: 0.6rem; border-bottom: 2px solid var(--gray-300);">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);"><strong>Digital · favicon</strong></td>
+        <td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);">16 × 16px</td>
+        <td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);">Inner circle and offset square collapse below 16px. Below this, use the mark without the inner details.</td>
+      </tr>
+      <tr>
+        <td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);"><strong>Digital · header / footer</strong></td>
+        <td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);">24 × 24px minimum</td>
+        <td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);">Recommended 32 × 32px for primary chrome.</td>
+      </tr>
+      <tr>
+        <td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);"><strong>Digital · app icon</strong></td>
+        <td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);">48 × 48px minimum</td>
+        <td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);">PWA / mobile app store requirements often exceed this.</td>
+      </tr>
+      <tr>
+        <td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);"><strong>Print · business card</strong></td>
+        <td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);">8mm</td>
+        <td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);">Reproduce at 600dpi minimum.</td>
+      </tr>
+      <tr>
+        <td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);"><strong>Print · letterhead / document</strong></td>
+        <td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);">12mm</td>
+        <td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);">Standard for official documents.</td>
+      </tr>
+      <tr>
+        <td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);"><strong>Signage · outdoor</strong></td>
+        <td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);">30mm at viewing distance</td>
+        <td style="padding: 0.6rem; border-bottom: 1px solid var(--gray-200);">Scale up 1.5× for every additional 5m of viewing distance.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h2>Forbidden modifications</h2>
+
+  <div class="do-dont">
+    <div class="card do">
+      <div class="tag">Recommended</div>
+      <ul style="line-height: 1.8; padding-left: 1.2rem">
+        <li>Maintain the 0.4× clearspace rule on all four sides.</li>
+        <li>Respect minimum sizes for the surface.</li>
+        <li>Scale the mark proportionally — never stretch or distort.</li>
+        <li>Use the appropriate variant for the surface (see <a href="05-icon.html">05 Icon</a>).</li>
+      </ul>
+    </div>
+    <div class="card dont">
+      <div class="tag">Avoid</div>
+      <ul style="line-height: 1.8; padding-left: 1.2rem">
+        <li>Crowding the mark with text, other marks, or container edges.</li>
+        <li>Placing the mark on busy photographic backgrounds without sufficient contrast.</li>
+        <li>Rotating the mark off its hexagonal axis.</li>
+        <li>Adding outlines, shadows, bevels, or 3D effects to the mark.</li>
+        <li>Reproducing the mark at sizes below the minimum for the surface.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout open">
+    <p><strong>OPEN: signage viewing distance formula.</strong> The 1.5×-per-5m scaling rule above is <span class="tag proposed">PROPOSED</span>. It needs validation against existing signage assets in the field before becoming a locked rule.</p>
+  </div>
+
+  <div class="page-nav">
+    <a href="05-icon.html">← 05 Icon</a>
+    <a href="07-color.html">07 Color Guide →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="../assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="../assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.4 · August 2026 · Superbloom Design</p>
+</footer>
+
+</body>
+</html>
