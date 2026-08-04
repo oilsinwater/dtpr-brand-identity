@@ -49,7 +49,7 @@
   </div>
 
   <h3>Geometry breakdown</h3>
-  <p><strong>Canonical marks</strong> are solid hex + white inner circle + colored square. <strong>Lockups</strong> follow the same construction for navy and black variants (white inner circle). For the white lockup variant the inner circle is omitted so the host surface shows through.</p>
+  <p><strong>Canonical marks</strong> are solid hex + white inner circle + colored square. <strong>Lockups</strong>: navy and black variants keep the white inner circle; the white variant omits the inner circle so the host surface shows through directly as a circle.</p>
 
   <pre style="background: var(--gray-100); padding: 1rem; font-family: var(--font-mono); font-size: 0.75rem; overflow-x: auto; border-radius: 4px; line-height: 1.5">
 DTPR_Logo_Blue.svg (28×32 viewBox, navy #002684 solid):
@@ -63,18 +63,19 @@ DTPR_Logo_Black.svg (28×32 viewBox, black solid):
 DTPR_Logo_Outline.svg (28×32 viewBox, stroke only):
   Same construction; no fill, 1.5px black stroke
 
-Lockups:
+|Lockups:
   horizontal_navy, stacked_navy, horizontal_black, stacked_black:
     Outer hex (navy/black) + WHITE inner circle + colored square + colored wordmark
-  horizontal_white, stacked_white:
-    Outer hex (white) + NO inner circle + white square + white wordmark
-    Inner area shows host surface through the transparent circle
+  horizontal_white_on_navy, stacked_white_on_navy:
+    Outer hex (white) + NO inner circle + NAVY square + white wordmark
+  horizontal_white_on_black, stacked_white_on_black:
+    Outer hex (white) + NO inner circle + BLACK square + white wordmark
   </pre>
 
   <hr>
 
   <h2>Canonical wordmark lockup</h2>
-  <p>The mark + wordmark lockup. Public Sans Bold, navy <code>#002684</code>, paired with the navy-solid mark. Default horizontal lockup. SVG sources: <code>assets/marks/dtpr_logo_horizontal_&lt;color&gt;.svg</code> in navy, black, and white variants.</p>
+  <p>The mark + wordmark lockup. Public Sans Bold, navy <code>#002684</code>, paired with the navy-solid mark. Default horizontal lockup. SVG sources: <code>assets/marks/dtpr_logo_horizontal_&lt;color&gt;.svg</code> for navy and black; <code>assets/marks/dtpr_logo_horizontal_white_on_&lt;bg&gt;.svg</code> for white-on-navy and white-on-black.</p>
 
   <div class="grid-2">
     <div class="mark-tile">
@@ -82,8 +83,8 @@ Lockups:
       <div class="label">Navy solid (default)</div>
     </div>
     <div class="mark-tile dark">
-      <img src="../assets/marks/dtpr_logo_horizontal_white.svg" alt="DTPR horizontal lockup — white on dark" style="width: 200px;">
-      <div class="label" style="color: rgba(255,255,255,0.7)">White (on dark)</div>
+      <img src="../assets/marks/dtpr_logo_horizontal_white_on_navy.svg" alt="DTPR horizontal lockup — white on navy" style="width: 200px;">
+      <div class="label" style="color: rgba(255,255,255,0.7)">White on dark (navy)</div>
     </div>
   </div>
 
@@ -93,7 +94,7 @@ Lockups:
       <div class="label" style="color: var(--gray-700, #444)">Black solid (on white)</div>
     </div>
     <div class="mark-tile dark" style="background: var(--ink, #111);">
-      <img src="../assets/marks/dtpr_logo_horizontal_white.svg" alt="DTPR horizontal lockup — white on black" style="width: 200px;">
+      <img src="../assets/marks/dtpr_logo_horizontal_white_on_black.svg" alt="DTPR horizontal lockup — white on black" style="width: 200px;">
       <div class="label" style="color: rgba(255,255,255,0.7)">White solid (on black)</div>
     </div>
   </div>
@@ -102,7 +103,7 @@ Lockups:
   <ul style="line-height: 1.8; padding-left: 1.2rem">
     <li>Wordmark is always <strong>Public Sans Bold</strong> (or Bold 700 weight equivalent). Never another weight.</li>
     <li>Wordmark is always the same color as the mark. Navy mark + navy wordmark, black mark + black wordmark, white mark + white wordmark.</li>
-    <li><strong>Lockups</strong>: navy and black variants use a white inner circle (matching the canonical mark). The white variant omits the inner circle so the host surface shows through.</li>
+    <li><strong>Lockups</strong>: navy and black variants keep the white inner circle. White variants omit the inner circle; the small square is navy for the white-on-navy lockup and black for the white-on-black lockup, so the square stays visible against the host surface.</li>
     <li>Letter-spacing: <code>-0.01em</code>. The wordmark is tight, not loose.</li>
     <li>Mark-to-wordmark gap: 0.6rem. The mark sits at the cap height of the wordmark.</li>
     <li>No alternate font pairings. No italic. No script. No all-caps with tracking.</li>
