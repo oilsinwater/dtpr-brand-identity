@@ -67,9 +67,9 @@ DTPR_Logo_Outline.svg (28×32 viewBox, stroke only):
   horizontal_navy, stacked_navy, horizontal_black, stacked_black:
     Outer hex (navy/black) + WHITE inner circle + colored square + colored wordmark
   horizontal_white_on_navy, stacked_white_on_navy:
-    Outer hex (white) + NO inner circle + NAVY square + white wordmark
+    Outer hex (white) + NAVY inner circle + white square + white wordmark
   horizontal_white_on_black, stacked_white_on_black:
-    Outer hex (white) + NO inner circle + BLACK square + white wordmark
+    Outer hex (white) + BLACK inner circle + white square + white wordmark
   </pre>
 
   <hr>
@@ -103,7 +103,7 @@ DTPR_Logo_Outline.svg (28×32 viewBox, stroke only):
   <ul style="line-height: 1.8; padding-left: 1.2rem">
     <li>Wordmark is always <strong>Public Sans Bold</strong> (or Bold 700 weight equivalent). Never another weight.</li>
     <li>Wordmark is always the same color as the mark. Navy mark + navy wordmark, black mark + black wordmark, white mark + white wordmark.</li>
-    <li><strong>Lockups</strong>: navy and black variants keep the white inner circle. White variants omit the inner circle; the small square is navy for the white-on-navy lockup and black for the white-on-black lockup, so the square stays visible against the host surface.</li>
+    <li><strong>Lockups</strong>: navy and black variants keep the white inner circle. White variants use a bg-colored inner circle (navy for white-on-navy, black for white-on-black) with a white square on top, so both the circle and the square are visible against the host surface.</li>
     <li>Letter-spacing: <code>-0.01em</code>. The wordmark is tight, not loose.</li>
     <li>Mark-to-wordmark gap: 0.6rem. The mark sits at the cap height of the wordmark.</li>
     <li>No alternate font pairings. No italic. No script. No all-caps with tracking.</li>
