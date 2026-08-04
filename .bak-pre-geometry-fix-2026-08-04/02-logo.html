@@ -49,53 +49,41 @@
   </div>
 
   <h3>Geometry breakdown</h3>
-  <p><strong>Canonical marks</strong> are solid hex + white inner circle + colored square. <strong>Lockups</strong>: navy and black variants keep the white inner circle; the white variant omits the inner circle so the host surface shows through directly as a circle.</p>
+  <p>Each variant is a hexagon with an inner circle and a small offset square inside the lower-right of the inner circle. The geometry is identical across the three; only the fill or stroke differs.</p>
 
   <pre style="background: var(--gray-100); padding: 1rem; font-family: var(--font-mono); font-size: 0.75rem; overflow-x: auto; border-radius: 4px; line-height: 1.5">
-DTPR_Logo_Blue.svg (28×32 viewBox, navy #002684 solid):
-  Outer hexagon:  M14,0 L28,8 L28,24 L14,32 L0,24 L0,8 Z  (fill #002684)
-  Inner circle:   r=9, centered at (14, 16)              (fill #FFFFFF)
-  Offset square:  8×8 unit, positioned at (10, 12)       (fill #002684)
+DTPR_Logo_Blue.svg (28×32 viewBox, blue solid):
+  Outer hexagon path:  M14,0 L28,8 L28,24 L14,32 L0,24 L0,8 Z
+  Inner circle:         r=8, centered at (14, 16)
+  Offset square:        7×8 unit, positioned at (10, 12)
 
-DTPR_Logo_Black.svg (28×32 viewBox, black solid):
-  Same construction; navy → black, white circle retained
+DTPR_Logo_Black.svg (36×36 viewBox, black solid):
+  Same construction; the larger viewBox is legacy of the Sketch-era source
 
 DTPR_Logo_Outline.svg (28×32 viewBox, stroke only):
   Same construction; no fill, 1.5px black stroke
-
-|Lockups:
-  horizontal_navy, stacked_navy, horizontal_black, stacked_black:
-    Outer hex (navy/black) + WHITE inner circle + colored square + colored wordmark
-  horizontal_white_on_navy, stacked_white_on_navy:
-    Outer hex (white) + NAVY inner circle + white square + white wordmark
-  horizontal_white_on_black, stacked_white_on_black:
-    Outer hex (white) + BLACK inner circle + white square + white wordmark
   </pre>
 
   <hr>
 
   <h2>Canonical wordmark lockup</h2>
-  <p>The mark + wordmark lockup. Public Sans Bold, navy <code>#002684</code>, paired with the navy-solid mark. Default horizontal lockup. SVG sources: <code>assets/marks/dtpr_logo_horizontal_&lt;color&gt;.svg</code> for navy and black; <code>assets/marks/dtpr_logo_horizontal_white_on_&lt;bg&gt;.svg</code> for white-on-navy and white-on-black.</p>
+
+  <p>The mark + wordmark lockup. Public Sans Bold, navy <code>#002684</code>, paired with the navy-solid mark. Default horizontal lockup.</p>
 
   <div class="grid-2">
     <div class="mark-tile">
-      <img src="../assets/marks/dtpr_logo_horizontal_navy.svg" alt="DTPR horizontal lockup — navy" style="width: 200px;">
-      <div class="label">Navy solid (default)</div>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.6rem">
+        <img src="../assets/marks/dtpr_logo_blue.svg" alt="" style="width: 36px;">
+        <span style="font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 1.5rem; color: var(--navy); letter-spacing: -0.01em">DTPR</span>
+      </div>
+      <div class="label">Default horizontal lockup (mark + wordmark)</div>
     </div>
     <div class="mark-tile dark">
-      <img src="../assets/marks/dtpr_logo_horizontal_white_on_navy.svg" alt="DTPR horizontal lockup — white on navy" style="width: 200px;">
-      <div class="label" style="color: rgba(255,255,255,0.7)">White on dark (navy)</div>
-    </div>
-  </div>
-
-  <div class="grid-2" style="margin-top: 1rem">
-    <div class="mark-tile on-light">
-      <img src="../assets/marks/dtpr_logo_horizontal_black.svg" alt="DTPR horizontal lockup — black on white" style="width: 200px;">
-      <div class="label" style="color: var(--gray-700, #444)">Black solid (on white)</div>
-    </div>
-    <div class="mark-tile dark" style="background: var(--ink, #111);">
-      <img src="../assets/marks/dtpr_logo_horizontal_white_on_black.svg" alt="DTPR horizontal lockup — white on black" style="width: 200px;">
-      <div class="label" style="color: rgba(255,255,255,0.7)">White solid (on black)</div>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.6rem">
+        <img src="../assets/marks/dtpr_logo_blue.svg" alt="" style="width: 36px; filter: brightness(0) invert(1);">
+        <span style="font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 1.5rem; color: #fff; letter-spacing: -0.01em">DTPR</span>
+      </div>
+      <div class="label" style="color: rgba(255,255,255,0.7)">Inverted horizontal lockup (on dark)</div>
     </div>
   </div>
 
@@ -103,7 +91,6 @@ DTPR_Logo_Outline.svg (28×32 viewBox, stroke only):
   <ul style="line-height: 1.8; padding-left: 1.2rem">
     <li>Wordmark is always <strong>Public Sans Bold</strong> (or Bold 700 weight equivalent). Never another weight.</li>
     <li>Wordmark is always the same color as the mark. Navy mark + navy wordmark, black mark + black wordmark, white mark + white wordmark.</li>
-    <li><strong>Lockups</strong>: navy and black variants keep the white inner circle. White variants use a bg-colored inner circle (navy for white-on-navy, black for white-on-black) with a white square on top, so both the circle and the square are visible against the host surface.</li>
     <li>Letter-spacing: <code>-0.01em</code>. The wordmark is tight, not loose.</li>
     <li>Mark-to-wordmark gap: 0.6rem. The mark sits at the cap height of the wordmark.</li>
     <li>No alternate font pairings. No italic. No script. No all-caps with tracking.</li>
@@ -136,7 +123,7 @@ DTPR_Logo_Outline.svg (28×32 viewBox, stroke only):
 
   <div class="page-nav">
     <a href="01-values.html">← 01 Brand Values</a>
-    <a href="03-logo-stacked.html">03 Logo (Stacked) →</a>
+    <a href="03-watermark.html">03 Watermark →</a>
   </div>
 </main>
 

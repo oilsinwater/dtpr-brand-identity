@@ -643,8 +643,11 @@ figure figcaption strong { color: var(--navy); }
 }
 
 .mark-tile img { max-width: 100%; height: auto; }
+.mark-tile .caption { margin: 0.5rem 0 0; font-family: var(--font-sans); font-size: 0.8rem; line-height: 1.45; color: var(--gray-600); text-align: center; }
 .mark-tile.dark { background: var(--navy); }
 .mark-tile.dark .label { color: rgba(255,255,255,0.5); }
+.mark-tile.terminal { background: #0A0E1A; }
+.mark-tile.terminal .label { color: rgba(255,255,255,0.5); }
 .mark-tile.on-light { background: var(--white); border: 1px solid var(--gray-300); }
 
 /* ============================================
