@@ -130,16 +130,40 @@ body {
 
 .site-header nav {
   display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;
+  list-style:none;
 }
+
 
 .site-header nav a {
   font-family: var(--font-mono);
   font-weight: 700; font-size: 0.68rem; letter-spacing: 0.09em; text-transform: uppercase;
   color: var(--gray-600);
   text-decoration: none;
+  margin-right:1rem;
   padding: 0.2rem 0;
   border-bottom: 2px solid transparent;
   transition: color 0.15s, border-color 0.15s;
+}
+
+.dropdown{
+  position:relative;
+}
+.dropdown-menu{
+  display:none;
+  position:absolute;
+  left:0;
+  top:100%;
+  padding:0.6rem;
+  background:rgba(255,255,255,0.96);
+  list-style:none;
+  
+}
+.dropdown:hover > .dropdown-menu, .dropdown-menu:hover{
+  display:block;
+}
+
+.dropdown-menu li a:hover{
+  text-decoration: underline;
 }
 
 .site-header nav a:hover { color: var(--navy); }
