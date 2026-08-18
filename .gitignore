@@ -10,3 +10,7 @@ Thumbs.db
 !.dev.vars.example
 .env*
 !.env.example
+
+# Backup files and folders
+.bak*
+*.bak
