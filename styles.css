@@ -812,6 +812,12 @@ th {
   text-align: left;
 }
 
+tr[style*="gray-100"] th,
+thead tr[style*="background"] th,
+table.light th {
+  color: var(--navy);
+}
+
 td {
   padding: 0.65rem 0.8rem;
   border-bottom: 1px solid var(--gray-200);
