@@ -1,0 +1,12 @@
+.git/
+.git/**
+.github/
+.github/**
+.bak*
+.bak*/**
+node_modules/
+node_modules/**
+*.md
+*.log
+.DS_Store
+Thumbs.db
