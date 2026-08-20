@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>12 Web Application — DTPR Brand Identity Guidelines</title>
+<meta name="description" content="DTPR Web Application — interactive digital presence prototype implementing Recipe B (Maker register, 3D city layers, global telemetry, and motion shaders).">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .app-preview-container {
+    margin: 2rem 0;
+    border: 1px solid var(--gray-300);
+    border-radius: 8px;
+    background: var(--white);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+  }
+  .app-preview-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.25rem;
+    background: #070B1A;
+    color: #94A3B8;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.8rem;
+    border-bottom: 1px solid #1E293B;
+  }
+  .app-preview-toolbar .status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #9ACD00;
+    margin-right: 0.5rem;
+  }
+  .app-preview-toolbar a.btn-open {
+    color: #9ACD00;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    background: rgba(154, 205, 0, 0.12);
+    border: 1px solid rgba(154, 205, 0, 0.3);
+    transition: all 0.15s ease;
+  }
+  .app-preview-toolbar a.btn-open:hover {
+    background: #9ACD00;
+    color: #070B1A;
+  }
+  .app-iframe-wrapper {
+    width: 100%;
+    height: 85vh;
+    min-height: 720px;
+    background: #070D24;
+    position: relative;
+  }
+  .app-iframe-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+  .specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .spec-card {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    padding: 1.5rem;
+  }
+  .spec-card h3 {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  .spec-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--gray-700);
+    margin: 0;
+  }
+  .spec-card .badge {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--blue);
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="../index.html"><span class="dot"></span>DTPR · Brand Book</a>
+  <nav>
+    <li><a href="../index.html">Cover</a></li>
+    <li class="dropdown">
+      <a href="#" class="nav-dropdown-trigger">How We Got Here</a>
+      <ul class="dropdown-menu">
+        <li><a href="../01-evolution.html">01 Evolution</a></li>
+        <li><a href="../02-dtpr-io.html">02 dtpr.io</a></li>
+        <li><a href="../03-vision.html">03 vision</a></li>
+        <li><a href="../04-makeshift.html">04 Makeshift</a></li>
+        <li><a href="../05-docs.html">05 docs.dtpr</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="nav-dropdown-trigger">Visual Component Audit</a>
+      <ul class="dropdown-menu">
+        <li><a href="../06-marks.html">06 Marks</a></li>
+        <li><a href="../07-color.html">07 Color</a></li>
+        <li><a href="../08-typography.html">08 Type</a></li>
+        <li><a href="../09-iconography.html">09 Icons</a></li>
+        <li><a href="../10-illustrations.html">10 Illustrations</a></li>
+        <li><a href="../11-voice.html">11 Voice</a></li>
+        <li><a href="../12-findings.html">12 Findings</a></li>
+        <li><a href="../13-strategic-postures.html">Strategic Postures</a></li>
+        <li><a href="../14-sprint-morphology.html">Sprint Morphology</a></li>
+        <li><a href="../15-transformation-morphology.html">Transformation Morphology</a></li>
+        <li><a href="../16-semantic-morphology.html">Semantic Morphology</a></li>
+        <li><a href="../17-sprint-recipes.html">Sprint Recipes</a></li>
+        <li><a href="../18-geometric-blueprint.html">Geometric Blueprint</a></li>
+        <li><a href="../19-core-caa-assets.html">Core CAA Assets</a></li>
+        <li><a href="../20-iso-3864-matrix.html">ISO 3864 Matrix</a></li>
+        <li><a href="../21-responsive-specs.html">Responsive Application Specs</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="./index.html" class="nav-dropdown-trigger">Going Forward</a>
+      <ul class="dropdown-menu">
+        <li><a href="./01-values.html">Values</a></li>
+        <li><a href="./02-logo.html">Logo</a></li>
+        <li><a href="./03-logo-stacked.html">Logo Stacked</a></li>
+        <li><a href="./04-watermark.html">Watermark</a></li>
+        <li><a href="./05-icon.html">Icon</a></li>
+        <li><a href="./06-dimensions.html">Dimensions</a></li>
+        <li><a href="./07-color.html">Color</a></li>
+        <li><a href="./08-fonts.html">Fonts</a></li>
+        <li><a href="./09-font-protocol.html">Font Protocol</a></li>
+        <li><a href="./10-photography.html">Photography</a></li>
+        <li><a href="./11-visual-language.html">Visual Language</a></li>
+        <li><a href="./12-web-application.html" class="active">Web Application</a></li>
+      </ul>
+    </li>
+  </nav>
+  <span class="badge-draft">v0.4 · brand book</span>
+</header>
+
+<main>
+  <span class="eyebrow">12 · Web Application</span>
+  <h1>Interactive Digital Presence</h1>
+  <p class="lede">The production implementation of Recipe B (Maker register). This interactive prototype consolidates DTPR's digital footprint into a responsive web application featuring dynamic WebGL city layer exploration, real-time telemetry, a lived civic journey simulator, and unified taxonomy navigation.</p>
+
+  <div class="tag-row">
+    <span class="tag verified">VERIFIED PROTOTYPE</span>
+    <span class="tag">RECIPE B</span>
+    <span class="tag">NUXT 3 / WEBGL</span>
+  </div>
+
+  <hr>
+
+  <h2>Live Prototype Viewport</h2>
+  <p>The web application runs below in an isolated sandbox environment, ensuring complete style and component independence from the parent brand guidelines document. You can interact directly with the 3D models, data chain explorer, and interactive simulator, or open the application in a dedicated window.</p>
+
+  <div class="app-preview-container">
+    <div class="app-preview-toolbar">
+      <div>
+        <span class="status-dot"></span>
+        <span>RECIPE B PROTOTYPE // v2.1 (MAKER)</span>
+      </div>
+      <div>
+        <a href="./prototype/index.html" target="_blank" class="btn-open">Open Standalone App ↗</a>
+      </div>
+    </div>
+    <div class="app-iframe-wrapper">
+      <iframe src="./prototype/index.html" title="DTPR Web Application Prototype" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Architectural Implementation of Brand Rules</h2>
+
+  <div class="specs-grid">
+    <div class="spec-card">
+      <span class="badge">RULE 01 // PALETTE DISCIPLINE</span>
+      <h3>Reserved Chartreuse Action</h3>
+      <p>Chartreuse (<code>#9ACD00</code>) is strictly reserved for live state beacons, telemetry indicators, and primary CTAs. Base surfaces use Brand Navy (<code>#1B2B80</code>), warm paper (<code>#F4F2EC</code>), and frosted glass.</p>
+    </div>
+
+    <div class="spec-card">
+      <span class="badge">RULE 02 // TYPOGRAPHIC TRIAD</span>
+      <h3>Three Faces, Clear Roles</h3>
+      <p>Source Serif 4 italic reserved for hero statements; Public Sans for UI headings and body copy; Source Code Pro monospace for terminal badges, schema keys, and telemetry metrics.</p>
+    </div>
+
+    <div class="spec-card">
+      <span class="badge">RULE 03 // 3D EXPLODED LAYERS</span>
+      <h3>Urban Legibility Canvas</h3>
+      <p>Three.js WebGL model demonstrating how DTPR's digital accountability layer integrates seamlessly with physical buildings, transit networks, and public realm infrastructure.</p>
+    </div>
+
+    <div class="spec-card">
+      <span class="badge">RULE 04 // DATA CHAINS</span>
+      <h3>Verifiable Accountability</h3>
+      <p>Two-column technical explorer mapping physical sensing nodes to responsible entities, municipal governance policies, and open machine-readable schemas.</p>
+    </div>
+  </div>
+
+  <div class="page-nav">
+    <a href="11-visual-language.html">← 11 Visual Language</a>
+    <a href="index.html">↑ Cover</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="../assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="../assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.4 · August 2026 · Superbloom Design</p>
+</footer>
+
+</body>
+</html>
