@@ -1,0 +1,1 @@
+import{r as e}from"./BUvNLCUC.js";var t=e(`/marks/dtpr_logo_horizontal_navy.svg`);export{t};
