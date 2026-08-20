@@ -4,16 +4,51 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>11 Visual Language — DTPR Brand Identity Guidelines</title>
-<meta name="description" content="DTPR Visual Language — logo + motifs + colors + fonts together. Applied examples of the identity in action.">
+<meta name="description" content="DTPR Visual Language — applied examples of the identity in action across web interfaces, developer docs, partner lockups, slide decks, and certification cards.">
 <link rel="stylesheet" href="../styles.css">
+<style>
+  /* Applied Mockup Utilities */
+  .mockup-container {
+    background: #F4F2EC;
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 1.5rem 0 0.5rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  }
+  .mockup-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 1.25rem;
+    background: #FFFFFF;
+    border-bottom: 1px solid #E2E0D8;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.75rem;
+    color: var(--gray-600);
+  }
+  .mockup-topbar .dots {
+    display: flex;
+    gap: 6px;
+  }
+  .mockup-topbar .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #CBD5E1;
+  }
+  .mockup-body {
+    padding: 2rem;
+    position: relative;
+  }
+</style>
 </head>
 <body>
-
 
 <header class="site-header">
   <a class="brand" href="../index.html"><span class="dot"></span>DTPR · Brand Book</a>
   <nav>
-    <li><a href="../index.html" aria-current="page">Cover</a></li>
+    <li><a href="../index.html">Cover</a></li>
     <li class="dropdown">
       <a href="#" class="nav-dropdown-trigger">How We Got Here</a>
       <ul class="dropdown-menu">
@@ -41,7 +76,7 @@
         <li><a href="../17-sprint-recipes.html">Sprint Recipes</a></li>
         <li><a href="../18-geometric-blueprint.html">Geometric Blueprint</a></li>
         <li><a href="../19-core-caa-assets.html">Core CAA Assets</a></li>
-        <li><a href="../20-iso-3864-matric.html">ISO 3864 Matrix</a></li>
+        <li><a href="../20-iso-3864-matrix.html">ISO 3864 Matrix</a></li>
         <li><a href="../21-responsive-specs.html">Responsive Application Specs</a></li>
       </ul>
     </li>
@@ -58,7 +93,7 @@
         <li><a href="./08-fonts.html">Fonts</a></li>
         <li><a href="./09-font-protocol.html">Font Protocol</a></li>
         <li><a href="./10-photography.html">Photography</a></li>
-        <li><a href="./11-visual-language.html">Visual Language</a></li>
+        <li><a href="./11-visual-language.html" class="active">Visual Language</a></li>
         <li><a href="./12-web-application.html">Web Application</a></li>
       </ul>
     </li>
@@ -69,112 +104,227 @@
 <main>
   <span class="eyebrow">11 · Visual Language</span>
   <h1>The identity in action</h1>
-  <p class="lede">The previous pages define the elements — logo, color, fonts. This page shows them combined. Examples of the Recipe B identity in real contexts: a Recipe B homepage, a documentation page, a partner co-branding lockup, a slide deck cover, a certification card.</p>
+  <p class="lede">The previous pages define the core elements — marks, typography hierarchy, and color tokens. This page demonstrates how those primitives unite across applied touchpoints: the consolidated Recipe B / Maker web interface, developer documentation, partner co-branding, presentation artifacts, and physical certification cards.</p>
 
   <div class="tag-row">
-    <span class="tag open">OPEN</span>
+    <span class="tag verified">VERIFIED SYSTEM</span>
+    <span class="tag">RECIPE B HYBRID</span>
+    <span class="tag">PRODUCTION</span>
   </div>
 
   <hr>
 
-  <h2>The Recipe B homepage</h2>
+  <h2>The Recipe B Homepage (Production Interface)</h2>
 
-  <p><em>Placeholder — render or embed the locked Recipe B homepage (the live build, or a high-fidelity static screenshot of the homepage).</em></p>
+  <p>The consolidated homepage combines the structural clarity of the Recipe B Maker register (monospace telemetry, graph paper underlay, 3D urban layers) with luminous ambient aura shaders and tactile warm paper surfaces (<code>#F4F2EC</code>).</p>
 
-  <div class="mark-tile" style="padding: 0;">
-    <div style="background: #F8F8F2; padding: 2rem; min-height: 320px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
-      <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1.5rem;">
-        <img src="../assets/marks/dtpr_logo_blue.svg" alt="" style="width: 32px;">
-        <span style="font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 1.25rem; color: var(--navy); letter-spacing: -0.01em;">DTPR</span>
+  <div class="mockup-container">
+    <div class="mockup-topbar">
+      <div class="dots">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
       </div>
-      <div style="font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 2.5rem; color: var(--navy); line-height: 1.15; margin-bottom: 0.75rem; max-width: 18ch;">Standardize trust for digital places and routines.</div>
-      <div style="font-family: 'Public Sans', sans-serif; font-size: 1.05rem; color: var(--ink); line-height: 1.64; max-width: 60ch; margin-bottom: 1.5rem;">A utility-first, schema-based protocol for a transparent public space data ecosystem.</div>
-      <div style="background: #9ACD00; color: #0F172A; padding: 0.6rem 1.25rem; font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 0.875rem; border-radius: 4px; display: inline-block;">Get Started</div>
+      <span>https://dtpr.io // PRODUCTION INTERFACE</span>
+      <span style="color: #9ACD00; font-weight: 700;">LIVE v2.1</span>
     </div>
-    <div class="label">Recipe B homepage — hero region (chartreuse CTA + Source Serif 4 italic headline + Public Sans body)</div>
-  </div>
 
-  <hr>
-
-  <h2>A documentation page</h2>
-
-  <p><em>Placeholder — render or embed a Recipe B documentation page (live build, or static screenshot of an API endpoint or quickstart page).</em></p>
-
-  <div class="mark-tile" style="padding: 0;">
-    <div style="background: #F8F8F2; padding: 2rem;">
-      <div style="font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 1.75rem; color: var(--navy); margin-bottom: 0.75rem;">Quickstart · REST API v2</div>
-      <div style="font-family: 'Public Sans', sans-serif; font-size: 1rem; line-height: 1.64; color: var(--ink); margin-bottom: 1.5rem;">The DTPR REST API v2 returns the public taxonomy schema. Endpoints are versioned and idempotent.</div>
-      <pre style="background: #0A0E1A; color: #F8F8F2; padding: 1rem; border-radius: 4px; font-family: 'Source Code Pro', monospace; font-size: 0.85rem; line-height: 1.55; margin: 0;"><span style="color: #9ACD00;">GET</span> /v2/schemas/dtpr-schema.json
-<span style="color: #475569;">// → 200 OK · application/json</span></pre>
-    </div>
-    <div class="label">Documentation page — Public Sans headings + body, Source Code Pro code block</div>
-  </div>
-
-  <hr>
-
-  <h2>Partner co-branding</h2>
-
-  <p><em>Placeholder — render a partner lockup with the DTPR mark + a partner mark, separated by a divider, on paper.</em></p>
-
-  <div class="mark-tile">
-    <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem;">
-      <img src="../assets/marks/dtpr_logo_blue.svg" alt="DTPR" style="width: 48px;">
-      <div style="width: 1px; height: 32px; background: var(--gray-400);"></div>
-      <span style="font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 1.25rem; color: var(--ink);">[Partner mark placeholder]</span>
-    </div>
-    <div class="label">DTPR · [Partner] co-branding — divider rule, equal mark heights, paper surface</div>
-  </div>
-
-  <hr>
-
-  <h2>Slide deck cover</h2>
-
-  <p><em>Placeholder — render a slide deck cover with the watermark + a title.</em></p>
-
-  <div class="mark-tile" style="padding: 0;">
-    <div style="background: var(--navy); padding: 3rem 2rem; position: relative; min-height: 240px;">
-      <img src="../assets/marks/dtpr_logo_blue.svg" alt="" style="width: 80px; opacity: 0.20; filter: brightness(0) invert(1); position: absolute; top: 1.5rem; left: 1.5rem;">
-      <div style="position: absolute; top: 50%; left: 2rem; right: 2rem; transform: translateY(-50%);">
-        <div style="font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 2rem; color: #fff; line-height: 1.15;">DTPR at [event].</div>
-        <div style="font-family: 'Public Sans', sans-serif; font-size: 1rem; color: rgba(255,255,255,0.7); margin-top: 0.75rem;">[Speaker name] · [Date]</div>
-      </div>
-    </div>
-    <div class="label">Slide deck cover — watermark (20% opacity, inverted) + Source Serif 4 italic title</div>
-  </div>
-
-  <hr>
-
-  <h2>Certification card</h2>
-
-  <p><em>Placeholder — render a printed certification card with the mark, signature line, and CC BY 4.0 footer.</em></p>
-
-  <div class="mark-tile" style="padding: 0;">
-    <div style="background: var(--white); border: 1px solid var(--gray-300); padding: 2rem; max-width: 480px;">
-      <img src="../assets/marks/dtpr_logo_outline.svg" alt="" style="width: 48px; opacity: 0.15; position: absolute;">
-      <div style="position: relative;">
-        <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem;">
-          <img src="../assets/marks/dtpr_logo_blue.svg" alt="" style="width: 32px;">
-          <span style="font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 1.125rem; color: var(--navy); letter-spacing: -0.01em;">DTPR</span>
+    <div class="mockup-body" style="background: radial-gradient(circle at 80% 20%, rgba(117, 184, 255, 0.25), transparent 50%), radial-gradient(circle at 10% 60%, rgba(170, 231, 4, 0.15), transparent 45%), #F4F2EC; background-size: 100% 100%, 100% 100%, auto; padding: 2.5rem 2rem;">
+      
+      <!-- Mini Nav Header -->
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(27, 43, 128, 0.15);">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <img src="../assets/marks/dtpr_logo_blue.svg" alt="DTPR" style="width: 28px; height: 28px;">
+          <span style="font-family: 'Public Sans', sans-serif; font-weight: 800; font-size: 1.1rem; color: #1B2B80; letter-spacing: -0.01em;">DTPR</span>
         </div>
-        <div style="font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 1.5rem; color: var(--ink); margin-bottom: 0.5rem;">[Deployment name]</div>
-        <div style="font-family: 'Public Sans', sans-serif; font-size: 0.95rem; color: var(--gray-700); line-height: 1.64; margin-bottom: 1.5rem;">Deployed under DTPR v[X] · [Date]</div>
-        <div style="font-family: 'Source Code Pro', monospace; font-size: 0.75rem; color: var(--gray-600); border-top: 1px solid var(--gray-200); padding-top: 0.75rem;">CC BY 4.0 · Helpful Places · CC BY 4.0</div>
+        <div style="display: flex; gap: 1.25rem; font-family: 'Source Code Pro', monospace; font-size: 0.72rem; font-weight: 600; color: #475569; text-transform: uppercase; letter-spacing: 0.05em;">
+          <span>WHO WE ARE</span>
+          <span>GET STARTED</span>
+          <span>GET INVOLVED</span>
+          <span>DEPLOYMENTS</span>
+        </div>
+      </div>
+
+      <!-- Hero Region -->
+      <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items: center;">
+        <div>
+          <div style="display: inline-block; padding: 0.2rem 0.6rem; background: #1B2B80; color: #FFFFFF; font-family: 'Source Code Pro', monospace; font-size: 0.7rem; font-weight: 700; border-radius: 4px; margin-bottom: 1rem; letter-spacing: 0.05em;">
+            01 // TRUSTED CIVIC INFRASTRUCTURE
+          </div>
+          <h2 style="font-family: 'Public Sans', sans-serif; font-weight: 800; font-size: 2rem; color: #0F172A; line-height: 1.15; margin: 0 0 0.75rem 0;">
+            Digital Trust for Places &amp; Routines
+          </h2>
+          <p style="font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.15rem; color: #1B2B80; line-height: 1.4; margin: 0 0 1.5rem 0;">
+            Making digital sensing, automated accountability, and civic consent legible in physical space.
+          </p>
+
+          <!-- Button Cluster -->
+          <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+            <div style="background: #F4F2EC; color: #1B2B80; border: 1px solid #1B2B80; padding: 0.55rem 1.25rem; font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 0.85rem; border-radius: 4px; box-shadow: 0 2px 6px rgba(27, 43, 128, 0.08);">
+              Explore the Standard →
+            </div>
+            <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(6px); color: #1B2B80; border: 1px solid rgba(27, 43, 128, 0.2); padding: 0.55rem 1rem; font-family: 'Public Sans', sans-serif; font-weight: 600; font-size: 0.85rem; border-radius: 4px;">
+              View Taxonomy ↗
+            </div>
+            <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(6px); color: #1B2B80; border: 1px solid rgba(27, 43, 128, 0.2); padding: 0.55rem 1rem; font-family: 'Public Sans', sans-serif; font-weight: 600; font-size: 0.85rem; border-radius: 4px;">
+              City Playbook ↗
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Layer Mini Callout Box -->
+        <div style="background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(8px); border: 1px solid rgba(27, 43, 128, 0.2); border-radius: 6px; padding: 1.25rem;">
+          <div style="font-family: 'Source Code Pro', monospace; font-size: 0.7rem; font-weight: 700; color: #2563D0; margin-bottom: 0.75rem;">
+            URBAN MODEL // EXPLODED LAYERS
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem; font-family: 'Source Code Pro', monospace; font-size: 0.75rem; font-weight: 700;">
+            <div style="display: flex; justify-content: space-between; padding: 0.4rem 0.6rem; background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 4px; color: #2563D0;">
+              <span>04 DIGITAL LAYER</span>
+              <span style="color: #9ACD00;">● ACTIVE</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.4rem 0.6rem; background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 4px; color: #1B2B80;">
+              <span>03 BUILDINGS</span>
+              <span style="color: #64748B;">STRUCTURE</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.4rem 0.6rem; background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 4px; color: #1B2B80;">
+              <span>02 TRANSPORTATION</span>
+              <span style="color: #64748B;">TRANSIT</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.4rem 0.6rem; background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 4px; color: #1B2B80;">
+              <span>01 PUBLIC REALM</span>
+              <span style="color: #64748B;">CIVIC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="label">Recipe B web interface — Warm paper substrate + aura glow + Source Serif 4 display + Public Sans UI + Source Code Pro telemetry</div>
+
+  <hr>
+
+  <h2>Developer Documentation &amp; REST Schema</h2>
+
+  <p>Developer and municipal documentation follows a rigorous technical scale. Public Sans delivers clear headings and prose, while Source Code Pro formats endpoints, method verbs, and schema properties on dark terminal slates.</p>
+
+  <div class="mockup-container">
+    <div class="mockup-topbar">
+      <div class="dots">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+      <span>https://docs.dtpr.io/v2/taxonomy // API REFERENCE</span>
+      <span style="color: #2563D0; font-weight: 700;">SPEC v2.1</span>
+    </div>
+
+    <div class="mockup-body" style="background: #FFFFFF; padding: 2rem;">
+      <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+        <span style="background: #9ACD00; color: #0A0E1A; font-family: 'Source Code Pro', monospace; font-weight: 800; font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px;">GET</span>
+        <span style="font-family: 'Source Code Pro', monospace; font-size: 0.95rem; font-weight: 700; color: #0F172A;">/v2/taxonomy/elements/{element_id}</span>
+      </div>
+      
+      <p style="font-family: 'Public Sans', sans-serif; font-size: 0.95rem; line-height: 1.6; color: #475569; margin: 0 0 1.25rem 0;">
+        Retrieves the canonical JSON schema definition, plain-language description, and governance compliance rules for a registered DTPR taxonomy element.
+      </p>
+
+      <div style="background: #070B1A; border: 1px solid #1E293B; border-radius: 6px; padding: 1.25rem; font-family: 'Source Code Pro', monospace; font-size: 0.82rem; color: #F8F8F2; line-height: 1.6;">
+        <div style="color: #64748B; margin-bottom: 0.5rem;">// Response: 200 OK · application/json</div>
+        <div>{</div>
+        <div style="padding-left: 1.5rem;"><span style="color: #93C5FD;">"id"</span>: <span style="color: #9ACD00;">"dtpr.tech.optical-sensor"</span>,</div>
+        <div style="padding-left: 1.5rem;"><span style="color: #93C5FD;">"category"</span>: <span style="color: #9ACD00;">"technology"</span>,</div>
+        <div style="padding-left: 1.5rem;"><span style="color: #93C5FD;">"accountable_entity"</span>: <span style="color: #9ACD00;">"Municipal Transit Authority"</span>,</div>
+        <div style="padding-left: 1.5rem;"><span style="color: #93C5FD;">"retention_policy"</span>: <span style="color: #9ACD00;">"none / real-time edge processed"</span>,</div>
+        <div style="padding-left: 1.5rem;"><span style="color: #93C5FD;">"license"</span>: <span style="color: #9ACD00;">"CC-BY-4.0"</span></div>
+        <div>}</div>
       </div>
     </div>
-    <div class="label">Certification card — outline watermark (15% opacity) + Public Sans + Source Code Pro footer</div>
   </div>
+  <div class="label">Documentation register — Public Sans body + Source Code Pro JSON schema on terminal substrate</div>
+
+  <hr>
+
+  <h2>Partner Co-Branding (Stacked Lockup)</h2>
+
+  <p>In co-branded and municipal partnership applications, the stacked DTPR mark anchors the primary partnership hierarchy, separated from the partner mark by a 1px neutral rule on paper.</p>
+
+  <div class="mark-tile" style="padding: 2.5rem 2rem;">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 2.5rem; flex-wrap: wrap;">
+      <img src="../assets/marks/dtpr_logo_stacked_navy.svg" alt="DTPR Stacked Logo" style="height: 52px; width: auto;">
+      <div style="width: 1px; height: 44px; background: var(--gray-300);"></div>
+      <img src="../assets/logos-partners/sprblm-horizontal.png" alt="Superbloom" style="height: 38px; width: auto;">
+    </div>
+    <div class="label">Partner co-branding — Stacked DTPR navy mark + 1px vertical divider + partner identity on paper substrate</div>
+  </div>
+
+  <hr>
+
+  <h2>Slide Deck Cover (Stacked Watermark)</h2>
+
+  <p>Slide deck presentations deploy the stacked mark on deep Brand Navy (<code>#1B2B80</code>) alongside a subtle stippled texture and Source Serif 4 italic display title.</p>
+
+  <div class="mark-tile" style="padding: 0;">
+    <div style="background: #1B2B80; padding: 3.5rem 2.5rem; position: relative; min-height: 260px; border-radius: 6px; overflow: hidden;">
+      
+      <!-- Watermark Background -->
+      <img src="../assets/marks/dtpr_logo_stacked_white_on_navy.svg" alt="" style="height: 140px; width: auto; opacity: 0.08; position: absolute; right: 2rem; bottom: 1rem; pointer-events: none;">
+      
+      <div style="position: relative; z-index: 10;">
+        <div style="display: inline-block; padding: 0.2rem 0.55rem; background: rgba(154, 205, 0, 0.15); border: 1px solid rgba(154, 205, 0, 0.4); color: #9ACD00; font-family: 'Source Code Pro', monospace; font-size: 0.72rem; font-weight: 700; border-radius: 4px; margin-bottom: 1rem;">
+          OPEN STANDARD BRIEFING
+        </div>
+        <div style="font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 2.2rem; color: #FFFFFF; line-height: 1.15; max-width: 22ch; margin-bottom: 1.25rem;">
+          Open digital accountability for modern public spaces.
+        </div>
+        <div style="font-family: 'Public Sans', sans-serif; font-size: 0.95rem; color: rgba(255, 255, 255, 0.8);">
+          DTPR Steering Committee · Stewardship Report 2026
+        </div>
+      </div>
+    </div>
+    <div class="label">Slide deck cover — Brand Navy `#1B2B80` + Stacked White Mark + Source Serif 4 italic display title</div>
+  </div>
+
+  <hr>
+
+  <h2>Physical Certification Card (Centered Monochrome Mark)</h2>
+
+  <p>Physical signage, verification plaques, and deployment cards use high-contrast monochrome printing. The outline logo mark is centered as an ambient watermark behind clear municipal metadata.</p>
+
+  <div class="mark-tile" style="padding: 0; display: flex; justify-content: center;">
+    <div style="background: #FFFFFF; border: 1px solid var(--gray-300); border-radius: 6px; padding: 2.5rem; width: 100%; max-width: 520px; position: relative; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
+      
+      <!-- Perfectly Centered Outline Watermark -->
+      <img src="../assets/marks/dtpr_logo_outline.svg" alt="" style="width: 140px; height: 140px; opacity: 0.08; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none;">
+
+      <div style="position: relative; z-index: 10;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--gray-200);">
+          <div style="display: flex; align-items: center; gap: 0.6rem;">
+            <img src="../assets/marks/dtpr_logo_black.svg" alt="" style="width: 28px; height: 28px;">
+            <span style="font-family: 'Public Sans', sans-serif; font-weight: 800; font-size: 1.1rem; color: #000000; letter-spacing: -0.01em;">DTPR VERIFIED</span>
+          </div>
+          <span style="font-family: 'Source Code Pro', monospace; font-size: 0.75rem; font-weight: 700; color: var(--gray-600);">CERT // 2026-B</span>
+        </div>
+
+        <div style="font-family: 'Public Sans', sans-serif; font-weight: 800; font-size: 1.35rem; color: #000000; margin-bottom: 0.35rem;">
+          Civic Center Transit Plaza
+        </div>
+        <div style="font-family: 'Public Sans', sans-serif; font-size: 0.9rem; color: var(--gray-700); line-height: 1.5; margin-bottom: 1.5rem;">
+          Deployed under DTPR Standard Specification v2.1. All optical sensors and environmental telemetry are publicly auditable.
+        </div>
+
+        <div style="font-family: 'Source Code Pro', monospace; font-size: 0.75rem; color: var(--gray-600); border-top: 1px solid var(--gray-200); padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+          <span>SCHEMA: dtpr.gov.transit-v2</span>
+          <span>CC BY 4.0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="label">Certification card — Monochrome DTPR mark + centered outline watermark + Source Code Pro audit metadata</div>
 
   <hr>
 
   <h2>What makes the language work</h2>
 
-  <p>The Recipe B visual language works because of <em>restraint</em>. The chartreuse reservation rule means chartreuse never decorates — it only acts. The italic cadence rule means the serif never headlines — it only editorializes. The mono rule means the technical content type never invades the UI. When these rules hold, the identity reads as a tool, not a brochure.</p>
+  <p>The consolidated DTPR visual language succeeds by balancing technical precision with civic accessibility. Rather than adhering to a rigid or sterile developer template, it blends Recipe B’s <strong>"Maker"</strong> register (monospace telemetry, schema keys, 3D exploded urban layers) with dynamic aura fields, rich split-theme contrast, and tactile warm paper surfaces (<code>#F4F2EC</code>).</p>
 
-  <p>When the rules break — chartreuse on a hover state, italic in a section header, mono in a button label — the identity collapses toward "generic developer landing page." The brand book exists to keep the rules.</p>
-
-  <div class="callout open">
-    <p><strong>OPEN: visual language corpus.</strong> The five examples above (homepage, documentation, partner lockup, slide deck, certification card) are placeholders. Production visual language examples need to be sourced from the live Recipe B build, slide deck archives, and certification artifacts. This page will be updated as those examples become available.</p>
-  </div>
+  <p>By breaking the binary between cold technical documentation and warm public communication, the identity establishes DTPR as both an auditable open-source protocol and an inviting public trust standard.</p>
 
   <div class="page-nav">
     <a href="10-photography.html">← 10 Photography</a>
