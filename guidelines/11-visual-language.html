@@ -116,7 +116,7 @@
 
   <h2>The Recipe B Homepage (Production Interface)</h2>
 
-  <p>The consolidated homepage combines the structural clarity of the Recipe B Maker register (monospace telemetry, graph paper underlay, 3D urban layers) with luminous ambient aura shaders and tactile warm paper surfaces (<code>#F4F2EC</code>).</p>
+  <p>The consolidated homepage sets warm paper (<code>#F4F2EC</code>) and a fixed graph-paper underlay beneath a full-bleed ambient aura shader, then reverses the hero type out of it in white. Display copy is Source Serif 4 italic; interface and body copy are Public Sans; all telemetry, labels and section numbering are Source Code Pro.</p>
 
   <div class="mockup-container">
     <div class="mockup-topbar">
@@ -127,70 +127,71 @@
       <span style="color: #9ACD00; font-weight: 700;">LIVE v2.1</span>
     </div>
 
-    <div class="mockup-body" style="background: radial-gradient(circle at 80% 20%, rgba(117, 184, 255, 0.25), transparent 50%), radial-gradient(circle at 10% 60%, rgba(170, 231, 4, 0.15), transparent 45%), #F4F2EC; background-size: 100% 100%, 100% 100%, auto; padding: 2.5rem 2rem;">
-      
-      <!-- Mini Nav Header -->
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(27, 43, 128, 0.15);">
-        <div style="display: flex; align-items: center; gap: 0.6rem;">
-          <img src="../assets/marks/dtpr_logo_blue.svg" alt="DTPR" style="width: 28px; height: 28px;">
-          <span style="font-family: 'Public Sans', sans-serif; font-weight: 800; font-size: 1.1rem; color: #1B2B80; letter-spacing: -0.01em;">DTPR</span>
-        </div>
-        <div style="display: flex; gap: 1.25rem; font-family: 'Source Code Pro', monospace; font-size: 0.72rem; font-weight: 600; color: #475569; text-transform: uppercase; letter-spacing: 0.05em;">
-          <span>WHO WE ARE</span>
-          <span>GET STARTED</span>
-          <span>GET INVOLVED</span>
-          <span>DEPLOYMENTS</span>
-        </div>
-      </div>
+    <!-- Paper substrate + graph paper + hero aura. The aura is a saturated
+         navy-to-blue field weighted left and thinning rightward, with a
+         single chartreuse bloom — the hero type is reversed out of it. -->
+    <div class="mockup-body" style="position: relative; padding: 0; background:
+        radial-gradient(120% 90% at 8% 34%, rgba(31, 56, 183, 0.92), rgba(31, 56, 183, 0) 62%),
+        radial-gradient(90% 80% at 40% 66%, rgba(37, 99, 208, 0.78), rgba(37, 99, 208, 0) 60%),
+        radial-gradient(46% 46% at 62% 22%, rgba(187, 255, 0, 0.30), rgba(187, 255, 0, 0) 68%),
+        #F4F2EC;">
 
-      <!-- Hero Region -->
-      <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items: center;">
-        <div>
-          <div style="display: inline-block; padding: 0.2rem 0.6rem; background: #1B2B80; color: #FFFFFF; font-family: 'Source Code Pro', monospace; font-size: 0.7rem; font-weight: 700; border-radius: 4px; margin-bottom: 1rem; letter-spacing: 0.05em;">
-            01 // TRUSTED CIVIC INFRASTRUCTURE
+      <!-- Graph paper underlay -->
+      <div style="position: absolute; inset: 0; pointer-events: none; opacity: 0.35;
+        background-image: linear-gradient(rgba(27,43,128,0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(27,43,128,0.10) 1px, transparent 1px);
+        background-size: 22px 22px;"></div>
+
+      <div style="position: relative; padding: 1.25rem 1.5rem 2.5rem;">
+
+        <!-- Floating pill navbar: mark + wordmark, centre links, language switch -->
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; background: rgba(255,255,255,0.90); backdrop-filter: blur(8px); border: 1px solid #E2E0D8; border-radius: 6px; padding: 0.5rem 0.9rem; box-shadow: 0 1px 3px rgba(15,23,42,0.06); margin-bottom: 2.75rem;">
+          <img src="../assets/marks/dtpr_logo_horizontal_navy.svg" alt="DTPR" style="height: 17px; width: auto;">
+          <div style="display: flex; gap: 0.9rem; font-family: 'Source Code Pro', monospace; font-size: 0.62rem; font-weight: 600; color: #475569; text-transform: uppercase; letter-spacing: 0.06em;">
+            <span>Who We Are</span>
+            <span>Get Started</span>
+            <span>Get Involved</span>
+            <span>DTPR in the World</span>
           </div>
-          <h2 style="font-family: 'Public Sans', sans-serif; font-weight: 800; font-size: 2rem; color: #0F172A; line-height: 1.15; margin: 0 0 0.75rem 0;">
-            Digital Trust for Places &amp; Routines
-          </h2>
-          <p style="font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 1.15rem; color: #1B2B80; line-height: 1.4; margin: 0 0 1.5rem 0;">
-            Making digital sensing, automated accountability, and civic consent legible in physical space.
-          </p>
-
-          <!-- Button Cluster -->
-          <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
-            <div style="background: #F4F2EC; color: #1B2B80; border: 1px solid #1B2B80; padding: 0.55rem 1.25rem; font-family: 'Public Sans', sans-serif; font-weight: 700; font-size: 0.85rem; border-radius: 4px; box-shadow: 0 2px 6px rgba(27, 43, 128, 0.08);">
-              Explore the Standard →
-            </div>
-            <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(6px); color: #1B2B80; border: 1px solid rgba(27, 43, 128, 0.2); padding: 0.55rem 1rem; font-family: 'Public Sans', sans-serif; font-weight: 600; font-size: 0.85rem; border-radius: 4px;">
-              View Taxonomy ↗
-            </div>
-            <div style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(6px); color: #1B2B80; border: 1px solid rgba(27, 43, 128, 0.2); padding: 0.55rem 1rem; font-family: 'Public Sans', sans-serif; font-weight: 600; font-size: 0.85rem; border-radius: 4px;">
-              City Playbook ↗
-            </div>
+          <div style="display: flex; align-items: center; padding: 3px; border-radius: 4px; background: rgba(226,224,216,0.5); border: 1px solid #E2E0D8; font-family: 'Source Code Pro', monospace; font-size: 0.6rem;">
+            <span style="padding: 0.15rem 0.4rem; border-radius: 3px; background: #FFFFFF; color: #1B2B80; font-weight: 700;">EN</span>
+            <span style="padding: 0.15rem 0.4rem; color: #64748B;">ES</span>
+            <span style="padding: 0.15rem 0.4rem; color: #64748B;">FR</span>
           </div>
         </div>
 
-        <!-- 3D Layer Mini Callout Box -->
-        <div style="background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(8px); border: 1px solid rgba(27, 43, 128, 0.2); border-radius: 6px; padding: 1.25rem;">
-          <div style="font-family: 'Source Code Pro', monospace; font-size: 0.7rem; font-weight: 700; color: #2563D0; margin-bottom: 0.75rem;">
-            URBAN MODEL // EXPLODED LAYERS
+        <!-- Hero: reversed type left, exploded urban model right -->
+        <div style="display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 2rem; align-items: center;">
+          <div>
+            <div style="font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-weight: 400; font-size: 2.35rem; color: #FFFFFF; line-height: 1.10; letter-spacing: -0.02em; margin: 0 0 1rem 0;">
+              Making the invisible visible.
+            </div>
+            <p style="font-family: 'Public Sans', sans-serif; font-weight: 600; font-size: 0.92rem; color: #F8F8F2; line-height: 1.35; letter-spacing: -0.01em; margin: 0 0 1.75rem 0; max-width: 34ch;">
+              Digital Trust for Places and Routines (DTPR) is an open standard for technology accountability and digital transparency in public space.
+            </p>
+
+            <!-- 2 x 2 action grid: one paper primary, three glass secondaries -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; max-width: 25rem; font-family: 'Public Sans', sans-serif; font-size: 0.78rem; font-weight: 600;">
+              <div style="display: flex; align-items: center; justify-content: center; gap: 0.4rem; padding: 0.5rem 0.75rem; background: #F4F2EC; color: #1B2B80; border: 1px solid #1B2B80; border-radius: 4px; font-weight: 700;">↓ Explore the Standard</div>
+              <div style="display: flex; align-items: center; justify-content: center; gap: 0.4rem; padding: 0.5rem 0.75rem; background: rgba(255,255,255,0.08); backdrop-filter: blur(6px); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.2); border-radius: 4px;">▦ View Taxonomy</div>
+              <div style="display: flex; align-items: center; justify-content: center; gap: 0.4rem; padding: 0.5rem 0.75rem; background: rgba(255,255,255,0.08); backdrop-filter: blur(6px); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.2); border-radius: 4px;">▤ City Playbook</div>
+              <div style="display: flex; align-items: center; justify-content: center; gap: 0.4rem; padding: 0.5rem 0.75rem; background: rgba(255,255,255,0.08); backdrop-filter: blur(6px); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.2); border-radius: 4px;">◎ Community Kit</div>
+            </div>
           </div>
-          <div style="display: flex; flex-direction: column; gap: 0.5rem; font-family: 'Source Code Pro', monospace; font-size: 0.75rem; font-weight: 700;">
-            <div style="display: flex; justify-content: space-between; padding: 0.4rem 0.6rem; background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 4px; color: #2563D0;">
-              <span>04 DIGITAL LAYER</span>
-              <span style="color: #9ACD00;">● ACTIVE</span>
+
+          <!-- Exploded urban model with monospace callout labels in secondary
+               Electric Blue, as rendered by the live WebGL scene. -->
+          <div style="position: relative; aspect-ratio: 1 / 1; display: flex; flex-direction: column; justify-content: center; gap: 0.55rem;">
+            <div style="position: relative; display: flex; flex-direction: column; gap: 0.5rem;">
+              <div style="position: relative; height: 34px; transform: skewX(-38deg) scaleY(0.62); background: rgba(255,255,255,0.16); border: 1px solid rgba(187,255,0,0.85); border-radius: 3px;"></div>
+              <div style="position: relative; height: 34px; transform: skewX(-38deg) scaleY(0.62); background: rgba(255,255,255,0.13); border: 1px solid rgba(255,255,255,0.5); border-radius: 3px;"></div>
+              <div style="position: relative; height: 34px; transform: skewX(-38deg) scaleY(0.62); background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.42); border-radius: 3px;"></div>
+              <div style="position: relative; height: 34px; transform: skewX(-38deg) scaleY(0.62); background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.35); border-radius: 3px;"></div>
             </div>
-            <div style="display: flex; justify-content: space-between; padding: 0.4rem 0.6rem; background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 4px; color: #1B2B80;">
-              <span>03 BUILDINGS</span>
-              <span style="color: #64748B;">STRUCTURE</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; padding: 0.4rem 0.6rem; background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 4px; color: #1B2B80;">
-              <span>02 TRANSPORTATION</span>
-              <span style="color: #64748B;">TRANSIT</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; padding: 0.4rem 0.6rem; background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 4px; color: #1B2B80;">
-              <span>01 PUBLIC REALM</span>
-              <span style="color: #64748B;">CIVIC</span>
+            <div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; gap: 1.15rem; padding-left: 1rem; font-family: 'Source Code Pro', monospace; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.045em; color: #2563D0;">
+              <span>DIGITAL NETWORK</span>
+              <span>BUILDINGS</span>
+              <span>TRANSPORTATION</span>
+              <span>PUBLIC REALM</span>
             </div>
           </div>
         </div>
@@ -198,7 +199,7 @@
 
     </div>
   </div>
-  <div class="label">Recipe B web interface — Warm paper substrate + aura glow + Source Serif 4 display + Public Sans UI + Source Code Pro telemetry</div>
+  <div class="label">Recipe B web interface — Paper substrate + graph-paper underlay + hero aura shader, hero type reversed to white, Source Code Pro callouts in secondary Electric Blue</div>
 
   <hr>
 
@@ -241,44 +242,43 @@
 
   <hr>
 
-  <h2>Partner Co-Branding (Stacked Lockup)</h2>
+  <h2>Partner Co-Branding (Horizontal Lockup)</h2>
 
-  <p>In co-branded and municipal partnership applications, the stacked DTPR mark anchors the primary partnership hierarchy, separated from the partner mark by a 1px neutral rule on paper.</p>
+  <p>In co-branded and municipal partnership applications, the horizontal DTPR mark anchors the partnership hierarchy, separated from the partner mark by a 1px neutral rule on paper. The horizontal lockup is the correct choice here: partner marks are themselves horizontal, and matching the axis keeps both identities on a single optical baseline. Reserve the stacked mark for square and vertical formats.</p>
 
   <div class="mark-tile" style="padding: 2.5rem 2rem;">
     <div style="display: flex; align-items: center; justify-content: center; gap: 2.5rem; flex-wrap: wrap;">
-      <img src="../assets/marks/dtpr_logo_stacked_navy.svg" alt="DTPR Stacked Logo" style="height: 52px; width: auto;">
+      <img src="../assets/marks/dtpr_logo_horizontal_navy.svg" alt="DTPR Logo" style="height: 30px; width: auto;">
       <div style="width: 1px; height: 44px; background: var(--gray-300);"></div>
       <img src="../assets/logos-partners/sprblm-horizontal.png" alt="Superbloom" style="height: 38px; width: auto;">
     </div>
-    <div class="label">Partner co-branding — Stacked DTPR navy mark + 1px vertical divider + partner identity on paper substrate</div>
+    <div class="label">Partner co-branding — Horizontal DTPR navy mark + 1px vertical divider + partner identity on paper substrate</div>
   </div>
 
   <hr>
 
-  <h2>Slide Deck Cover (Stacked Watermark)</h2>
+  <h2>Slide Deck Cover (Cornered Stacked Mark)</h2>
 
-  <p>Slide deck presentations deploy the stacked mark on deep Brand Navy (<code>#1B2B80</code>) alongside a subtle stippled texture and Source Serif 4 italic display title.</p>
+  <p>Slide deck covers set a centred Source Serif 4 italic title on deep Brand Navy (<code>#1B2B80</code>), with the stacked mark held small in the top right corner. The mark identifies the deck without competing with the title, and the title carries the cover on its own — no eyebrow label above it.</p>
 
   <div class="mark-tile" style="padding: 0;">
-    <div style="background: #1B2B80; padding: 3.5rem 2.5rem; position: relative; min-height: 260px; border-radius: 6px; overflow: hidden;">
-      
-      <!-- Watermark Background -->
-      <img src="../assets/marks/dtpr_logo_stacked_white_on_navy.svg" alt="" style="height: 140px; width: auto; opacity: 0.08; position: absolute; right: 2rem; bottom: 1rem; pointer-events: none;">
-      
-      <div style="position: relative; z-index: 10;">
-        <div style="display: inline-block; padding: 0.2rem 0.55rem; background: rgba(154, 205, 0, 0.15); border: 1px solid rgba(154, 205, 0, 0.4); color: #9ACD00; font-family: 'Source Code Pro', monospace; font-size: 0.72rem; font-weight: 700; border-radius: 4px; margin-bottom: 1rem;">
-          OPEN STANDARD BRIEFING
-        </div>
-        <div style="font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 2.2rem; color: #FFFFFF; line-height: 1.15; max-width: 22ch; margin-bottom: 1.25rem;">
+    <div style="background: #1B2B80; padding: 1.25rem 2.5rem 3rem; position: relative; min-height: 260px; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column;">
+
+      <!-- Stacked mark, cornered, with clear space above and below -->
+      <div style="display: flex; justify-content: flex-end; margin-bottom: 2.25rem;">
+        <img src="../assets/marks/dtpr_logo_stacked_white_on_navy.svg" alt="DTPR" style="height: 46px; width: auto;">
+      </div>
+
+      <div style="position: relative; z-index: 10; text-align: center; margin: auto 0;">
+        <div style="font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 2.2rem; color: #FFFFFF; line-height: 1.15; max-width: 22ch; margin: 0 auto;">
           Open digital accountability for modern public spaces.
         </div>
-        <div style="font-family: 'Public Sans', sans-serif; font-size: 0.95rem; color: rgba(255, 255, 255, 0.8);">
+        <div style="font-family: 'Public Sans', sans-serif; font-size: 0.95rem; color: rgba(255, 255, 255, 0.8); margin-top: 2.5rem;">
           DTPR Steering Committee · Stewardship Report 2026
         </div>
       </div>
     </div>
-    <div class="label">Slide deck cover — Brand Navy `#1B2B80` + Stacked White Mark + Source Serif 4 italic display title</div>
+    <div class="label">Slide deck cover — Brand Navy <code>#1B2B80</code> + cornered stacked white mark + centred Source Serif 4 italic display title</div>
   </div>
 
   <hr>
@@ -322,7 +322,7 @@
 
   <h2>What makes the language work</h2>
 
-  <p>The consolidated DTPR visual language succeeds by balancing technical precision with civic accessibility. Rather than adhering to a rigid or sterile developer template, it blends Recipe B’s <strong>"Maker"</strong> register (monospace telemetry, schema keys, 3D exploded urban layers) with dynamic aura fields, rich split-theme contrast, and tactile warm paper surfaces (<code>#F4F2EC</code>).</p>
+  <p>The consolidated DTPR visual language succeeds by balancing technical precision with civic accessibility. Rather than adhering to a rigid or sterile developer template, it blends Recipe B’s <strong>"Maker"</strong> register (monospace telemetry, schema keys, 3D exploded urban layers) with dynamic aura fields over a single tactile warm paper substrate (<code>#F4F2EC</code>). Contrast comes from placing a small number of deep navy objects — the problem band, the deployment map, the device — into that paper field, rather than from alternating light and dark themes.</p>
 
   <p>By breaking the binary between cold technical documentation and warm public communication, the identity establishes DTPR as both an auditable open-source protocol and an inviting public trust standard.</p>
 
