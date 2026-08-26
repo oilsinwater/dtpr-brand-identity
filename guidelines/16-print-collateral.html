@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>16 Print Collateral — DTPR Brand Identity Guidelines</title>
+<meta name="description" content="DTPR Print Collateral — one-pagers, brochures, posters, reports. Token-driven applications of the brand across printed surfaces.">
+<link rel="stylesheet" href="../styles.css">
+<style>
+
+  .app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .app-card {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+  }
+  .app-card h3 {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0 0 0.5rem;
+  }
+  .app-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--gray-700);
+    margin: 0;
+  }
+  /* Stage / mock surface where a token-applied example is shown. */
+  .mock-stage {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    overflow: hidden;
+  }
+  .mock-stage.dark { background: #070D24; border-color: #1B2B80; color: #F4F2EC; }
+  .mock-stage.warm { background: var(--gray-50); border-color: var(--gray-300); color: var(--navy); }
+  .mock-stage.paper { background: var(--white); border-color: var(--gray-300); color: var(--navy); }
+  .stage-label {
+    margin-top: 0.5rem;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+  .sizing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+  }
+  .sizing-table th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    background: var(--gray-100, #f3f4f6);
+    border-bottom: 2px solid var(--navy);
+    color: var(--navy);
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .sizing-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--gray-200, #e5e7eb);
+    vertical-align: top;
+    color: var(--gray-700);
+  }
+  .sizing-table td:first-child {
+    font-weight: 700;
+    color: var(--navy);
+    font-family: 'Source Code Pro', monospace;
+  }
+
+  /* One-pager: letter-format card with masthead, body columns, footer. */
+  .one-pager {
+    aspect-ratio: 8.5/11;
+    background: var(--white);
+    color: var(--navy);
+    font-family: 'Public Sans', sans-serif;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--gray-300);
+  }
+  .one-pager .masthead {
+    border-bottom: 2px solid var(--navy);
+    padding-bottom: 1rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .one-pager .masthead .mark-row { display: flex; align-items: center; gap: 0.5rem; }
+  .one-pager .masthead .mark-row svg { height: 18px; }
+  .one-pager .masthead h2 { font-size: 0.95rem; font-weight: 700; margin: 0; color: var(--navy); }
+  .one-pager .masthead .doc-id {
+    font-family: 'Source Code Pro', monospace; font-size: 0.65rem; color: var(--blue);
+    text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .one-pager h1 {
+    font-family: 'Source Serif 4', Georgia, serif; font-style: italic;
+    font-size: 1.5rem; line-height: 1.15; margin: 0 0 0.75rem; color: var(--navy);
+  }
+  .one-pager .standfirst {
+    font-size: 0.85rem; line-height: 1.45; color: var(--gray-700); margin: 0 0 1rem;
+  }
+  .one-pager .columns {
+    columns: 2; column-gap: 1.5rem; font-size: 0.75rem; line-height: 1.45;
+    color: var(--gray-700); flex: 1;
+  }
+  .one-pager .columns p { margin: 0 0 0.6rem; }
+  .one-pager .footer-line {
+    border-top: 1px solid var(--gray-300);
+    padding-top: 0.75rem;
+    margin-top: 1rem;
+    display: flex; justify-content: space-between;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.65rem; color: var(--gray-600);
+    text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  /* Brochure: tri-fold cover. */
+  .brochure-cover {
+    aspect-ratio: 11/8.5;
+    background: var(--navy);
+    color: var(--white);
+    padding: 2rem;
+    display: flex; flex-direction: column; justify-content: space-between;
+    border: 1px solid var(--navy);
+  }
+  .brochure-cover .mark-row svg { height: 32px; width: auto; }
+  .brochure-cover .title {
+    font-family: 'Source Serif 4', Georgia, serif; font-style: italic;
+    font-size: 2rem; line-height: 1.1; margin: 0;
+  }
+  .brochure-cover .sub {
+    font-family: 'Public Sans', sans-serif; font-weight: 600;
+    font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
+    margin: 0.5rem 0 0; color: rgba(255,255,255,0.7);
+  }
+  .brochure-cover .footer-line {
+    display: flex; justify-content: space-between;
+    font-family: 'Source Code Pro', monospace; font-size: 0.7rem;
+    color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  /* Poster: vertical column with one serif italic moment + chartreuse pin. */
+  .poster {
+    aspect-ratio: 2/3;
+    background: var(--white);
+    color: var(--navy);
+    padding: 1.75rem;
+    display: flex; flex-direction: column; justify-content: space-between;
+    border: 1px solid var(--gray-300);
+  }
+  .poster .mark-row svg { height: 20px; }
+  .poster .body h1 {
+    font-family: 'Source Serif 4', Georgia, serif; font-style: italic;
+    font-size: 2.25rem; line-height: 1.05; margin: 0 0 0.75rem; color: var(--navy);
+  }
+  .poster .body p {
+    font-size: 0.85rem; line-height: 1.5; color: var(--gray-700); margin: 0 0 1rem;
+  }
+  .poster .footer-line {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.65rem; color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .poster .footer-line .pin {
+    display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+    background: #9ACD00;
+  }
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="../index.html"><span class="dot"></span>DTPR · Brand Book</a>
+  <nav>
+    <li><a href="../index.html">Cover</a></li>
+    <li class="dropdown">
+      <a href="#" class="nav-dropdown-trigger">How We Got Here</a>
+      <ul class="dropdown-menu">
+        <li><a href="../01-evolution.html">01 Evolution</a></li>
+        <li><a href="../02-dtpr-io.html">02 dtpr.io</a></li>
+        <li><a href="../03-vision.html">03 vision</a></li>
+        <li><a href="../04-makeshift.html">04 Makeshift</a></li>
+        <li><a href="../05-docs.html">05 docs.dtpr</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="nav-dropdown-trigger">Visual Component Audit</a>
+      <ul class="dropdown-menu">
+        <li><a href="../06-marks.html">06 Marks</a></li>
+        <li><a href="../07-color.html">07 Color</a></li>
+        <li><a href="../08-typography.html">08 Type</a></li>
+        <li><a href="../09-iconography.html">09 Icons</a></li>
+        <li><a href="../10-illustrations.html">10 Illustrations</a></li>
+        <li><a href="../11-voice.html">11 Voice</a></li>
+        <li><a href="../12-findings.html">12 Findings</a></li>
+        <li><a href="../13-strategic-postures.html">Strategic Postures</a></li>
+        <li><a href="../14-sprint-morphology.html">Sprint Morphology</a></li>
+        <li><a href="../15-transformation-morphology.html">Transformation Morphology</a></li>
+        <li><a href="../16-semantic-morphology.html">Semantic Morphology</a></li>
+        <li><a href="../17-sprint-recipes.html">Sprint Recipes</a></li>
+        <li><a href="../18-geometric-blueprint.html">Geometric Blueprint</a></li>
+        <li><a href="../19-core-caa-assets.html">Core CAA Assets</a></li>
+        <li><a href="../20-iso-3864-matrix.html">ISO 3864 Matrix</a></li>
+        <li><a href="../21-responsive-specs.html">Responsive Application Specs</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="./index.html" class="nav-dropdown-trigger">Going Forward</a>
+      <ul class="dropdown-menu">
+        <li><a href="./01-values.html">Values</a></li>
+        <li><a href="./02-logo.html">Logo</a></li>
+        <li><a href="./03-logo-stacked.html">Logo Stacked</a></li>
+        <li><a href="./04-watermark.html">Watermark</a></li>
+        <li><a href="./05-icon.html">Icon</a></li>
+        <li><a href="./06-dimensions.html">Dimensions</a></li>
+        <li><a href="./07-color.html">Color</a></li>
+        <li><a href="./08-fonts.html">Fonts</a></li>
+        <li><a href="./09-font-protocol.html">Font Protocol</a></li>
+        <li><a href="./10-photography.html">Photography</a></li>
+        <li><a href="./11-visual-language.html">Visual Language</a></li>
+        <li><a href="./12-web-application.html">Web Application</a></li>
+        <li><a href="./13-misuse.html">Misuse &amp; Don'ts</a></li>
+        <li><a href="./14-voice-tone.html">Voice &amp; Tone</a></li>
+        <li><a href="./15-co-branding.html">Co-Branding</a></li>
+        <li><a href="./16-print-collateral.html">Print Collateral</a></li>
+        <li><a href="./17-stationery.html">Stationery</a></li>
+        <li><a href="./18-environmental.html">Environmental &amp; Signage</a></li>
+        <li><a href="./19-merch.html">Merch &amp; Swag</a></li>
+        <li><a href="./20-motion.html">Motion</a></li>
+        <li><a href="./21-email-templates.html">Email Templates</a></li>
+        <li><a href="./22-app-ui.html">App UI</a></li>
+      </ul>
+    </li>
+  </nav>
+  <span class="badge-draft">v0.4 · brand book</span>
+</header>
+
+<main>
+  <span class="eyebrow">16 · Print Collateral</span>
+  <h1>Print collateral.</h1>
+  <p class="lede">DTPR Print Collateral — one-pagers, brochures, posters, reports. Token-driven applications of the brand across printed surfaces.</p>
+
+  <div class="tag-row">
+<span class="tag">PRINT</span><span class="tag">ONE-PAGER</span><span class="tag">BROCHURE</span><span class="tag">POSTER</span>
+  </div>
+
+
+  <hr>
+  <h2>One-pager</h2>
+  <p>Letter-format (8.5×11 in / 210×297 mm) fact sheet or summary document. Masthead + display headline + standfirst + two-column body + footer. Used for stakeholder briefings, council memos, and event handouts.</p>
+
+  <div class="mock-stage paper">
+    <div class="one-pager">
+      <div class="masthead">
+        <div class="mark-row">
+          <svg viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/><circle cx="14" cy="16" r="9" fill="#FFFFFF"/><rect x="10" y="12" width="8" height="8" fill="#1B2B80"/></svg>
+          <h2>DTPR · Standard Brief</h2>
+        </div>
+        <span class="doc-id">DOC-001 · v2.1</span>
+      </div>
+      <h1>A standard for accountable technology.</h1>
+      <p class="standfirst">DTPR translates the invisible systems that operate in public space — sensors, cameras, AI decision-makers — into legible disclosures that a person walking past can read.</p>
+      <div class="columns">
+        <p>The standard combines a taxonomy of concepts, a visual system of icons, and auditable data chains. Deployments name the accountable steward, declare the primary purpose, and disclose what is collected and where it goes.</p>
+        <p>Six years in the field. Fifteen communities on three continents. Published under CC BY 4.0. Stewarded by Helpful Places; designed in collaboration with Superbloom.</p>
+        <p>This brief is one of three formats. A one-pager is the standard. A brochure extends it to three folds for events. A poster is the public-space variant.</p>
+      </div>
+      <div class="footer-line">
+        <span>DTPR · Helpful Places · Superbloom</span>
+        <span>CC BY 4.0</span>
+      </div>
+    </div>
+  </div>
+  <p class="stage-label">One-pager · masthead + display headline + standfirst + 2-col body + footer line</p>
+
+  <hr>
+
+  <h2>Brochure (tri-fold)</h2>
+  <p>Landscape 11×8.5 in (or A4 tri-fold) for events, conferences, council briefings. Cover panel uses the navy surface, inverse mark, and serif-italic display headline. Inside panels repeat the one-pager structure with section-specific copy.</p>
+
+  <div class="mock-stage">
+    <div class="brochure-cover">
+      <div class="mark-row">
+        <svg viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#F4F2EC"/><circle cx="14" cy="16" r="9" fill="#1B2B80"/><rect x="10" y="12" width="8" height="8" fill="#F4F2EC"/></svg>
+      </div>
+      <div>
+        <p class="title">A standard for<br>accountable<br>technology.</p>
+        <p class="sub">DTPR · Open standard · v2.1</p>
+      </div>
+      <div class="footer-line">
+        <span>Helpful Places · Superbloom</span>
+        <span>CC BY 4.0</span>
+      </div>
+    </div>
+  </div>
+  <p class="stage-label">Brochure cover · navy surface · inverse mark · serif-italic display</p>
+
+  <hr>
+
+  <h2>Poster</h2>
+  <p>Vertical 2:3 format for civic-space display. The chartreuse dot appears only on the footer line (active deployment indicator). White surface, navy text.</p>
+
+  <div class="mock-stage">
+    <div class="poster">
+      <div class="mark-row">
+        <svg viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/><circle cx="14" cy="16" r="9" fill="#FFFFFF"/><rect x="10" y="12" width="8" height="8" fill="#1B2B80"/></svg>
+      </div>
+      <div class="body">
+        <h1>This technology is accountable to you.</h1>
+        <p>Every deployment declares who runs it, what it does, and where the data goes. The disclosure is physical, public, and standardized — readable in passing.</p>
+        <p>DTPR is an open standard published under CC BY 4.0. Anyone can use it, adapt it, or build on it without permission or fee.</p>
+      </div>
+      <div class="footer-line">
+        <span class="pin" aria-hidden="true"></span>
+        <span>Live deployment · dtpr.io</span>
+      </div>
+    </div>
+  </div>
+  <p class="stage-label">Poster · vertical · chartreuse pin only on live deployment footer</p>
+
+  <hr>
+
+  <h2>Format &amp; production notes</h2>
+
+  <table class="sizing-table">
+    <thead><tr><th>Format</th><th>Dimensions</th><th>Bleed</th><th>Paper</th></tr></thead>
+    <tbody>
+      <tr><td>One-pager</td><td>US Letter 8.5×11 in / A4 210×297 mm</td><td>0.125 in / 3 mm</td><td>100lb text, matte</td></tr>
+      <tr><td>Brochure</td><td>US Letter landscape, 3 folds / A4 tri-fold</td><td>0.125 in / 3 mm</td><td>100lb cover, matte</td></tr>
+      <tr><td>Poster</td><td>11×17 in (Tabloid) or 18×24 in</td><td>0.25 in / 6 mm</td><td>80lb coated, satin</td></tr>
+      <tr><td>Report</td><td>US Letter or A4, 8–24 pages</td><td>0.125 in / 3 mm</td><td>80lb text, matte</td></tr>
+    </tbody>
+  </table>
+
+
+  <div class="page-nav">
+    <a href="15-co-branding.html">← 15 Co-Branding</a>
+    <a href="17-stationery.html">17 Stationery →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="../assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="../assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.4 · August 2026 · Superbloom Design</p>
+</footer>
+
+<script src="../nav.js"></script>
+</body>
+</html>

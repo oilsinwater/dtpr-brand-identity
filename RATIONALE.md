@@ -6,7 +6,7 @@ The deck is a static website documenting a flexible visual grammar in service of
 
 ## Why a visual system at all
 
-This is the load-bearing question. Everything else stacks on top of it.
+This is the fundamental question. Everything else stacks on top of it.
 
 - **The audit surfaces real problems.** 12-findings lists ten unresolved open questions. Without a system, those get answered ad-hoc by each deployment, and the brand drifts by accumulation rather than by decision.
 - **Decisions compound.** Every visual choice not made today is a choice a future designer will make under less context — usually faster, usually without the brief. A visual system is how you make the decision once and let it propagate.

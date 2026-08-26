@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>15 Co-Branding — DTPR Brand Identity Guidelines</title>
+<meta name="description" content="DTPR Co-Branding — lockup rules for partner and funder marks. Mark sizing, clearspace, ordering, equal-weight variants.">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .lockup-stage {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    padding: 2.5rem 2rem;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 140px;
+  }
+  .lockup-stage.dark { background: #070D24; border-color: #1B2B80; }
+  .lockup {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .lockup .divider {
+    width: 1px;
+    height: 48px;
+    background: var(--gray-300);
+  }
+  .lockup.dark .divider { background: rgba(255,255,255,0.2); }
+  .lockup img, .lockup svg { height: 28px; width: auto; display: block; }
+  .lockup .dtpr-mark svg { height: 32px; width: auto; }
+  .stage-label {
+    margin-top: 0.5rem;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+  .co-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .co-card {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+  }
+  .co-card h3 {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0 0 0.5rem;
+  }
+  .co-card .label {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--blue);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .co-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--gray-700);
+    margin: 0 0 0.75rem;
+  }
+  .co-card p:last-child { margin-bottom: 0; }
+  .sizing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+  }
+  .sizing-table th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    background: var(--gray-100, #f3f4f6);
+    border-bottom: 2px solid var(--navy);
+    color: var(--navy);
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .sizing-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--gray-200, #e5e7eb);
+    vertical-align: top;
+    color: var(--gray-700);
+  }
+  .sizing-table td:first-child {
+    font-weight: 700;
+    color: var(--navy);
+    font-family: 'Source Code Pro', monospace;
+  }
+  .do-dont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  .do-dont > div {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    padding: 1.25rem;
+  }
+  .do-dont .yes { border-left: 3px solid #15803D; }
+  .do-dont .no  { border-left: 3px solid #B91C1C; }
+  .do-dont h4 {
+    margin: 0 0 0.5rem;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .do-dont .yes h4 { color: #15803D; }
+  .do-dont .no h4  { color: #B91C1C; }
+  .do-dont p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--gray-700);
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="../index.html"><span class="dot"></span>DTPR · Brand Book</a>
+  <nav>
+    <li><a href="../index.html">Cover</a></li>
+    <li class="dropdown">
+      <a href="#" class="nav-dropdown-trigger">How We Got Here</a>
+      <ul class="dropdown-menu">
+        <li><a href="../01-evolution.html">01 Evolution</a></li>
+        <li><a href="../02-dtpr-io.html">02 dtpr.io</a></li>
+        <li><a href="../03-vision.html">03 vision</a></li>
+        <li><a href="../04-makeshift.html">04 Makeshift</a></li>
+        <li><a href="../05-docs.html">05 docs.dtpr</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="nav-dropdown-trigger">Visual Component Audit</a>
+      <ul class="dropdown-menu">
+        <li><a href="../06-marks.html">06 Marks</a></li>
+        <li><a href="../07-color.html">07 Color</a></li>
+        <li><a href="../08-typography.html">08 Type</a></li>
+        <li><a href="../09-iconography.html">09 Icons</a></li>
+        <li><a href="../10-illustrations.html">10 Illustrations</a></li>
+        <li><a href="../11-voice.html">11 Voice</a></li>
+        <li><a href="../12-findings.html">12 Findings</a></li>
+        <li><a href="../13-strategic-postures.html">Strategic Postures</a></li>
+        <li><a href="../14-sprint-morphology.html">Sprint Morphology</a></li>
+        <li><a href="../15-transformation-morphology.html">Transformation Morphology</a></li>
+        <li><a href="../16-semantic-morphology.html">Semantic Morphology</a></li>
+        <li><a href="../17-sprint-recipes.html">Sprint Recipes</a></li>
+        <li><a href="../18-geometric-blueprint.html">Geometric Blueprint</a></li>
+        <li><a href="../19-core-caa-assets.html">Core CAA Assets</a></li>
+        <li><a href="../20-iso-3864-matrix.html">ISO 3864 Matrix</a></li>
+        <li><a href="../21-responsive-specs.html">Responsive Application Specs</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="./index.html" class="nav-dropdown-trigger">Going Forward</a>
+      <ul class="dropdown-menu">
+        <li><a href="./01-values.html">Values</a></li>
+        <li><a href="./02-logo.html">Logo</a></li>
+        <li><a href="./03-logo-stacked.html">Logo Stacked</a></li>
+        <li><a href="./04-watermark.html">Watermark</a></li>
+        <li><a href="./05-icon.html">Icon</a></li>
+        <li><a href="./06-dimensions.html">Dimensions</a></li>
+        <li><a href="./07-color.html">Color</a></li>
+        <li><a href="./08-fonts.html">Fonts</a></li>
+        <li><a href="./09-font-protocol.html">Font Protocol</a></li>
+        <li><a href="./10-photography.html">Photography</a></li>
+        <li><a href="./11-visual-language.html">Visual Language</a></li>
+        <li><a href="./12-web-application.html">Web Application</a></li>
+        <li><a href="./13-misuse.html">Misuse &amp; Don'ts</a></li>
+        <li><a href="./14-voice-tone.html">Voice &amp; Tone</a></li>
+        <li><a href="./15-co-branding.html" class="active">Co-Branding</a></li>
+        <li><a href="./16-print-collateral.html">Print Collateral</a></li>
+        <li><a href="./17-stationery.html">Stationery</a></li>
+        <li><a href="./18-environmental.html">Environmental &amp; Signage</a></li>
+        <li><a href="./19-merch.html">Merch &amp; Swag</a></li>
+        <li><a href="./20-motion.html">Motion</a></li>
+        <li><a href="./21-email-templates.html">Email Templates</a></li>
+        <li><a href="./22-app-ui.html">App UI</a></li>
+      </ul>
+    </li>
+  </nav>
+  <span class="badge-draft">v0.4 · brand book</span>
+</header>
+
+<main>
+  <span class="eyebrow">15 · Co-Branding</span>
+  <h1>Partner marks beside the DTPR mark.</h1>
+  <p class="lede">How the DTPR mark sits next to a partner organization, a funder, or a host institution. Co-branding follows the same logic as the wordmark lockup: equal clearspace, equal visual weight, no hierarchy implied by ordering.</p>
+
+  <div class="tag-row">
+    <span class="tag">LOCKUP</span>
+    <span class="tag">CLEARSPACE</span>
+    <span class="tag">PARTNER MARKS</span>
+  </div>
+
+  <hr>
+
+  <h2>The default lockup (light surface)</h2>
+  <p>Two marks, vertical divider, equal height, horizontal alignment. The DTPR mark goes on the left in most contexts; partner mark on the right.</p>
+
+  <div class="lockup-stage">
+    <div class="lockup">
+      <span class="dtpr-mark">
+        <svg viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/>
+          <circle cx="14" cy="16" r="9" fill="#FFFFFF"/>
+          <rect x="10" y="12" width="8" height="8" fill="#1B2B80"/>
+        </svg>
+      </span>
+      <span class="divider"></span>
+      <span>
+        <svg viewBox="0 0 112 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/>
+          <circle cx="14" cy="16" r="9" fill="#FFFFFF"/>
+          <rect x="10" y="12" width="8" height="8" fill="#1B2B80"/>
+          <g transform="translate(36 26.11) scale(1 -1)" fill="#1B2B80">
+            <path d="M9.91 2.34 Q11.30 2.34 12.20 2.63 Q13.80 3.17 14.81 4.69 Q15.63 5.92 15.98 7.83 Q16.19 8.98 16.19 9.95 Q16.19 13.71 14.70 15.79 Q13.20 17.87 9.89 17.87 L5.03 17.87 L5.03 2.34 Z M2.27 20.22 L10.46 20.22 Q14.63 20.22 16.93 17.26 Q18.99 14.59 18.99 10.42 Q18.99 7.20 17.77 4.60 Q15.64 0 10.44 0 L2.27 0 Z M36.95 20.22 L36.95 17.82 L30.13 17.82 L30.13 0 L27.35 0 L27.35 17.82 L20.53 17.82 L20.53 20.22 Z M39.43 20.22 L48.53 20.22 Q51.23 20.22 52.88 18.70 Q54.53 17.18 54.53 14.43 Q54.53 12.06 53.06 10.30 Q51.59 8.55 48.53 8.55 L42.17 8.55 L42.17 0 L39.43 0 Z M51.77 14.41 Q51.77 16.64 50.11 17.44 Q49.21 17.87 47.62 17.87 L42.17 17.87 L42.17 10.86 L47.62 10.86 Q49.47 10.86 50.62 11.65 Q51.77 12.43 51.77 14.41 Z M67.10 10.96 Q69.02 10.96 70.15 11.73 Q71.27 12.50 71.27 14.51 Q71.27 16.67 69.70 17.46 Q68.86 17.87 67.45 17.87 L60.76 17.87 L60.76 10.96 Z M58.02 20.22 L67.39 20.22 Q69.70 20.22 71.20 19.55 Q74.05 18.26 74.05 14.77 Q74.05 12.96 73.30 11.80 Q72.55 10.64 71.20 9.94 Q72.38 9.46 72.98 8.67 Q73.58 7.89 73.65 6.13 L73.75 3.41 Q73.79 2.26 73.94 1.69 Q74.19 0.73 74.82 0.45 L74.82 0 L71.46 0 Q71.32 0.26 71.24 0.67 Q71.16 1.09 71.10 2.27 L70.94 5.64 Q70.84 7.63 69.46 8.30 Q68.68 8.67 67 8.67 L60.76 8.67 L60.76 0 L58.02 0 Z" />
+          </g>
+        </svg>
+      </span>
+    </div>
+  </div>
+  <p class="stage-label">Standard horizontal lockup · light surface</p>
+
+  <hr>
+
+  <h2>Inverted lockup (dark surface)</h2>
+  <p>Same geometry. The DTPR mark uses its navy-on-navy inverted variant; partner mark gets the white-on-dark treatment.</p>
+
+  <div class="lockup-stage dark">
+    <div class="lockup dark">
+      <span class="dtpr-mark">
+        <svg viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#F4F2EC"/>
+          <circle cx="14" cy="16" r="9" fill="#1B2B80"/>
+          <rect x="10" y="12" width="8" height="8" fill="#F4F2EC"/>
+        </svg>
+      </span>
+      <span class="divider"></span>
+      <span>
+        <svg viewBox="0 0 112 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#F4F2EC"/>
+          <circle cx="14" cy="16" r="9" fill="#1B2B80"/>
+          <rect x="10" y="12" width="8" height="8" fill="#F4F2EC"/>
+          <g transform="translate(36 26.11) scale(1 -1)" fill="#F4F2EC">
+            <path d="M9.91 2.34 Q11.30 2.34 12.20 2.63 Q13.80 3.17 14.81 4.69 Q15.63 5.92 15.98 7.83 Q16.19 8.98 16.19 9.95 Q16.19 13.71 14.70 15.79 Q13.20 17.87 9.89 17.87 L5.03 17.87 L5.03 2.34 Z M2.27 20.22 L10.46 20.22 Q14.63 20.22 16.93 17.26 Q18.99 14.59 18.99 10.42 Q18.99 7.20 17.77 4.60 Q15.64 0 10.44 0 L2.27 0 Z M36.95 20.22 L36.95 17.82 L30.13 17.82 L30.13 0 L27.35 0 L27.35 17.82 L20.53 17.82 L20.53 20.22 Z M39.43 20.22 L48.53 20.22 Q51.23 20.22 52.88 18.70 Q54.53 17.18 54.53 14.43 Q54.53 12.06 53.06 10.30 Q51.59 8.55 48.53 8.55 L42.17 8.55 L42.17 0 L39.43 0 Z M51.77 14.41 Q51.77 16.64 50.11 17.44 Q49.21 17.87 47.62 17.87 L42.17 17.87 L42.17 10.86 L47.62 10.86 Q49.47 10.86 50.62 11.65 Q51.77 12.43 51.77 14.41 Z M67.10 10.96 Q69.02 10.96 70.15 11.73 Q71.27 12.50 71.27 14.51 Q71.27 16.67 69.70 17.46 Q68.86 17.87 67.45 17.87 L60.76 17.87 L60.76 10.96 Z M58.02 20.22 L67.39 20.22 Q69.70 20.22 71.20 19.55 Q74.05 18.26 74.05 14.77 Q74.05 12.96 73.30 11.80 Q72.55 10.64 71.20 9.94 Q72.38 9.46 72.98 8.67 Q73.58 7.89 73.65 6.13 L73.75 3.41 Q73.79 2.26 73.94 1.69 Q74.19 0.73 74.82 0.45 L74.82 0.45 L71.46 0.45 Q71.32 0.71 71.24 1.12 Q71.16 1.54 71.10 2.72 L70.94 6.09 Q70.84 8.08 69.46 8.75 Q68.68 9.12 67 9.12 L60.76 9.12 L60.76 0 L58.02 0 Z" />
+          </g>
+        </svg>
+      </span>
+    </div>
+  </div>
+  <p class="stage-label">Standard horizontal lockup · dark surface</p>
+
+  <hr>
+
+  <h2>The four lockup patterns</h2>
+
+  <div class="co-grid">
+
+    <div class="co-card">
+      <span class="label">PATTERN 01</span>
+      <h3>DTPR left, partner right</h3>
+      <p>Default horizontal lockup. Use when the partner is the host (event, deployment, study) and DTPR is the standard they're implementing.</p>
+    </div>
+
+    <div class="co-card">
+      <span class="label">PATTERN 02</span>
+      <h3>Partner left, DTPR right</h3>
+      <p>When the partner is the host institution and DTPR is a guest (a panel, a partnership announcement). Reverses the lockup but keeps the same vertical divider.</p>
+    </div>
+
+    <div class="co-card">
+      <span class="label">PATTERN 03</span>
+      <h3>Stacked (vertical)</h3>
+      <p>For narrow surfaces — newsletter footers, certificate headers, certificate footers. Mark on top, partner below, divided by a horizontal hairline.</p>
+    </div>
+
+    <div class="co-card">
+      <span class="label">PATTERN 04</span>
+      <h3>Three-party lockup</h3>
+      <p>DTPR + host partner + funder. Same horizontal pattern, marks separated by 1px hairline dividers, each mark at equal cap height.</p>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <h2>Clearspace and sizing</h2>
+
+  <table class="sizing-table">
+    <thead>
+      <tr>
+        <th>Rule</th>
+        <th>Specification</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Divider gap</td>
+        <td>1px vertical line, color <code>var(--gray-300)</code> (light) or <code>rgba(255,255,255,0.2)</code> (dark). Length = 0.4× mark height on either side of the smaller mark.</td>
+      </tr>
+      <tr>
+        <td>Clearspace around the lockup</td>
+        <td>Equal to the cap-height of the smaller mark on all four sides. No body copy closer than this clearspace.</td>
+      </tr>
+      <tr>
+        <td>Cap-height equality</td>
+        <td>Both marks rendered at the same cap-height (the top of the larger letterform). Partner marks must be optically sized to match — never auto-scaled by aspect ratio alone.</td>
+      </tr>
+      <tr>
+        <td>Minimum lockup width</td>
+        <td>240px on screen, 1.5in (38mm) in print. Below this, use the stacked pattern instead.</td>
+      </tr>
+      <tr>
+        <td>Three-party lockup</td>
+        <td>Two dividers. Equal cap heights. Clearspace scales by the smallest mark's height.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h2>What not to do</h2>
+
+  <div class="do-dont">
+    <div class="yes">
+      <h4>YES</h4>
+      <p>Equal cap heights, single hairline divider, marks at the same baseline. The lockup reads as a partnership, not a hierarchy.</p>
+    </div>
+    <div class="no">
+      <h4>NO</h4>
+      <p>One mark significantly larger than the other; no divider; words "presented by" or "in partnership with" layered between the marks. Hierarchy implies ownership — the lockup shouldn't.</p>
+    </div>
+  </div>
+
+  <div class="do-dont">
+    <div class="yes">
+      <h4>YES</h4>
+      <p>Partner mark in its canonical treatment (color or monochrome, as supplied). DTPR mark in its canonical navy. No restyling either mark to match.</p>
+    </div>
+    <div class="no">
+      <h4>NO</h4>
+      <p>Recoloring the partner mark to navy so it "matches." Recolor the partner mark to fit a chartreuse accent. Either mark's brand guidelines forbid arbitrary recoloring.</p>
+    </div>
+  </div>
+
+  <div class="page-nav">
+    <a href="14-voice-tone.html">← 14 Voice &amp; Tone</a>
+    <a href="16-print-collateral.html">16 Print Collateral →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="../assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="../assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.4 · August 2026 · Superbloom Design</p>
+</footer>
+
+<script src="../nav.js"></script>
+</body>
+</html>

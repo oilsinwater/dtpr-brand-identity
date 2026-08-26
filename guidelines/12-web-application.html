@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>12 Web Application — DTPR Brand Identity Guidelines</title>
-<meta name="description" content="DTPR Web Application — interactive digital presence prototype implementing Recipe B (Maker register, 3D city layers, global telemetry, and motion shaders).">
+<meta name="description" content="DTPR Web Application — interactive digital presence prototype implementing Recipe B (Maker register) V3 edition: pared-back home, triangulated mesh world map, light-mode journey phone.">
 <link rel="stylesheet" href="../styles.css">
 <style>
   .app-preview-container {
@@ -52,7 +52,7 @@
     width: 100%;
     height: 85vh;
     min-height: 720px;
-    background: #070D24;
+    background: #F4F2EC;
     position: relative;
   }
   .app-iframe-wrapper iframe {
@@ -95,6 +95,30 @@
     display: inline-block;
     margin-bottom: 0.5rem;
   }
+  .changelog {
+    margin: 2rem 0;
+    padding: 1.25rem 1.5rem;
+    border-left: 3px solid var(--blue);
+    background: var(--gray-50);
+    border-radius: 0 6px 6px 0;
+  }
+  .changelog h3 {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .changelog ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-size: 0.9rem;
+    color: var(--gray-700);
+    line-height: 1.6;
+  }
+  .changelog li { margin-bottom: 0.25rem; }
 </style>
 </head>
 <body>
@@ -149,6 +173,16 @@
         <li><a href="./10-photography.html">Photography</a></li>
         <li><a href="./11-visual-language.html">Visual Language</a></li>
         <li><a href="./12-web-application.html" class="active">Web Application</a></li>
+        <li><a href="./13-misuse.html">Misuse &amp; Don'ts</a></li>
+        <li><a href="./14-voice-tone.html">Voice &amp; Tone</a></li>
+        <li><a href="./15-co-branding.html">Co-Branding</a></li>
+        <li><a href="./16-print-collateral.html">Print Collateral</a></li>
+        <li><a href="./17-stationery.html">Stationery</a></li>
+        <li><a href="./18-environmental.html">Environmental &amp; Signage</a></li>
+        <li><a href="./19-merch.html">Merch &amp; Swag</a></li>
+        <li><a href="./20-motion.html">Motion</a></li>
+        <li><a href="./21-email-templates.html">Email Templates</a></li>
+        <li><a href="./22-app-ui.html">App UI</a></li>
       </ul>
     </li>
   </nav>
@@ -158,31 +192,43 @@
 <main>
   <span class="eyebrow">12 · Web Application</span>
   <h1>Interactive Digital Presence</h1>
-  <p class="lede">The production implementation of Recipe B (Maker register). This interactive prototype consolidates DTPR's digital footprint into a responsive web application featuring dynamic WebGL city layer exploration, real-time telemetry, a lived civic journey simulator, and unified taxonomy navigation.</p>
+  <p class="lede">The production implementation of Recipe B (Maker register). This interactive prototype consolidates DTPR's digital footprint into a responsive web application featuring a flat triangulated world map, a light-mode journey phone simulator, and unified taxonomy navigation — pared-back edition.</p>
 
   <div class="tag-row">
-    <span class="tag verified">VERIFIED PROTOTYPE</span>
+    <span class="tag verified">VERIFIED PROTOTYPE · V3</span>
     <span class="tag">RECIPE B</span>
-    <span class="tag">NUXT 3 / WEBGL</span>
+    <span class="tag">NUXT 4 / STATIC</span>
+    <span class="tag">NO WEBGL</span>
+  </div>
+
+  <div class="changelog">
+    <h3>What changed V2 → V3</h3>
+    <ul>
+      <li>Removed WebGL shader auras and the orbital globe; replaced with static SVG triangulated mesh map.</li>
+      <li>JourneySection phone inverted from dark terminal substrate to warm-paper light mode.</li>
+      <li>Removed three.js dependency, gsap, maplibre-gl, @nuxt/content; build is now plain Nuxt 4 + @nuxt/ui.</li>
+      <li>CTA hierarchy corrected: chartreuse reserved for primary CTA only; secondary actions use blue #2563D0.</li>
+      <li>Home section spine matches V2's five-section structure (Hero / Problem / Standard / Day / Footprint) without the shader fixtures.</li>
+    </ul>
   </div>
 
   <hr>
 
   <h2>Live Prototype Viewport</h2>
-  <p>The web application runs below in an isolated sandbox environment, ensuring complete style and component independence from the parent brand guidelines document. You can interact directly with the 3D models, data chain explorer, and interactive simulator, or open the application in a dedicated window.</p>
+  <p>The web application runs below in an isolated sandbox environment, ensuring complete style and component independence from the parent brand guidelines document. You can interact directly with the triangulated mesh map, the journey stepper, and the taxonomy/data-chain explorers, or open the application in a dedicated window.</p>
 
   <div class="app-preview-container">
     <div class="app-preview-toolbar">
       <div>
         <span class="status-dot"></span>
-        <span>RECIPE B PROTOTYPE // v2.1 (MAKER)</span>
+        <span>RECIPE B PROTOTYPE // V3.0 (MAKER · PARED-BACK)</span>
       </div>
       <div>
         <a href="./prototype/index.html" target="_blank" class="btn-open">Open Standalone App ↗</a>
       </div>
     </div>
     <div class="app-iframe-wrapper">
-      <iframe src="./prototype/index.html" title="DTPR Web Application Prototype" loading="lazy"></iframe>
+      <iframe src="./prototype/index.html" title="DTPR Web Application Prototype — V3 pared-back" loading="lazy"></iframe>
     </div>
   </div>
 
@@ -194,7 +240,7 @@
     <div class="spec-card">
       <span class="badge">RULE 01 // PALETTE DISCIPLINE</span>
       <h3>Reserved Chartreuse Action</h3>
-      <p>Chartreuse (<code>#9ACD00</code>) is strictly reserved for live state beacons, telemetry indicators, and primary CTAs. Base surfaces use Brand Navy (<code>#1B2B80</code>), warm paper (<code>#F4F2EC</code>), and frosted glass.</p>
+      <p>Chartreuse (<code>#9ACD00</code>) is strictly reserved for live state beacons, telemetry indicators, and the primary CTA. Base surfaces use Brand Navy (<code>#1B2B80</code>), warm paper (<code>#F4F2EC</code>), and frosted glass. Blue (<code>#2563D0</code>) is the secondary action color.</p>
     </div>
 
     <div class="spec-card">
@@ -204,21 +250,33 @@
     </div>
 
     <div class="spec-card">
-      <span class="badge">RULE 03 // 3D EXPLODED LAYERS</span>
-      <h3>Urban Legibility Canvas</h3>
-      <p>Three.js WebGL model demonstrating how DTPR's digital accountability layer integrates seamlessly with physical buildings, transit networks, and public realm infrastructure.</p>
+      <span class="badge">RULE 03 // FLAT TRIANGULATED MAP</span>
+      <h3>Static SVG World Map</h3>
+      <p>Six continent meshes (NA, SA, EU, AF, AS, OC) triangulated via ear-clipping on hand-authored outlines, rendered as white-fill silhouette + white outline polyline + white wireframe triangles. Chartreuse pins for deployments, hollow chartreuse for pilots. No WebGL.</p>
     </div>
 
     <div class="spec-card">
-      <span class="badge">RULE 04 // DATA CHAINS</span>
+      <span class="badge">RULE 04 // LIGHT-MODE JOURNEY</span>
+      <h3>Inverted Phone Substrate</h3>
+      <p>JourneySection phone shifted from dark terminal substrate (V2) to warm-paper light mode (V3). Bezel white, screen <code>#F4F2EC</code>, chrome bars paper-tone. Chartreuse reserved inside the phone for the live status dot, "DTPR LABEL" caption, and the pinned action CTA.</p>
+    </div>
+
+    <div class="spec-card">
+      <span class="badge">RULE 05 // DATA CHAINS</span>
       <h3>Verifiable Accountability</h3>
-      <p>Two-column technical explorer mapping physical sensing nodes to responsible entities, municipal governance policies, and open machine-readable schemas.</p>
+      <p>Compact two-column explorer mapping physical sensing nodes to responsible entities, municipal governance policies, and open machine-readable schemas — no flip-card flourish, no flip animation.</p>
+    </div>
+
+    <div class="spec-card">
+      <span class="badge">RULE 06 // SECTION SPINE</span>
+      <h3>Five-section structure, no shader fixtures</h3>
+      <p>Home is Hero → Problem → Standard (5-icon row, taxonomy, data chain) → A Day With DTPR (light phone) → Global Footprint (flat map + city grid). No full-bleed dark band, no shader smoke fields, no orbital globe. Page reads on warm paper throughout.</p>
     </div>
   </div>
 
   <div class="page-nav">
     <a href="11-visual-language.html">← 11 Visual Language</a>
-    <a href="index.html">↑ Cover</a>
+    <a href="13-misuse.html">13 Misuse &amp; Don'ts →</a>
   </div>
 </main>
 
@@ -230,5 +288,6 @@
   <p>v0.4 · August 2026 · Superbloom Design</p>
 </footer>
 
+<script src="../nav.js"></script>
 </body>
 </html>

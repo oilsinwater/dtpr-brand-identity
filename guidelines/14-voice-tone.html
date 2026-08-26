@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>14 Voice &amp; Tone — DTPR Brand Identity Guidelines</title>
+<meta name="description" content="DTPR Voice &amp; Tone — how the brand writes across surfaces. Plain. Accountable. Calm. Legible. Headlines, body, CTAs, captions.">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .voice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .voice-card {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+  }
+  .voice-card h3 {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0 0 0.5rem;
+  }
+  .voice-card .label {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--blue);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .voice-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--gray-700);
+    margin: 0 0 0.75rem;
+  }
+  .voice-card p:last-child { margin-bottom: 0; }
+  .example-block {
+    margin-top: 0.75rem;
+    padding: 1rem 1.25rem;
+    border-radius: 4px;
+    border: 1px solid var(--gray-200, #e5e7eb);
+    background: var(--gray-50);
+    font-size: 0.95rem;
+    color: var(--navy);
+  }
+  .example-block .tag {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--blue);
+  }
+  .example-block .yes { color: var(--navy); }
+  .example-block .no { color: var(--gray-500); text-decoration: line-through; }
+  .rules-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+  }
+  .rules-table th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    background: var(--gray-100, #f3f4f6);
+    border-bottom: 2px solid var(--navy);
+    color: var(--navy);
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .rules-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--gray-200, #e5e7eb);
+    vertical-align: top;
+    color: var(--gray-700);
+  }
+  .rules-table td:first-child {
+    font-weight: 700;
+    color: var(--navy);
+    font-family: 'Public Sans', sans-serif;
+  }
+  .values-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .value-pill {
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--blue);
+    border-radius: 6px;
+    background: var(--white);
+    text-align: center;
+  }
+  .value-pill .word {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--navy);
+    margin-bottom: 0.25rem;
+  }
+  .value-pill .desc {
+    font-size: 0.75rem;
+    color: var(--gray-600);
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="../index.html"><span class="dot"></span>DTPR · Brand Book</a>
+  <nav>
+    <li><a href="../index.html">Cover</a></li>
+    <li class="dropdown">
+      <a href="#" class="nav-dropdown-trigger">How We Got Here</a>
+      <ul class="dropdown-menu">
+        <li><a href="../01-evolution.html">01 Evolution</a></li>
+        <li><a href="../02-dtpr-io.html">02 dtpr.io</a></li>
+        <li><a href="../03-vision.html">03 vision</a></li>
+        <li><a href="../04-makeshift.html">04 Makeshift</a></li>
+        <li><a href="../05-docs.html">05 docs.dtpr</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="nav-dropdown-trigger">Visual Component Audit</a>
+      <ul class="dropdown-menu">
+        <li><a href="../06-marks.html">06 Marks</a></li>
+        <li><a href="../07-color.html">07 Color</a></li>
+        <li><a href="../08-typography.html">08 Type</a></li>
+        <li><a href="../09-iconography.html">09 Icons</a></li>
+        <li><a href="../10-illustrations.html">10 Illustrations</a></li>
+        <li><a href="../11-voice.html">11 Voice</a></li>
+        <li><a href="../12-findings.html">12 Findings</a></li>
+        <li><a href="../13-strategic-postures.html">Strategic Postures</a></li>
+        <li><a href="../14-sprint-morphology.html">Sprint Morphology</a></li>
+        <li><a href="../15-transformation-morphology.html">Transformation Morphology</a></li>
+        <li><a href="../16-semantic-morphology.html">Semantic Morphology</a></li>
+        <li><a href="../17-sprint-recipes.html">Sprint Recipes</a></li>
+        <li><a href="../18-geometric-blueprint.html">Geometric Blueprint</a></li>
+        <li><a href="../19-core-caa-assets.html">Core CAA Assets</a></li>
+        <li><a href="../20-iso-3864-matrix.html">ISO 3864 Matrix</a></li>
+        <li><a href="../21-responsive-specs.html">Responsive Application Specs</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="./index.html" class="nav-dropdown-trigger">Going Forward</a>
+      <ul class="dropdown-menu">
+        <li><a href="./01-values.html">Values</a></li>
+        <li><a href="./02-logo.html">Logo</a></li>
+        <li><a href="./03-logo-stacked.html">Logo Stacked</a></li>
+        <li><a href="./04-watermark.html">Watermark</a></li>
+        <li><a href="./05-icon.html">Icon</a></li>
+        <li><a href="./06-dimensions.html">Dimensions</a></li>
+        <li><a href="./07-color.html">Color</a></li>
+        <li><a href="./08-fonts.html">Fonts</a></li>
+        <li><a href="./09-font-protocol.html">Font Protocol</a></li>
+        <li><a href="./10-photography.html">Photography</a></li>
+        <li><a href="./11-visual-language.html">Visual Language</a></li>
+        <li><a href="./12-web-application.html">Web Application</a></li>
+        <li><a href="./13-misuse.html">Misuse &amp; Don'ts</a></li>
+        <li><a href="./14-voice-tone.html" class="active">Voice &amp; Tone</a></li>
+        <li><a href="./15-co-branding.html">Co-Branding</a></li>
+        <li><a href="./16-print-collateral.html">Print Collateral</a></li>
+        <li><a href="./17-stationery.html">Stationery</a></li>
+        <li><a href="./18-environmental.html">Environmental &amp; Signage</a></li>
+        <li><a href="./19-merch.html">Merch &amp; Swag</a></li>
+        <li><a href="./20-motion.html">Motion</a></li>
+        <li><a href="./21-email-templates.html">Email Templates</a></li>
+        <li><a href="./22-app-ui.html">App UI</a></li>
+      </ul>
+    </li>
+  </nav>
+  <span class="badge-draft">v0.4 · brand book</span>
+</header>
+
+<main>
+  <span class="eyebrow">14 · Voice &amp; Tone</span>
+  <h1>How the brand writes.</h1>
+  <p class="lede">DTPR's visual register is calm and legible; the writing matches. Short sentences, plain words, no marketing inflection. The voice is the same across surfaces — the tone adapts to context.</p>
+
+  <div class="tag-row">
+    <span class="tag">WRITING GUIDE</span>
+    <span class="tag">EDITORIAL</span>
+    <span class="tag">RECIPE B</span>
+  </div>
+
+  <h2>The four values, applied to writing</h2>
+
+  <p>From <a href="01-values.html">01 Values</a>. The personality words govern copy decisions the way they govern color decisions.</p>
+
+  <div class="values-row">
+    <div class="value-pill">
+      <div class="word">Plain</div>
+      <div class="desc">Short sentences. Common words. The reader should never need a dictionary.</div>
+    </div>
+    <div class="value-pill">
+      <div class="word">Accountable</div>
+      <div class="desc">Names the actor. Says who did it, who decides, who pays. No passive voice hiding the steward.</div>
+    </div>
+    <div class="value-pill">
+      <div class="word">Calm</div>
+      <div class="desc">No exclamation marks. No marketing italics. States the case and stops.</div>
+    </div>
+    <div class="value-pill">
+      <div class="word">Legible</div>
+      <div class="desc">Plain language. Active voice. Reads aloud without stumbling.</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>What to write, and how</h2>
+
+  <div class="voice-grid">
+
+    <div class="voice-card">
+      <span class="label">HEADLINES</span>
+      <h3>One claim, written like a person.</h3>
+      <p>Headlines state what DTPR is, not what it does for you. Subject first; benefit second; never "Welcome to..."</p>
+      <div class="example-block">
+        <span class="tag">YES</span>
+        <p class="yes">A standard for accountable technology.</p>
+        <span class="tag">NO</span>
+        <p class="no">Welcome to the future of public trust!</p>
+      </div>
+    </div>
+
+    <div class="voice-card">
+      <span class="label">BODY COPY</span>
+      <h3>Read aloud.</h3>
+      <p>Long sentences that you can't read aloud without gasping are wrong. Aim for 12–18 words per sentence in body copy.</p>
+      <div class="example-block">
+        <span class="tag">YES</span>
+        <p class="yes">Sensors arrive with procurement notices, but with nothing a person walking past can actually read.</p>
+        <span class="tag">NO</span>
+        <p class="no">In today's rapidly evolving civic technology landscape, where intelligent infrastructure increasingly shapes the lived experience of urban spaces, the imperative for transparency has never been more paramount.</p>
+      </div>
+    </div>
+
+    <div class="voice-card">
+      <span class="label">CTAs</span>
+      <h3>Verb-first, no exclamation.</h3>
+      <p>CTAs say what happens next. "Explore", "View", "Subscribe", "Get the standard". One or two words. No "Click here!", no "Sign up now &gt;&gt;".</p>
+      <div class="example-block">
+        <span class="tag">YES</span>
+        <p class="yes">Explore the Standard →  ·  Subscribe  ·  View taxonomy</p>
+        <span class="tag">NO</span>
+        <p class="no">CLICK HERE TO LEARN MORE!!!  ·  Sign up now &gt;&gt;</p>
+      </div>
+    </div>
+
+    <div class="voice-card">
+      <span class="label">CAPTIONS &amp; METADATA</span>
+      <h3>Lowercase, mono, factual.</h3>
+      <p>Captions and schema keys are monospace, lowercase, terminal in register. They're for people who already know what they're looking at.</p>
+      <div class="example-block">
+        <span class="tag">YES</span>
+        <p class="mono yes">location: civic plaza, pole #104</p>
+        <span class="tag">NO</span>
+        <p class="no">Welcome to our Beautiful Civic Plaza where Amazing Pole #104 is Located!</p>
+      </div>
+    </div>
+
+    <div class="voice-card">
+      <span class="label">ERROR MESSAGES</span>
+      <h3>State the problem, give the next step.</h3>
+      <p>Errors should not apologize, blame the user, or hedge. State what happened in one sentence and what to do next.</p>
+      <div class="example-block">
+        <span class="tag">YES</span>
+        <p class="yes">Could not reach the taxonomy endpoint. Retrying in 5s. Refresh to try sooner.</p>
+        <span class="tag">NO</span>
+        <p class="no">Oops! Something went wrong. We're sorry for the inconvenience. Please try again later!</p>
+      </div>
+    </div>
+
+    <div class="voice-card">
+      <span class="label">DEPLOYMENT DESCRIPTIONS</span>
+      <h3>Cite the steward and the scope.</h3>
+      <p>When describing a deployment, name who runs it and what it covers. Avoid adjectives that could become false claims.</p>
+      <div class="example-block">
+        <span class="tag">YES</span>
+        <p class="yes">Standardized digital rights signage deployed by the City of Long Beach across civic plazas and municipal facilities.</p>
+        <span class="tag">NO</span>
+        <p class="no">A pioneering world-class deployment showcasing best-in-class transparency innovation!</p>
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <h2>The hard rules</h2>
+
+  <table class="rules-table">
+    <thead>
+      <tr>
+        <th>Rule</th>
+        <th>Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>No exclamation marks.</td>
+        <td>The calm register requires them. Save the energy for the substance.</td>
+      </tr>
+      <tr>
+        <td>No "we're excited to..." / "we're proud to...".</td>
+        <td>Tell the reader what's useful. They're not here for the team's feelings.</td>
+      </tr>
+      <tr>
+        <td>No "leverage", "unlock", "powerful", "robust", "seamless".</td>
+        <td>These are filler. Name the specific thing the standard does instead.</td>
+      </tr>
+      <tr>
+        <td>No second-person marketing ("you can...").</td>
+        <td>State the standard's capabilities factually. The reader infers what they can do.</td>
+      </tr>
+      <tr>
+        <td>Cite the steward of every deployment.</td>
+        <td>Accountability is the brand. Don't say "a city" — say which city, which department.</td>
+      </tr>
+      <tr>
+        <td>Numbers are facts. Don't round to look better.</td>
+        <td>"17 cities" beats "20+ communities". Specificity is the trust signal.</td>
+      </tr>
+      <tr>
+        <td>One italic sentence per page.</td>
+        <td>The italic editorial moment is fundamental. Don't dilute it.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-nav">
+    <a href="13-misuse.html">← 13 Misuse &amp; Don'ts</a>
+    <a href="15-co-branding.html">15 Co-Branding →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="../assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="../assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.4 · August 2026 · Superbloom Design</p>
+</footer>
+
+<script src="../nav.js"></script>
+</body>
+</html>

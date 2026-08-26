@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>17 Stationery — DTPR Brand Identity Guidelines</title>
+<meta name="description" content="DTPR Stationery — business cards, letterhead, envelopes, email signatures. The brand applied to the surfaces an org actually sends.">
+<link rel="stylesheet" href="../styles.css">
+<style>
+
+  .app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .app-card {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+  }
+  .app-card h3 {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0 0 0.5rem;
+  }
+  .app-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--gray-700);
+    margin: 0;
+  }
+  /* Stage / mock surface where a token-applied example is shown. */
+  .mock-stage {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    overflow: hidden;
+  }
+  .mock-stage.dark { background: #070D24; border-color: #1B2B80; color: #F4F2EC; }
+  .mock-stage.warm { background: var(--gray-50); border-color: var(--gray-300); color: var(--navy); }
+  .mock-stage.paper { background: var(--white); border-color: var(--gray-300); color: var(--navy); }
+  .stage-label {
+    margin-top: 0.5rem;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+  .sizing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+  }
+  .sizing-table th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    background: var(--gray-100, #f3f4f6);
+    border-bottom: 2px solid var(--navy);
+    color: var(--navy);
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .sizing-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--gray-200, #e5e7eb);
+    vertical-align: top;
+    color: var(--gray-700);
+  }
+  .sizing-table td:first-child {
+    font-weight: 700;
+    color: var(--navy);
+    font-family: 'Source Code Pro', monospace;
+  }
+
+  .biz-card {
+    aspect-ratio: 85/55;
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: 4px;
+    padding: 1.25rem;
+    display: flex; flex-direction: column; justify-content: space-between;
+    color: var(--navy);
+    font-family: 'Public Sans', sans-serif;
+  }
+  .biz-card.back { background: var(--white); }
+  .biz-card .top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .biz-card svg.mark { height: 14px; }
+  .biz-card .name { font-weight: 700; font-size: 0.9rem; line-height: 1.2; }
+  .biz-card .role { font-size: 0.7rem; color: var(--gray-600); margin-top: 0.1rem; }
+  .biz-card .contact {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.65rem; color: var(--gray-700);
+    line-height: 1.6;
+  }
+  .biz-card .contact .key { color: var(--blue); margin-right: 0.25rem; }
+  /* Letterhead: masthead band + body preview. */
+  .letterhead {
+    aspect-ratio: 8.5/11;
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    padding: 2rem 2.5rem;
+    color: var(--navy);
+    font-family: 'Public Sans', sans-serif;
+  }
+  .letterhead .masthead {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    border-bottom: 1px solid var(--navy);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  .letterhead .masthead .mark-row { display: flex; align-items: center; gap: 0.5rem; }
+  .letterhead .masthead svg.mark { height: 18px; }
+  .letterhead .masthead .lockup-mark { height: 14px; }
+  .letterhead .masthead .meta {
+    font-family: 'Source Code Pro', monospace; font-size: 0.65rem;
+    color: var(--gray-600); text-align: right;
+    line-height: 1.5;
+  }
+  .letterhead .date {
+    font-family: 'Source Code Pro', monospace; font-size: 0.7rem; color: var(--gray-600);
+    margin-bottom: 1rem;
+  }
+  .letterhead .body { font-size: 0.75rem; line-height: 1.55; color: var(--gray-700); }
+  .letterhead .body p { margin: 0 0 0.5rem; }
+  .letterhead .footer {
+    border-top: 1px solid var(--gray-300);
+    padding-top: 0.75rem; margin-top: 2rem;
+    display: flex; justify-content: space-between;
+    font-family: 'Source Code Pro', monospace; font-size: 0.6rem;
+    color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  /* Envelope: business #10. */
+  .envelope {
+    aspect-ratio: 9.5/4.125;
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    padding: 0.75rem 1rem;
+    display: flex; flex-direction: column; justify-content: space-between;
+    color: var(--navy);
+  }
+  .envelope .top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .envelope svg.mark { height: 12px; }
+  .envelope .return-addr {
+    font-family: 'Source Code Pro', monospace; font-size: 0.55rem; color: var(--gray-700);
+    line-height: 1.5;
+  }
+  .envelope .recipient {
+    font-family: 'Public Sans', sans-serif; font-size: 0.75rem; color: var(--navy);
+    align-self: flex-end; text-align: left; line-height: 1.5;
+  }
+  .envelope .recipient .name { font-weight: 700; }
+  .envelope .recipient .line { color: var(--gray-700); }
+  /* Email signature block. */
+  .email-sig {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-300);
+    border-radius: 4px;
+    padding: 1.5rem;
+    font-family: 'Public Sans', sans-serif;
+    color: var(--navy);
+  }
+  .email-sig .lockup-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
+  .email-sig .lockup-row svg { height: 16px; }
+  .email-sig .name { font-weight: 700; font-size: 0.95rem; }
+  .email-sig .role { font-size: 0.8rem; color: var(--gray-700); margin-bottom: 0.75rem; }
+  .email-sig .lines {
+    border-top: 1px solid var(--gray-300);
+    padding-top: 0.75rem;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.7rem; line-height: 1.7; color: var(--gray-700);
+  }
+  .email-sig .lines .key { color: var(--blue); margin-right: 0.4rem; }
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="../index.html"><span class="dot"></span>DTPR · Brand Book</a>
+  <nav>
+    <li><a href="../index.html">Cover</a></li>
+    <li class="dropdown">
+      <a href="#" class="nav-dropdown-trigger">How We Got Here</a>
+      <ul class="dropdown-menu">
+        <li><a href="../01-evolution.html">01 Evolution</a></li>
+        <li><a href="../02-dtpr-io.html">02 dtpr.io</a></li>
+        <li><a href="../03-vision.html">03 vision</a></li>
+        <li><a href="../04-makeshift.html">04 Makeshift</a></li>
+        <li><a href="../05-docs.html">05 docs.dtpr</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="nav-dropdown-trigger">Visual Component Audit</a>
+      <ul class="dropdown-menu">
+        <li><a href="../06-marks.html">06 Marks</a></li>
+        <li><a href="../07-color.html">07 Color</a></li>
+        <li><a href="../08-typography.html">08 Type</a></li>
+        <li><a href="../09-iconography.html">09 Icons</a></li>
+        <li><a href="../10-illustrations.html">10 Illustrations</a></li>
+        <li><a href="../11-voice.html">11 Voice</a></li>
+        <li><a href="../12-findings.html">12 Findings</a></li>
+        <li><a href="../13-strategic-postures.html">Strategic Postures</a></li>
+        <li><a href="../14-sprint-morphology.html">Sprint Morphology</a></li>
+        <li><a href="../15-transformation-morphology.html">Transformation Morphology</a></li>
+        <li><a href="../16-semantic-morphology.html">Semantic Morphology</a></li>
+        <li><a href="../17-sprint-recipes.html">Sprint Recipes</a></li>
+        <li><a href="../18-geometric-blueprint.html">Geometric Blueprint</a></li>
+        <li><a href="../19-core-caa-assets.html">Core CAA Assets</a></li>
+        <li><a href="../20-iso-3864-matrix.html">ISO 3864 Matrix</a></li>
+        <li><a href="../21-responsive-specs.html">Responsive Application Specs</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="./index.html" class="nav-dropdown-trigger">Going Forward</a>
+      <ul class="dropdown-menu">
+        <li><a href="./01-values.html">Values</a></li>
+        <li><a href="./02-logo.html">Logo</a></li>
+        <li><a href="./03-logo-stacked.html">Logo Stacked</a></li>
+        <li><a href="./04-watermark.html">Watermark</a></li>
+        <li><a href="./05-icon.html">Icon</a></li>
+        <li><a href="./06-dimensions.html">Dimensions</a></li>
+        <li><a href="./07-color.html">Color</a></li>
+        <li><a href="./08-fonts.html">Fonts</a></li>
+        <li><a href="./09-font-protocol.html">Font Protocol</a></li>
+        <li><a href="./10-photography.html">Photography</a></li>
+        <li><a href="./11-visual-language.html">Visual Language</a></li>
+        <li><a href="./12-web-application.html">Web Application</a></li>
+        <li><a href="./13-misuse.html">Misuse &amp; Don'ts</a></li>
+        <li><a href="./14-voice-tone.html">Voice &amp; Tone</a></li>
+        <li><a href="./15-co-branding.html">Co-Branding</a></li>
+        <li><a href="./16-print-collateral.html">Print Collateral</a></li>
+        <li><a href="./17-stationery.html">Stationery</a></li>
+        <li><a href="./18-environmental.html">Environmental &amp; Signage</a></li>
+        <li><a href="./19-merch.html">Merch &amp; Swag</a></li>
+        <li><a href="./20-motion.html">Motion</a></li>
+        <li><a href="./21-email-templates.html">Email Templates</a></li>
+        <li><a href="./22-app-ui.html">App UI</a></li>
+      </ul>
+    </li>
+  </nav>
+  <span class="badge-draft">v0.4 · brand book</span>
+</header>
+
+<main>
+  <span class="eyebrow">17 · Stationery</span>
+  <h1>Stationery and identity collateral.</h1>
+  <p class="lede">DTPR Stationery — business cards, letterhead, envelopes, email signatures. The brand applied to the surfaces an org actually sends.</p>
+
+  <div class="tag-row">
+<span class="tag">STATIONERY</span><span class="tag">CARDS</span><span class="tag">LETTERHEAD</span><span class="tag">EMAIL</span>
+  </div>
+
+
+  <hr>
+  <h2>Business card</h2>
+  <p>85×55 mm (US: 3.5×2 in). Mark on the back; name/role/contact on the front. Source Code Pro for contact lines; Public Sans for the name.</p>
+
+  <div class="app-grid">
+    <div class="biz-card back">
+      <div class="top">
+        <svg class="mark" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/><circle cx="14" cy="16" r="9" fill="#FFFFFF"/><rect x="10" y="12" width="8" height="8" fill="#1B2B80"/></svg>
+        <span></span>
+      </div>
+      <div style="text-align: right;">
+        <div style="font-family: 'Source Code Pro', monospace; font-size: 0.55rem; color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.06em;">CC BY 4.0</div>
+        <div style="font-family: 'Source Code Pro', monospace; font-size: 0.55rem; color: var(--gray-600); margin-top: 0.2rem;">v2.1 · 2026</div>
+      </div>
+    </div>
+    <div class="biz-card">
+      <div class="top">
+        <div>
+          <div class="name">Chelsea Mendoza</div>
+          <div class="role">Programme Director · DTPR</div>
+        </div>
+        <svg class="mark" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/><circle cx="14" cy="16" r="9" fill="#FFFFFF"/><rect x="10" y="12" width="8" height="8" fill="#1B2B80"/></svg>
+      </div>
+      <div class="contact">
+        <div><span class="key">e</span>chelsea@helpfulplaces.com</div>
+        <div><span class="key">w</span>dtpr.io / chelsea</div>
+        <div><span class="key">m</span>+1 555 0104</div>
+      </div>
+    </div>
+  </div>
+  <p class="stage-label">Business card · back (mark) + front (name + role + contact)</p>
+
+  <hr>
+
+  <h2>Letterhead</h2>
+  <p>US Letter / A4. Masthead band: mark + lockup on the left, organizational meta on the right. Body uses Public Sans with the canonical 1.65 line-height. Footer line cites license and stewarding orgs.</p>
+
+  <div class="mock-stage">
+    <div class="letterhead">
+      <div class="masthead">
+        <div class="mark-row">
+          <svg class="mark" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/><circle cx="14" cy="16" r="9" fill="#FFFFFF"/><rect x="10" y="12" width="8" height="8" fill="#1B2B80"/></svg>
+          <svg class="lockup-mark" viewBox="0 0 112 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/><circle cx="14" cy="16" r="9" fill="#FFFFFF"/><rect x="10" y="12" width="8" height="8" fill="#1B2B80"/></svg>
+        </div>
+        <div class="meta">
+          228 Park Ave S, NYC 10003<br>
+          hello@helpfulplaces.com<br>
+          dtpr.io · @dtpr_standard
+        </div>
+      </div>
+      <div class="date">2026-08-12</div>
+      <div class="body">
+        <p>To the Civic Technology Working Group,</p>
+        <p>DTPR is an open standard published under CC BY 4.0. The standard combines a taxonomy, a visual system, and auditable data chains. Deployments name the steward, declare the purpose, and disclose retention.</p>
+        <p>This letter accompanies the enclosed one-pager and the v2.1 specification. Comments are open until October 1.</p>
+        <p>— Chelsea</p>
+      </div>
+      <div class="footer">
+        <span>DTPR · Open standard v2.1</span>
+        <span>Helpful Places · CC BY 4.0</span>
+      </div>
+    </div>
+  </div>
+  <p class="stage-label">Letterhead · masthead band + date + body + license footer</p>
+
+  <hr>
+
+  <h2>Envelope</h2>
+  <p>Business #10 (9.5×4.125 in / 241×105 mm). Mark + return address top-left; recipient address block bottom-right.</p>
+
+  <div class="mock-stage">
+    <div class="envelope">
+      <div class="top">
+        <svg class="mark" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/><circle cx="14" cy="16" r="9" fill="#FFFFFF"/><rect x="10" y="12" width="8" height="8" fill="#1B2B80"/></svg>
+        <div class="return-addr">
+          DTPR / Helpful Places<br>
+          228 Park Ave S, NYC 10003
+        </div>
+      </div>
+      <div class="recipient">
+        <div class="name">Civic Tech Working Group</div>
+        <div class="line">City Hall, Room 412</div>
+        <div class="line">1 Centre Street, NYC 10007</div>
+      </div>
+    </div>
+  </div>
+  <p class="stage-label">Envelope · return address top-left, recipient bottom-right</p>
+
+  <hr>
+
+  <h2>Email signature</h2>
+  <p>Block-format signature for Outlook, Gmail, Apple Mail. Lockup row at the top, then a single-line name/role, then a Source Code Pro lines block with the canonical keys (e · w · m).</p>
+
+  <div class="mock-stage">
+    <div class="email-sig">
+      <div class="lockup-row">
+        <svg viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/><circle cx="14" cy="16" r="9" fill="#FFFFFF"/><rect x="10" y="12" width="8" height="8" fill="#1B2B80"/></svg>
+        <svg viewBox="0 0 112 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/><circle cx="14" cy="16" r="9" fill="#FFFFFF"/><rect x="10" y="12" width="8" height="8" fill="#1B2B80"/></svg>
+      </div>
+      <div class="name">Chelsea Mendoza</div>
+      <div class="role">Programme Director · DTPR · Helpful Places</div>
+      <div class="lines">
+        <div><span class="key">e</span>chelsea@helpfulplaces.com</div>
+        <div><span class="key">w</span>dtpr.io</div>
+        <div><span class="key">m</span>+1 555 0104</div>
+        <div style="margin-top: 0.5rem; color: var(--blue);">DTPR · Open standard v2.1 · CC BY 4.0</div>
+      </div>
+    </div>
+  </div>
+  <p class="stage-label">Email signature · lockup + role + mono contact block + license line</p>
+
+
+  <div class="page-nav">
+    <a href="16-print-collateral.html">← 16 Print Collateral</a>
+    <a href="18-environmental.html">18 Environmental →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="../assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="../assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.4 · August 2026 · Superbloom Design</p>
+</footer>
+
+<script src="../nav.js"></script>
+</body>
+</html>

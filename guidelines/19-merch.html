@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>19 Merch &amp; Swag — DTPR Brand Identity Guidelines</title>
+<meta name="description" content="DTPR Merch &amp; Swag — tees, totes, stickers, pins, patches. Apparel and accessories that steward the brand without cheapening it.">
+<link rel="stylesheet" href="../styles.css">
+<style>
+
+  .app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .app-card {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+  }
+  .app-card h3 {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0 0 0.5rem;
+  }
+  .app-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--gray-700);
+    margin: 0;
+  }
+  /* Stage / mock surface where a token-applied example is shown. */
+  .mock-stage {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    overflow: hidden;
+  }
+  .mock-stage.dark { background: #070D24; border-color: #1B2B80; color: #F4F2EC; }
+  .mock-stage.warm { background: var(--gray-50); border-color: var(--gray-300); color: var(--navy); }
+  .mock-stage.paper { background: var(--white); border-color: var(--gray-300); color: var(--navy); }
+  .stage-label {
+    margin-top: 0.5rem;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+  .sizing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+  }
+  .sizing-table th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    background: var(--gray-100, #f3f4f6);
+    border-bottom: 2px solid var(--navy);
+    color: var(--navy);
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .sizing-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--gray-200, #e5e7eb);
+    vertical-align: top;
+    color: var(--gray-700);
+  }
+  .sizing-table td:first-child {
+    font-weight: 700;
+    color: var(--navy);
+    font-family: 'Source Code Pro', monospace;
+  }
+
+  .merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .merch-tile {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+  }
+  .merch-tile h3 {
+    font-family: 'Public Sans', sans-serif; font-size: 0.95rem;
+    font-weight: 700; color: var(--navy); margin: 0 0 0.5rem;
+  }
+  .merch-tile p {
+    font-size: 0.85rem; line-height: 1.55; color: var(--gray-700); margin: 0 0 1rem;
+  }
+  /* Tee preview: white tee with chest-area mark. */
+  .tee {
+    aspect-ratio: 4/5;
+    background: linear-gradient(180deg, #f5f5f5 0%, #ececec 50%, #d8d8d8 100%);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    border: 1px solid var(--gray-300);
+  }
+  .tee .tee-body {
+    position: absolute;
+    width: 70%; height: 60%; top: 18%;
+    background: linear-gradient(180deg, #fafafa 0%, #f0f0f0 50%, #e8e8e8 100%);
+    border-radius: 0 0 30% 30%;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    box-shadow: inset 0 -20px 30px rgba(0,0,0,0.05);
+  }
+  .tee .tee-collar {
+    position: absolute;
+    top: 18%; left: 50%; transform: translateX(-50%);
+    width: 30%; height: 6%;
+    background: #f0f0f0; border-radius: 0 0 50% 50%;
+  }
+  .tee .chest-mark {
+    position: absolute;
+    top: 30%; left: 50%; transform: translateX(-50%);
+    width: 36px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .tee .chest-mark svg { width: 100%; height: 100%; }
+  /* Tote preview: cream tote with screen-printed mark. */
+  .tote {
+    aspect-ratio: 4/5;
+    background: linear-gradient(180deg, var(--gray-100, #f3f4f6) 0%, #d6d3cb 100%);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--gray-300);
+    position: relative;
+  }
+  .tote .tote-body {
+    position: absolute;
+    width: 80%; height: 70%; top: 20%;
+    background: linear-gradient(180deg, #f5f0e6 0%, #ece6d8 100%);
+    border-radius: 4px 4px 0 0;
+  }
+  .tote .tote-handle {
+    position: absolute;
+    top: 8%; width: 70%; height: 24%;
+    border: 3px solid #c4b89f;
+    border-bottom: 0;
+    border-radius: 50% 50% 0 0;
+  }
+  .tote .chest-mark {
+    position: absolute;
+    top: 38%; left: 50%; transform: translateX(-50%);
+    width: 60px; height: 70px;
+  }
+  .tote .chest-mark svg { width: 100%; height: 100%; }
+  /* Sticker: round die-cut. */
+  .sticker {
+    aspect-ratio: 1;
+    background: var(--white);
+    border-radius: 50%;
+    border: 2px solid var(--navy);
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column;
+    width: 100%; max-width: 200px; margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+  }
+  .sticker svg { width: 50%; height: auto; }
+  .sticker .label {
+    font-family: 'Source Code Pro', monospace; font-size: 0.55rem;
+    color: var(--navy); text-transform: uppercase; letter-spacing: 0.06em;
+    margin-top: 0.4rem;
+  }
+  /* Button / pin. */
+  .button-pin {
+    aspect-ratio: 1;
+    background: #2563D0;  /* medium blue — secondary; chartreuse reserved for primary CTA + live status */
+    border-radius: 50%;
+    border: 2px solid var(--navy);
+    display: flex; align-items: center; justify-content: center;
+    width: 100%; max-width: 180px; margin: 0 auto;
+  }
+  .button-pin svg { width: 50%; height: auto; }
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="../index.html"><span class="dot"></span>DTPR · Brand Book</a>
+  <nav>
+    <li><a href="../index.html">Cover</a></li>
+    <li class="dropdown">
+      <a href="#" class="nav-dropdown-trigger">How We Got Here</a>
+      <ul class="dropdown-menu">
+        <li><a href="../01-evolution.html">01 Evolution</a></li>
+        <li><a href="../02-dtpr-io.html">02 dtpr.io</a></li>
+        <li><a href="../03-vision.html">03 vision</a></li>
+        <li><a href="../04-makeshift.html">04 Makeshift</a></li>
+        <li><a href="../05-docs.html">05 docs.dtpr</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="nav-dropdown-trigger">Visual Component Audit</a>
+      <ul class="dropdown-menu">
+        <li><a href="../06-marks.html">06 Marks</a></li>
+        <li><a href="../07-color.html">07 Color</a></li>
+        <li><a href="../08-typography.html">08 Type</a></li>
+        <li><a href="../09-iconography.html">09 Icons</a></li>
+        <li><a href="../10-illustrations.html">10 Illustrations</a></li>
+        <li><a href="../11-voice.html">11 Voice</a></li>
+        <li><a href="../12-findings.html">12 Findings</a></li>
+        <li><a href="../13-strategic-postures.html">Strategic Postures</a></li>
+        <li><a href="../14-sprint-morphology.html">Sprint Morphology</a></li>
+        <li><a href="../15-transformation-morphology.html">Transformation Morphology</a></li>
+        <li><a href="../16-semantic-morphology.html">Semantic Morphology</a></li>
+        <li><a href="../17-sprint-recipes.html">Sprint Recipes</a></li>
+        <li><a href="../18-geometric-blueprint.html">Geometric Blueprint</a></li>
+        <li><a href="../19-core-caa-assets.html">Core CAA Assets</a></li>
+        <li><a href="../20-iso-3864-matrix.html">ISO 3864 Matrix</a></li>
+        <li><a href="../21-responsive-specs.html">Responsive Application Specs</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="./index.html" class="nav-dropdown-trigger">Going Forward</a>
+      <ul class="dropdown-menu">
+        <li><a href="./01-values.html">Values</a></li>
+        <li><a href="./02-logo.html">Logo</a></li>
+        <li><a href="./03-logo-stacked.html">Logo Stacked</a></li>
+        <li><a href="./04-watermark.html">Watermark</a></li>
+        <li><a href="./05-icon.html">Icon</a></li>
+        <li><a href="./06-dimensions.html">Dimensions</a></li>
+        <li><a href="./07-color.html">Color</a></li>
+        <li><a href="./08-fonts.html">Fonts</a></li>
+        <li><a href="./09-font-protocol.html">Font Protocol</a></li>
+        <li><a href="./10-photography.html">Photography</a></li>
+        <li><a href="./11-visual-language.html">Visual Language</a></li>
+        <li><a href="./12-web-application.html">Web Application</a></li>
+        <li><a href="./13-misuse.html">Misuse &amp; Don'ts</a></li>
+        <li><a href="./14-voice-tone.html">Voice &amp; Tone</a></li>
+        <li><a href="./15-co-branding.html">Co-Branding</a></li>
+        <li><a href="./16-print-collateral.html">Print Collateral</a></li>
+        <li><a href="./17-stationery.html">Stationery</a></li>
+        <li><a href="./18-environmental.html">Environmental &amp; Signage</a></li>
+        <li><a href="./19-merch.html">Merch &amp; Swag</a></li>
+        <li><a href="./20-motion.html">Motion</a></li>
+        <li><a href="./21-email-templates.html">Email Templates</a></li>
+        <li><a href="./22-app-ui.html">App UI</a></li>
+      </ul>
+    </li>
+  </nav>
+  <span class="badge-draft">v0.4 · brand book</span>
+</header>
+
+<main>
+  <span class="eyebrow">19 · Merch &amp; Swag</span>
+  <h1>Merch and swag that holds the line.</h1>
+  <p class="lede">DTPR Merch &amp; Swag — tees, totes, stickers, pins, patches. Apparel and accessories that steward the brand without cheapening it.</p>
+
+  <div class="tag-row">
+<span class="tag">MERCH</span><span class="tag">PRINT-ON-DEMAND</span><span class="tag">STEWARDSHIP</span>
+  </div>
+
+
+  <hr>
+  <h2>Tee</h2>
+  <p>Heavyweight cotton, white surface, single-color navy print on the chest. Mark sits 4 cm below the collar, sized to read from 3 ft away. No back print.</p>
+
+  <div class="mock-stage" style="display: flex; justify-content: center;">
+    <div class="tee">
+      <div class="tee-body"></div>
+      <div class="tee-collar"></div>
+      <div class="chest-mark">
+        <svg viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/><circle cx="14" cy="16" r="9" fill="#FFFFFF"/><rect x="10" y="12" width="8" height="8" fill="#1B2B80"/></svg>
+      </div>
+    </div>
+  </div>
+  <p class="stage-label">Tee · white cotton · 4cm chest mark · no back print</p>
+
+  <hr>
+
+  <h2>Tote bag</h2>
+  <p>Natural canvas tote, 14×16 in. Single-color navy screen print centered on the front panel. Web handles, no gusset. Pairs with the workshop kit.</p>
+
+  <div class="mock-stage" style="display: flex; justify-content: center;">
+    <div class="tote">
+      <div class="tote-handle"></div>
+      <div class="tote-body"></div>
+      <div class="chest-mark">
+        <svg viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/><circle cx="14" cy="16" r="9" fill="#f5f0e6"/><rect x="10" y="12" width="8" height="8" fill="#1B2B80"/></svg>
+      </div>
+    </div>
+  </div>
+  <p class="stage-label">Tote · natural canvas · 14×16 in · navy single-color print</p>
+
+  <hr>
+
+  <h2>Sticker</h2>
+  <p>Round die-cut, 3 in diameter. Mark at center, mono "DTPR · v2.1 · CC BY 4.0" caption around the perimeter. White surface, navy print.</p>
+
+  <div class="merch-grid">
+    <div>
+      <div class="sticker">
+        <svg viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/><circle cx="14" cy="16" r="9" fill="#1B2B80"/><rect x="10" y="12" width="8" height="8" fill="#FFFFFF"/></svg>
+        <div class="label">DTPR · v2.1 · CC BY 4.0</div>
+      </div>
+    </div>
+  </div>
+  <p class="stage-label">Sticker · 3 in round · white surface · navy print · die-cut</p>
+
+  <hr>
+
+  <h2>Button / pin</h2>
+  <p>1.25 in round pin-back button. <strong>Medium-blue surface</strong> — secondary blue is the merch accent; the steward's mark lives on a colored field so it reads as a badge, not a brand element. White print of the mark at center.</p>
+
+  <div class="merch-grid">
+    <div>
+      <div class="button-pin">
+        <svg viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#FFFFFF"/><circle cx="14" cy="16" r="9" fill="#2563D0"/><rect x="10" y="12" width="8" height="8" fill="#FFFFFF"/></svg>
+      </div>
+    </div>
+  </div>
+  <p class="stage-label">Button/pin · 1.25 in · medium-blue surface · white print · steward's mark</p>
+
+  <hr>
+
+  <h2>Production notes</h2>
+
+  <table class="sizing-table">
+    <thead><tr><th>Format</th><th>Spec</th><th>Print method</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Tee</td><td>Unisex heavy cotton, white</td><td>Screen print (1 color)</td><td>Chest mark only, no back</td></tr>
+      <tr><td>Tote</td><td>14×16 in natural canvas</td><td>Screen print (1 color)</td><td>Front panel centered</td></tr>
+      <tr><td>Sticker</td><td>3 in round die-cut</td><td>Digital print</td><td>White vinyl, matte laminate</td></tr>
+      <tr><td>Pin</td><td>1.25 in round</td><td>Digital print</td><td>Medium-blue surface — secondary blue as a merch variant</td></tr>
+      <tr><td>Patch</td><td>2.5 in round, embroidered</td><td>Embroidery</td><td>Iron-on or sew-on; navy thread on cream</td></tr>
+    </tbody>
+  </table>
+
+
+  <div class="page-nav">
+    <a href="18-environmental.html">← 18 Environmental</a>
+    <a href="20-motion.html">20 Motion →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="../assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="../assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.4 · August 2026 · Superbloom Design</p>
+</footer>
+
+<script src="../nav.js"></script>
+</body>
+</html>

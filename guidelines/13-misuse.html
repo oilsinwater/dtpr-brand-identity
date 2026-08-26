@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>13 Misuse &amp; Don'ts — DTPR Brand Identity Guidelines</title>
+<meta name="description" content="DTPR Misuse &amp; Don'ts — explicit misuse examples for the mark, color, type, and layout. As important as the correct examples.">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  /* Page-specific styles. */
+  .misuse-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .misuse-tile {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .misuse-tile h3 {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0 0 0.5rem;
+  }
+  .misuse-tile .rule-code {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--red, #B91C1C);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.5rem;
+  }
+  .misuse-tile p {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: var(--gray-700);
+    margin: 0;
+  }
+  .misuse-stage {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px dashed var(--gray-300);
+    background: var(--gray-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 110px;
+  }
+  /* Specific stage backgrounds that stage the violation. */
+  .stage-stretch { transform-origin: center; }
+  .stage-stretch svg { transform: scaleX(1.6); }
+  .stage-chartreuse-text { color: #9ACD00; }
+  .stage-chartreuse-text svg path { stroke: #9ACD00; }
+  .stage-rotate { transform: rotate(18deg); }
+  .stage-outline-low { opacity: 0.18; }
+  .stage-coral { background: #FF8A65; }
+  .stage-italic-mono { font-family: 'Source Code Pro', monospace; font-style: italic; }
+  .stage-blur { filter: blur(2.5px); }
+  .stage-low-contrast { background: #9ACD00; color: #9ACD00; }
+  .stage-low-contrast .label { background: #9ACD00; color: #9ACD00; padding: 0.25rem 0.75rem; border-radius: 3px; }
+  .label {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.8rem;
+    color: var(--gray-700);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  /* Stack-note callout. */
+  .callout {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border-radius: 6px;
+    background: rgba(185, 28, 28, 0.04);
+    border-left: 3px solid var(--red, #B91C1C);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--gray-700);
+  }
+  .callout strong { color: var(--red, #B91C1C); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="../index.html"><span class="dot"></span>DTPR · Brand Book</a>
+  <nav>
+    <li><a href="../index.html">Cover</a></li>
+    <li class="dropdown">
+      <a href="#" class="nav-dropdown-trigger">How We Got Here</a>
+      <ul class="dropdown-menu">
+        <li><a href="../01-evolution.html">01 Evolution</a></li>
+        <li><a href="../02-dtpr-io.html">02 dtpr.io</a></li>
+        <li><a href="../03-vision.html">03 vision</a></li>
+        <li><a href="../04-makeshift.html">04 Makeshift</a></li>
+        <li><a href="../05-docs.html">05 docs.dtpr</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="nav-dropdown-trigger">Visual Component Audit</a>
+      <ul class="dropdown-menu">
+        <li><a href="../06-marks.html">06 Marks</a></li>
+        <li><a href="../07-color.html">07 Color</a></li>
+        <li><a href="../08-typography.html">08 Type</a></li>
+        <li><a href="../09-iconography.html">09 Icons</a></li>
+        <li><a href="../10-illustrations.html">10 Illustrations</a></li>
+        <li><a href="../11-voice.html">11 Voice</a></li>
+        <li><a href="../12-findings.html">12 Findings</a></li>
+        <li><a href="../13-strategic-postures.html">Strategic Postures</a></li>
+        <li><a href="../14-sprint-morphology.html">Sprint Morphology</a></li>
+        <li><a href="../15-transformation-morphology.html">Transformation Morphology</a></li>
+        <li><a href="../16-semantic-morphology.html">Semantic Morphology</a></li>
+        <li><a href="../17-sprint-recipes.html">Sprint Recipes</a></li>
+        <li><a href="../18-geometric-blueprint.html">Geometric Blueprint</a></li>
+        <li><a href="../19-core-caa-assets.html">Core CAA Assets</a></li>
+        <li><a href="../20-iso-3864-matrix.html">ISO 3864 Matrix</a></li>
+        <li><a href="../21-responsive-specs.html">Responsive Application Specs</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="./index.html" class="nav-dropdown-trigger">Going Forward</a>
+      <ul class="dropdown-menu">
+        <li><a href="./01-values.html">Values</a></li>
+        <li><a href="./02-logo.html">Logo</a></li>
+        <li><a href="./03-logo-stacked.html">Logo Stacked</a></li>
+        <li><a href="./04-watermark.html">Watermark</a></li>
+        <li><a href="./05-icon.html">Icon</a></li>
+        <li><a href="./06-dimensions.html">Dimensions</a></li>
+        <li><a href="./07-color.html">Color</a></li>
+        <li><a href="./08-fonts.html">Fonts</a></li>
+        <li><a href="./09-font-protocol.html">Font Protocol</a></li>
+        <li><a href="./10-photography.html">Photography</a></li>
+        <li><a href="./11-visual-language.html">Visual Language</a></li>
+        <li><a href="./12-web-application.html">Web Application</a></li>
+        <li><a href="./13-misuse.html" class="active">Misuse &amp; Don'ts</a></li>
+        <li><a href="./14-voice-tone.html">Voice &amp; Tone</a></li>
+        <li><a href="./15-co-branding.html">Co-Branding</a></li>
+        <li><a href="./16-print-collateral.html">Print Collateral</a></li>
+        <li><a href="./17-stationery.html">Stationery</a></li>
+        <li><a href="./18-environmental.html">Environmental &amp; Signage</a></li>
+        <li><a href="./19-merch.html">Merch &amp; Swag</a></li>
+        <li><a href="./20-motion.html">Motion</a></li>
+        <li><a href="./21-email-templates.html">Email Templates</a></li>
+        <li><a href="./22-app-ui.html">App UI</a></li>
+      </ul>
+    </li>
+  </nav>
+  <span class="badge-draft">v0.4 · brand book</span>
+</header>
+
+<main>
+  <span class="eyebrow">13 · Misuse &amp; Don'ts</span>
+  <h1>What the brand is not.</h1>
+  <p class="lede">As important as the correct examples. Showing what DTPR looks like when its rules are violated makes the rules legible — and gives anyone reviewing work a clear basis for "this doesn't ship." Misuse examples are part of the brand, not an aside.</p>
+
+  <div class="tag-row">
+    <span class="tag">RULES</span>
+    <span class="tag">REVIEW CHECKLIST</span>
+    <span class="tag">RECIPE B</span>
+  </div>
+
+  <div class="callout">
+    <strong>Rule of thumb.</strong> If the work you're reviewing makes any of the mistakes below, send it back. A clear "no, this is wrong" is faster than three rounds of "could you adjust this slightly."
+  </div>
+
+  <hr>
+
+  <h2>Mark &amp; lockup</h2>
+
+  <div class="misuse-grid">
+    <div class="misuse-tile">
+      <span class="rule-code">D-01 · STRETCH</span>
+      <h3>Don't stretch the mark.</h3>
+      <p>The hexagon's six sides are equal. Stretching it horizontally or vertically distorts the geometry the mark is built on.</p>
+      <div class="misuse-stage stage-stretch">
+        <svg width="64" height="64" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/>
+          <circle cx="14" cy="16" r="9" fill="#FFFFFF"/>
+          <rect x="10" y="12" width="8" height="8" fill="#1B2B80"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="misuse-tile">
+      <span class="rule-code">D-02 · ROTATE</span>
+      <h3>Don't rotate the mark.</h3>
+      <p>The mark sits in the same orientation as the wordmark. Rotation breaks the lockup balance.</p>
+      <div class="misuse-stage">
+        <span class="stage-rotate">
+          <svg width="64" height="64" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/>
+            <circle cx="14" cy="16" r="9" fill="#FFFFFF"/>
+            <rect x="10" y="12" width="8" height="8" fill="#1B2B80"/>
+          </svg>
+        </span>
+      </div>
+    </div>
+
+    <div class="misuse-tile">
+      <span class="rule-code">D-03 · FILL CHANGES</span>
+      <h3>Don't recolor the mark in arbitrary hues.</h3>
+      <p>Chartreuse, salmon, coral, and other accent colors are reserved for status/live-data signals only. The mark stays brand-navy, white, or monochrome.</p>
+      <div class="misuse-stage">
+        <svg width="64" height="64" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#FF8A65"/>
+          <circle cx="14" cy="16" r="9" fill="#FFFFFF"/>
+          <rect x="10" y="12" width="8" height="8" fill="#FF8A65"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="misuse-tile">
+      <span class="rule-code">D-04 · LOW CONTRAST</span>
+      <h3>Don't fade the mark to invisibility.</h3>
+      <p>The watermark variant is the only acceptable low-contrast state, and it's already in the system. Don't reduce opacity further on the mark itself.</p>
+      <div class="misuse-stage">
+        <span class="stage-outline-low">
+          <svg width="64" height="64" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/>
+            <circle cx="14" cy="16" r="9" fill="#FFFFFF"/>
+            <rect x="10" y="12" width="8" height="8" fill="#1B2B80"/>
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Color</h2>
+
+  <div class="misuse-grid">
+    <div class="misuse-tile">
+      <span class="rule-code">D-05 · CHARTREUSE TEXT</span>
+      <h3>Don't use chartreuse for text or borders.</h3>
+      <p>Chartreuse is reserved for the live-data beacon and primary CTA. Body text, headings, and borders stay navy or warm-paper.</p>
+      <div class="misuse-stage">
+        <span class="label stage-chartreuse-text" style="font-size: 1.1rem; font-weight: 700;">This is wrong</span>
+      </div>
+    </div>
+
+    <div class="misuse-tile">
+      <span class="rule-code">D-06 · CHARTREUSE BORDER</span>
+      <h3>Don't frame cards or sections in chartreuse.</h3>
+      <p>Chartreuse frame implies "live / interactive." Static content framed in chartreuse reads as "this is the action" when it isn't.</p>
+      <div class="misuse-stage" style="border-color: #9ACD00;">
+        <span class="label" style="color: #9ACD00; border: 1px solid #9ACD00; padding: 0.5rem 1rem; border-radius: 4px;">Looks live but isn't</span>
+      </div>
+    </div>
+
+    <div class="misuse-tile">
+      <span class="rule-code">D-07 · CHARTREUSE-ON-CHARTREUSE</span>
+      <h3>Don't put chartreuse text on a chartreuse background.</h3>
+      <p>Both elements lose the. Contrast failure.</p>
+      <div class="misuse-stage stage-low-contrast">
+        <span class="label">UNREADABLE</span>
+      </div>
+    </div>
+
+    <div class="misuse-tile">
+      <span class="rule-code">D-08 · ARBITRARY ACCENTS</span>
+      <h3>Don't introduce new accent colors.</h3>
+      <p>Rose, lime, mint, gold, teal — all forbidden outside the canonical palette. If a design needs more than navy + blue + chartreuse + paper, return to the values (01) and reduce.</p>
+      <div class="misuse-stage" style="background: linear-gradient(135deg, #FF8A65, #9ACD00);">
+        <span class="label" style="color: white;">Off-brand</span>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Typography</h2>
+
+  <div class="misuse-grid">
+    <div class="misuse-tile">
+      <span class="rule-code">D-09 · MONO UI</span>
+      <h3>Don't set Source Code Pro as body copy.</h3>
+      <p>Source Code Pro is for code, schema keys, taxonomy codes, and live-data indicators. UI text is Public Sans.</p>
+      <div class="misuse-stage">
+        <span class="stage-italic-mono label" style="font-size: 1rem;">Don't do this for body copy</span>
+      </div>
+    </div>
+
+    <div class="misuse-tile">
+      <span class="rule-code">D-10 · ITALIC EVERYWHERE</span>
+      <h3>Don't italicize more than one sentence per page.</h3>
+      <p>Source Serif 4 italic is the editorial moment — once per surface, in a hero statement. Multiple italic blocks drain the gesture of its weight.</p>
+      <div class="misuse-stage">
+        <span class="serif label" style="font-size: 1rem;">Italic</span>
+        <span class="serif label" style="font-size: 1rem; margin-top: 0.5rem;">Italic again</span>
+        <span class="serif label" style="font-size: 1rem; margin-top: 0.5rem;">Italic again</span>
+      </div>
+    </div>
+
+    <div class="misuse-tile">
+      <span class="rule-code">D-11 · BLURRED TEXT</span>
+      <h3>Don't ship text behind a blur.</h3>
+      <p>Frosted glass over legible text reads as "loading" or "disabled." Either commit to the frosted surface or move the text out from under it.</p>
+      <div class="misuse-stage" style="backdrop-filter: blur(2.5px); background: rgba(255,255,255,0.4);">
+        <span class="label" style="font-size: 1rem;">DTPR</span>
+      </div>
+    </div>
+
+    <div class="misuse-tile">
+      <span class="rule-code">D-12 · ALL CAPS BODY</span>
+      <h3>Don't set body copy in all caps.</h3>
+      <p>Mono caps are fine for taxonomy codes, schema keys, and section badges. Body paragraphs in caps reads as shouting and breaks the calm register.</p>
+      <div class="misuse-stage">
+        <span class="label" style="font-size: 0.85rem; text-transform: uppercase;">DON'T SHOUT AT PEOPLE WHO ARE TRYING TO READ</span>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Layout</h2>
+
+  <div class="misuse-grid">
+    <div class="misuse-tile">
+      <span class="rule-code">D-13 · TIGHT CLEARSpace</span>
+      <h3>Don't crowd the mark.</h3>
+      <p>The mark needs 0.4× mark-height clearspace on all four sides. Crowding the mark weakens its recognition at small sizes.</p>
+      <div class="misuse-stage" style="padding: 0.25rem;">
+        <svg width="20" height="20" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/>
+          <circle cx="14" cy="16" r="9" fill="#FFFFFF"/>
+          <rect x="10" y="12" width="8" height="8" fill="#1B2B80"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="misuse-tile">
+      <span class="rule-code">D-14 · OFF-GRID</span>
+      <h3>Don't lay out on a free grid.</h3>
+      <p>DTPR lives on a 24px base unit. Margins, gutters, padding, and component dimensions snap to the grid. Free-floating pixels break the maker register.</p>
+      <div class="misuse-stage" style="padding: 7px; border-color: var(--cobalt, blue);">
+        <span class="label">x: 7px (off-grid)</span>
+      </div>
+    </div>
+
+    <div class="misuse-tile">
+      <span class="rule-code">D-15 · BUSY BACKGROUNDS</span>
+      <h3>Don't put type over a busy texture.</h3>
+      <p>The graph-paper substrate is 18% opacity at most. Dense textures behind text cause contrast failures. Either commit to the texture (no text) or commit to the text (no texture).</p>
+      <div class="misuse-stage" style="background-image: radial-gradient(rgba(0,0,0,0.4) 1px, transparent 1px); background-size: 4px 4px; background-color: var(--white);">
+        <span class="label" style="font-weight: 700; font-size: 1.1rem;">Hard to read</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-nav">
+    <a href="12-web-application.html">← 12 Web Application</a>
+    <a href="14-voice-tone.html">14 Voice &amp; Tone →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="row">
+    <img src="../assets/logos-partners/hp-black.png" alt="Helpful Places">
+    <img src="../assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
+  </div>
+  <p>v0.4 · August 2026 · Superbloom Design</p>
+</footer>
+
+<script src="../nav.js"></script>
+</body>
+</html>
