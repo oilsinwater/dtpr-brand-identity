@@ -230,10 +230,8 @@ body {
   overflow-y: auto;
 }
 
-/* Open state when toggled or hovered */
-.site-header .dropdown.is-open > .dropdown-menu,
-.site-header .dropdown:hover > .dropdown-menu,
-.site-header .dropdown-menu:hover {
+/* Open state — strictly click-to-toggle via nav.js */
+.site-header .dropdown.is-open > .dropdown-menu {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 0.5rem 1.25rem;

@@ -1,5 +1,5 @@
 // Mega menu: click-to-toggle, click-outside / Escape to close.
-// Also auto-detects active route to underline parent dropdown triggers and highlight active page in the big nav.
+// Auto-detects active route for subpages inside the big nav, without persistent selection on the Cover link.
 
 (function () {
   'use strict';
@@ -29,18 +29,10 @@
     trigger.setAttribute('aria-haspopup', 'true');
 
     trigger.addEventListener('click', function (e) {
-      var href = trigger.getAttribute('href');
-      if (!href || href === '#' || href.startsWith('javascript:')) {
-        e.preventDefault();
-        var isOpen = dd.classList.toggle('is-open');
-        trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        if (isOpen) closeAll(dd);
-      } else {
-        e.preventDefault();
-        var isOpen = dd.classList.toggle('is-open');
-        trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        if (isOpen) closeAll(dd);
-      }
+      e.preventDefault();
+      var isOpen = dd.classList.toggle('is-open');
+      trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      if (isOpen) closeAll(dd);
     });
   });
 
@@ -54,45 +46,35 @@
     if (e.key === 'Escape') closeAll(null);
   });
 
-  // Highlight current active page in big nav and underline parent section in proper nav
+  // Highlight active page inside the big nav and highlight active section trigger in proper nav
   var currentPath = window.location.pathname;
-  var currentFilename = currentPath.split('/').filter(Boolean).pop() || 'index.html';
+  var currentFilename = currentPath.split('/').filter(Boolean).pop() || '';
   var isGuidelines = currentPath.includes('/guidelines');
 
-  var allLinks = header.querySelectorAll('nav a');
-  allLinks.forEach(function (link) {
-    var href = link.getAttribute('href');
-    if (!href || href === '#') return;
+  // Do not persistently underline Cover link
+  if (currentFilename && currentFilename !== 'index.html') {
+    var dropdownLinks = header.querySelectorAll('.dropdown-menu a');
+    dropdownLinks.forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (!href) return;
 
-    var linkFile = href.split('#')[0].split('/').filter(Boolean).pop();
-    var linkIsGuidelines = href.includes('guidelines') || (isGuidelines && !href.startsWith('../'));
+      var linkFile = href.split('#')[0].split('/').filter(Boolean).pop();
+      var linkIsGuidelines = href.includes('guidelines') || (isGuidelines && !href.startsWith('../'));
 
-    var isMatch = false;
-    if (currentFilename === 'index.html' && !isGuidelines) {
-      if (linkFile === 'index.html' && !linkIsGuidelines && (href === './index.html' || href === 'index.html' || href === '../index.html' || href === '/index.html' || href === '/')) {
-        isMatch = true;
-      }
-    } else if (currentFilename === 'index.html' && isGuidelines) {
-      if (linkFile === 'index.html' && (href === './index.html' || href === 'guidelines/index.html' || href === './guidelines/index.html')) {
-        isMatch = true;
-      }
-    } else if (currentFilename === linkFile && (isGuidelines === linkIsGuidelines || (!href.includes('../') && isGuidelines))) {
-      isMatch = true;
-    }
+      if (currentFilename === linkFile && (isGuidelines === linkIsGuidelines || (!href.includes('../') && isGuidelines))) {
+        link.setAttribute('aria-current', 'page');
+        link.classList.add('active');
 
-    if (isMatch) {
-      link.setAttribute('aria-current', 'page');
-      link.classList.add('active');
-
-      // If this link is inside a dropdown-menu, mark the parent trigger as active-section
-      var parentDropdown = link.closest('.dropdown');
-      if (parentDropdown) {
-        var trigger = parentDropdown.querySelector('.nav-dropdown-trigger');
-        if (trigger) {
-          trigger.classList.add('active-section');
-          trigger.setAttribute('aria-current', 'true');
+        // Mark the parent section trigger as active in the proper nav
+        var parentDropdown = link.closest('.dropdown');
+        if (parentDropdown) {
+          var trigger = parentDropdown.querySelector('.nav-dropdown-trigger');
+          if (trigger) {
+            trigger.classList.add('active-section');
+            trigger.setAttribute('aria-current', 'true');
+          }
         }
       }
-    }
-  });
+    });
+  }
 })();
