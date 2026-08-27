@@ -31,6 +31,7 @@
 
   /* Assembly Day additions */
   --cobalt:      #2D2BFF;
+  --medium-blue:  #2563D0;  /* secondary accent — link hovers, mid-level tags, focus rings, callout borders */
   --amber:       #FFC107;
 
   /* Bootstrap palette remnant (vision.dtpr.io) */
