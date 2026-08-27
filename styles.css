@@ -1,6 +1,6 @@
 /* ============================================
    DTPR Brand Identity Audit — shared styles
-   v0.3 · Full visual reconciliation with MakeShift 2026
+   Full visual reconciliation with MakeShift 2026
    An audit, not a prescriptive brand book.
    ============================================ */
 
@@ -1054,7 +1054,7 @@ tbody tr:hover { background: rgba(0, 38, 132, 0.03); }
 .finding .src { font-size: 0.68rem; color: var(--gray-400); font-family: var(--font-mono); margin-top: 0.5rem; }
 
 /* ============================================
-   VALUES GRID (§3b Organizational Values)
+   VALUES GRID (Section 3b Organizational Values)
    ============================================ */
 
 .values-grid {

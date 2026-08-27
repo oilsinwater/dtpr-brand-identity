@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>22 Primitive Derivation — DTPR Visual System Prep</title>
-<meta name="description" content="DTPR Primitive Derivation — the upstream construction chain behind every variable × recipe selection in §14 Form Box, §15 Process Box, and §16 Semantic Box.">
+<meta name="description" content="DTPR Primitive Derivation — the upstream construction chain behind every variable × recipe selection in Section 14 Form Box, Section 15 Process Box, and Section 16 Semantic Box.">
 <link rel="stylesheet" href="styles.css">
 <style>
   .audit-note { background: rgba(198,233,61,0.07); border-left: 5px solid var(--chartreuse); padding: 1.25rem 1.5rem; border-radius: 0 var(--r-md) var(--r-md) 0; margin: 2rem 0; font-size: 0.88rem; line-height: 1.6; color: var(--gray-800); }
@@ -103,9 +103,8 @@
       <h1>DTPR<br><em>Primitive Derivation</em></h1>
       <p class="subhead">The construction chain behind every variable × recipe selection in the Form Box, Process Box, and Semantic Box. Why each selection is the right primitive for its recipe — recovered through a reverse strip-down of the existing corpus.</p>
       <div class="meta">
-        <div><strong>Status</strong>v0.1 · derivation draft</div>
         <div><strong>Scope</strong>54 derivations (18 variables × 3 recipes)</div>
-        <div><strong>Method</strong>Five-step construction chain grounded in §06–§13 corpus</div>
+        <div><strong>Method</strong>Five-step construction chain grounded in Section 06–Section 13 corpus</div>
         <div><strong>Steward</strong>Helpful Places · CC BY 4.0</div>
         <div><strong>Author</strong>Philliph Drummond, Superbloom Design · June 2026</div>
       </div>
@@ -233,12 +232,12 @@
   </div>
 
   <h2>How to read this page</h2>
-  <p class="lede">This page documents the upstream construction chain behind every parameter selection in the three morphological boxes (§14 Form, §15 Process, §16 Semantic). The boxes <em>present</em> parameters; they do not <em>derive</em> them. This page recovers the missing derivation layer — the five-step reasoning chain that justifies why each recipe picks the option it picks.</p>
-  <p class="lede">Each of the 18 variables has three sub-derivations, one per canonical recipe (Regulatory / Maker / Commons, per §17). Each sub-derivation follows the same five-step chain: <strong>Inventory</strong> → <strong>Constraint extraction</strong> → <strong>Collision / picturability test</strong> → <strong>Geometry / scale / rendering test</strong> → <strong>Primitive confirmation</strong>. Where corpus evidence is thin, it is flagged. Where an open question from brand memo §9 affects a variable, it is linked inline.</p>
-  <p class="lede">What this page is <em>not</em>: not a brand book, not a parameter presentation (that's §14–§16), not a recipe selector (that's §17). It is the reasoning layer <em>underneath</em> all three.</p>
+  <p class="lede">This page documents the upstream construction chain behind every parameter selection in the three morphological boxes (Section 14 Form, Section 15 Process, Section 16 Semantic). The boxes <em>present</em> parameters; they do not <em>derive</em> them. This page recovers the missing derivation layer — the five-step reasoning chain that justifies why each recipe picks the option it picks.</p>
+  <p class="lede">Each of the 18 variables has three sub-derivations, one per canonical recipe (Regulatory / Maker / Commons, per Section 17). Each sub-derivation follows the same five-step chain: <strong>Inventory</strong> → <strong>Constraint extraction</strong> → <strong>Collision / picturability test</strong> → <strong>Geometry / scale / rendering test</strong> → <strong>Primitive confirmation</strong>. Where corpus evidence is thin, it is flagged. Where an open question from brand memo Section 9 affects a variable, it is linked inline.</p>
+  <p class="lede">What this page is <em>not</em>: not a brand book, not a parameter presentation (that's Section 14–Section 16), not a recipe selector (that's Section 17). It is the reasoning layer <em>underneath</em> all three.</p>
 
   <hr>
-  <h2 style="font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-500);">Form Box Derivations (§14)</h2>
+  <h2 style="font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-500);">Form Box Derivations (Section 14)</h2>
 
   <section class="derivation-section" id="form-var-1">
     <h2>Form Variable 1: Shape Primitive</h2>
@@ -247,27 +246,27 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>The canonical DTPR mark (§06 Marks) is a flat-top hexagon containing an inner circle (r=8 at center 14,16) and an offset square (7×8 at position 10,12). Three variants exist: blue solid (#002684), black solid, outline (1.5px stroke). Sketch metadata names it <code>dtpr_icons/container/hexagon</code> — deliberately a container, not a logo. §18 Blueprint specifies R=100 master unit, R=45mm for signage.</p>
+        <p>The canonical DTPR mark (Section 06 Marks) is a flat-top hexagon containing an inner circle (r=8 at center 14,16) and an offset square (7×8 at position 10,12). Three variants exist: blue solid (#002684), black solid, outline (1.5px stroke). Sketch metadata names it <code>dtpr_icons/container/hexagon</code> — deliberately a container, not a logo. Section 18 Blueprint specifies R=100 master unit, R=45mm for signage.</p>
         <h4>2. Constraint extraction</h4>
         <p>Regulatory recipe needs ISO 3864 co-existence: the shape must not collide with ISO warning triangles or mandatory circles, and must be recognizable at 10m viewing distance.</p>
         <h4>3. Collision / picturability test</h4>
         <p>The hexagon passes the ISO collision test — ISO 3864 uses triangles (warning), circles (mandatory), squares (optional); the hexagon reads as none. The isometric 3D hex (Posture B) fails — extrusion is illegible at signage scale. The wireframe network (Posture C) fails — thin lines vanish at R=45mm print.</p>
         <h4>4. Geometry / scale / rendering test</h4>
-        <p>§18 geometry: width=2R=90mm, height=R√3≈77.9mm, stroke=R×0.02=0.9mm at signage scale. Flat-top tessellates with row_offset=R√3/2. Inner circle and offset square strip away at 16px render without losing identity.</p>
+        <p>Section 18 geometry: width=2R=90mm, height=R√3≈77.9mm, stroke=R×0.02=0.9mm at signage scale. Flat-top tessellates with row_offset=R√3/2. Inner circle and offset square strip away at 16px render without losing identity.</p>
         <h4>5. Primitive confirmation</h4>
         <p>The flat-top hexagon is the shape primitive for the Regulatory recipe because it is the only candidate that passes the ISO 3864 collision test while maintaining geometric consistency with the signage blueprint.</p>
       </div>
       <figure class="decomposition-svg">
-        <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="180.0,80.0 155.0,123.3 105.0,123.3 80.0,80.0 105.0,36.7 155.0,36.7" fill="rgba(0,38,132,0.08)" stroke="#002684" stroke-width="2"/><circle cx="130" cy="80" r="22" fill="none" stroke="#002684" stroke-width="1.5"/><rect x="122" y="84" width="14" height="14" fill="#002684"/><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Full mark (§06)</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip square</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="430.0,80.0 405.0,123.3 355.0,123.3 330.0,80.0 355.0,36.7 405.0,36.7" fill="rgba(0,38,132,0.05)" stroke="#002684" stroke-width="2"/><circle cx="380" cy="80" r="22" fill="none" stroke="#002684" stroke-width="1.5"/><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip offset square</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><text x="500" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip circle</text><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><polygon points="680.0,80.0 655.0,123.3 605.0,123.3 580.0,80.0 605.0,36.7 655.0,36.7" fill="none" stroke="#002684" stroke-width="2.5"/><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Hexagon remains</text></g><text x="700" y="55" font-family="monospace" font-size="8" fill="#3b85d4" font-weight="bold">§18</text><text x="700" y="70" font-family="monospace" font-size="7" fill="#6b7280">width=2R</text><text x="700" y="83" font-family="monospace" font-size="7" fill="#6b7280">height=R√3</text></svg><figcaption>Canonical DTPR mark (§06): full mark → strip offset square → strip inner circle → hexagon remains. §18 geometry.</figcaption>
+        <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="180.0,80.0 155.0,123.3 105.0,123.3 80.0,80.0 105.0,36.7 155.0,36.7" fill="rgba(0,38,132,0.08)" stroke="#002684" stroke-width="2"/><circle cx="130" cy="80" r="22" fill="none" stroke="#002684" stroke-width="1.5"/><rect x="122" y="84" width="14" height="14" fill="#002684"/><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Full mark (Section 06)</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip square</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="430.0,80.0 405.0,123.3 355.0,123.3 330.0,80.0 355.0,36.7 405.0,36.7" fill="rgba(0,38,132,0.05)" stroke="#002684" stroke-width="2"/><circle cx="380" cy="80" r="22" fill="none" stroke="#002684" stroke-width="1.5"/><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip offset square</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><text x="500" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip circle</text><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><polygon points="680.0,80.0 655.0,123.3 605.0,123.3 580.0,80.0 605.0,36.7 655.0,36.7" fill="none" stroke="#002684" stroke-width="2.5"/><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Hexagon remains</text></g><text x="700" y="55" font-family="monospace" font-size="8" fill="#3b85d4" font-weight="bold">Section 18</text><text x="700" y="70" font-family="monospace" font-size="7" fill="#6b7280">width=2R</text><text x="700" y="83" font-family="monospace" font-size="7" fill="#6b7280">height=R√3</text></svg><figcaption>Canonical DTPR mark (Section 06): full mark → strip offset square → strip inner circle → hexagon remains. Section 18 geometry.</figcaption>
       </figure>
       
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="06-marks.html">§06 Marks</a> — canonical mark geometry</li>
-          <li><a href="18-geometric-blueprint.html">§18 Blueprint</a> — R-multiplier math</li>
-          <li><a href="09-iconography.html">§09 Iconography</a> — hexagon as container</li>
-          <li><a href="01-evolution.html">§01 Evolution</a> — hexagon persistence</li>
+          <li><a href="06-marks.html">Section 06 Marks</a> — canonical mark geometry</li>
+          <li><a href="18-geometric-blueprint.html">Section 18 Blueprint</a> — R-multiplier math</li>
+          <li><a href="09-iconography.html">Section 09 Iconography</a> — hexagon as container</li>
+          <li><a href="01-evolution.html">Section 01 Evolution</a> — hexagon persistence</li>
         </ul>
       </details>
     </div>
@@ -276,7 +275,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>MakeShift 2026 (§04) uses graph-paper texture as background field for all formats. vision.dtpr.io (§03) uses the same. Brand memo §5: 'Graph-paper / grid maker aesthetic — confirming the vision.dtpr.io baseline.'</p>
+        <p>MakeShift 2026 (Section 04) uses graph-paper texture as background field for all formats. vision.dtpr.io (Section 03) uses the same. Brand memo Section 5: 'Graph-paper / grid maker aesthetic — confirming the vision.dtpr.io baseline.'</p>
         <h4>2. Constraint extraction</h4>
         <p>Maker recipe serves developers needing a 'hackable-by-design' register. Shape must signal builder/integrator context at desktop viewport sizes.</p>
         <h4>3. Collision / picturability test</h4>
@@ -293,9 +292,9 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="04-makeshift.html">§04 MakeShift</a> — graph-paper background field</li>
-          <li>Brand memo §5 — maker aesthetic confirmation</li>
-          <li><a href="03-vision.html">§03 Vision</a> — vision.dtpr.io baseline</li>
+          <li><a href="04-makeshift.html">Section 04 MakeShift</a> — graph-paper background field</li>
+          <li>Brand memo Section 5 — maker aesthetic confirmation</li>
+          <li><a href="03-vision.html">Section 03 Vision</a> — vision.dtpr.io baseline</li>
         </ul>
       </details>
     </div>
@@ -304,9 +303,9 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§10 Illustrations shows human-centered scenarios with rounded forms on hexagonal containers. §09 Iconography uses hex as container with organic pictographic content (people, hands, buildings).</p>
+        <p>Section 10 Illustrations shows human-centered scenarios with rounded forms on hexagonal containers. Section 09 Iconography uses hex as container with organic pictographic content (people, hands, buildings).</p>
         <h4>2. Constraint extraction</h4>
-        <p>Commons recipe needs 'calm, mobile-first, non-coercive' register (brand memo §3 Impacted Citizen). Shape must feel approachable, not institutional.</p>
+        <p>Commons recipe needs 'calm, mobile-first, non-coercive' register (brand memo Section 3 Impacted Citizen). Shape must feel approachable, not institutional.</p>
         <h4>3. Collision / picturability test</h4>
         <p>'Organic + hex' survives — keeps hexagon as structural container while softening interior. Pure flat hex reads as institutional. Wireframe network doesn't serve 'what is this thing?' citizen question.</p>
         <h4>4. Geometry / scale / rendering test</h4>
@@ -321,9 +320,9 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="10-illustrations.html">§10 Illustrations</a> — human-centered scenarios</li>
-          <li><a href="09-iconography.html">§09 Iconography</a> — hex as container</li>
-          <li>Brand memo §3 — Impacted Citizen persona</li>
+          <li><a href="10-illustrations.html">Section 10 Illustrations</a> — human-centered scenarios</li>
+          <li><a href="09-iconography.html">Section 09 Iconography</a> — hex as container</li>
+          <li>Brand memo Section 3 — Impacted Citizen persona</li>
         </ul>
       </details>
     </div>
@@ -335,13 +334,13 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§18 Blueprint: honeycomb tiling, flat-top hexes, col_step=2R+gap, row_step=R√3, odd_offset=col_step/2. At R=45mm: gap=3.6mm, col_step=93.6mm.</p>
+        <p>Section 18 Blueprint: honeycomb tiling, flat-top hexes, col_step=2R+gap, row_step=R√3, odd_offset=col_step/2. At R=45mm: gap=3.6mm, col_step=93.6mm.</p>
         <h4>2. Constraint extraction</h4>
         <p>Physical signage needs deterministic grid behavior: no shift between print runs, predictable tessellation on mounting hardware.</p>
         <h4>3. Collision / picturability test</h4>
         <p>Honeycomb and ISO modular both pass tessellation. Sparse network fails — variable spacing breaks print determinism. Linear grid fails – abandons hexagonal primitive.</p>
         <h4>4. Geometry / scale / rendering test</h4>
-        <p>§18 math: gap=R×0.08=3.6mm, row_offset=R√3/2. 'Strict ISO' = grid never breaks, no responsive reflow.</p>
+        <p>Section 18 math: gap=R×0.08=3.6mm, row_offset=R√3/2. 'Strict ISO' = grid never breaks, no responsive reflow.</p>
         <h4>5. Primitive confirmation</h4>
         <p>The ISO modular honeycomb is the grid primitive for the Regulatory recipe because it maintains deterministic print behavior while preserving the hexagonal primitive.</p>
       </div>
@@ -352,8 +351,8 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="18-geometric-blueprint.html">§18 Blueprint</a></li>
-          <li><a href="14-sprint-morphology.html">§14 Form Box</a></li>
+          <li><a href="18-geometric-blueprint.html">Section 18 Blueprint</a></li>
+          <li><a href="14-sprint-morphology.html">Section 14 Form Box</a></li>
         </ul>
       </details>
     </div>
@@ -362,13 +361,13 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§21 Responsive spec defines breakpoints 320px→desktop. Developer-portal pattern: fluid columns that reflow at breakpoints.</p>
+        <p>Section 21 Responsive spec defines breakpoints 320px→desktop. Developer-portal pattern: fluid columns that reflow at breakpoints.</p>
         <h4>2. Constraint extraction</h4>
         <p>Developer layouts need responsive reflow: code blocks, API docs, interactive explorers need viewport-fluid behavior.</p>
         <h4>3. Collision / picturability test</h4>
         <p>Fluid columns pass responsive test. ISO modular fails — can't reflow without breaking tessellation. Single column fails — dev content needs multi-column (sidebars, split panes).</p>
         <h4>4. Geometry / scale / rendering test</h4>
-        <p>CSS flexbox/grid breakpoints at 320px, 768px, 1024px, 1280px (§21). Graph-paper background stable across breakpoints.</p>
+        <p>CSS flexbox/grid breakpoints at 320px, 768px, 1024px, 1280px (Section 21). Graph-paper background stable across breakpoints.</p>
         <h4>5. Primitive confirmation</h4>
         <p>Fluid columns are the grid primitive for the Maker recipe because they support responsive reflow while maintaining the maker aesthetic.</p>
       </div>
@@ -379,8 +378,8 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="21-responsive-specs.html">§21 Responsive</a></li>
-          <li><a href="04-makeshift.html">§04 MakeShift</a></li>
+          <li><a href="21-responsive-specs.html">Section 21 Responsive</a></li>
+          <li><a href="04-makeshift.html">Section 04 MakeShift</a></li>
         </ul>
       </details>
     </div>
@@ -389,7 +388,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§17 Commons recipe: 'Single Column — Mobile-first QR landing.' §21 defines 320px as primary mobile target for QR-scan arrivals.</p>
+        <p>Section 17 Commons recipe: 'Single Column — Mobile-first QR landing.' Section 21 defines 320px as primary mobile target for QR-scan arrivals.</p>
         <h4>2. Constraint extraction</h4>
         <p>Citizens scanning QR arrive on mobile: single column, no horizontal scroll, no pinch-zoom, one-thumb reading.</p>
         <h4>3. Collision / picturability test</h4>
@@ -406,8 +405,8 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="21-responsive-specs.html">§21 Responsive</a></li>
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
+          <li><a href="21-responsive-specs.html">Section 21 Responsive</a></li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
         </ul>
       </details>
     </div>
@@ -419,27 +418,27 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§07 Color documents navy (#002684) as primary, with yellow/blue identifiability semantics. §20 ISO Matrix maps the collision: DTPR yellow vs ISO hazard-yellow, DTPR blue vs ISO mandatory-blue. Brand memo §5 identifies MakeShift chartreuse (#9ACD00 range) as candidate resolution.</p>
+        <p>Section 07 Color documents navy (#002684) as primary, with yellow/blue identifiability semantics. Section 20 ISO Matrix maps the collision: DTPR yellow vs ISO hazard-yellow, DTPR blue vs ISO mandatory-blue. Brand memo Section 5 identifies MakeShift chartreuse (#9ACD00 range) as candidate resolution.</p>
         <h4>2. Constraint extraction</h4>
         <p>Regulatory recipe needs ISO 3864 compliance for physical signage co-placement. Colors must not trigger false hazard/mandatory readings near ISO safety signs.</p>
         <h4>3. Collision / picturability test</h4>
-        <p>Safety Semantic passes: isolates brand identifiers inside ISO shield shape (§14 Posture C). Legacy Navy/Teal fails — two-tone reads as decoration, not safety-aware. Assembly Cobalt/Amber fails — amber collides with ISO hazard-yellow.</p>
+        <p>Safety Semantic passes: isolates brand identifiers inside ISO shield shape (Section 14 Posture C). Legacy Navy/Teal fails — two-tone reads as decoration, not safety-aware. Assembly Cobalt/Amber fails — amber collides with ISO hazard-yellow.</p>
         <h4>4. Geometry / scale / rendering test</h4>
-        <p>Safety Semantic uses chartreuse (#9ACD00) as signal color against navy/white base. Chartreuse reads neither as ISO hazard-yellow nor ISO mandatory-blue, resolving the collision per brand memo §5.</p>
+        <p>Safety Semantic uses chartreuse (#9ACD00) as signal color against navy/white base. Chartreuse reads neither as ISO hazard-yellow nor ISO mandatory-blue, resolving the collision per brand memo Section 5.</p>
         <h4>5. Primitive confirmation</h4>
         <p>The Safety Semantic palette is the color primitive for the Regulatory recipe because it achieves ISO 3864 co-existence while maintaining brand recognizability.</p>
       </div>
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="55" y="35" width="60" height="40" fill="#002684" rx="4"/><rect x="125" y="35" width="60" height="40" fill="#c6e93d" rx="4"/><rect x="55" y="85" width="130" height="35" fill="#bae6ed" opacity="0.4" rx="4"/><text x="120" y="105" font-family="sans-serif" font-size="10" font-weight="bold" fill="#002684" text-anchor="middle">DTPR</text><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Full palette</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">wireframe</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="305" y="35" width="60" height="40" fill="none" stroke="#002684" stroke-width="1.5" rx="4"/><rect x="375" y="35" width="60" height="40" fill="none" stroke="#ced4da" stroke-width="1" rx="4" stroke-dasharray="3,2"/><rect x="305" y="85" width="130" height="35" fill="none" stroke="#ced4da" stroke-width="1" rx="4" stroke-dasharray="3,2"/><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip accents</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><rect x="580" y="35" width="100" height="60" fill="#002684" rx="4"/><text x="630" y="70" font-family="monospace" font-size="8" font-weight="bold" fill="#fff" text-anchor="middle">navy base</text><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Navy base remains</text></g></svg><figcaption>Safety-semantic palette → wireframe → navy base.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.1 (ISO 3864 color collision). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.1 (ISO 3864 color collision). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="07-color.html">§07 Color</a></li>
-          <li><a href="20-iso-3864-matrix.html">§20 ISO Matrix</a></li>
-          <li>Brand memo §5</li>
-          <li>§14 Posture C</li>
+          <li><a href="07-color.html">Section 07 Color</a></li>
+          <li><a href="20-iso-3864-matrix.html">Section 20 ISO Matrix</a></li>
+          <li>Brand memo Section 5</li>
+          <li>Section 14 Posture C</li>
         </ul>
       </details>
     </div>
@@ -448,7 +447,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§07 Color documents navy (#002684) and chartreuse (#c6e93d) as the core brand pair. MakeShift (§04) uses chartreuse exclusively for high-contrast label bands. Brand memo §5 confirms chartreuse as the brand's signal color.</p>
+        <p>Section 07 Color documents navy (#002684) and chartreuse (#c6e93d) as the core brand pair. MakeShift (Section 04) uses chartreuse exclusively for high-contrast label bands. Brand memo Section 5 confirms chartreuse as the brand's signal color.</p>
         <h4>2. Constraint extraction</h4>
         <p>Maker recipe needs a developer-facing palette: dark navy base, chartreuse CTA accent. No ISO constraint at digital viewport.</p>
         <h4>3. Collision / picturability test</h4>
@@ -461,13 +460,13 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="55" y="35" width="60" height="40" fill="#002684" rx="4"/><rect x="125" y="35" width="60" height="40" fill="#c6e93d" rx="4"/><rect x="55" y="85" width="130" height="35" fill="#bae6ed" opacity="0.4" rx="4"/><text x="120" y="105" font-family="sans-serif" font-size="10" font-weight="bold" fill="#002684" text-anchor="middle">DTPR</text><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Full palette</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">wireframe</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="305" y="35" width="60" height="40" fill="none" stroke="#002684" stroke-width="1.5" rx="4"/><rect x="375" y="35" width="60" height="40" fill="none" stroke="#ced4da" stroke-width="1" rx="4" stroke-dasharray="3,2"/><rect x="305" y="85" width="130" height="35" fill="none" stroke="#ced4da" stroke-width="1" rx="4" stroke-dasharray="3,2"/><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip accents</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><rect x="580" y="35" width="100" height="60" fill="#002684" rx="4"/><text x="630" y="70" font-family="monospace" font-size="8" font-weight="bold" fill="#fff" text-anchor="middle">navy base</text><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Navy base remains</text></g></svg><figcaption>Navy + chartreuse → strip accents → navy base.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.1 (ISO 3864 color collision). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.1 (ISO 3864 color collision). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="07-color.html">§07 Color</a></li>
-          <li><a href="04-makeshift.html">§04 MakeShift</a></li>
-          <li>Brand memo §5</li>
+          <li><a href="07-color.html">Section 07 Color</a></li>
+          <li><a href="04-makeshift.html">Section 04 MakeShift</a></li>
+          <li>Brand memo Section 5</li>
         </ul>
       </details>
     </div>
@@ -476,7 +475,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§07 Color documents the existing palette. Brand memo §3 Impacted Citizen: 'Calm, mobile-first, non-coercive, respectful of low trust.' WCAG AA contrast is a brand-level requirement.</p>
+        <p>Section 07 Color documents the existing palette. Brand memo Section 3 Impacted Citizen: 'Calm, mobile-first, non-coercive, respectful of low trust.' WCAG AA contrast is a brand-level requirement.</p>
         <h4>2. Constraint extraction</h4>
         <p>Commons recipe needs WCAG AA contrast ratios (4.5:1 body text, 3:1 large text) on mobile-first citizen surfaces. Colors must not read as alarmist.</p>
         <h4>3. Collision / picturability test</h4>
@@ -489,13 +488,13 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="55" y="35" width="60" height="40" fill="#002684" rx="4"/><rect x="125" y="35" width="60" height="40" fill="#c6e93d" rx="4"/><rect x="55" y="85" width="130" height="35" fill="#bae6ed" opacity="0.4" rx="4"/><text x="120" y="105" font-family="sans-serif" font-size="10" font-weight="bold" fill="#002684" text-anchor="middle">DTPR</text><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Full palette</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">wireframe</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="305" y="35" width="60" height="40" fill="none" stroke="#002684" stroke-width="1.5" rx="4"/><rect x="375" y="35" width="60" height="40" fill="none" stroke="#ced4da" stroke-width="1" rx="4" stroke-dasharray="3,2"/><rect x="305" y="85" width="130" height="35" fill="none" stroke="#ced4da" stroke-width="1" rx="4" stroke-dasharray="3,2"/><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip accents</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><rect x="580" y="35" width="100" height="60" fill="#002684" rx="4"/><text x="630" y="70" font-family="monospace" font-size="8" font-weight="bold" fill="#fff" text-anchor="middle">navy base</text><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Navy base remains</text></g></svg><figcaption>Accessible palette → strip accents → high-contrast base.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.1 (ISO 3864 color collision). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.1 (ISO 3864 color collision). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="07-color.html">§07 Color</a></li>
-          <li>Brand memo §3</li>
-          <li><a href="21-responsive-specs.html">§21 Responsive</a></li>
+          <li><a href="07-color.html">Section 07 Color</a></li>
+          <li>Brand memo Section 3</li>
+          <li><a href="21-responsive-specs.html">Section 21 Responsive</a></li>
         </ul>
       </details>
     </div>
@@ -507,26 +506,26 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§09 Iconography documents 147 taxonomy elements across three taxonomies. The hexagon-as-container pattern is consistent: each icon is a pictogram inside a hexagonal frame. §10 Illustrations confirms flat icon style as dominant.</p>
+        <p>Section 09 Iconography documents 147 taxonomy elements across three taxonomies. The hexagon-as-container pattern is consistent: each icon is a pictogram inside a hexagonal frame. Section 10 Illustrations confirms flat icon style as dominant.</p>
         <h4>2. Constraint extraction</h4>
         <p>Regulatory recipe needs maximum legibility at physical signage scale. Illustrations must render at R=45mm without detail loss, recognizable at 10m viewing distance.</p>
         <h4>3. Collision / picturability test</h4>
-        <p>Flat Icon passes — minimal geometric pictograms are legible at distance and print scale. Isometric block scenes fail — 3D extrusion illegible at signage distance. Memphis City fails — brand memo §5: 'Corporate Memphis illustration is explicitly deprecated.'</p>
+        <p>Flat Icon passes — minimal geometric pictograms are legible at distance and print scale. Isometric block scenes fail — 3D extrusion illegible at signage distance. Memphis City fails — brand memo Section 5: 'Corporate Memphis illustration is explicitly deprecated.'</p>
         <h4>4. Geometry / scale / rendering test</h4>
-        <p>Flat icons use hexagonal container (R=16px digital, R=45mm signage) with fill-only rendering below 24px per §18 stroke scaling rules.</p>
+        <p>Flat icons use hexagonal container (R=16px digital, R=45mm signage) with fill-only rendering below 24px per Section 18 stroke scaling rules.</p>
         <h4>5. Primitive confirmation</h4>
         <p>The flat icon is the illustration primitive for the Regulatory recipe because it maximizes legibility at physical signage scale while maintaining the hexagonal container system.</p>
       </div>
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="175.0,80.0 152.5,119.0 107.5,119.0 85.0,80.0 107.5,41.0 152.5,41.0" fill="rgba(0,38,132,0.05)" stroke="#002684" stroke-width="2"/><rect x="112" y="65" width="30" height="22" rx="2" fill="#002684"/><circle cx="127" cy="76" r="7" fill="#bae6ed"/><rect x="120" y="60" width="14" height="6" rx="1" fill="#002684"/><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Hex icon</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip detail</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="425.0,80.0 402.5,119.0 357.5,119.0 335.0,80.0 357.5,41.0 402.5,41.0" fill="none" stroke="#3b85d4" stroke-width="1.5"/><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip pictogram</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><polygon points="675.0,80.0 652.5,119.0 607.5,119.0 585.0,80.0 607.5,41.0 652.5,41.0" fill="none" stroke="#002684" stroke-width="2.5"/><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Hex container</text></g></svg><figcaption>Flat hex icon → strip pictogram → hex container.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.10 (iconographic rules). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.10 (iconographic rules). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="09-iconography.html">§09 Iconography</a></li>
-          <li><a href="10-illustrations.html">§10 Illustrations</a></li>
-          <li>Brand memo §5/§8</li>
+          <li><a href="09-iconography.html">Section 09 Iconography</a></li>
+          <li><a href="10-illustrations.html">Section 10 Illustrations</a></li>
+          <li>Brand memo Section 5/Section 8</li>
         </ul>
       </details>
     </div>
@@ -535,7 +534,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§04 MakeShift uses sketchbook/clip-art style illustrations in graph-paper context. §10 Illustrations documents the hand-drawn register as present in the MakeShift identity.</p>
+        <p>Section 04 MakeShift uses sketchbook/clip-art style illustrations in graph-paper context. Section 10 Illustrations documents the hand-drawn register as present in the MakeShift identity.</p>
         <h4>2. Constraint extraction</h4>
         <p>Maker recipe needs illustrations that signal 'built by people, not corporations.' Sketch aesthetic matches graph-paper/hacker register.</p>
         <h4>3. Collision / picturability test</h4>
@@ -548,12 +547,12 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="175.0,80.0 152.5,119.0 107.5,119.0 85.0,80.0 107.5,41.0 152.5,41.0" fill="rgba(0,38,132,0.05)" stroke="#002684" stroke-width="2"/><path d="M 110 65 L 135 60 L 145 85 L 120 95 Z" fill="none" stroke="#002684" stroke-width="1.5" stroke-linecap="round"/><path d="M 115 70 L 130 68" fill="none" stroke="#3b85d4" stroke-width="1"/><circle cx="128" cy="75" r="4" fill="none" stroke="#002684" stroke-width="1"/><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Hex icon</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip detail</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="425.0,80.0 402.5,119.0 357.5,119.0 335.0,80.0 357.5,41.0 402.5,41.0" fill="none" stroke="#3b85d4" stroke-width="1.5"/><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip pictogram</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><polygon points="675.0,80.0 652.5,119.0 607.5,119.0 585.0,80.0 607.5,41.0 652.5,41.0" fill="none" stroke="#002684" stroke-width="2.5"/><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Hex container</text></g></svg><figcaption>Sketch illustration → strip texture → line art.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.10 (iconographic rules). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.10 (iconographic rules). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="04-makeshift.html">§04 MakeShift</a></li>
-          <li><a href="10-illustrations.html">§10 Illustrations</a></li>
+          <li><a href="04-makeshift.html">Section 04 MakeShift</a></li>
+          <li><a href="10-illustrations.html">Section 10 Illustrations</a></li>
         </ul>
       </details>
     </div>
@@ -562,11 +561,11 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§10 Illustrations documents human-centered scenarios (people, hands, community scenes). Brand memo §3 Impacted Citizen needs: 'calm, mobile-first, non-coercive.'</p>
+        <p>Section 10 Illustrations documents human-centered scenarios (people, hands, community scenes). Brand memo Section 3 Impacted Citizen needs: 'calm, mobile-first, non-coercive.'</p>
         <h4>2. Constraint extraction</h4>
         <p>Commons recipe needs relatable human illustration that builds trust with low-trust citizen audiences. Not abstract, not technical.</p>
         <h4>3. Collision / picturability test</h4>
-        <p>People-Centered passes — human scenarios are approachable. Flat Icon fails — abstract pictograms are cold. Memphis City fails — deprecated per brand memo §5.</p>
+        <p>People-Centered passes — human scenarios are approachable. Flat Icon fails — abstract pictograms are cold. Memphis City fails — deprecated per brand memo Section 5.</p>
         <h4>4. Geometry / scale / rendering test</h4>
         <p>People-centered illustrations render at mobile-first scale (32–48px container). Must be legible at 320px viewport on citizen-facing QR landing pages.</p>
         <h4>5. Primitive confirmation</h4>
@@ -575,12 +574,12 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="175.0,80.0 152.5,119.0 107.5,119.0 85.0,80.0 107.5,41.0 152.5,41.0" fill="rgba(0,38,132,0.05)" stroke="#002684" stroke-width="2"/><circle cx="130" cy="62" r="10" fill="#002684" opacity="0.7"/><path d="M 115 95 Q 130 75 145 95 Z" fill="#002684" opacity="0.5"/><circle cx="126" cy="60" r="1.5" fill="#fff"/><circle cx="134" cy="60" r="1.5" fill="#fff"/><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Hex icon</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip detail</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="425.0,80.0 402.5,119.0 357.5,119.0 335.0,80.0 357.5,41.0 402.5,41.0" fill="none" stroke="#3b85d4" stroke-width="1.5"/><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip pictogram</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><polygon points="675.0,80.0 652.5,119.0 607.5,119.0 585.0,80.0 607.5,41.0 652.5,41.0" fill="none" stroke="#002684" stroke-width="2.5"/><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Hex container</text></g></svg><figcaption>People-centered scene → strip detail → figure remains.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.10 (iconographic rules). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.10 (iconographic rules). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="10-illustrations.html">§10 Illustrations</a></li>
-          <li>Brand memo §3/§5</li>
+          <li><a href="10-illustrations.html">Section 10 Illustrations</a></li>
+          <li>Brand memo Section 3/Section 5</li>
         </ul>
       </details>
     </div>
@@ -592,9 +591,9 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§08 Typography documents existing specimens. Brand memo §5 identifies MakeShift three-role system: Baskerville Display PT (display), Source Sans Variable (body), JetBrains Mono ExtraBold (code). Condensed sans serves physical signage where horizontal space is constrained.</p>
+        <p>Section 08 Typography documents existing specimens. Brand memo Section 5 identifies MakeShift three-role system: Baskerville Display PT (display), Source Sans Variable (body), JetBrains Mono ExtraBold (code). Condensed sans serves physical signage where horizontal space is constrained.</p>
         <h4>2. Constraint extraction</h4>
-        <p>Regulatory recipe needs space-efficient typography for physical signage panels. Type must be readable at viewing distance (0.5m touch/read per §18).</p>
+        <p>Regulatory recipe needs space-efficient typography for physical signage panels. Type must be readable at viewing distance (0.5m touch/read per Section 18).</p>
         <h4>3. Collision / picturability test</h4>
         <p>Condensed Sans passes — narrow letterforms maximize character count per panel. System Stack fails — neutral, not compliance-register. Mono+Serif fails — contrast pairing is editorial, not regulatory.</p>
         <h4>4. Geometry / scale / rendering test</h4>
@@ -605,13 +604,13 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="50" y="30" width="160" height="100" fill="#f8f9fa" rx="4"/><text x="130" y="50" font-family="sans-serif" font-size="20" font-weight="bold" fill="#002684" text-anchor="middle">DTPR</text><text x="130" y="70" font-family="sans-serif" font-size="10" font-weight="normal" fill="#666" text-anchor="middle">subhead</text><rect x="60" y="80" width="140" height="1" fill="#ced4da"/><text x="130" y="100" font-family="sans-serif" font-size="9" font-weight="normal" fill="#666" text-anchor="middle">body text</text><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Full type specimen</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip scale</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><text x="380" y="65" font-family="sans-serif" font-size="16" font-weight="bold" fill="#002684" text-anchor="middle">DTPR</text><text x="380" y="85" font-family="sans-serif" font-size="10" font-weight="normal" fill="#002684" text-anchor="middle">body</text><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip hierarchy</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><text x="630" y="80" font-family="sans-serif" font-size="18" font-weight="bold" fill="#002684" text-anchor="middle">DTPR</text><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Letterforms</text></g></svg><figcaption>Condensed sans label → strip hierarchy → letterforms.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.8 (type system extraction). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.8 (type system extraction). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="08-typography.html">§08 Typography</a></li>
-          <li>Brand memo §5</li>
-          <li><a href="18-geometric-blueprint.html">§18 Blueprint</a></li>
+          <li><a href="08-typography.html">Section 08 Typography</a></li>
+          <li>Brand memo Section 5</li>
+          <li><a href="18-geometric-blueprint.html">Section 18 Blueprint</a></li>
         </ul>
       </details>
     </div>
@@ -620,7 +619,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§08 Typography and §04 MakeShift document JetBrains Mono as the code-label typeface. Brand memo §5: 'JetBrains Mono ExtraBold for data labels, taxonomy codes, technical call-outs.'</p>
+        <p>Section 08 Typography and Section 04 MakeShift document JetBrains Mono as the code-label typeface. Brand memo Section 5: 'JetBrains Mono ExtraBold for data labels, taxonomy codes, technical call-outs.'</p>
         <h4>2. Constraint extraction</h4>
         <p>Maker recipe needs a code-first typographic register. Developers expect monospace: code blocks, API specs, terminal aesthetics.</p>
         <h4>3. Collision / picturability test</h4>
@@ -633,13 +632,13 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="50" y="30" width="160" height="100" fill="#f8f9fa" rx="4"/><text x="130" y="50" font-family="monospace" font-size="20" font-weight="bold" fill="#002684" text-anchor="middle">[DTPR]</text><text x="130" y="70" font-family="monospace" font-size="10" font-weight="normal" fill="#666" text-anchor="middle">subhead</text><rect x="60" y="80" width="140" height="1" fill="#ced4da"/><text x="130" y="100" font-family="monospace" font-size="9" font-weight="normal" fill="#666" text-anchor="middle">body text</text><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Full type specimen</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip scale</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><text x="380" y="65" font-family="monospace" font-size="16" font-weight="bold" fill="#002684" text-anchor="middle">[DTPR]</text><text x="380" y="85" font-family="monospace" font-size="10" font-weight="normal" fill="#002684" text-anchor="middle">body</text><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip hierarchy</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><text x="630" y="80" font-family="monospace" font-size="18" font-weight="bold" fill="#002684" text-anchor="middle">[DTPR]</text><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Letterforms</text></g></svg><figcaption>JetBrains Mono → strip styling → monospace grid.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.8 (type system extraction). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.8 (type system extraction). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="08-typography.html">§08 Typography</a></li>
-          <li><a href="04-makeshift.html">§04 MakeShift</a></li>
-          <li>Brand memo §5</li>
+          <li><a href="08-typography.html">Section 08 Typography</a></li>
+          <li><a href="04-makeshift.html">Section 04 MakeShift</a></li>
+          <li>Brand memo Section 5</li>
         </ul>
       </details>
     </div>
@@ -648,7 +647,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§08 Typography documents body text specimens. Brand memo §3 Impacted Citizen: 'calm, mobile-first, non-coercive.' Accessibility-first sizing is a brand-level requirement.</p>
+        <p>Section 08 Typography documents body text specimens. Brand memo Section 3 Impacted Citizen: 'calm, mobile-first, non-coercive.' Accessibility-first sizing is a brand-level requirement.</p>
         <h4>2. Constraint extraction</h4>
         <p>Commons recipe needs large, readable body text for mobile-first citizen surfaces. Type must be legible without pinch-zoom on 320px mobile viewport.</p>
         <h4>3. Collision / picturability test</h4>
@@ -661,13 +660,13 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="50" y="30" width="160" height="100" fill="#f8f9fa" rx="4"/><text x="130" y="50" font-family="sans-serif" font-size="20" font-weight="bold" fill="#002684" text-anchor="middle">DTPR</text><text x="130" y="70" font-family="sans-serif" font-size="10" font-weight="normal" fill="#666" text-anchor="middle">subhead</text><rect x="60" y="80" width="140" height="1" fill="#ced4da"/><text x="130" y="100" font-family="sans-serif" font-size="9" font-weight="normal" fill="#666" text-anchor="middle">body text</text><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Full type specimen</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip scale</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><text x="380" y="65" font-family="sans-serif" font-size="16" font-weight="bold" fill="#002684" text-anchor="middle">DTPR</text><text x="380" y="85" font-family="sans-serif" font-size="10" font-weight="normal" fill="#002684" text-anchor="middle">body</text><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip hierarchy</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><text x="630" y="80" font-family="sans-serif" font-size="18" font-weight="bold" fill="#002684" text-anchor="middle">DTPR</text><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Letterforms</text></g></svg><figcaption>Large body text → strip headings → readable body.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.8 (type system extraction). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.8 (type system extraction). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="08-typography.html">§08 Typography</a></li>
-          <li>Brand memo §3</li>
-          <li><a href="21-responsive-specs.html">§21 Responsive</a></li>
+          <li><a href="08-typography.html">Section 08 Typography</a></li>
+          <li>Brand memo Section 3</li>
+          <li><a href="21-responsive-specs.html">Section 21 Responsive</a></li>
         </ul>
       </details>
     </div>
@@ -676,10 +675,10 @@
     <h2>Form Variable 6: Motion Behavior</h2>
     <div class="recipe-derivation regulatory" id="form-var-6-regulatory">
       <h3>Regulatory recipe — selection: <span class="chip chip-a">A</span> None / Static</h3>
-      <p class="thin-evidence-flag">⚠ Thin corpus evidence — no motion principles are documented (brand memo §9.9: 'Motion principles. None exist.'). This derivation is constructed from absence.</p>
+      <p class="thin-evidence-flag">⚠ Thin corpus evidence — no motion principles are documented (brand memo Section 9.9: 'Motion principles. None exist.'). This derivation is constructed from absence.</p>
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>No motion principles are documented anywhere in the DTPR corpus. Brand memo §9.9: 'Motion principles. None exist.' The absence is the evidence — physical signage is inherently static.</p>
+        <p>No motion principles are documented anywhere in the DTPR corpus. Brand memo Section 9.9: 'Motion principles. None exist.' The absence is the evidence — physical signage is inherently static.</p>
         <h4>2. Constraint extraction</h4>
         <p>Regulatory recipe targets physical signage panels. Printed/static surfaces cannot animate. Motion is structurally impossible in this deployment context.</p>
         <h4>3. Collision / picturability test</h4>
@@ -692,21 +691,21 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="170.0,80.0 150.0,114.6 110.0,114.6 90.0,80.0 110.0,45.4 150.0,45.4" fill="rgba(0,38,132,0.05)" stroke="#ced4da" stroke-width="1.5"/><text x="130" y="85" text-anchor="middle" font-family="monospace" font-size="14" fill="#ced4da">⏸</text><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Static signage</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">no candidates</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><text x="380" y="85" text-anchor="middle" font-family="monospace" font-size="12" fill="#ced4da">no motion</text><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip candidates</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><polygon points="670.0,80.0 650.0,114.6 610.0,114.6 590.0,80.0 610.0,45.4 650.0,45.4" fill="none" stroke="#002684" stroke-width="2.5"/><text x="630" y="85" font-family="monospace" font-size="10" font-weight="bold" fill="#002684" text-anchor="middle">STATIC</text><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Static only</text></g></svg><figcaption>Static signage → no motion candidates → static only.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.9 (motion principles — none exist). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.9 (motion principles — none exist). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li>Brand memo §9.9</li>
-          <li><a href="18-geometric-blueprint.html">§18 Blueprint</a> — physical signage medium</li>
+          <li>Brand memo Section 9.9</li>
+          <li><a href="18-geometric-blueprint.html">Section 18 Blueprint</a> — physical signage medium</li>
         </ul>
       </details>
     </div>
     <div class="recipe-derivation maker" id="form-var-6-maker">
       <h3>Maker recipe — selection: <span class="chip chip-b">B</span> Micro-interaction</h3>
-      <p class="thin-evidence-flag">⚠ Thin corpus evidence — no motion principles are documented (brand memo §9.9). This derivation is constructed from absence.</p>
+      <p class="thin-evidence-flag">⚠ Thin corpus evidence — no motion principles are documented (brand memo Section 9.9). This derivation is constructed from absence.</p>
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>No motion principles documented (brand memo §9.9). However, §17 Maker recipe specifies 'Micro-interaction — Hover state feedback,' indicating intended register even without formal documentation.</p>
+        <p>No motion principles documented (brand memo Section 9.9). However, Section 17 Maker recipe specifies 'Micro-interaction — Hover state feedback,' indicating intended register even without formal documentation.</p>
         <h4>2. Constraint extraction</h4>
         <p>Maker recipe targets developer portal UI. Hover states and filter interactions need motion feedback to signal interactivity.</p>
         <h4>3. Collision / picturability test</h4>
@@ -719,21 +718,21 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="160.0,80.0 145.0,106.0 115.0,106.0 100.0,80.0 115.0,54.0 145.0,54.0" fill="rgba(59,133,212,0.1)" stroke="#3b85d4" stroke-width="1" stroke-dasharray="3,2"/><polygon points="165.0,80.0 147.5,110.3 112.5,110.3 95.0,80.0 112.5,49.7 147.5,49.7" fill="none" stroke="#002684" stroke-width="2"/><text x="130" y="130" text-anchor="middle" font-family="monospace" font-size="7" fill="#3b85d4">:hover +150ms</text><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Motion candidate</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip timing</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="415.0,80.0 397.5,110.3 362.5,110.3 345.0,80.0 362.5,49.7 397.5,49.7" fill="none" stroke="#002684" stroke-width="2"/><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip animation</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><polygon points="665.0,80.0 647.5,110.3 612.5,110.3 595.0,80.0 612.5,49.7 647.5,49.7" fill="none" stroke="#002684" stroke-width="2.5"/><text x="630" y="130" text-anchor="middle" font-family="monospace" font-size="7" fill="#002684">hover affordance</text><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Static states</text></g></svg><figcaption>Hover state → strip timing → hover affordance.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.9 (motion principles — none exist). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.9 (motion principles — none exist). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li>Brand memo §9.9</li>
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
+          <li>Brand memo Section 9.9</li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
         </ul>
       </details>
     </div>
     <div class="recipe-derivation commons" id="form-var-6-commons">
       <h3>Commons recipe — selection: <span class="chip chip-c">C</span> Page Transitions</h3>
-      <p class="thin-evidence-flag">⚠ Thin corpus evidence — no motion principles are documented (brand memo §9.9). This derivation is constructed from absence.</p>
+      <p class="thin-evidence-flag">⚠ Thin corpus evidence — no motion principles are documented (brand memo Section 9.9). This derivation is constructed from absence.</p>
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>No motion principles documented (brand memo §9.9). §17 Commons recipe specifies 'Page Transitions — Wayfinding guidance,' indicating intended register.</p>
+        <p>No motion principles documented (brand memo Section 9.9). Section 17 Commons recipe specifies 'Page Transitions — Wayfinding guidance,' indicating intended register.</p>
         <h4>2. Constraint extraction</h4>
         <p>Commons recipe targets mobile QR-landing. Citizens need wayfinding guidance — motion helps signal navigation direction and content hierarchy.</p>
         <h4>3. Collision / picturability test</h4>
@@ -746,19 +745,19 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="60" y="35" width="140" height="30" rx="4" fill="#002684" opacity="0.8"/><rect x="60" y="75" width="140" height="30" rx="4" fill="#3b85d4" opacity="0.4"/><path d="M 200 60 L 215 50 M 200 60 L 215 70" fill="none" stroke="#c6e93d" stroke-width="2"/><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Motion candidate</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip timing</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="310" y="35" width="140" height="30" rx="4" fill="none" stroke="#002684" stroke-width="1.5"/><rect x="310" y="75" width="140" height="30" rx="4" fill="none" stroke="#3b85d4" stroke-width="1"/><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip animation</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><rect x="570" y="40" width="120" height="50" rx="4" fill="none" stroke="#002684" stroke-width="2.5"/><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Static states</text></g></svg><figcaption>Page transition → strip curve → sections remain.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.9 (motion principles — none exist). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.9 (motion principles — none exist). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li>Brand memo §9.9</li>
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
+          <li>Brand memo Section 9.9</li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
         </ul>
       </details>
     </div>
   </section>
   <hr>
 
-  <h2 style="font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-500);">Process Box Derivations (§15)</h2>
+  <h2 style="font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-500);">Process Box Derivations (Section 15)</h2>
 
   <section class="derivation-section" id="proc-var-1">
     <h2>Process Variable 1: Grid Decomposition</h2>
@@ -767,13 +766,13 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§18 Blueprint specifies honeycomb tiling math. 'Strict ISO' means the grid never breaks — no decomposition, no reflow, no responsive splitting.</p>
+        <p>Section 18 Blueprint specifies honeycomb tiling math. 'Strict ISO' means the grid never breaks — no decomposition, no reflow, no responsive splitting.</p>
         <h4>2. Constraint extraction</h4>
         <p>Physical signage requires deterministic grid behavior: panel layout is printed once and mounted. No decomposition is possible or desirable.</p>
         <h4>3. Collision / picturability test</h4>
         <p>Strict ISO passes — enforces grid integrity by refusing decomposition. Concentric rings fail — nesting inward is decorative, not structural. Triangular shards fail — destroys container primitive.</p>
         <h4>4. Geometry / scale / rendering test</h4>
-        <p>§18: grid locked at gap=R×0.08, col_step=2R+gap. No responsive breakpoints apply. CSS grid-template is fixed.</p>
+        <p>Section 18: grid locked at gap=R×0.08, col_step=2R+gap. No responsive breakpoints apply. CSS grid-template is fixed.</p>
         <h4>5. Primitive confirmation</h4>
         <p>Strict ISO is the grid decomposition primitive for the Regulatory recipe because it refuses decomposition — the grid is fundamental structural, not decorative.</p>
       </div>
@@ -784,8 +783,8 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="18-geometric-blueprint.html">§18 Blueprint</a></li>
-          <li><a href="21-responsive-specs.html">§21 Responsive</a></li>
+          <li><a href="18-geometric-blueprint.html">Section 18 Blueprint</a></li>
+          <li><a href="21-responsive-specs.html">Section 21 Responsive</a></li>
         </ul>
       </details>
     </div>
@@ -794,7 +793,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§21 Responsive spec defines breakpoints at 320px, 768px, 1024px, 1280px. Fluid Overlay means the grid reflows at each breakpoint.</p>
+        <p>Section 21 Responsive spec defines breakpoints at 320px, 768px, 1024px, 1280px. Fluid Overlay means the grid reflows at each breakpoint.</p>
         <h4>2. Constraint extraction</h4>
         <p>Developer portals need responsive grid behavior: code blocks, sidebars, and content areas reflow across viewport sizes.</p>
         <h4>3. Collision / picturability test</h4>
@@ -811,8 +810,8 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="21-responsive-specs.html">§21 Responsive</a></li>
-          <li><a href="18-geometric-blueprint.html">§18 Blueprint</a></li>
+          <li><a href="21-responsive-specs.html">Section 21 Responsive</a></li>
+          <li><a href="18-geometric-blueprint.html">Section 18 Blueprint</a></li>
         </ul>
       </details>
     </div>
@@ -821,7 +820,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§17 Commons recipe: 'Stacked Card — Single-thumb mobile.' §21 defines 320px mobile viewport for QR-scan arrivals.</p>
+        <p>Section 17 Commons recipe: 'Stacked Card — Single-thumb mobile.' Section 21 defines 320px mobile viewport for QR-scan arrivals.</p>
         <h4>2. Constraint extraction</h4>
         <p>Mobile-first citizen surfaces need content that stacks vertically for one-thumb scrolling. No multi-column decomposition is useful at 320px.</p>
         <h4>3. Collision / picturability test</h4>
@@ -838,8 +837,8 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="21-responsive-specs.html">§21 Responsive</a></li>
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
+          <li><a href="21-responsive-specs.html">Section 21 Responsive</a></li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
         </ul>
       </details>
     </div>
@@ -848,10 +847,10 @@
     <h2>Process Variable 2: Scale Adaptation</h2>
     <div class="recipe-derivation regulatory" id="proc-var-2-regulatory">
       <h3>Regulatory recipe — selection: <span class="chip chip-d">D</span> Physical Distance</h3>
-      <p class="thin-evidence-flag">⚠ Thin corpus evidence — the physical-distance zones (10m/2m/0.5m) exist in §21 spec but deployment evidence validating these thresholds is limited.</p>
+      <p class="thin-evidence-flag">⚠ Thin corpus evidence — the physical-distance zones (10m/2m/0.5m) exist in Section 21 spec but deployment evidence validating these thresholds is limited.</p>
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§18 Blueprint defines R=45mm for physical signage with 0.5m minimum viewing distance. §21 specifies three distance zones: 10m (wayfinding), 2m (reading), 0.5m (touch/QR scan).</p>
+        <p>Section 18 Blueprint defines R=45mm for physical signage with 0.5m minimum viewing distance. Section 21 specifies three distance zones: 10m (wayfinding), 2m (reading), 0.5m (touch/QR scan).</p>
         <h4>2. Constraint extraction</h4>
         <p>Physical signage scale adaptation must respond to viewing distance, not viewport width. Same panel must be legible at 10m, 2m, and 0.5m.</p>
         <h4>3. Collision / picturability test</h4>
@@ -868,8 +867,8 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="18-geometric-blueprint.html">§18 Blueprint</a></li>
-          <li><a href="21-responsive-specs.html">§21 Responsive</a></li>
+          <li><a href="18-geometric-blueprint.html">Section 18 Blueprint</a></li>
+          <li><a href="21-responsive-specs.html">Section 21 Responsive</a></li>
         </ul>
       </details>
     </div>
@@ -878,7 +877,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§21 Responsive spec defines viewport breakpoints from 320px to 1280px+. Viewport Fluid means layout adapts to screen width.</p>
+        <p>Section 21 Responsive spec defines viewport breakpoints from 320px to 1280px+. Viewport Fluid means layout adapts to screen width.</p>
         <h4>2. Constraint extraction</h4>
         <p>Developer portals need layouts that adapt to developer's screen: laptop, external monitor, split-pane. Scale is in CSS pixels.</p>
         <h4>3. Collision / picturability test</h4>
@@ -895,8 +894,8 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="21-responsive-specs.html">§21 Responsive</a></li>
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
+          <li><a href="21-responsive-specs.html">Section 21 Responsive</a></li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
         </ul>
       </details>
     </div>
@@ -905,7 +904,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§17 Commons recipe: 'Content Hierarchy — Progressive disclosure.' QR-landing reveals information progressively: summary → details → full taxonomy.</p>
+        <p>Section 17 Commons recipe: 'Content Hierarchy — Progressive disclosure.' QR-landing reveals information progressively: summary → details → full taxonomy.</p>
         <h4>2. Constraint extraction</h4>
         <p>Mobile-first citizen surfaces need progressive disclosure: don't overwhelm with all information at once. Scale = information density adaptation.</p>
         <h4>3. Collision / picturability test</h4>
@@ -922,8 +921,8 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
-          <li><a href="21-responsive-specs.html">§21 Responsive</a></li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
+          <li><a href="21-responsive-specs.html">Section 21 Responsive</a></li>
         </ul>
       </details>
     </div>
@@ -935,13 +934,13 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§19 CAA Assets documents the physical signage panel with QR code. §18 Blueprint shows QR placeholder at 40×40mm on signage panel.</p>
+        <p>Section 19 CAA Assets documents the physical signage panel with QR code. Section 18 Blueprint shows QR placeholder at 40×40mm on signage panel.</p>
         <h4>2. Constraint extraction</h4>
         <p>Regulatory recipe uses physical signage as primary surface. Only interaction: citizen scans QR → arrives at digital content. One entry point, one modality.</p>
         <h4>3. Collision / picturability test</h4>
         <p>QR Deeplink passes — standard physical-to-digital bridge for signage. Tabbed Filters fail — require digital surface. Scrollytelling fails — requires sustained digital engagement.</p>
         <h4>4. Geometry / scale / rendering test</h4>
-        <p>QR code renders at 40×40mm on signage panel (§18). Scans at 0.5m. Routes to mobile-optimized landing page. The deeplink URL is the process primitive.</p>
+        <p>QR code renders at 40×40mm on signage panel (Section 18). Scans at 0.5m. Routes to mobile-optimized landing page. The deeplink URL is the process primitive.</p>
         <h4>5. Primitive confirmation</h4>
         <p>QR Deeplink is the interaction primitive for the Regulatory recipe because it is the single physical-to-digital entry point that signage supports.</p>
       </div>
@@ -952,8 +951,8 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="19-core-caa-assets.html">§19 CAA Assets</a></li>
-          <li><a href="18-geometric-blueprint.html">§18 Blueprint</a></li>
+          <li><a href="19-core-caa-assets.html">Section 19 CAA Assets</a></li>
+          <li><a href="18-geometric-blueprint.html">Section 18 Blueprint</a></li>
         </ul>
       </details>
     </div>
@@ -962,7 +961,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§17 Maker recipe: 'Hover + Filter — Taxonomy explorer.' Developer portals use hover states for affordance discovery.</p>
+        <p>Section 17 Maker recipe: 'Hover + Filter — Taxonomy explorer.' Developer portals use hover states for affordance discovery.</p>
         <h4>2. Constraint extraction</h4>
         <p>Developer-facing surfaces need interactive exploration: hover to preview, filter to narrow. Mouse-and-keyboard is primary input.</p>
         <h4>3. Collision / picturability test</h4>
@@ -979,8 +978,8 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
-          <li><a href="19-core-caa-assets.html">§19 CAA Assets</a></li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
+          <li><a href="19-core-caa-assets.html">Section 19 CAA Assets</a></li>
         </ul>
       </details>
     </div>
@@ -989,7 +988,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§17 Commons recipe: 'Tap + Expand — Touch-first accordion.' Mobile QR-landing uses accordion-style progressive disclosure.</p>
+        <p>Section 17 Commons recipe: 'Tap + Expand — Touch-first accordion.' Mobile QR-landing uses accordion-style progressive disclosure.</p>
         <h4>2. Constraint extraction</h4>
         <p>Citizen mobile surfaces need touch-first interaction: tap to expand, tap to collapse. No hover states. One-thumb operation.</p>
         <h4>3. Collision / picturability test</h4>
@@ -1006,8 +1005,8 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
-          <li><a href="21-responsive-specs.html">§21 Responsive</a></li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
+          <li><a href="21-responsive-specs.html">Section 21 Responsive</a></li>
         </ul>
       </details>
     </div>
@@ -1016,10 +1015,10 @@
     <h2>Process Variable 4: Dynamic Overlay</h2>
     <div class="recipe-derivation regulatory" id="proc-var-4-regulatory">
       <h3>Regulatory recipe — selection: <span class="chip chip-a">A</span> None</h3>
-      <p class="thin-evidence-flag">⚠ Thin corpus evidence — no motion or overlay principles are documented (brand memo §9.9). Defensive default constructed from absence of evidence.</p>
+      <p class="thin-evidence-flag">⚠ Thin corpus evidence — no motion or overlay principles are documented (brand memo Section 9.9). Defensive default constructed from absence of evidence.</p>
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>No dynamic overlay principles documented. Brand memo §9.9: 'Motion principles. None exist.' Physical signage context makes dynamic overlays structurally impossible.</p>
+        <p>No dynamic overlay principles documented. Brand memo Section 9.9: 'Motion principles. None exist.' Physical signage context makes dynamic overlays structurally impossible.</p>
         <h4>2. Constraint extraction</h4>
         <p>Physical signage is static printed material. Dynamic overlays require live data feed and digital display — neither exists in signage deployment.</p>
         <h4>3. Collision / picturability test</h4>
@@ -1032,12 +1031,12 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="170.0,80.0 150.0,114.6 110.0,114.6 90.0,80.0 110.0,45.4 150.0,45.4" fill="rgba(0,38,132,0.05)" stroke="#ced4da" stroke-width="1.5"/><text x="130" y="85" text-anchor="middle" font-family="monospace" font-size="14" fill="#ced4da">⏸</text><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Static signage</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">no candidates</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><text x="380" y="85" text-anchor="middle" font-family="monospace" font-size="12" fill="#ced4da">no motion</text><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip candidates</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><polygon points="670.0,80.0 650.0,114.6 610.0,114.6 590.0,80.0 610.0,45.4 650.0,45.4" fill="none" stroke="#002684" stroke-width="2.5"/><text x="630" y="85" font-family="monospace" font-size="10" font-weight="bold" fill="#002684" text-anchor="middle">STATIC</text><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Static only</text></g></svg><figcaption>Static signage → no overlays → static only.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.9 (motion principles — none exist). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.9 (motion principles — none exist). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li>Brand memo §9.9</li>
-          <li><a href="18-geometric-blueprint.html">§18 Blueprint</a></li>
+          <li>Brand memo Section 9.9</li>
+          <li><a href="18-geometric-blueprint.html">Section 18 Blueprint</a></li>
         </ul>
       </details>
     </div>
@@ -1046,7 +1045,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§17 Maker recipe: 'Live Data — API-driven real state.' Developer portals display live deployment status, API health, real-time taxonomy data.</p>
+        <p>Section 17 Maker recipe: 'Live Data — API-driven real state.' Developer portals display live deployment status, API health, real-time taxonomy data.</p>
         <h4>2. Constraint extraction</h4>
         <p>Developer-facing surfaces benefit from live data overlays: deployment counts, API status indicators, real-time data.</p>
         <h4>3. Collision / picturability test</h4>
@@ -1063,7 +1062,7 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
         </ul>
       </details>
     </div>
@@ -1072,7 +1071,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§17 Commons recipe: 'Contextual Pop-in — Definition tooltips.' Mobile QR-landing uses contextual tooltips for inline term definitions.</p>
+        <p>Section 17 Commons recipe: 'Contextual Pop-in — Definition tooltips.' Mobile QR-landing uses contextual tooltips for inline term definitions.</p>
         <h4>2. Constraint extraction</h4>
         <p>Citizen surfaces need inline definitions: when citizen encounters 'sensor' or 'datachain,' a tooltip explains without navigating away.</p>
         <h4>3. Collision / picturability test</h4>
@@ -1089,7 +1088,7 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
         </ul>
       </details>
     </div>
@@ -1101,7 +1100,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§17 Regulatory recipe: 'Icon Guide — Plain-lang citizen entry.' Brand memo §3c lists 'Visual Framework and Icon Guide' as core tool. The Icon Guide is the plain-language bridge from QR scan to understanding.</p>
+        <p>Section 17 Regulatory recipe: 'Icon Guide — Plain-lang citizen entry.' Brand memo Section 3c lists 'Visual Framework and Icon Guide' as core tool. The Icon Guide is the plain-language bridge from QR scan to understanding.</p>
         <h4>2. Constraint extraction</h4>
         <p>Regulatory recipe serves deployers who need citizens to understand what they're looking at. Gateway from signage to comprehension must be plain-language.</p>
         <h4>3. Collision / picturability test</h4>
@@ -1114,13 +1113,13 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="50" y="30" width="160" height="100" fill="#f8f9fa" stroke="#ced4da" rx="4"/><line x1="50" y1="100" x2="210" y2="100" stroke="#ced4da"/><rect x="60" y="105" width="30" height="20" fill="#002684"/><text x="100" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by</text><text x="155" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#002684" text-anchor="middle">Helpful Places</text><text x="60" y="45" font-family="sans-serif" font-size="10" fill="#002684" font-weight="bold">DTPR</text><text x="60" y="60" font-family="sans-serif" font-size="7" fill="#666">Open standard</text><rect x="140" y="35" width="25" height="20" fill="#c6e93d" opacity="0.3" rx="2"/><text x="152" y="50" font-family="monospace" font-size="7" font-weight="bold" fill="#002684" text-anchor="middle">CC</text><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Footer</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip chrome</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><line x1="300" y1="100" x2="460" y2="100" stroke="#ced4da"/><rect x="310" y="105" width="30" height="20" fill="none" stroke="#ced4da" stroke-dasharray="2,2"/><text x="370" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by HP</text><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip content</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><text x="500" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip logo</text><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><text x="630" y="75" font-family="sans-serif" font-size="9" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by</text><text x="630" y="95" font-family="sans-serif" font-size="11" font-weight="bold" fill="#002684" text-anchor="middle">Helpful Places</text><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Signature</text></g></svg><figcaption>QR scan → routing → Icon Guide.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.5 (Engagement Journey Map ownership). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.5 (Engagement Journey Map ownership). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
-          <li>Brand memo §3c</li>
-          <li><a href="19-core-caa-assets.html">§19 CAA Assets</a></li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
+          <li>Brand memo Section 3c</li>
+          <li><a href="19-core-caa-assets.html">Section 19 CAA Assets</a></li>
         </ul>
       </details>
     </div>
@@ -1129,7 +1128,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§17 Maker recipe: 'Developer Portal — Quickstart entry.' Developer portal is the gateway for integrators who want to implement DTPR programmatically.</p>
+        <p>Section 17 Maker recipe: 'Developer Portal — Quickstart entry.' Developer portal is the gateway for integrators who want to implement DTPR programmatically.</p>
         <h4>2. Constraint extraction</h4>
         <p>Maker recipe serves developers who need API docs, quickstart guides, and code examples. Gateway must be technical and copy-pasteable.</p>
         <h4>3. Collision / picturability test</h4>
@@ -1146,7 +1145,7 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
         </ul>
       </details>
     </div>
@@ -1155,7 +1154,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§17 Commons recipe: 'Icon Guide — You scanned a sign.' Same tool as Regulatory, different framing: immediate answer to 'what is this thing?'</p>
+        <p>Section 17 Commons recipe: 'Icon Guide — You scanned a sign.' Same tool as Regulatory, different framing: immediate answer to 'what is this thing?'</p>
         <h4>2. Constraint extraction</h4>
         <p>Commons recipe's citizen arrives via QR scan with low trust. Gateway must immediately answer 'what is this thing?' before any other content.</p>
         <h4>3. Collision / picturability test</h4>
@@ -1172,8 +1171,8 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
-          <li>Brand memo §3c</li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
+          <li>Brand memo Section 3c</li>
         </ul>
       </details>
     </div>
@@ -1185,7 +1184,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§17 Regulatory recipe: 'Fixed Persistent — Cross-domain navigation.' dtpr.io uses persistent header nav visible across all pages.</p>
+        <p>Section 17 Regulatory recipe: 'Fixed Persistent — Cross-domain navigation.' dtpr.io uses persistent header nav visible across all pages.</p>
         <h4>2. Constraint extraction</h4>
         <p>Regulatory recipe serves deployers who navigate across multiple DTPR properties. Fixed persistent nav provides cross-domain orientation.</p>
         <h4>3. Collision / picturability test</h4>
@@ -1202,7 +1201,7 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
           <li><a href="sprint-index.html">sprint-index.html</a> nav pattern</li>
         </ul>
       </details>
@@ -1212,7 +1211,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§17 Maker recipe: 'Scrollspy — Docs sidebar pattern.' Developer documentation uses scrollspy sidebar highlighting current section.</p>
+        <p>Section 17 Maker recipe: 'Scrollspy — Docs sidebar pattern.' Developer documentation uses scrollspy sidebar highlighting current section.</p>
         <h4>2. Constraint extraction</h4>
         <p>Developer portals need section-level navigation within long documentation pages. Scrollspy provides persistent within-page orientation.</p>
         <h4>3. Collision / picturability test</h4>
@@ -1229,7 +1228,7 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
         </ul>
       </details>
     </div>
@@ -1238,7 +1237,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§17 Commons recipe: 'Progress Dots — Onboarding wayfinding.' Mobile citizen surfaces use progress dots to show position in multi-step flow.</p>
+        <p>Section 17 Commons recipe: 'Progress Dots — Onboarding wayfinding.' Mobile citizen surfaces use progress dots to show position in multi-step flow.</p>
         <h4>2. Constraint extraction</h4>
         <p>Citizen mobile surfaces need simple wayfinding: progress dots show 'you are on step 3 of 7' without overwhelming.</p>
         <h4>3. Collision / picturability test</h4>
@@ -1255,14 +1254,14 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
         </ul>
       </details>
     </div>
   </section>
   <hr>
 
-  <h2 style="font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-500);">Semantic Box Derivations (§16)</h2>
+  <h2 style="font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-500);">Semantic Box Derivations (Section 16)</h2>
 
   <section class="derivation-section" id="sem-var-1">
     <h2>Semantic Variable 1: Deployment Track</h2>
@@ -1271,26 +1270,26 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§16 Posture A: 'Physical Sensors — Public physical space technology (cameras, IoT).' Brand memo §3/§6: 17+ real deployments (Angers, Porto, Lure, Boston) are all physical-sensor contexts.</p>
+        <p>Section 16 Posture A: 'Physical Sensors — Public physical space technology (cameras, IoT).' Brand memo Section 3/Section 6: 17+ real deployments (Angers, Porto, Lure, Boston) are all physical-sensor contexts.</p>
         <h4>2. Constraint extraction</h4>
         <p>Regulatory recipe serves deployers managing physical public-space technology. The deployment track determines the accountability architecture.</p>
         <h4>3. Collision / picturability test</h4>
-        <p>Physical Sensors passes — matches 17+ real deployments. Digital Channels fails for regulatory — deployers manage physical infrastructure. AI/Decision Engines fails — brand memo §3: 'AI track message map is structurally blank.'</p>
+        <p>Physical Sensors passes — matches 17+ real deployments. Digital Channels fails for regulatory — deployers manage physical infrastructure. AI/Decision Engines fails — brand memo Section 3: 'AI track message map is structurally blank.'</p>
         <h4>4. Geometry / scale / rendering test</h4>
-        <p>Physical sensor deployment requires: spatial signage (§18 R=45mm), physical-to-digital QR gateway (§15 Process var 3), ISO 3864 co-existence (§20).</p>
+        <p>Physical sensor deployment requires: spatial signage (Section 18 R=45mm), physical-to-digital QR gateway (Section 15 Process var 3), ISO 3864 co-existence (Section 20).</p>
         <h4>5. Primitive confirmation</h4>
         <p>Physical Sensors is the deployment track primitive for the Regulatory recipe because it matches real-world deployments and grounds every downstream visual decision.</p>
       </div>
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="108.0,55.0 99.0,70.6 81.0,70.6 72.0,55.0 81.0,39.4 99.0,39.4" fill="none" stroke="#002684" stroke-width="1"/><polygon points="158.0,55.0 149.0,70.6 131.0,70.6 122.0,55.0 131.0,39.4 149.0,39.4" fill="none" stroke="#002684" stroke-width="1"/><polygon points="133.0,90.0 124.0,105.6 106.0,105.6 97.0,90.0 106.0,74.4 124.0,74.4" fill="none" stroke="#002684" stroke-width="1"/><rect x="160" y="80" width="40" height="30" rx="2" fill="none" stroke="#ced4da"/><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Full panel</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip chrome</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="358.0,55.0 349.0,70.6 331.0,70.6 322.0,55.0 331.0,39.4 349.0,39.4" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><polygon points="408.0,55.0 399.0,70.6 381.0,70.6 372.0,55.0 381.0,39.4 399.0,39.4" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><polygon points="383.0,90.0 374.0,105.6 356.0,105.6 347.0,90.0 356.0,74.4 374.0,74.4" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip detail</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><polygon points="660.0,80.0 645.0,106.0 615.0,106.0 600.0,80.0 615.0,54.0 645.0,54.0" fill="none" stroke="#002684" stroke-width="2.5"/><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Core element</text></g></svg><figcaption>Physical → strip digital → signage.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.7 (two-track fork treatment). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.7 (two-track fork treatment). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="16-semantic-morphology.html">§16 Semantic Box</a></li>
-          <li>Brand memo §3/§6</li>
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
+          <li><a href="16-semantic-morphology.html">Section 16 Semantic Box</a></li>
+          <li>Brand memo Section 3/Section 6</li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
         </ul>
       </details>
     </div>
@@ -1299,7 +1298,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§16 Posture B: 'Digital Channels — Background code, databases, digital networks.' Brand memo §3: Technical Evaluator needs 'clean, well-documented, copy-pasteable' interaction.</p>
+        <p>Section 16 Posture B: 'Digital Channels — Background code, databases, digital networks.' Brand memo Section 3: Technical Evaluator needs 'clean, well-documented, copy-pasteable' interaction.</p>
         <h4>2. Constraint extraction</h4>
         <p>Maker recipe serves developers integrating DTPR programmatically. Deployment track is digital — API connections, data pipelines, code integrations.</p>
         <h4>3. Collision / picturability test</h4>
@@ -1312,13 +1311,13 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="108.0,55.0 99.0,70.6 81.0,70.6 72.0,55.0 81.0,39.4 99.0,39.4" fill="none" stroke="#002684" stroke-width="1"/><polygon points="158.0,55.0 149.0,70.6 131.0,70.6 122.0,55.0 131.0,39.4 149.0,39.4" fill="none" stroke="#002684" stroke-width="1"/><polygon points="133.0,90.0 124.0,105.6 106.0,105.6 97.0,90.0 106.0,74.4 124.0,74.4" fill="none" stroke="#002684" stroke-width="1"/><rect x="160" y="80" width="40" height="30" rx="2" fill="none" stroke="#ced4da"/><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Full panel</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip chrome</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="358.0,55.0 349.0,70.6 331.0,70.6 322.0,55.0 331.0,39.4 349.0,39.4" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><polygon points="408.0,55.0 399.0,70.6 381.0,70.6 372.0,55.0 381.0,39.4 399.0,39.4" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><polygon points="383.0,90.0 374.0,105.6 356.0,105.6 347.0,90.0 356.0,74.4 374.0,74.4" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip detail</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><polygon points="660.0,80.0 645.0,106.0 615.0,106.0 600.0,80.0 615.0,54.0 645.0,54.0" fill="none" stroke="#002684" stroke-width="2.5"/><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Core element</text></g></svg><figcaption>Digital → strip physical → API.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.7 (two-track fork treatment). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.7 (two-track fork treatment). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="16-semantic-morphology.html">§16 Semantic Box</a></li>
-          <li>Brand memo §3</li>
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
+          <li><a href="16-semantic-morphology.html">Section 16 Semantic Box</a></li>
+          <li>Brand memo Section 3</li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
         </ul>
       </details>
     </div>
@@ -1327,7 +1326,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§16 Posture D: 'Combined Hybrid — Connected physical-digital-AI systems.' Brand memo §3: two-track fork recommendation is '(a) one brand, named surfaces.'</p>
+        <p>Section 16 Posture D: 'Combined Hybrid — Connected physical-digital-AI systems.' Brand memo Section 3: two-track fork recommendation is '(a) one brand, named surfaces.'</p>
         <h4>2. Constraint extraction</h4>
         <p>Commons recipe serves audiences who encounter both physical (signage scans) and digital (feedback portals) surfaces. Track is hybrid.</p>
         <h4>3. Collision / picturability test</h4>
@@ -1340,13 +1339,13 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="108.0,55.0 99.0,70.6 81.0,70.6 72.0,55.0 81.0,39.4 99.0,39.4" fill="none" stroke="#002684" stroke-width="1"/><polygon points="158.0,55.0 149.0,70.6 131.0,70.6 122.0,55.0 131.0,39.4 149.0,39.4" fill="none" stroke="#002684" stroke-width="1"/><polygon points="133.0,90.0 124.0,105.6 106.0,105.6 97.0,90.0 106.0,74.4 124.0,74.4" fill="none" stroke="#002684" stroke-width="1"/><rect x="160" y="80" width="40" height="30" rx="2" fill="none" stroke="#ced4da"/><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Full panel</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip chrome</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="358.0,55.0 349.0,70.6 331.0,70.6 322.0,55.0 331.0,39.4 349.0,39.4" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><polygon points="408.0,55.0 399.0,70.6 381.0,70.6 372.0,55.0 381.0,39.4 399.0,39.4" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><polygon points="383.0,90.0 374.0,105.6 356.0,105.6 347.0,90.0 356.0,74.4 374.0,74.4" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip detail</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><polygon points="660.0,80.0 645.0,106.0 615.0,106.0 600.0,80.0 615.0,54.0 645.0,54.0" fill="none" stroke="#002684" stroke-width="2.5"/><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Core element</text></g></svg><figcaption>Physical + digital → hybrid.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.7 (two-track fork treatment). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.7 (two-track fork treatment). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="16-semantic-morphology.html">§16 Semantic Box</a></li>
-          <li>Brand memo §3</li>
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
+          <li><a href="16-semantic-morphology.html">Section 16 Semantic Box</a></li>
+          <li>Brand memo Section 3</li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
         </ul>
       </details>
     </div>
@@ -1358,26 +1357,26 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§13 Postures maps Posture D to 'Deployer Compliance.' Brand memo §3: 'Pragmatic Deployer — a standard I can adopt without burning my city. Needs: credible, low-risk, regulator-friendly.'</p>
+        <p>Section 13 Postures maps Posture D to 'Deployer Compliance.' Brand memo Section 3: 'Pragmatic Deployer — a standard I can adopt without burning my city. Needs: credible, low-risk, regulator-friendly.'</p>
         <h4>2. Constraint extraction</h4>
         <p>Regulatory recipe must speak deployer's language: risk mitigation, compliance, procurement-ready. Brand must feel 'credible, low-risk, regulator-friendly.'</p>
         <h4>3. Collision / picturability test</h4>
         <p>Deployer passes — matches persona who procures and installs signage. Resident fails — too citizen-focused. Developer fails — technical register doesn't serve compliance.</p>
         <h4>4. Geometry / scale / rendering test</h4>
-        <p>Deployer surfaces use: compliance checklist language, ISO references, deployment-count proof points. Voice: 'accountable before impressive' per brand memo §4.</p>
+        <p>Deployer surfaces use: compliance checklist language, ISO references, deployment-count proof points. Voice: 'accountable before impressive' per brand memo Section 4.</p>
         <h4>5. Primitive confirmation</h4>
         <p>Deployer is the audience register primitive for the Regulatory recipe because it serves the persona who procures and deploys DTPR signage.</p>
       </div>
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="50" y="30" width="160" height="100" fill="#f8f9fa" stroke="#ced4da" rx="4"/><line x1="50" y1="100" x2="210" y2="100" stroke="#ced4da"/><rect x="60" y="105" width="30" height="20" fill="#002684"/><text x="100" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by</text><text x="155" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#002684" text-anchor="middle">Helpful Places</text><text x="60" y="45" font-family="sans-serif" font-size="10" fill="#002684" font-weight="bold">DTPR</text><text x="60" y="60" font-family="sans-serif" font-size="7" fill="#666">Open standard</text><rect x="140" y="35" width="25" height="20" fill="#c6e93d" opacity="0.3" rx="2"/><text x="152" y="50" font-family="monospace" font-size="7" font-weight="bold" fill="#002684" text-anchor="middle">CC</text><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Footer</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip chrome</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><line x1="300" y1="100" x2="460" y2="100" stroke="#ced4da"/><rect x="310" y="105" width="30" height="20" fill="none" stroke="#ced4da" stroke-dasharray="2,2"/><text x="370" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by HP</text><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip content</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><text x="500" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip logo</text><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><text x="630" y="75" font-family="sans-serif" font-size="9" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by</text><text x="630" y="95" font-family="sans-serif" font-size="11" font-weight="bold" fill="#002684" text-anchor="middle">Helpful Places</text><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Signature</text></g></svg><figcaption>Deployer page → compliance register.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.4 (audience model reconciliation). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.4 (audience model reconciliation). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="13-strategic-postures.html">§13 Postures</a></li>
-          <li>Brand memo §3/§4</li>
-          <li><a href="16-semantic-morphology.html">§16 Semantic Box</a></li>
+          <li><a href="13-strategic-postures.html">Section 13 Postures</a></li>
+          <li>Brand memo Section 3/Section 4</li>
+          <li><a href="16-semantic-morphology.html">Section 16 Semantic Box</a></li>
         </ul>
       </details>
     </div>
@@ -1386,26 +1385,26 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§13 maps Posture B to 'Developer Blueprint.' Brand memo §3: 'Technical Evaluator — can I integrate this cleanly? Needs: clean, well-documented, copy-pasteable.'</p>
+        <p>Section 13 maps Posture B to 'Developer Blueprint.' Brand memo Section 3: 'Technical Evaluator — can I integrate this cleanly? Needs: clean, well-documented, copy-pasteable.'</p>
         <h4>2. Constraint extraction</h4>
         <p>Maker recipe must speak developer's language: API specs, code examples, SDKs. Brand must feel 'clean, well-documented, copy-pasteable.'</p>
         <h4>3. Collision / picturability test</h4>
         <p>Developer passes — matches integrator persona. Deployer fails — compliance register doesn't serve code-first evaluation. Resident fails — plain-language wrong for technical assessment.</p>
         <h4>4. Geometry / scale / rendering test</h4>
-        <p>Developer surfaces use: API reference, code blocks (JetBrains Mono), quickstart, GitHub links. Voice: 'specific before abstract' per brand memo §4.</p>
+        <p>Developer surfaces use: API reference, code blocks (JetBrains Mono), quickstart, GitHub links. Voice: 'specific before abstract' per brand memo Section 4.</p>
         <h4>5. Primitive confirmation</h4>
         <p>Developer is the audience register primitive for the Maker recipe because it serves the persona who evaluates and integrates DTPR programmatically.</p>
       </div>
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="50" y="30" width="160" height="100" fill="#f8f9fa" stroke="#ced4da" rx="4"/><line x1="50" y1="100" x2="210" y2="100" stroke="#ced4da"/><rect x="60" y="105" width="30" height="20" fill="#002684"/><text x="100" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by</text><text x="155" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#002684" text-anchor="middle">Helpful Places</text><text x="60" y="45" font-family="sans-serif" font-size="10" fill="#002684" font-weight="bold">DTPR</text><text x="60" y="60" font-family="sans-serif" font-size="7" fill="#666">Open standard</text><rect x="140" y="35" width="25" height="20" fill="#c6e93d" opacity="0.3" rx="2"/><text x="152" y="50" font-family="monospace" font-size="7" font-weight="bold" fill="#002684" text-anchor="middle">CC</text><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Footer</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip chrome</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><line x1="300" y1="100" x2="460" y2="100" stroke="#ced4da"/><rect x="310" y="105" width="30" height="20" fill="none" stroke="#ced4da" stroke-dasharray="2,2"/><text x="370" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by HP</text><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip content</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><text x="500" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip logo</text><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><text x="630" y="75" font-family="sans-serif" font-size="9" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by</text><text x="630" y="95" font-family="sans-serif" font-size="11" font-weight="bold" fill="#002684" text-anchor="middle">Helpful Places</text><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Signature</text></g></svg><figcaption>Portal → protocol register.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.4 (audience model reconciliation). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.4 (audience model reconciliation). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="13-strategic-postures.html">§13 Postures</a></li>
-          <li>Brand memo §3/§4</li>
-          <li><a href="16-semantic-morphology.html">§16 Semantic Box</a></li>
+          <li><a href="13-strategic-postures.html">Section 13 Postures</a></li>
+          <li>Brand memo Section 3/Section 4</li>
+          <li><a href="16-semantic-morphology.html">Section 16 Semantic Box</a></li>
         </ul>
       </details>
     </div>
@@ -1414,7 +1413,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§13 maps Posture A to 'Citizen Utility.' Brand memo §3: 'Impacted Citizen — tell me what this thing is and how to push back. Needs: calm, mobile-first, non-coercive.'</p>
+        <p>Section 13 maps Posture A to 'Citizen Utility.' Brand memo Section 3: 'Impacted Citizen — tell me what this thing is and how to push back. Needs: calm, mobile-first, non-coercive.'</p>
         <h4>2. Constraint extraction</h4>
         <p>Commons recipe must speak citizen's language: plain-language, non-technical, calm. Brand must feel 'calm, non-coercive, respectful of low trust.'</p>
         <h4>3. Collision / picturability test</h4>
@@ -1427,13 +1426,13 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="50" y="30" width="160" height="100" fill="#f8f9fa" stroke="#ced4da" rx="4"/><line x1="50" y1="100" x2="210" y2="100" stroke="#ced4da"/><rect x="60" y="105" width="30" height="20" fill="#002684"/><text x="100" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by</text><text x="155" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#002684" text-anchor="middle">Helpful Places</text><text x="60" y="45" font-family="sans-serif" font-size="10" fill="#002684" font-weight="bold">DTPR</text><text x="60" y="60" font-family="sans-serif" font-size="7" fill="#666">Open standard</text><rect x="140" y="35" width="25" height="20" fill="#c6e93d" opacity="0.3" rx="2"/><text x="152" y="50" font-family="monospace" font-size="7" font-weight="bold" fill="#002684" text-anchor="middle">CC</text><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Footer</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip chrome</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><line x1="300" y1="100" x2="460" y2="100" stroke="#ced4da"/><rect x="310" y="105" width="30" height="20" fill="none" stroke="#ced4da" stroke-dasharray="2,2"/><text x="370" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by HP</text><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip content</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><text x="500" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip logo</text><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><text x="630" y="75" font-family="sans-serif" font-size="9" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by</text><text x="630" y="95" font-family="sans-serif" font-size="11" font-weight="bold" fill="#002684" text-anchor="middle">Helpful Places</text><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Signature</text></g></svg><figcaption>Citizen page → plain-language.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.4 (audience model reconciliation). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.4 (audience model reconciliation). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="13-strategic-postures.html">§13 Postures</a></li>
-          <li>Brand memo §3/§4</li>
-          <li><a href="16-semantic-morphology.html">§16 Semantic Box</a></li>
+          <li><a href="13-strategic-postures.html">Section 13 Postures</a></li>
+          <li>Brand memo Section 3/Section 4</li>
+          <li><a href="16-semantic-morphology.html">Section 16 Semantic Box</a></li>
         </ul>
       </details>
     </div>
@@ -1445,7 +1444,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§09 Iconography documents the 7-question taxonomy structuring DTPR disclosure. Brand memo §1: 'nutrition label for technology in public space.' The 7Q structure is the categorical format.</p>
+        <p>Section 09 Iconography documents the 7-question taxonomy structuring DTPR disclosure. Brand memo Section 1: 'nutrition label for technology in public space.' The 7Q structure is the categorical format.</p>
         <h4>2. Constraint extraction</h4>
         <p>Regulatory recipe needs standardized, comparable disclosure. The 7Q taxonomy provides categorical structure that compliance officers can audit.</p>
         <h4>3. Collision / picturability test</h4>
@@ -1458,13 +1457,13 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="84.0,45.0 77.0,57.1 63.0,57.1 56.0,45.0 63.0,32.9 77.0,32.9" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/><text x="70" y="48" font-family="monospace" font-size="6" font-weight="bold" fill="#002684" text-anchor="middle">Q1</text><polygon points="122.0,45.0 115.0,57.1 101.0,57.1 94.0,45.0 101.0,32.9 115.0,32.9" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/><text x="108" y="48" font-family="monospace" font-size="6" font-weight="bold" fill="#002684" text-anchor="middle">Q2</text><polygon points="160.0,45.0 153.0,57.1 139.0,57.1 132.0,45.0 139.0,32.9 153.0,32.9" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/><text x="146" y="48" font-family="monospace" font-size="6" font-weight="bold" fill="#002684" text-anchor="middle">Q3</text><polygon points="198.0,45.0 191.0,57.1 177.0,57.1 170.0,45.0 177.0,32.9 191.0,32.9" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/><text x="184" y="48" font-family="monospace" font-size="6" font-weight="bold" fill="#002684" text-anchor="middle">Q4</text><polygon points="84.0,85.0 77.0,97.1 63.0,97.1 56.0,85.0 63.0,72.9 77.0,72.9" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/><text x="70" y="88" font-family="monospace" font-size="6" font-weight="bold" fill="#002684" text-anchor="middle">Q5</text><polygon points="122.0,85.0 115.0,97.1 101.0,97.1 94.0,85.0 101.0,72.9 115.0,72.9" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/><text x="108" y="88" font-family="monospace" font-size="6" font-weight="bold" fill="#002684" text-anchor="middle">Q6</text><polygon points="160.0,85.0 153.0,97.1 139.0,97.1 132.0,85.0 139.0,72.9 153.0,72.9" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/><text x="146" y="88" font-family="monospace" font-size="6" font-weight="bold" fill="#002684" text-anchor="middle">Q7</text><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: 7Q panel</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip text</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="334.0,45.0 327.0,57.1 313.0,57.1 306.0,45.0 313.0,32.9 327.0,32.9" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><polygon points="372.0,45.0 365.0,57.1 351.0,57.1 344.0,45.0 351.0,32.9 365.0,32.9" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><polygon points="410.0,45.0 403.0,57.1 389.0,57.1 382.0,45.0 389.0,32.9 403.0,32.9" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><polygon points="448.0,45.0 441.0,57.1 427.0,57.1 420.0,45.0 427.0,32.9 441.0,32.9" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><polygon points="334.0,85.0 327.0,97.1 313.0,97.1 306.0,85.0 313.0,72.9 327.0,72.9" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><polygon points="372.0,85.0 365.0,97.1 351.0,97.1 344.0,85.0 351.0,72.9 365.0,72.9" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><polygon points="410.0,85.0 403.0,97.1 389.0,97.1 382.0,85.0 389.0,72.9 403.0,72.9" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip detail</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><polygon points="584.0,45.0 577.0,57.1 563.0,57.1 556.0,45.0 563.0,32.9 577.0,32.9" fill="none" stroke="#002684" stroke-width="1.5"/><polygon points="622.0,45.0 615.0,57.1 601.0,57.1 594.0,45.0 601.0,32.9 615.0,32.9" fill="none" stroke="#002684" stroke-width="1.5"/><polygon points="660.0,45.0 653.0,57.1 639.0,57.1 632.0,45.0 639.0,32.9 653.0,32.9" fill="none" stroke="#002684" stroke-width="1.5"/><polygon points="698.0,45.0 691.0,57.1 677.0,57.1 670.0,45.0 677.0,32.9 691.0,32.9" fill="none" stroke="#002684" stroke-width="1.5"/><polygon points="584.0,85.0 577.0,97.1 563.0,97.1 556.0,85.0 563.0,72.9 577.0,72.9" fill="none" stroke="#002684" stroke-width="1.5"/><polygon points="622.0,85.0 615.0,97.1 601.0,97.1 594.0,85.0 601.0,72.9 615.0,72.9" fill="none" stroke="#002684" stroke-width="1.5"/><polygon points="660.0,85.0 653.0,97.1 639.0,97.1 632.0,85.0 639.0,72.9 653.0,72.9" fill="none" stroke="#002684" stroke-width="1.5"/><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Structure</text></g></svg><figcaption>7 hex answers → strip detail → structure.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.10 (iconographic rules). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.10 (iconographic rules). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="09-iconography.html">§09 Iconography</a></li>
-          <li><a href="16-semantic-morphology.html">§16 Semantic Box</a></li>
-          <li>Brand memo §1</li>
+          <li><a href="09-iconography.html">Section 09 Iconography</a></li>
+          <li><a href="16-semantic-morphology.html">Section 16 Semantic Box</a></li>
+          <li>Brand memo Section 1</li>
         </ul>
       </details>
     </div>
@@ -1473,7 +1472,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§16 Posture D: 'Dynamic Explorer — Interactive search and filter database.' Developer-facing taxonomy explorer allows filtering full taxonomy interactively.</p>
+        <p>Section 16 Posture D: 'Dynamic Explorer — Interactive search and filter database.' Developer-facing taxonomy explorer allows filtering full taxonomy interactively.</p>
         <h4>2. Constraint extraction</h4>
         <p>Maker recipe needs interactive disclosure: developers want to query, filter, explore the taxonomy, not read fixed panel.</p>
         <h4>3. Collision / picturability test</h4>
@@ -1490,9 +1489,9 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="16-semantic-morphology.html">§16 Semantic Box</a></li>
-          <li><a href="09-iconography.html">§09 Iconography</a></li>
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
+          <li><a href="16-semantic-morphology.html">Section 16 Semantic Box</a></li>
+          <li><a href="09-iconography.html">Section 09 Iconography</a></li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
         </ul>
       </details>
     </div>
@@ -1501,7 +1500,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§09 documents same 7-question taxonomy. For citizens, 7Qs rendered icon-forward, not text-heavy. Brand memo §1: 'nutrition label' — the 7 questions ARE the nutrition label.</p>
+        <p>Section 09 documents same 7-question taxonomy. For citizens, 7Qs rendered icon-forward, not text-heavy. Brand memo Section 1: 'nutrition label' — the 7 questions ARE the nutrition label.</p>
         <h4>2. Constraint extraction</h4>
         <p>Commons recipe needs icon-forward disclosure: citizens understand icons faster than text. 7Q structure provides complete-but-simple overview.</p>
         <h4>3. Collision / picturability test</h4>
@@ -1514,13 +1513,13 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="84.0,45.0 77.0,57.1 63.0,57.1 56.0,45.0 63.0,32.9 77.0,32.9" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/><polygon points="122.0,45.0 115.0,57.1 101.0,57.1 94.0,45.0 101.0,32.9 115.0,32.9" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/><polygon points="160.0,45.0 153.0,57.1 139.0,57.1 132.0,45.0 139.0,32.9 153.0,32.9" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/><polygon points="198.0,45.0 191.0,57.1 177.0,57.1 170.0,45.0 177.0,32.9 191.0,32.9" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/><polygon points="84.0,85.0 77.0,97.1 63.0,97.1 56.0,85.0 63.0,72.9 77.0,72.9" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/><polygon points="122.0,85.0 115.0,97.1 101.0,97.1 94.0,85.0 101.0,72.9 115.0,72.9" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/><polygon points="160.0,85.0 153.0,97.1 139.0,97.1 132.0,85.0 139.0,72.9 153.0,72.9" fill="rgba(0,38,132,0.06)" stroke="#002684" stroke-width="1"/><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: 7Q panel</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip text</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><polygon points="334.0,45.0 327.0,57.1 313.0,57.1 306.0,45.0 313.0,32.9 327.0,32.9" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><polygon points="372.0,45.0 365.0,57.1 351.0,57.1 344.0,45.0 351.0,32.9 365.0,32.9" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><polygon points="410.0,45.0 403.0,57.1 389.0,57.1 382.0,45.0 389.0,32.9 403.0,32.9" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><polygon points="448.0,45.0 441.0,57.1 427.0,57.1 420.0,45.0 427.0,32.9 441.0,32.9" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><polygon points="334.0,85.0 327.0,97.1 313.0,97.1 306.0,85.0 313.0,72.9 327.0,72.9" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><polygon points="372.0,85.0 365.0,97.1 351.0,97.1 344.0,85.0 351.0,72.9 365.0,72.9" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><polygon points="410.0,85.0 403.0,97.1 389.0,97.1 382.0,85.0 389.0,72.9 403.0,72.9" fill="none" stroke="#3b85d4" stroke-width="0.8" stroke-dasharray="3,2"/><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip detail</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><polygon points="584.0,45.0 577.0,57.1 563.0,57.1 556.0,45.0 563.0,32.9 577.0,32.9" fill="none" stroke="#002684" stroke-width="1.5"/><polygon points="622.0,45.0 615.0,57.1 601.0,57.1 594.0,45.0 601.0,32.9 615.0,32.9" fill="none" stroke="#002684" stroke-width="1.5"/><polygon points="660.0,45.0 653.0,57.1 639.0,57.1 632.0,45.0 639.0,32.9 653.0,32.9" fill="none" stroke="#002684" stroke-width="1.5"/><polygon points="698.0,45.0 691.0,57.1 677.0,57.1 670.0,45.0 677.0,32.9 691.0,32.9" fill="none" stroke="#002684" stroke-width="1.5"/><polygon points="584.0,85.0 577.0,97.1 563.0,97.1 556.0,85.0 563.0,72.9 577.0,72.9" fill="none" stroke="#002684" stroke-width="1.5"/><polygon points="622.0,85.0 615.0,97.1 601.0,97.1 594.0,85.0 601.0,72.9 615.0,72.9" fill="none" stroke="#002684" stroke-width="1.5"/><polygon points="660.0,85.0 653.0,97.1 639.0,97.1 632.0,85.0 639.0,72.9 653.0,72.9" fill="none" stroke="#002684" stroke-width="1.5"/><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Structure</text></g></svg><figcaption>7 icons → strip text → icon structure.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.10 (iconographic rules). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.10 (iconographic rules). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="09-iconography.html">§09 Iconography</a></li>
-          <li>Brand memo §1</li>
-          <li><a href="16-semantic-morphology.html">§16 Semantic Box</a></li>
+          <li><a href="09-iconography.html">Section 09 Iconography</a></li>
+          <li>Brand memo Section 1</li>
+          <li><a href="16-semantic-morphology.html">Section 16 Semantic Box</a></li>
         </ul>
       </details>
     </div>
@@ -1529,14 +1528,14 @@
     <h2>Semantic Variable 4: Feedback Loop</h2>
     <div class="recipe-derivation regulatory" id="sem-var-4-regulatory">
       <h3>Regulatory recipe — selection: <span class="chip chip-d">D</span> Issue Reporting</h3>
-      <p class="thin-evidence-flag">⚠ Thin corpus evidence — brand memo §3c: 'the current site inventory found zero feedback forms or intercept surveys anywhere in the ecosystem. The Feedback Hub tool is aspirational, not live.'</p>
+      <p class="thin-evidence-flag">⚠ Thin corpus evidence — brand memo Section 3c: 'the current site inventory found zero feedback forms or intercept surveys anywhere in the ecosystem. The Feedback Hub tool is aspirational, not live.'</p>
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§16 Posture D: 'Issue Reporting — Formalized discrepancy tickets for standard audits.' Brand memo §3c: zero feedback forms exist. Issue Reporting is aspirational.</p>
+        <p>Section 16 Posture D: 'Issue Reporting — Formalized discrepancy tickets for standard audits.' Brand memo Section 3c: zero feedback forms exist. Issue Reporting is aspirational.</p>
         <h4>2. Constraint extraction</h4>
         <p>Regulatory recipe needs formal, auditable feedback: discrepancy reports tracked, verified, resolved. Not casual ratings — formal tickets.</p>
         <h4>3. Collision / picturability test</h4>
-        <p>Issue Reporting passes — formal tickets serve compliance. Anonymous Rating fails — too informal. However: ALL feedback mechanisms are aspirational (brand memo §3c).</p>
+        <p>Issue Reporting passes — formal tickets serve compliance. Anonymous Rating fails — too informal. However: ALL feedback mechanisms are aspirational (brand memo Section 3c).</p>
         <h4>4. Geometry / scale / rendering test</h4>
         <p>Issue reporting would render as: form-based submission, ticket tracking, status updates. Architecture exists in semantic box but implementation does not.</p>
         <h4>5. Primitive confirmation</h4>
@@ -1545,25 +1544,25 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="60" y="35" width="140" height="80" rx="4" fill="#fff" stroke="#002684"/><rect x="70" y="45" width="80" height="12" rx="2" fill="#002684"/><text x="80" y="55" font-family="monospace" font-size="7" font-weight="bold" fill="#fff" text-anchor="middle">ISSUE REPORT</text><line x1="70" y1="65" x2="190" y2="65" stroke="#ced4da"/><line x1="70" y1="75" x2="170" y2="75" stroke="#ced4da"/><circle cx="180" cy="95" r="10" fill="#f04a4a"/><text x="180" y="99" font-family="sans-serif" font-size="10" font-weight="bold" fill="#fff" text-anchor="middle">!</text><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Feedback UI</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip UI</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="310" y="35" width="140" height="80" rx="4" fill="none" stroke="#ced4da" stroke-dasharray="3,2"/><circle cx="380" cy="75" r="12" fill="none" stroke="#f04a4a" stroke-width="1.5" stroke-dasharray="3,2"/><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip chrome</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><circle cx="630" cy="75" r="15" fill="none" stroke="#f04a4a" stroke-width="2.5"/><text x="630" y="80" font-family="sans-serif" font-size="14" font-weight="bold" fill="#f04a4a" text-anchor="middle">!</text><text x="630" y="110" font-family="monospace" font-size="7" font-weight="bold" fill="#002684" text-anchor="middle">report channel</text><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Channel</text></g></svg><figcaption>Issue report → strip chrome → channel.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ The Feedback Hub is listed as a tool but does not exist. <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo §3c.</a></p>
+      <p class="open-question-link">⚠ The Feedback Hub is listed as a tool but does not exist. <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo Section 3c.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li>Brand memo §3c/§7</li>
-          <li><a href="16-semantic-morphology.html">§16 Semantic Box</a></li>
+          <li>Brand memo Section 3c/Section 7</li>
+          <li><a href="16-semantic-morphology.html">Section 16 Semantic Box</a></li>
         </ul>
       </details>
     </div>
     <div class="recipe-derivation maker" id="sem-var-4-maker">
       <h3>Maker recipe — selection: <span class="chip chip-a">A</span> Anonymous Rating</h3>
-      <p class="thin-evidence-flag">⚠ Thin corpus evidence — brand memo §3c: zero feedback forms exist. The Feedback Hub tool is aspirational, not live.</p>
+      <p class="thin-evidence-flag">⚠ Thin corpus evidence — brand memo Section 3c: zero feedback forms exist. The Feedback Hub tool is aspirational, not live.</p>
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§16 Posture A: 'Anonymous Rating — Direct emoji/rating input on scans.' Brand memo §3c: zero feedback forms exist.</p>
+        <p>Section 16 Posture A: 'Anonymous Rating — Direct emoji/rating input on scans.' Brand memo Section 3c: zero feedback forms exist.</p>
         <h4>2. Constraint extraction</h4>
         <p>Maker recipe needs lightweight feedback: developers want to signal quality without formal tickets. Rating is faster than report.</p>
         <h4>3. Collision / picturability test</h4>
-        <p>Anonymous Rating passes — lightweight signal suits developer attention. Issue Reporting fails — too heavy. All aspirational (brand memo §3c).</p>
+        <p>Anonymous Rating passes — lightweight signal suits developer attention. Issue Reporting fails — too heavy. All aspirational (brand memo Section 3c).</p>
         <h4>4. Geometry / scale / rendering test</h4>
         <p>Anonymous rating would render as: emoji-scale or star-rating widget. No login required. Aggregated ratings displayed. Implementation does not exist.</p>
         <h4>5. Primitive confirmation</h4>
@@ -1572,25 +1571,25 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><text x="80" y="80" font-family="sans-serif" font-size="20" fill="#FFC107">★</text><text x="105" y="80" font-family="sans-serif" font-size="20" fill="#FFC107">★</text><text x="130" y="80" font-family="sans-serif" font-size="20" fill="#FFC107">★</text><text x="155" y="80" font-family="sans-serif" font-size="20" fill="#FFC107">★</text><text x="180" y="80" font-family="sans-serif" font-size="20" fill="#ced4da">☆</text><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Feedback UI</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip UI</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><text x="330" y="80" font-family="sans-serif" font-size="20" fill="#ced4da">☆</text><text x="355" y="80" font-family="sans-serif" font-size="20" fill="#ced4da">☆</text><text x="380" y="80" font-family="sans-serif" font-size="20" fill="#ced4da">☆</text><text x="405" y="80" font-family="sans-serif" font-size="20" fill="#ced4da">☆</text><text x="430" y="80" font-family="sans-serif" font-size="20" fill="#ced4da">☆</text><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip chrome</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><text x="630" y="80" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#c6e93d">★</text><text x="630" y="105" font-family="monospace" font-size="7" font-weight="bold" fill="#002684" text-anchor="middle">signal channel</text><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Channel</text></g></svg><figcaption>Rating widget → strip → signal channel.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ The Feedback Hub is listed as a tool but does not exist. <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo §3c.</a></p>
+      <p class="open-question-link">⚠ The Feedback Hub is listed as a tool but does not exist. <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo Section 3c.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li>Brand memo §3c</li>
-          <li><a href="16-semantic-morphology.html">§16 Semantic Box</a></li>
+          <li>Brand memo Section 3c</li>
+          <li><a href="16-semantic-morphology.html">Section 16 Semantic Box</a></li>
         </ul>
       </details>
     </div>
     <div class="recipe-derivation commons" id="sem-var-4-commons">
       <h3>Commons recipe — selection: <span class="chip chip-b">B</span> Public Comments</h3>
-      <p class="thin-evidence-flag">⚠ Thin corpus evidence — brand memo §3c: zero feedback forms exist. The Feedback Hub tool is aspirational, not live.</p>
+      <p class="thin-evidence-flag">⚠ Thin corpus evidence — brand memo Section 3c: zero feedback forms exist. The Feedback Hub tool is aspirational, not live.</p>
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§16 Posture B: 'Public Comments — Mapping spatial resident feedback pins.' Brand memo §3c: zero feedback forms exist.</p>
+        <p>Section 16 Posture B: 'Public Comments — Mapping spatial resident feedback pins.' Brand memo Section 3c: zero feedback forms exist.</p>
         <h4>2. Constraint extraction</h4>
-        <p>Commons recipe needs citizen-voice feedback: residents want to report issues, share concerns, see that input matters. Brand memo §3: 'tell me how to push back.'</p>
+        <p>Commons recipe needs citizen-voice feedback: residents want to report issues, share concerns, see that input matters. Brand memo Section 3: 'tell me how to push back.'</p>
         <h4>3. Collision / picturability test</h4>
-        <p>Public Comments passes — spatial feedback serves citizen advocacy. Anonymous Rating fails — too individualistic. All aspirational (brand memo §3c).</p>
+        <p>Public Comments passes — spatial feedback serves citizen advocacy. Anonymous Rating fails — too individualistic. All aspirational (brand memo Section 3c).</p>
         <h4>4. Geometry / scale / rendering test</h4>
         <p>Public comments would render as: map-based feedback pins, comment threads on deployment locations. Citizens tag physical location. Implementation does not exist.</p>
         <h4>5. Primitive confirmation</h4>
@@ -1599,12 +1598,12 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><path d="M 70 50 Q 130 30 190 50 Q 200 80 180 100 L 170 90 Q 120 95 80 80 Z" fill="rgba(0,38,132,0.1)" stroke="#002684"/><circle cx="130" cy="65" r="6" fill="#002684"/><rect x="140" y="40" width="30" height="12" fill="#c6e93d" rx="2" stroke="#002684" stroke-width="0.5"/><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Feedback UI</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip UI</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><path d="M 320 50 Q 380 30 440 50 Q 450 80 430 100 L 420 90 Q 370 95 330 80 Z" fill="none" stroke="#3b85d4" stroke-width="1" stroke-dasharray="3,2"/><circle cx="380" cy="65" r="6" fill="none" stroke="#ced4da" stroke-dasharray="2,2"/><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip chrome</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><path d="M 570 50 Q 630 30 690 50 Q 700 80 680 100 L 670 90 Q 620 95 580 80 Z" fill="none" stroke="#002684" stroke-width="2"/><text x="630" y="125" font-family="monospace" font-size="7" font-weight="bold" fill="#002684" text-anchor="middle">comment channel</text><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Channel</text></g></svg><figcaption>Feedback map → strip pins → comment channel.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ The Feedback Hub is listed as a tool but does not exist. <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo §3c.</a></p>
+      <p class="open-question-link">⚠ The Feedback Hub is listed as a tool but does not exist. <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo Section 3c.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li>Brand memo §3c/§3</li>
-          <li><a href="16-semantic-morphology.html">§16 Semantic Box</a></li>
+          <li>Brand memo Section 3c/Section 3</li>
+          <li><a href="16-semantic-morphology.html">Section 16 Semantic Box</a></li>
         </ul>
       </details>
     </div>
@@ -1616,11 +1615,11 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§06 Marks documents Helpful Places stewardship signature in every page footer. Brand memo §6: 'Helpful Places — founding steward, appears as trust signal.' Architecture: DTPR → HP → Clarable.</p>
+        <p>Section 06 Marks documents Helpful Places stewardship signature in every page footer. Brand memo Section 6: 'Helpful Places — founding steward, appears as trust signal.' Architecture: DTPR → HP → Clarable.</p>
         <h4>2. Constraint extraction</h4>
         <p>Regulatory recipe serves deployers who need to know 'who runs this?' Founding-steward signature provides accountability chain.</p>
         <h4>3. Collision / picturability test</h4>
-        <p>Founding Steward passes — HP signature already deployed in every footer (§06). Pure Commons fails for deployers — need named accountable entity. SaaS Co-Branded fails — brand memo §6: 'Clarable is technology, not brand.'</p>
+        <p>Founding Steward passes — HP signature already deployed in every footer (Section 06). Pure Commons fails for deployers — need named accountable entity. SaaS Co-Branded fails — brand memo Section 6: 'Clarable is technology, not brand.'</p>
         <h4>4. Geometry / scale / rendering test</h4>
         <p>Stewardship renders as: 'Stewarded by Helpful Places' in footer. CC BY 4.0 visible. Not 'a Helpful Places product.' Signature is trust signal, not co-brand.</p>
         <h4>5. Primitive confirmation</h4>
@@ -1629,13 +1628,13 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="50" y="30" width="160" height="100" fill="#f8f9fa" stroke="#ced4da" rx="4"/><line x1="50" y1="100" x2="210" y2="100" stroke="#ced4da"/><rect x="60" y="105" width="30" height="20" fill="#002684"/><text x="100" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by</text><text x="155" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#002684" text-anchor="middle">Helpful Places</text><text x="60" y="45" font-family="sans-serif" font-size="10" fill="#002684" font-weight="bold">DTPR</text><text x="60" y="60" font-family="sans-serif" font-size="7" fill="#666">Open standard</text><rect x="140" y="35" width="25" height="20" fill="#c6e93d" opacity="0.3" rx="2"/><text x="152" y="50" font-family="monospace" font-size="7" font-weight="bold" fill="#002684" text-anchor="middle">CC</text><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Footer</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip chrome</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><line x1="300" y1="100" x2="460" y2="100" stroke="#ced4da"/><rect x="310" y="105" width="30" height="20" fill="none" stroke="#ced4da" stroke-dasharray="2,2"/><text x="370" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by HP</text><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip content</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><text x="500" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip logo</text><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><text x="630" y="75" font-family="sans-serif" font-size="9" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by</text><text x="630" y="95" font-family="sans-serif" font-size="11" font-weight="bold" fill="#002684" text-anchor="middle">Helpful Places</text><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Signature</text></g></svg><figcaption>Footer → strip brands → HP signature.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.6 (Stewardship Model sign-off — proposed but not adopted). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.6 (Stewardship Model sign-off — proposed but not adopted). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="06-marks.html">§06 Marks</a></li>
-          <li>Brand memo §6</li>
-          <li><a href="16-semantic-morphology.html">§16 Semantic Box</a></li>
+          <li><a href="06-marks.html">Section 06 Marks</a></li>
+          <li>Brand memo Section 6</li>
+          <li><a href="16-semantic-morphology.html">Section 16 Semantic Box</a></li>
         </ul>
       </details>
     </div>
@@ -1644,7 +1643,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>Brand memo §6: 'DTPR is open-source, CC BY 4.0, community-owned.' Maker recipe serves open-source contributors who value community ownership.</p>
+        <p>Brand memo Section 6: 'DTPR is open-source, CC BY 4.0, community-owned.' Maker recipe serves open-source contributors who value community ownership.</p>
         <h4>2. Constraint extraction</h4>
         <p>Maker recipe must signal DTPR is community-owned, open-source, hackable. Stewardship framing emphasizes commons, not steward.</p>
         <h4>3. Collision / picturability test</h4>
@@ -1657,12 +1656,12 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="50" y="30" width="160" height="100" fill="#f8f9fa" stroke="#ced4da" rx="4"/><line x1="50" y1="100" x2="210" y2="100" stroke="#ced4da"/><rect x="60" y="105" width="30" height="20" fill="#002684"/><text x="100" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by</text><text x="155" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#002684" text-anchor="middle">Helpful Places</text><text x="60" y="45" font-family="sans-serif" font-size="10" fill="#002684" font-weight="bold">DTPR</text><text x="60" y="60" font-family="sans-serif" font-size="7" fill="#666">Open standard</text><rect x="140" y="35" width="25" height="20" fill="#c6e93d" opacity="0.3" rx="2"/><text x="152" y="50" font-family="monospace" font-size="7" font-weight="bold" fill="#002684" text-anchor="middle">CC</text><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Footer</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip chrome</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><line x1="300" y1="100" x2="460" y2="100" stroke="#ced4da"/><rect x="310" y="105" width="30" height="20" fill="none" stroke="#ced4da" stroke-dasharray="2,2"/><text x="370" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by HP</text><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip content</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><text x="500" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip logo</text><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><text x="630" y="75" font-family="sans-serif" font-size="9" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by</text><text x="630" y="95" font-family="sans-serif" font-size="11" font-weight="bold" fill="#002684" text-anchor="middle">Helpful Places</text><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Signature</text></g></svg><figcaption>Repo → strip HP → CC BY 4.0.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.6 (Stewardship Model sign-off). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.6 (Stewardship Model sign-off). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li>Brand memo §6</li>
-          <li><a href="16-semantic-morphology.html">§16 Semantic Box</a></li>
+          <li>Brand memo Section 6</li>
+          <li><a href="16-semantic-morphology.html">Section 16 Semantic Box</a></li>
         </ul>
       </details>
     </div>
@@ -1671,7 +1670,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>Brand memo §6: 'DTPR is community-owned.' §3: Impacted Citizen and Vigilant Advocate both benefit from knowing standard is community-owned.</p>
+        <p>Brand memo Section 6: 'DTPR is community-owned.' Section 3: Impacted Citizen and Vigilant Advocate both benefit from knowing standard is community-owned.</p>
         <h4>2. Constraint extraction</h4>
         <p>Commons recipe serves citizens and advocates who distrust vendor-controlled standards. Stewardship framing must emphasize community ownership as trust mechanism.</p>
         <h4>3. Collision / picturability test</h4>
@@ -1684,12 +1683,12 @@
       <figure class="decomposition-svg">
         <svg viewBox="0 0 780 170" xmlns="http://www.w3.org/2000/svg"><g id="step-1"><rect x="40" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><rect x="50" y="30" width="160" height="100" fill="#f8f9fa" stroke="#ced4da" rx="4"/><line x1="50" y1="100" x2="210" y2="100" stroke="#ced4da"/><rect x="60" y="105" width="30" height="20" fill="#002684"/><text x="100" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by</text><text x="155" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#002684" text-anchor="middle">Helpful Places</text><text x="60" y="45" font-family="sans-serif" font-size="10" fill="#002684" font-weight="bold">DTPR</text><text x="60" y="60" font-family="sans-serif" font-size="7" fill="#666">Open standard</text><rect x="140" y="35" width="25" height="20" fill="#c6e93d" opacity="0.3" rx="2"/><text x="152" y="50" font-family="monospace" font-size="7" font-weight="bold" fill="#002684" text-anchor="middle">CC</text><text x="130" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 1: Footer</text></g><line x1="230" y1="80" x2="270" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="265,75 275,80 265,85" fill="#c6e93d"/><text x="250" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip chrome</text><g id="step-2"><rect x="290" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#3b85d4" stroke-width="2" stroke-dasharray="4,3"/><line x1="300" y1="100" x2="460" y2="100" stroke="#ced4da"/><rect x="310" y="105" width="30" height="20" fill="none" stroke="#ced4da" stroke-dasharray="2,2"/><text x="370" y="120" font-family="sans-serif" font-size="7" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by HP</text><text x="380" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 2: Strip content</text></g><line x1="480" y1="80" x2="520" y2="80" stroke="#c6e93d" stroke-width="2" stroke-dasharray="4,3"/><polygon points="515,75 525,80 515,85" fill="#c6e93d"/><text x="500" y="70" text-anchor="middle" font-family="monospace" font-size="7" fill="#4d5c00">strip logo</text><g id="step-3"><rect x="540" y="20" width="180" height="120" rx="6" fill="rgba(0,38,132,0.02)" stroke="#002684" stroke-width="2.5" stroke-dasharray=""/><text x="630" y="75" font-family="sans-serif" font-size="9" font-weight="bold" fill="#666" text-anchor="middle">Stewarded by</text><text x="630" y="95" font-family="sans-serif" font-size="11" font-weight="bold" fill="#002684" text-anchor="middle">Helpful Places</text><text x="630" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#6b7280">Step 3: Signature</text></g></svg><figcaption>Page → strip institutional → community-owned.</figcaption>
       </figure>
-      <p class="open-question-link">⚠ Affected by open question §9.6 (Stewardship Model sign-off). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
+      <p class="open-question-link">⚠ Affected by open question Section 9.6 (Stewardship Model sign-off). <a href="../dtpr-brand-foundation-memo-v2.md">See brand memo.</a></p>
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li>Brand memo §3/§6</li>
-          <li><a href="16-semantic-morphology.html">§16 Semantic Box</a></li>
+          <li>Brand memo Section 3/Section 6</li>
+          <li><a href="16-semantic-morphology.html">Section 16 Semantic Box</a></li>
         </ul>
       </details>
     </div>
@@ -1701,7 +1700,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§16 Posture D: 'Pitch-Deck Checklist — Sales pitch deck checklist for internal city champions.' §17: 'City champion asset.'</p>
+        <p>Section 16 Posture D: 'Pitch-Deck Checklist — Sales pitch deck checklist for internal city champions.' Section 17: 'City champion asset.'</p>
         <h4>2. Constraint extraction</h4>
         <p>Regulatory recipe serves deployers who need to pitch DTPR internally to city leadership. Education scaffold must be pitch-ready checklist.</p>
         <h4>3. Collision / picturability test</h4>
@@ -1718,8 +1717,8 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="16-semantic-morphology.html">§16 Semantic Box</a></li>
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
+          <li><a href="16-semantic-morphology.html">Section 16 Semantic Box</a></li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
         </ul>
       </details>
     </div>
@@ -1728,7 +1727,7 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§16 Posture B: 'Scrollytelling Tour — Guided narrative tour explaining DTPR in action.' §17: 'Guided demo tour.'</p>
+        <p>Section 16 Posture B: 'Scrollytelling Tour — Guided narrative tour explaining DTPR in action.' Section 17: 'Guided demo tour.'</p>
         <h4>2. Constraint extraction</h4>
         <p>Maker recipe serves developers who learn by doing. Education scaffold must be interactive demo, not static document.</p>
         <h4>3. Collision / picturability test</h4>
@@ -1745,8 +1744,8 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li><a href="16-semantic-morphology.html">§16 Semantic Box</a></li>
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
+          <li><a href="16-semantic-morphology.html">Section 16 Semantic Box</a></li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
         </ul>
       </details>
     </div>
@@ -1755,11 +1754,11 @@
       
       <div class="derivation-chain">
         <h4>1. Inventory</h4>
-        <p>§16 Posture A: 'Nutrition Label — Standardized comparability visual grid.' Brand memo §1: 'DTPR is a nutrition label for technology in public space.'</p>
+        <p>Section 16 Posture A: 'Nutrition Label — Standardized comparability visual grid.' Brand memo Section 1: 'DTPR is a nutrition label for technology in public space.'</p>
         <h4>2. Constraint extraction</h4>
         <p>Commons recipe serves citizens who need standardized, comparable overview — just like nutrition label on food packaging.</p>
         <h4>3. Collision / picturability test</h4>
-        <p>Nutrition Label passes — the metaphor IS the brand essence (brand memo §1). Pitch Checklist fails — internal-facing. Academic Modules fail — too deep.</p>
+        <p>Nutrition Label passes — the metaphor IS the brand essence (brand memo Section 1). Pitch Checklist fails — internal-facing. Academic Modules fail — too deep.</p>
         <h4>4. Geometry / scale / rendering test</h4>
         <p>Nutrition label renders as: standardized grid showing 'what this technology collects / why / how / who controls it.' Each deployment gets same structure. Mobile-optimized.</p>
         <h4>5. Primitive confirmation</h4>
@@ -1772,9 +1771,9 @@
       <details>
         <summary>Source citations</summary>
         <ul class="source-list">
-          <li>Brand memo §1</li>
-          <li><a href="16-semantic-morphology.html">§16 Semantic Box</a></li>
-          <li><a href="17-sprint-recipes.html">§17 Recipes</a></li>
+          <li>Brand memo Section 1</li>
+          <li><a href="16-semantic-morphology.html">Section 16 Semantic Box</a></li>
+          <li><a href="17-sprint-recipes.html">Section 17 Recipes</a></li>
         </ul>
       </details>
     </div>
@@ -1793,378 +1792,378 @@
           <td><a href="#form-var-1-regulatory">Shape Primitive</a></td>
           <td>Regulatory</td>
           <td><span class="chip chip-d">D</span> Hexagon Grid</td>
-          <td>§01, §06, §09, §18</td>
+          <td>Section 01, Section 06, Section 09, Section 18</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#form-var-1-maker">Shape Primitive</a></td>
           <td>Maker</td>
           <td><span class="chip chip-b">B</span> Graph Paper</td>
-          <td>§04, §06, memo §5</td>
+          <td>Section 04, Section 06, memo Section 5</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#form-var-1-commons">Shape Primitive</a></td>
           <td>Commons</td>
           <td><span class="chip chip-c">C</span> Organic + Hex</td>
-          <td>§06, §09, §10</td>
+          <td>Section 06, Section 09, Section 10</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#form-var-2-regulatory">Grid Tiling</a></td>
           <td>Regulatory</td>
           <td><span class="chip chip-d">D</span> ISO Modular</td>
-          <td>§18, §14</td>
+          <td>Section 18, Section 14</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#form-var-2-maker">Grid Tiling</a></td>
           <td>Maker</td>
           <td><span class="chip chip-b">B</span> Fluid Columns</td>
-          <td>§18, §21</td>
+          <td>Section 18, Section 21</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#form-var-2-commons">Grid Tiling</a></td>
           <td>Commons</td>
           <td><span class="chip chip-c">C</span> Single Column</td>
-          <td>§21, §17</td>
+          <td>Section 21, Section 17</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#form-var-3-regulatory">Color Logic</a></td>
           <td>Regulatory</td>
           <td><span class="chip chip-d">D</span> Safety Semantic</td>
-          <td>§07, §20, memo §5</td>
-          <td>§9.1</td>
+          <td>Section 07, Section 20, memo Section 5</td>
+          <td>Section 9.1</td>
         </tr>
         <tr>
           <td><a href="#form-var-3-maker">Color Logic</a></td>
           <td>Maker</td>
           <td><span class="chip chip-b">B</span> Graph Accent</td>
-          <td>§07, memo §5</td>
-          <td>§9.1</td>
+          <td>Section 07, memo Section 5</td>
+          <td>Section 9.1</td>
         </tr>
         <tr>
           <td><a href="#form-var-3-commons">Color Logic</a></td>
           <td>Commons</td>
           <td><span class="chip chip-c">C</span> Palette Accessible</td>
-          <td>§07, memo §3</td>
-          <td>§9.1</td>
+          <td>Section 07, memo Section 3</td>
+          <td>Section 9.1</td>
         </tr>
         <tr>
           <td><a href="#form-var-4-regulatory">Illustration Style</a></td>
           <td>Regulatory</td>
           <td><span class="chip chip-a">A</span> Flat Icon</td>
-          <td>§09, §10</td>
-          <td>§9.10</td>
+          <td>Section 09, Section 10</td>
+          <td>Section 9.10</td>
         </tr>
         <tr>
           <td><a href="#form-var-4-maker">Illustration Style</a></td>
           <td>Maker</td>
           <td><span class="chip chip-b">B</span> Maker Sketch</td>
-          <td>§04, §09, §10</td>
-          <td>§9.10</td>
+          <td>Section 04, Section 09, Section 10</td>
+          <td>Section 9.10</td>
         </tr>
         <tr>
           <td><a href="#form-var-4-commons">Illustration Style</a></td>
           <td>Commons</td>
           <td><span class="chip chip-c">C</span> People-Centered</td>
-          <td>§10, memo §3</td>
-          <td>§9.10</td>
+          <td>Section 10, memo Section 3</td>
+          <td>Section 9.10</td>
         </tr>
         <tr>
           <td><a href="#form-var-5-regulatory">Typographic Grammar</a></td>
           <td>Regulatory</td>
           <td><span class="chip chip-d">D</span> Condensed Sans</td>
-          <td>§08, memo §5</td>
-          <td>§9.8</td>
+          <td>Section 08, memo Section 5</td>
+          <td>Section 9.8</td>
         </tr>
         <tr>
           <td><a href="#form-var-5-maker">Typographic Grammar</a></td>
           <td>Maker</td>
           <td><span class="chip chip-b">B</span> Mono Primary</td>
-          <td>§08, §04, memo §5</td>
-          <td>§9.8</td>
+          <td>Section 08, Section 04, memo Section 5</td>
+          <td>Section 9.8</td>
         </tr>
         <tr>
           <td><a href="#form-var-5-commons">Typographic Grammar</a></td>
           <td>Commons</td>
           <td><span class="chip chip-c">C</span> Large Body Text</td>
-          <td>§08, memo §3</td>
-          <td>§9.8</td>
+          <td>Section 08, memo Section 3</td>
+          <td>Section 9.8</td>
         </tr>
         <tr>
           <td><a href="#form-var-6-regulatory">Motion Behavior</a></td>
           <td>Regulatory</td>
           <td><span class="chip chip-a">A</span> None / Static</td>
-          <td>memo §9.9</td>
-          <td>§9.9</td>
+          <td>memo Section 9.9</td>
+          <td>Section 9.9</td>
         </tr>
         <tr>
           <td><a href="#form-var-6-maker">Motion Behavior</a></td>
           <td>Maker</td>
           <td><span class="chip chip-b">B</span> Micro-interaction</td>
-          <td>memo §9.9, §17</td>
-          <td>§9.9</td>
+          <td>memo Section 9.9, Section 17</td>
+          <td>Section 9.9</td>
         </tr>
         <tr>
           <td><a href="#form-var-6-commons">Motion Behavior</a></td>
           <td>Commons</td>
           <td><span class="chip chip-c">C</span> Page Transitions</td>
-          <td>memo §9.9, §17</td>
-          <td>§9.9</td>
+          <td>memo Section 9.9, Section 17</td>
+          <td>Section 9.9</td>
         </tr>
         <tr>
           <td><a href="#proc-var-1-regulatory">Grid Decomposition</a></td>
           <td>Regulatory</td>
           <td><span class="chip chip-d">D</span> Strict ISO</td>
-          <td>§18, §21</td>
+          <td>Section 18, Section 21</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#proc-var-1-maker">Grid Decomposition</a></td>
           <td>Maker</td>
           <td><span class="chip chip-b">B</span> Fluid Overlay</td>
-          <td>§18, §21</td>
+          <td>Section 18, Section 21</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#proc-var-1-commons">Grid Decomposition</a></td>
           <td>Commons</td>
           <td><span class="chip chip-c">C</span> Stacked Card</td>
-          <td>§21, §17</td>
+          <td>Section 21, Section 17</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#proc-var-2-regulatory">Scale Adaptation</a></td>
           <td>Regulatory</td>
           <td><span class="chip chip-d">D</span> Physical Distance</td>
-          <td>§18, §21</td>
+          <td>Section 18, Section 21</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#proc-var-2-maker">Scale Adaptation</a></td>
           <td>Maker</td>
           <td><span class="chip chip-b">B</span> Viewport Fluid</td>
-          <td>§21</td>
+          <td>Section 21</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#proc-var-2-commons">Scale Adaptation</a></td>
           <td>Commons</td>
           <td><span class="chip chip-c">C</span> Content Hierarchy</td>
-          <td>§17, §21</td>
+          <td>Section 17, Section 21</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#proc-var-3-regulatory">Interaction</a></td>
           <td>Regulatory</td>
           <td><span class="chip chip-a">A</span> QR Deeplink</td>
-          <td>§18, §19</td>
+          <td>Section 18, Section 19</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#proc-var-3-maker">Interaction</a></td>
           <td>Maker</td>
           <td><span class="chip chip-b">B</span> Hover + Filter</td>
-          <td>§17</td>
+          <td>Section 17</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#proc-var-3-commons">Interaction</a></td>
           <td>Commons</td>
           <td><span class="chip chip-c">C</span> Tap + Expand</td>
-          <td>§17</td>
+          <td>Section 17</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#proc-var-4-regulatory">Dynamic Overlay</a></td>
           <td>Regulatory</td>
           <td><span class="chip chip-a">A</span> None</td>
-          <td>memo §9.9</td>
-          <td>§9.9</td>
+          <td>memo Section 9.9</td>
+          <td>Section 9.9</td>
         </tr>
         <tr>
           <td><a href="#proc-var-4-maker">Dynamic Overlay</a></td>
           <td>Maker</td>
           <td><span class="chip chip-c">C</span> Live Data</td>
-          <td>§17</td>
+          <td>Section 17</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#proc-var-4-commons">Dynamic Overlay</a></td>
           <td>Commons</td>
           <td><span class="chip chip-b">B</span> Contextual Pop-in</td>
-          <td>§17</td>
+          <td>Section 17</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#proc-var-5-regulatory">Gateway Hand-off</a></td>
           <td>Regulatory</td>
           <td><span class="chip chip-c">C</span> Icon Guide</td>
-          <td>§17, memo §3c</td>
-          <td>§9.5</td>
+          <td>Section 17, memo Section 3c</td>
+          <td>Section 9.5</td>
         </tr>
         <tr>
           <td><a href="#proc-var-5-maker">Gateway Hand-off</a></td>
           <td>Maker</td>
           <td><span class="chip chip-b">B</span> Developer Portal</td>
-          <td>§17</td>
+          <td>Section 17</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#proc-var-5-commons">Gateway Hand-off</a></td>
           <td>Commons</td>
           <td><span class="chip chip-a">A</span> Icon Guide</td>
-          <td>§17, memo §3c</td>
+          <td>Section 17, memo Section 3c</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#proc-var-6-regulatory">Nav Anchors</a></td>
           <td>Regulatory</td>
           <td><span class="chip chip-d">D</span> Fixed Persistent</td>
-          <td>§17</td>
+          <td>Section 17</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#proc-var-6-maker">Nav Anchors</a></td>
           <td>Maker</td>
           <td><span class="chip chip-b">B</span> Scrollspy</td>
-          <td>§17</td>
+          <td>Section 17</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#proc-var-6-commons">Nav Anchors</a></td>
           <td>Commons</td>
           <td><span class="chip chip-c">C</span> Progress Dots</td>
-          <td>§17</td>
+          <td>Section 17</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#sem-var-1-regulatory">Deployment Track</a></td>
           <td>Regulatory</td>
           <td><span class="chip chip-a">A</span> Physical Sensors</td>
-          <td>memo §3, §6</td>
-          <td>§9.7</td>
+          <td>memo Section 3, Section 6</td>
+          <td>Section 9.7</td>
         </tr>
         <tr>
           <td><a href="#sem-var-1-maker">Deployment Track</a></td>
           <td>Maker</td>
           <td><span class="chip chip-b">B</span> Digital Channels</td>
-          <td>memo §3</td>
-          <td>§9.7</td>
+          <td>memo Section 3</td>
+          <td>Section 9.7</td>
         </tr>
         <tr>
           <td><a href="#sem-var-1-commons">Deployment Track</a></td>
           <td>Commons</td>
           <td><span class="chip chip-d">D</span> Combined Hybrid</td>
-          <td>memo §3</td>
-          <td>§9.7</td>
+          <td>memo Section 3</td>
+          <td>Section 9.7</td>
         </tr>
         <tr>
           <td><a href="#sem-var-2-regulatory">Audience Register</a></td>
           <td>Regulatory</td>
           <td><span class="chip chip-c">C</span> Deployer</td>
-          <td>memo §3, §13</td>
-          <td>§9.4</td>
+          <td>memo Section 3, Section 13</td>
+          <td>Section 9.4</td>
         </tr>
         <tr>
           <td><a href="#sem-var-2-maker">Audience Register</a></td>
           <td>Maker</td>
           <td><span class="chip chip-d">D</span> Developer (API)</td>
-          <td>memo §3, §13</td>
-          <td>§9.4</td>
+          <td>memo Section 3, Section 13</td>
+          <td>Section 9.4</td>
         </tr>
         <tr>
           <td><a href="#sem-var-2-commons">Audience Register</a></td>
           <td>Commons</td>
           <td><span class="chip chip-a">A</span> Resident (Plain)</td>
-          <td>memo §3, §13</td>
-          <td>§9.4</td>
+          <td>memo Section 3, Section 13</td>
+          <td>Section 9.4</td>
         </tr>
         <tr>
           <td><a href="#sem-var-3-regulatory">Disclosure Depth</a></td>
           <td>Regulatory</td>
           <td><span class="chip chip-b">B</span> Categorical 7Qs</td>
-          <td>§09, §16</td>
-          <td>§9.10</td>
+          <td>Section 09, Section 16</td>
+          <td>Section 9.10</td>
         </tr>
         <tr>
           <td><a href="#sem-var-3-maker">Disclosure Depth</a></td>
           <td>Maker</td>
           <td><span class="chip chip-d">D</span> Dynamic Explorer</td>
-          <td>§09, §17</td>
+          <td>Section 09, Section 17</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#sem-var-3-commons">Disclosure Depth</a></td>
           <td>Commons</td>
           <td><span class="chip chip-b">B</span> Categorical 7Qs</td>
-          <td>§09, §16</td>
+          <td>Section 09, Section 16</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#sem-var-4-regulatory">Feedback Loop</a></td>
           <td>Regulatory</td>
           <td><span class="chip chip-d">D</span> Issue Reporting</td>
-          <td>memo §3c, §7</td>
-          <td>§3c</td>
+          <td>memo Section 3c, Section 7</td>
+          <td>Section 3c</td>
         </tr>
         <tr>
           <td><a href="#sem-var-4-maker">Feedback Loop</a></td>
           <td>Maker</td>
           <td><span class="chip chip-a">A</span> Anonymous Rating</td>
-          <td>memo §3c</td>
-          <td>§3c</td>
+          <td>memo Section 3c</td>
+          <td>Section 3c</td>
         </tr>
         <tr>
           <td><a href="#sem-var-4-commons">Feedback Loop</a></td>
           <td>Commons</td>
           <td><span class="chip chip-b">B</span> Public Comments</td>
-          <td>memo §3c, §3</td>
-          <td>§3c</td>
+          <td>memo Section 3c, Section 3</td>
+          <td>Section 3c</td>
         </tr>
         <tr>
           <td><a href="#sem-var-5-regulatory">Stewardship</a></td>
           <td>Regulatory</td>
           <td><span class="chip chip-b">B</span> Founding Steward</td>
-          <td>memo §6, §06</td>
-          <td>§9.6</td>
+          <td>memo Section 6, Section 06</td>
+          <td>Section 9.6</td>
         </tr>
         <tr>
           <td><a href="#sem-var-5-maker">Stewardship</a></td>
           <td>Maker</td>
           <td><span class="chip chip-a">A</span> Pure Commons</td>
-          <td>memo §6</td>
-          <td>§9.6</td>
+          <td>memo Section 6</td>
+          <td>Section 9.6</td>
         </tr>
         <tr>
           <td><a href="#sem-var-5-commons">Stewardship</a></td>
           <td>Commons</td>
           <td><span class="chip chip-a">A</span> Pure Commons</td>
-          <td>memo §6</td>
-          <td>§9.6</td>
+          <td>memo Section 6</td>
+          <td>Section 9.6</td>
         </tr>
         <tr>
           <td><a href="#sem-var-6-regulatory">Education Scaffold</a></td>
           <td>Regulatory</td>
           <td><span class="chip chip-d">D</span> Pitch Checklist</td>
-          <td>§17</td>
+          <td>Section 17</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#sem-var-6-maker">Education Scaffold</a></td>
           <td>Maker</td>
           <td><span class="chip chip-b">B</span> Scrollytelling</td>
-          <td>§17</td>
+          <td>Section 17</td>
           <td>None</td>
         </tr>
         <tr>
           <td><a href="#sem-var-6-commons">Education Scaffold</a></td>
           <td>Commons</td>
           <td><span class="chip chip-a">A</span> Nutrition Label</td>
-          <td>memo §1, §17</td>
+          <td>memo Section 1, Section 17</td>
           <td>None</td>
         </tr>
       </tbody>
@@ -2182,7 +2181,6 @@
     <img src="assets/logos-partners/hp-black.png" alt="Helpful Places">
     <img src="assets/logos-partners/sprblm-horizontal.png" alt="Superbloom">
   </div>
-  <p>v0.1 · June 2026 · Superbloom Design · <a href="https://github.com/superbloom/dtpr-brand-identity" target="_blank" rel="noopener">view on GitHub</a> (forthcoming)</p>
 </footer>
 
 <script src="nav.js"></script>
