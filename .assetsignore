@@ -1,12 +1,11 @@
-.git/
-.git/**
-.github/
-.github/**
-.bak*
-.bak*/**
-node_modules/
-node_modules/**
-*.md
-*.log
-.DS_Store
-Thumbs.db
+# Process development & morphology pages (kept locally, excluded from public deployment)
+14-sprint-morphology.html
+15-transformation-morphology.html
+16-semantic-morphology.html
+17-sprint-recipes.html
+18-geometric-blueprint.html
+19-core-caa-assets.html
+20-iso-3864-matrix.html
+21-responsive-specs.html
+22-primitive-derivation.html
+sprint-index.html
