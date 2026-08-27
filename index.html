@@ -96,39 +96,54 @@
     </div>
 
     <div class="cover-hex" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 716.18 650.66" width="100%" height="100%">
+      <?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 716.18 650.66">
   <defs>
     <style>
-      .hex-bg { fill: #001170; }
-      .hex-mid { fill: #006ad9; }
-      .hex-bot { fill: #cfedff; }
-      .hex-wire { fill: none; stroke: #ffffff; stroke-width: 2.16px; stroke-miterlimit: 10; }
+      .cls-1 { fill: #001070; }
+      .cls-2 { fill: #0072d9; }
+      .cls-3 { fill: #fff; }
+      .cls-4 { fill: #b7ff08; }
+      .cls-5 { fill: #006ad9; }
+      .cls-6 { fill: #cfedff; }
+      .cls-7 { fill: #001170; }
+      .cls-8, .cls-9 { fill: none; }
+      .cls-10 { isolation: isolate; }
+      .cls-9 { stroke: #fff; stroke-miterlimit: 10; stroke-width: 2.16px; }
+      .cls-11 { fill: #002684; }
       .hex-mono-text {
         font-family: 'Source Code Pro', 'Courier New', monospace;
         font-weight: 700;
         font-size: 15px;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.06em;
       }
-      .text-form { fill: #ffffff; }
-      .text-process { fill: #ffffff; }
-      .text-semantics { fill: #001170; }
+      .text-white { fill: #ffffff; }
+      .text-navy { fill: #001170; }
     </style>
   </defs>
-  <g id="layered-hexagon">
-    <!-- Bottom Pale Blue Layer (Semantics) -->
-    <polyline class="hex-bot" points="682.31 437.81 360.23 581.04 33.7 438.49 21.58 501.66 360.18 649.48 694.57 500.78 682.31 437.81" />
-    <polyline class="hex-wire" points="21.58 501.66 360.18 649.48 694.57 500.78" />
-    <text transform="translate(68, 488) rotate(23.584)" class="hex-mono-text text-semantics">Semantics</text>
+  <g id="a">
+    <g>
+      <!-- Bottom Layer Pale Blue Rim & Inner Polygon -->
+      <polyline class="cls-6" points="682.31 437.81 360.23 581.04 33.7 438.49 21.58 501.66 360.18 649.48 694.57 500.78 682.31 437.81"/>
+      <polygon class="cls-9" points="359.02 168.76 648.77 265.51 694.57 500.78 360.18 649.48 21.58 501.66 69.57 265.51 359.02 168.76"/>
+      <polygon class="cls-2" points="360.18 206.07 626.85 295.42 669.76 512.44 360.24 650.66 49.04 513.78 93.38 296.34 360.18 206.07"/>
+      <polyline class="cls-1" points="694.57 500.78 682.31 437.81 669.76 512.44 694.57 500.78"/>
+      
+      <!-- Top Navy Hexagon Face -->
+      <polygon class="cls-7" points="360.18 37.31 626.85 126.66 669.76 343.68 360.24 481.9 49.04 345.02 93.38 127.58 360.18 37.31"/>
+      <polyline class="cls-1" points="694.57 332.02 682.31 269.05 669.76 343.68 694.57 332.02"/>
 
-    <!-- Middle Royal Blue Layer (Process) -->
-    <polyline class="hex-mid" points="669.76 373.35 360.31 510.97 46.1 373.8 33.7 438.49 360.23 581.04 682.31 437.81 669.76 373.35" />
-    <polyline class="hex-wire" points="33.7 438.49 360.23 581.04 682.31 437.81" />
-    <text transform="translate(90, 428) rotate(23.584)" class="hex-mono-text text-process">Process</text>
+      <!-- Middle Royal Blue Rim -->
+      <polyline class="cls-5" points="669.76 373.35 360.31 510.97 46.1 373.8 33.7 438.49 360.23 581.04 682.31 437.81 669.76 373.35"/>
+      
+      <!-- Top Outline Stroke -->
+      <polygon class="cls-9" points="359.08 1.14 666.37 103.75 714.95 353.26 360.31 510.97 1.22 354.21 49.08 104.64 359.08 1.14"/>
 
-    <!-- Top Navy Hexagon Face (Form) -->
-    <polygon class="hex-bg" points="359.08 1.14 666.37 103.75 714.95 353.26 360.31 510.97 1.22 354.21 49.08 104.64 359.08 1.14" />
-    <polygon class="hex-wire" points="359.08 1.14 666.37 103.75 714.95 353.26 360.31 510.97 1.22 354.21 49.08 104.64 359.08 1.14" />
-    <text transform="translate(112, 368) rotate(23.584)" class="hex-mono-text text-form">Form</text>
+      <!-- Morphological Layer Labels -->
+      <text transform="translate(118, 362) rotate(23.584)" class="hex-mono-text text-white">Form</text>
+      <text transform="translate(100, 428) rotate(23.584)" class="hex-mono-text text-white">Process</text>
+      <text transform="translate(78, 488) rotate(23.584)" class="hex-mono-text text-navy">Semantics</text>
+    </g>
   </g>
 </svg>
     </div>
