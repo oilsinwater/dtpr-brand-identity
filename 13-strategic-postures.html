@@ -24,6 +24,200 @@
   .posture-card.posture-c { border-top-color: var(--teal); }
   .posture-card.posture-d { border-top-color: var(--orange); }
 
+  /* Recipe cards (Recipe A / B / C) */
+  .recipe-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-top: 4px solid var(--navy);
+    border-radius: var(--r-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .recipe-card.recipe-a { border-top-color: var(--navy); }
+  .recipe-card.recipe-b { border-top-color: var(--chartreuse); }
+  .recipe-card.recipe-c { border-top-color: var(--cobalt); }
+  .recipe-card h3 { margin-top: 0; margin-bottom: 0.4rem; color: var(--navy); font-size: 1.05rem; }
+  .recipe-card .recipe-meta {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--gray-500);
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed var(--gray-200);
+    padding-bottom: 0.6rem;
+    line-height: 1.5;
+  }
+  .recipe-card .recipe-meta strong { color: var(--navy); }
+  .recipe-card .mood-link {
+    display: inline-block;
+    margin: -0.4rem 0 0.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--navy);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+  .recipe-card .mood-link:hover { border-bottom-color: var(--navy); }
+  .recipe-card .recipe-probe {
+    margin-top: 1rem;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--r-md);
+    overflow: hidden;
+    background: var(--gray-50);
+  }
+  .recipe-card .recipe-probe img { display: block; width: 100%; height: auto; }
+  .recipe-card .recipe-probe .probe-caption {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    color: var(--gray-700);
+    background: var(--white);
+    border-top: 1px solid var(--gray-100);
+  }
+  .recipe-card .recipe-probe .probe-caption strong {
+    color: var(--navy);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+  }
+  .recipe-card .selected-tag {
+    display: inline-block;
+    margin-top: 0.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: #8a5a00;
+    background: #fff7e6;
+    border: 1px solid #d4a04a;
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--r-sm);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .recipe-card.recipe-b .selected-tag {
+    color: var(--navy);
+    background: var(--chartreuse);
+    border: none;
+    padding: 0.2rem 0.6rem;
+    font-weight: 700;
+  }
+
+  /* Inline alert — canonical contract notice */
+  .alert-canonical {
+    background: linear-gradient(180deg, #fdfff0 0%, #ffffff 100%);
+    border: 1px solid var(--chartreuse);
+    border-left: 4px solid var(--chartreuse);
+    border-radius: var(--r-md);
+    padding: 1.2rem 1.5rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .alert-canonical h4 {
+    margin: 0 0 0.4rem;
+    color: var(--navy);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-family: var(--font-mono);
+  }
+  .alert-canonical p { margin: 0; font-size: 0.92rem; line-height: 1.55; color: var(--gray-700); }
+  .alert-canonical p + p { margin-top: 0.6rem; }
+
+  /* Through-line block */
+  .throughline {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-left: 4px solid var(--navy);
+    border-radius: var(--r-md);
+    padding: 1.5rem 1.8rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .throughline h3 { margin: 0 0 0.8rem; color: var(--navy); font-size: 1.1rem; }
+  .throughline ol { margin: 0; padding-left: 1.4rem; line-height: 1.55; }
+  .throughline ol li { margin-bottom: 0.8rem; color: var(--gray-700); }
+  .throughline ol li:last-child { margin-bottom: 0; }
+  .throughline ol li strong { color: var(--navy); }
+
+  /* Reconciliation cards */
+  .recon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+  }
+  .recon-grid .recon-card {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-top: 3px solid var(--navy);
+    border-radius: var(--r-md);
+    padding: 1rem 1.2rem;
+  }
+  .recon-grid .recon-card h4 {
+    margin: 0 0 0.4rem;
+    color: var(--navy);
+    font-size: 0.85rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .recon-grid .recon-card p { margin: 0; font-size: 0.85rem; line-height: 1.5; color: var(--gray-700); }
+
+  /* Wide figure for the lane-field contact sheet */
+  figure.wide-figure { margin: 2rem 0; }
+  figure.wide-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--r-md);
+    background: #222;
+  }
+  figure.wide-figure figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: var(--gray-700);
+  }
+  figure.wide-figure figcaption strong {
+    color: var(--navy);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+  }
+
+  /* Going-forward links list */
+  .gf-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+  .gf-links a {
+    display: block;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-left: 4px solid var(--chartreuse);
+    border-radius: var(--r-sm);
+    padding: 0.8rem 1rem;
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .gf-links a:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+    border-left-color: var(--navy);
+  }
+  .gf-links a strong {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--gray-500);
+    margin-bottom: 0.2rem;
+  }
+
   .posture-meta {
     font-family: var(--font-mono);
     font-size: 0.75rem;
@@ -62,58 +256,52 @@
 </style>
 </head>
 <body><header class="site-header">
-  <a class="brand" href="./index.html"><img src="assets/marks/dtpr_logo_horizontal_navy.svg" alt="DTPR" class="brand-logo"><span class="brand-sub">· Brand Identity Book</span></a>
-  <nav>
+  <a class="brand" href="./index.html"><img src="assets/marks/dtpr_logo_horizontal_navy.svg" alt="DTPR" class="brand-logo"><span class="brand-sub">· Brand Identity Book</span>      <nav>
     <ul>
-      <li><a href="./index.html">Cover</a></li>
       <li class="dropdown">
-        <a href="#" class="nav-dropdown-trigger">How We Got Here</a>
+        <a href="#" class="nav-dropdown-trigger">Audit</a>
         <ul class="dropdown-menu">
-          <li><a href="./01-evolution.html">01 Evolution</a></li>
-          <li><a href="./02-dtpr-io.html">02 dtpr.io</a></li>
-          <li><a href="./03-vision.html">03 vision</a></li>
-          <li><a href="./04-makeshift.html">04 Makeshift</a></li>
-          <li><a href="./05-docs.html">05 docs.dtpr</a></li>
-        </ul>
-      </li>
-            <li class="dropdown">
-        <a href="#" class="nav-dropdown-trigger">Visual Component Audit</a>
-        <ul class="dropdown-menu">
-          <li><a href="./06-marks.html">06 Marks</a></li>
-          <li><a href="./07-color.html">07 Color</a></li>
-          <li><a href="./08-typography.html">08 Type</a></li>
-          <li><a href="./09-iconography.html">09 Icons</a></li>
-          <li><a href="./10-illustrations.html">10 Illustrations</a></li>
-          <li><a href="./11-voice.html">11 Voice</a></li>
-          <li><a href="./12-findings.html">12 Findings</a></li>
-          <li><a href="./13-strategic-postures.html">13 Strategic Postures</a></li>
+          <li><a href="index.html">00 Cover</a></li>
+          <li><a href="01-evolution.html">01 Evolution</a></li>
+          <li><a href="02-dtpr-io.html">02 dtpr.io</a></li>
+          <li><a href="03-vision.html">03 vision</a></li>
+          <li><a href="04-makeshift.html">04 Makeshift</a></li>
+          <li><a href="05-docs.html">05 docs.dtpr</a></li>
+          <li><a href="06-marks.html">06 Marks</a></li>
+          <li><a href="07-color.html">07 Color</a></li>
+          <li><a href="08-typography.html">08 Type</a></li>
+          <li><a href="09-iconography.html">09 Icons</a></li>
+          <li><a href="10-illustrations.html">10 Illustrations</a></li>
+          <li><a href="11-voice.html">11 Voice</a></li>
+          <li><a href="12-findings.html">12 Findings</a></li>
+          <li><a href="13-strategic-postures.html">13 Strategic Postures</a></li>
         </ul>
       </li>
       <li class="dropdown">
-        <a href="./guidelines/index.html" class="nav-dropdown-trigger">Going Forward</a>
+        <a href="guidelines/index.html" class="nav-dropdown-trigger">Guidelines</a>
         <ul class="dropdown-menu">
-          <li><a href="./guidelines/01-values.html">01 Values</a></li>
-          <li><a href="./guidelines/02-logo.html">02 Logo</a></li>
-          <li><a href="./guidelines/03-logo-stacked.html">03 Logo Stacked</a></li>
-          <li><a href="./guidelines/04-watermark.html">04 Watermark</a></li>
-          <li><a href="./guidelines/05-icon.html">05 Icon</a></li>
-          <li><a href="./guidelines/06-dimensions.html">06 Dimensions</a></li>
-          <li><a href="./guidelines/07-color.html">07 Color</a></li>
-          <li><a href="./guidelines/08-fonts.html">08 Fonts</a></li>
-          <li><a href="./guidelines/09-font-protocol.html">09 Font Protocol</a></li>
-          <li><a href="./guidelines/10-photography.html">10 Photography</a></li>
-          <li><a href="./guidelines/11-visual-language.html">11 Visual Language</a></li>
-          <li><a href="./guidelines/12-web-application.html">12 Web Application</a></li>
-          <li><a href="./guidelines/13-misuse.html">13 Misuse &amp; Don'ts</a></li>
-          <li><a href="./guidelines/14-voice-tone.html">14 Voice &amp; Tone</a></li>
-          <li><a href="./guidelines/15-co-branding.html">15 Co-Branding</a></li>
-          <li><a href="./guidelines/16-print-collateral.html">16 Print Collateral</a></li>
-          <li><a href="./guidelines/17-stationery.html">17 Stationery</a></li>
-          <li><a href="./guidelines/18-environmental.html">18 Environmental</a></li>
-          <li><a href="./guidelines/19-merch.html">19 Merch &amp; Swag</a></li>
-          <li><a href="./guidelines/20-motion.html">20 Motion</a></li>
-          <li><a href="./guidelines/21-email-templates.html">21 Email Templates</a></li>
-          <li><a href="./guidelines/22-app-ui.html">22 App UI</a></li>
+          <li><a href="guidelines/index.html">00 Cover</a></li>
+          <li><a href="guidelines/01-values.html">01 Values</a></li>
+          <li><a href="guidelines/02-logo.html">02 Logo</a></li>
+          <li><a href="guidelines/03-logo-stacked.html">03 Logo Stacked</a></li>
+          <li><a href="guidelines/04-watermark.html">04 Watermark</a></li>
+          <li><a href="guidelines/05-icon.html">05 Icon</a></li>
+          <li><a href="guidelines/06-dimensions.html">06 Dimensions</a></li>
+          <li><a href="guidelines/07-color.html">07 Color</a></li>
+          <li><a href="guidelines/08-fonts.html">08 Fonts</a></li>
+          <li><a href="guidelines/09-font-protocol.html">09 Font Protocol</a></li>
+          <li><a href="guidelines/10-photography.html">10 Photography</a></li>
+          <li><a href="guidelines/11-visual-language.html">11 Visual Language</a></li>
+          <li><a href="guidelines/12-web-application.html">12 Web Application</a></li>
+          <li><a href="guidelines/13-misuse.html">13 Misuse &amp; Don'ts</a></li>
+          <li><a href="guidelines/14-voice-tone.html">14 Voice &amp; Tone</a></li>
+          <li><a href="guidelines/15-co-branding.html">15 Co-Branding</a></li>
+          <li><a href="guidelines/16-print-collateral.html">16 Print Collateral</a></li>
+          <li><a href="guidelines/17-stationery.html">17 Stationery</a></li>
+          <li><a href="guidelines/18-environmental.html">18 Environmental</a></li>
+          <li><a href="guidelines/19-merch.html">19 Merch &amp; Swag</a></li>
+          <li><a href="guidelines/20-motion.html">20 Motion</a></li>
+          <li><a href="guidelines/21-email-templates.html">21 Email Templates</a></li>
         </ul>
       </li>
     </ul>
@@ -121,217 +309,162 @@
 </header>
 
 <main>
-  <span class="eyebrow">13 · Strategic Identity Postures</span>
-  <h1>Four Conceptual Identity Postures</h1>
-  <p class="lede">Visual identity in civic technology cannot be treated as a single, static logo lockup; it must function as an adaptive design system across diverse environments ranging from physical street signage to interactive developer dashboards. We recommend that DTPR utilize <strong>morphological analysis</strong>—a structured design method that deconstructs the <strong>brand identity system</strong> into discrete, combinable visual parameters (Option A through Option D). These parameters define four distinct, intentional <strong>visual identity postures</strong>, each aligning a specific stakeholder persona from field research with a concrete structural model for dynamic visual and typographic execution.</p>
+  <span class="eyebrow">13 · Strategic Postures</span>
+  <h1>Three Recipes, One Canonical Direction</h1>
+  <p class="lede">This page documents the <strong>strategic postures</strong> that produced DTPR's visual identity system — the three <em>recipes</em> that were sampled against the brief, the Lane that was locked per recipe, and why <strong>Recipe B (Maker) became canonical</strong> for dtpr.io while Recipes A (Regulatory) and C (Commons) were folded in as sparing, B-rendered flavors. Supersedes the earlier four-posture framing (Options A/B/C/D = Citizen / Maker / Advocate / Deployer) that this page previously described.</p>
 
-  <div class="grid-2">
-    <div class="callout open">
-      <h4>Why Identity Postures Matter</h4>
-      <p>A single, rigid visual lockup cannot communicate effectively with municipal administrators, open-source developers, privacy advocates, and scanning residents without creating visual friction or losing clarity. Structuring the visual identity into four distinct design postures allows the system to adapt its visual density, typography, and dimensionality to specific deployment contexts while maintaining a cohesive, recognizable DTPR brand identity standard.</p>
+  <div class="alert-canonical">
+    <h4>Canonical contract notice</h4>
+    <p>This page is the HTML counterpart to <code>BRAND_BOOK.md</code> Section 14 ("Strategic Postures") and Section 15 ("Going Forward") in the vault. The markdown is the contract that travels between agents; this page is what humans read. They agree.</p>
+    <p>The four-posture framing this page used to describe has been <strong>archived</strong>. The strategic-postures work since <code>09-font-protocol.html</code> v0.4 (August 2026) treats three recipes, not four postures, as the unit of analysis. The earlier A/B/C/D vocabulary (Citizen / Maker / Advocate / Deployer) survives as audience descriptions — Deployer, Developer, Advocate — but is no longer a 1:1 mapping to visual systems.</p>
+  </div>
+
+  <hr>
+
+  <h2>The process, in plain terms</h2>
+  <p>For each recipe, the brand-development workflow produced four artifacts, in this order:</p>
+  <ol style="line-height: 1.6; padding-left: 1.4rem;">
+    <li><strong>A Design Brief</strong> (text). Names the audience, the features, the primary user actions, and the constraints — what's <em>for</em>. The brief fixes the <em>posture</em> before any pixel is drawn.</li>
+    <li><strong>A corpus of mood-board images</strong>, organized into four buckets: graphic inspiration (composition and grid references), photo inspiration (register and voice references), textures (surface references), and icons and motifs (shape vocabulary). The mood boards were assembled for review and feedback in the <a href="https://miro.com/app/board/uXjVHCm5C0Y=/" target="_blank" rel="noopener">DTPR Visual Identity Miro board</a> — one concept mood board per recipe. From there, for each image, a vision-LLM extraction pass produced a structured JSON (line quality, shape language, dominant palette register, motion, <code>recipe_fit_score</code> 1–5). Color and type are <strong>not</strong> extracted from images — they are specified as design tokens separately.</li>
+    <li><strong>A field of Lanes</strong> — 8–12 visual probe directions, each rendered as a static screenshot of the homepage at that direction, with a caption naming its background, accent, signature pattern, and reference inspiration. The Lanes are a <em>deliberate sampling</em> of the design space the brief's posture opens up. They are the probes you saw on the concept mood boards.</li>
+    <li><strong>A selection.</strong> One Lane is locked. The others stay as "exploratory directions retained for history."</li>
+  </ol>
+  <p>The concept mood boards — one per recipe, organized in the DTPR Visual Identity Miro board — are the artifacts of steps 2–4 for each recipe. Step 1 (the Design Brief) lives in <code>recipes/&lt;letter&gt;/design_brief.md</code>. The corpus JSONs live in <code>recipes/&lt;letter&gt;/corpus/*.json</code>.</p>
+
+  <hr>
+
+  <h2>The Three Recipes at a Glance</h2>
+  <p class="lede">Each recipe began with a posture — a named audience and a named mode of address. The postures map to the three audiences the parent brand promised to serve: the people who <em>deploy</em> DTPR (A), the people who <em>build with</em> DTPR (B), and the people who <em>hold DTPR accountable</em> (C).</p>
+
+  <div class="grid-3">
+    <div class="recipe-card recipe-a">
+      <h3>Recipe A — Regulatory</h3>
+      <a class="mood-link" href="https://miro.com/app/board/uXjVHCm5C0Y=/?moveToWidget=3458764677110774968&cot=14" target="_blank" rel="noopener">Concept mood board ↗</a>
+      <div class="recipe-meta">
+        <span>Audience: <strong>Deployers</strong> · procurement, public-sector, compliance officers</span>
+        <span>Posture: <strong>Standards-compliance artifact</strong></span>
+        <span>Lane locked: <strong>Lane 9 — Industrial Spec Sheet</strong></span>
+        <span>Probes explored: <strong>12 (1 locked)</strong></span>
+      </div>
+      <p>The page reads as a spec sheet, not as marketing. Authority comes from the visual language of engineering documentation.</p>
+      <div class="selected-tag">archived · flavor survives</div>
+      <div class="recipe-probe">
+        <img src="probes-from-pdfs/A-lane-9-selected-industrial-spec-sheet.jpg" alt="Recipe A · Lane 9 · Industrial Spec Sheet (the locked probe)">
+        <div class="probe-caption"><strong>Lane 9 — Industrial Spec Sheet (selected).</strong> <code>inspo-graphic/008.png</code> (Blissful Studio 3.0). Light gray <code>#F0F2F5</code>, sharp bordered zones, input/output/ID panel, deployment evidence strip, caution band. Caption verbatim from the design brief.</div>
+      </div>
     </div>
-    <div class="callout">
-      <h4>Epistemic Grounding</h4>
-      <p>These postures translate co-design insights from the MakeShift convening and the visual component audit into formal visual grammar rules. Rather than leaving visual styling open to ad-hoc interpretation, these postures establish explicit, testable visual identity parameters for implementation.</p>
+
+    <div class="recipe-card recipe-b">
+      <h3>Recipe B — Maker <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--chartreuse); background: var(--navy); padding: 0.1rem 0.4rem; border-radius: 3px; margin-left: 0.4rem;">CANONICAL</span></h3>
+      <a class="mood-link" href="https://miro.com/app/board/uXjVHCm5C0Y=/?moveToWidget=3458764677607468882&cot=14" target="_blank" rel="noopener">Concept mood board ↗</a>
+      <div class="recipe-meta">
+        <span>Audience: <strong>All three</strong> · Deployer + Developer + Advocate, role-routed</span>
+        <span>Posture: <strong>Precise and structural, with one editorial moment</strong></span>
+        <span>Lane locked: <strong>Lane 5 — Light-Paper with Navy Primary Buttons</strong></span>
+        <span>Probes explored: <strong>8 (1 locked)</strong></span>
+      </div>
+      <p>The page reads as a technical schematic or interactive IDE. The hero is the one place the voice is not quiet.</p>
+      <div class="selected-tag">canonical for dtpr.io</div>
+      <div class="recipe-probe">
+        <img src="probes-from-pdfs/B-lane-5-selected-light-paper-navy-buttons.jpg" alt="Recipe B · Lane 5 · Light-Paper with Navy Primary Buttons (the locked probe, now canonical)">
+        <div class="probe-caption"><strong>Lane 5 — Light-Paper with Navy Primary Buttons (selected).</strong> Warm paper <code>#F8F8F2</code>, navy <code>#1B2B80</code> primary, no chartreuse accents on this Lane (chartreuse arrives as a CTA signal on Lane 7). Layout inspiration: the Tailwind CSS homepage (large hero + side-by-side editor + trust logo grid + 3-column features), using the Blueprint Terminal tokens.</div>
+      </div>
+    </div>
+
+    <div class="recipe-card recipe-c">
+      <h3>Recipe C — Commons</h3>
+      <a class="mood-link" href="https://miro.com/app/board/uXjVHCm5C0Y=/?moveToWidget=3458764677487270499&cot=14" target="_blank" rel="noopener">Concept mood board ↗</a>
+      <div class="recipe-meta">
+        <span>Audience: <strong>Advocates</strong> · residents, community accountability, participation</span>
+        <span>Posture: <strong>Structured but human</strong></span>
+        <span>Lane locked: <strong>Lane 3 — The Split Ground</strong></span>
+        <span>Probes explored: <strong>11 (1 locked)</strong></span>
+      </div>
+      <p>The page reads as a civic notice — a public document for the public. Authority comes from being legible to a person walking past a sensor.</p>
+      <div class="selected-tag">archived · flavor survives</div>
+      <div class="recipe-probe">
+        <img src="probes-from-pdfs/C-lane-3-selected-split-ground.jpg" alt="Recipe C · Lane 3 · The Split Ground (the locked probe)">
+        <div class="probe-caption"><strong>Lane 3 — The Split Ground (selected).</strong> Bilateral split: dark <code>#0F1414</code> left, cream <code>#F0E7D6</code> right. Single headline spanning both grounds. Mycelial connector motif at the boundary. Civic blue <code>#2A4B8C</code> CTA. Vibe: "structured, bilaterally tensioned, principled."</div>
+      </div>
     </div>
   </div>
 
   <hr>
 
-  <h2>The Four Identity Postures at a Glance</h2>
+  <h2>The exploration fields</h2>
+  <p class="lede">The three fields of Lanes are categorically different — you can read a Lane at random and tell which recipe it belongs to.</p>
 
-  <div class="grid-4">
-    <!-- Posture A -->
-    <div class="posture-card posture-a">
-      <h4>Option A<br>Flat / Minimal</h4>
-      <div class="posture-meta">
-        <span>Target: <strong>Impacted Citizen</strong></span>
-        <span>Identity Model: <strong>Form-Based (Static)</strong></span>
-        <span>Motive: <strong>Plain Legibility</strong></span>
-      </div>
-      <p class="posture-desc">DTPR as a simple public utility. Minimalist 2D geometry, flat icon sets, and system-default fonts to deliver maximum speed and zero jargon for residents scanning signs on the street.</p>
+  <figure class="wide-figure">
+    <img src="probes-from-pdfs/A-lane-field.jpg" alt="Recipe A — four early Lanes from the exploration field">
+    <figcaption><strong>Recipe A — exploration field (four early Lanes shown).</strong> Navy-dominant status-quo layouts, MakeShift chartreuse, Government Data Portal, Printed Policy Document, Split Panel, Fluent sidebar systems (dark/light/mobile), <em>Industrial Spec Sheet (locked)</em>, Library Catalog Card, Business Letterhead, Fluent + corpus hybrid. Total: 12 Lanes explored, 1 locked.</figcaption>
+  </figure>
+
+  <figure class="wide-figure">
+    <img src="probes-from-pdfs/B-lane-field.jpg" alt="Recipe B — four early Lanes from the exploration field">
+    <figcaption><strong>Recipe B — exploration field (four early Lanes shown).</strong> Lighter graph paper with gradient blobs, exploded axonometric blueprint, Moire grids and Platonic 3D solids, cyberpunk HUD terminal, <em>Light-Paper with Navy Primary Buttons (locked)</em>, dark navy + chartreuse Tailwind probes, light-paper Tailwind probes with chartreuse CTAs, original pre-Tailwind direction probes. Total: 8 Lanes explored, 1 locked.</figcaption>
+  </figure>
+
+  <figure class="wide-figure">
+    <img src="probes-from-pdfs/C-lane-field.jpg" alt="Recipe C — two early Lanes from the exploration field">
+    <figcaption><strong>Recipe C — exploration field (two early Lanes shown).</strong> Dark civic bold, cream notice board, <em>The Split Ground (locked)</em>, M3 dark civic, M3 cream civic, M3 people-community, M3 amoeba + wayfinding, M3 lava-lamp blob signage, M3 walking-figure + CAD title block, M3 organic wash, M3 utility infrastructure. Total: 11 Lanes explored, 1 locked.</figcaption>
+  </figure>
+
+  <hr>
+
+  <h2>The through-line — why Recipe B became canonical</h2>
+  <p class="lede">By the end of the brand identity sprint, three things had become true at once:</p>
+
+  <div class="throughline">
+    <h3>3 structural reasons</h3>
+    <ol>
+      <li><strong>The Developer audience turned out to be a separate product.</strong> The deep technical content (MCP server quickstarts, REST API references, UI embed examples, Claude-plugin authoring) was always going to live at <code>developer.dtpr.io</code>, not on the dtpr.io homepage. The "Technical Evaluator" persona that Lane 5 of Recipe B was optimized for turned out to have a real home elsewhere. Recipe B's homepage role shrank to <em>routing</em> developers onward, not serving them with depth.</li>
+      <li><strong>The Deployer and Advocate audiences turned out to need the same page.</strong> The Deployer (procurement, compliance, RFPs) needed plan/scope/pilot/monitor framing and RFP-grade language — exactly what Recipe A's Industrial Spec Sheet gave. The Advocate (community accountability, feedback pathways, participation) needed trust signals and open channels — closer to Recipe C's tone. But the two audiences <em>don't need separate visual systems</em>; they need a single page that holds both, with role-routing that takes each where they actually need to go. The role-routing pattern (<code>content/pages/get-started.md</code> → <code>start-here-{deployer,developer,advocate}.md</code>) is what made a single homepage viable.</li>
+      <li><strong>Recipe B's posture was the most compressible.</strong> Recipe A's posture (regulatory / procurement) was already surviving in real Recipe A content (<code>/playbook/deploy</code>, <code>/standard/audit-rubric</code>) — its real contribution was the <em>procurement-grade copy and routes</em>, not its visual tokens. Recipe C's posture (commons / civic tension) had a genuine contribution in the bilateral-split <em>compositional idea</em> (one anchored graphic against one field) and in the human-warmth flavor. Recipe B's posture (precise and structural with one editorial moment) had the broadest reach — it could hold a procurement section <em>and</em> a split-panel moment <em>and</em> a live-data indicator without breaking character.</li>
+    </ol>
+    <p style="margin-top: 1.2rem; padding-top: 1rem; border-top: 1px dashed var(--gray-200); font-size: 0.92rem; line-height: 1.55;">The decision in <code>09-font-protocol.html</code> v0.4 ("Cross-recipe protocol," August 2026) was the formal lock-in: <strong>Recipe A and Recipe C are archived.</strong> Their distinct content and structural DNA are folded into Recipe B as sparing, B-rendered flavors. Recipe B is now the canonical visual system for dtpr.io. This is not a rejection of Recipes A or C — it is the recognition that the work each Lane was doing has a different answer now.</p>
+  </div>
+
+  <hr>
+
+  <h2>Reconciliation — what to say about Recipes A and C now</h2>
+  <p class="lede">A future agent landing on this page may ask: <em>"Doesn't this mean Recipes A and C were wrong?"</em> No. Each answered its audience correctly — it just answered only that audience. The compression of three audiences onto one homepage is what makes the flavor-fold necessary.</p>
+
+  <div class="recon-grid">
+    <div class="recon-card">
+      <h4>Recipe A · procurement content</h4>
+      <p>Real Recipe A procurement copy and routes (<code>/playbook/deploy</code>, <code>/standard/audit-rubric</code>) survive in the real Nuxt app's <code>content/pages/</code>. Rendered in Recipe B's own system (Public Sans, <code>#1B2B80</code> navy, chartreuse reservation, rounded corners), never in Recipe A's own tool system. <strong>The Procurement flavor survives; the Procurement recipe does not.</strong></p>
     </div>
-
-    <!-- Posture B -->
-    <div class="posture-card posture-b">
-      <h4>Option B<br>Speculative / Maker</h4>
-      <div class="posture-meta">
-        <span>Target: <strong>Technical Evaluator</strong></span>
-        <span>Identity Model: <strong>Transformation/Process</strong></span>
-        <span>Motive: <strong>Tactile Blueprint</strong></span>
-      </div>
-      <p class="posture-desc">DTPR as an open-source builder framework. Isometric layered planes, graph-paper grids, monospaced tech stacks, and active sliding layouts designed for developers and system architects.</p>
+    <div class="recon-card">
+      <h4>Recipe C · split-panel DNA</h4>
+      <p>The bilateral-split compositional idea survives as the homepage's I/O + geometric-network split panel (<code>DESIGN.md</code> Section 5.10, Section 6.3). Rendered with connected navy nodes and straight edges, not with Recipe C's organic amoeba motif. <strong>The Structural Contrast flavor survives; the Commons recipe does not.</strong></p>
     </div>
-
-    <!-- Posture C -->
-    <div class="posture-card posture-c">
-      <h4>Option C<br>Human / Ecosystem</h4>
-      <div class="posture-meta">
-        <span>Target: <strong>Vigilant Advocate</strong></span>
-        <span>Identity Model: <strong>Interaction-Based</strong></span>
-        <span>Motive: <strong>Decentralized Power</strong></span>
-      </div>
-      <p class="posture-desc">DTPR as a community trust standard. Focuses on wireframe networks, refined cities, collective neighborhood voting boards, and educational syllabus modules for local community audits.</p>
-    </div>
-
-    <!-- Posture D -->
-    <div class="posture-card posture-d">
-      <h4>Option D<br>Regulated / Standard</h4>
-      <div class="posture-meta">
-        <span>Target: <strong>Pragmatic Deployer</strong></span>
-        <span>Identity Model: <strong>Rules-Based Closed</strong></span>
-        <span>Motive: <strong>Risk Compliance</strong></span>
-      </div>
-      <p class="posture-desc">DTPR as civic compliance infrastructure. Structured around ISO 3864 safety check templates, corporate pitch checklists, issue reporting ticket systems, and federated city chapters.</p>
+    <div class="recon-card">
+      <h4>Neither posture was wrong</h4>
+      <p>Recipe A answered the Deployer's question correctly, but only the Deployer's. Recipe C answered the Advocate's question correctly, but only the Advocate's. Recipe B's posture is what survives the <em>compression</em> of three audiences into one page. The test for any borrowed element lives in <code>BRAND_BOOK.md</code> Section 8: is this <em>this recipe's own render</em> of a real fact or a real structural idea from an archived recipe — or is it that recipe's actual tool, imported wholesale?</p>
     </div>
   </div>
 
   <hr>
 
-  <h2>Detailed Posture Mappings</h2>
-  <p class="lede">To ground each posture across both physical signage and digital software touchpoints, each option is mapped across five core system variables:</p>
+  <h2>Going Forward</h2>
+  <p>This page now hands off to the Going Forward surfaces. The full "where the archived recipes' content lives now" inventory, the structural commitments that "canonical" requires going forward, and the open judgment calls are in <code>BRAND_BOOK.md</code> Section 15. The three highest-leverage moves from Section 15:</p>
 
-  <div class="callout" style="margin: 1.5rem 0 2.5rem; background: var(--gray-50); border-left: 4px solid var(--navy);">
-    <h4 style="margin-top: 0; color: var(--navy); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.08em; font-family: var(--font-mono);">System Variable Definitions</h4>
-    <dl style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; margin: 0.9rem 0 0; font-size: 0.88rem; line-height: 1.5;">
-      <div>
-        <dt style="font-family: var(--font-mono); font-weight: 700; color: var(--navy); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">1. Form Variable</dt>
-        <dd style="margin: 0; color: var(--gray-700);">The geometric construction, spatial dimensionality (2D flat, 3D isometric, wireframe node network), color palette application, and visual mass of the container marks.</dd>
-      </div>
-      <div>
-        <dt style="font-family: var(--font-mono); font-weight: 700; color: var(--navy); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">2. Process Variable</dt>
-        <dd style="margin: 0; color: var(--gray-700);">The temporal and behavioral dynamics of the identity—kinetic motion rules, state transitions, layout fluidity, and rendering constraints across print, signage, and screen.</dd>
-      </div>
-      <div>
-        <dt style="font-family: var(--font-mono); font-weight: 700; color: var(--navy); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">3. Semantic Variable</dt>
-        <dd style="margin: 0; color: var(--gray-700);">The informational depth, vocabulary register, and technical domain (physical sensors, digital data channels, AI/algorithmic engines, or hybrid municipal governance).</dd>
-      </div>
-      <div>
-        <dt style="font-family: var(--font-mono); font-weight: 700; color: var(--navy); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">4. Feedback Loop</dt>
-        <dd style="margin: 0; color: var(--gray-700);">The interactive mechanism allowing residents, evaluators, or deployers to respond, verify, comment, or report discrepancies with the physical-digital installation.</dd>
-      </div>
-      <div>
-        <dt style="font-family: var(--font-mono); font-weight: 700; color: var(--navy); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">5. Core Analogy</dt>
-        <dd style="margin: 0; color: var(--gray-700);">The intuitive real-world mental model (e.g. nutrition label, developer blueprint, civic workshop syllabus, compliance checklist) that anchors public comprehension.</dd>
-      </div>
-    </dl>
+  <div class="gf-links">
+    <a href="guidelines/09-font-protocol.html">
+      <strong>Guidelines · 09 Font Protocol (v0.4)</strong>
+      The cross-recipe protocol that made Recipe B canonical — Public Sans locked site-wide, italic cadence rule, chartreuse reservation. This is the canonical lock-in artifact.
+    </a>
+    <a href="guidelines/index.html">
+      <strong>Guidelines Cover</strong>
+      The prescriptive identity guide — values, logo, color, type, photography, visual language, web application.
+    </a>
+    <a href="guidelines/07-color.html">
+      <strong>Guidelines · 07 Color</strong>
+      The chartreuse reservation, navy role, and status-color system. Where the canonical palette is locked.
+    </a>
   </div>
 
-  <div class="grid-2">
-    <div>
-      <h3>Option A: Flat &amp; Minimal (Citizen Utility)</h3>
-      <p>Designed to mitigate public <strong>AI &amp; consent fatigue</strong>. It addresses the <em>Impacted Citizen's</em> low tolerance for legal jargon or complex layout shifts by stripping the interface down to static, highly legible visual facts.</p>
-      
-      <table class="posture-spec-table">
-        <tr>
-          <td>Form Variable</td>
-          <td>Solid Flat Hexagon geometry; Legacy Navy/Teal Flat palette</td>
-        </tr>
-        <tr>
-          <td>Process Variable</td>
-          <td>Static-only motion behavior (optimized for physical sign prints)</td>
-        </tr>
-        <tr>
-          <td>Semantic Variable</td>
-          <td>Physical sensors focus; plain resident register; binary presence data</td>
-        </tr>
-        <tr>
-          <td>Feedback Loop</td>
-          <td>Anonymous smiley/emoji rating interface</td>
-        </tr>
-        <tr>
-          <td>Core Analogy</td>
-          <td>The standard nutrition label (Data Facts)</td>
-        </tr>
-      </table>
-    </div>
-
-    <div>
-      <h3>Option B: Speculative &amp; Maker (Developer Blueprint)</h3>
-      <p>Designed to unblock <strong>developer integration friction</strong>. It frames the standard as a set of developer tools and open modular systems. Grounded in the SVA MakeShift 2026 visual assets and typewriter/grid textures.</p>
-      
-      <table class="posture-spec-table">
-        <tr>
-          <td>Form Variable</td>
-          <td>Isometric 3D Hexagon; Sparse connective networks; Layered navy/pale-blue</td>
-        </tr>
-        <tr>
-          <td>Process Variable</td>
-          <td>Kinetic sliding/tiling cell transitions; Monospace + Serif type stack</td>
-        </tr>
-        <tr>
-          <td>Semantic Variable</td>
-          <td>Digital channels focus; advocate register; categorical 7-questions depth</td>
-        </tr>
-        <tr>
-          <td>Feedback Loop</td>
-          <td>Spatial public comment map pinning</td>
-        </tr>
-        <tr>
-          <td>Core Analogy</td>
-          <td>Interactive scrollytelling playground tour</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <div class="grid-2" style="margin-top: 2rem;">
-    <div>
-      <h3>Option C: Human &amp; Ecosystem (Advocate Commons)</h3>
-      <p>Designed for non-profit and civic tech groups who act as the translation layer between city hall and the community. Grounded in the <strong>Vigilant Advocate's</strong> need for decentralized trust and collective agency.</p>
-      
-      <table class="posture-spec-table">
-        <tr>
-          <td>Form Variable</td>
-          <td>Wireframe node network geometry; ISO 3864 safe shield isolation coloring</td>
-        </tr>
-        <tr>
-          <td>Process Variable</td>
-          <td>Elastic spring-damping motion; Refined Memphis city illustration style</td>
-        </tr>
-        <tr>
-          <td>Semantic Variable</td>
-          <td>AI &amp; Algorithmic decision engines focus; deployer register; database schema</td>
-        </tr>
-        <tr>
-          <td>Feedback Loop</td>
-          <td>Collective neighborhood polling &amp; ballot voting</td>
-        </tr>
-        <tr>
-          <td>Core Analogy</td>
-          <td>Decentralized academic/workshop syllabus modules</td>
-        </tr>
-      </table>
-    </div>
-
-    <div>
-      <h3>Option D: Regulated &amp; Standard (Deployer Compliance)</h3>
-      <p>Designed to resolve the <strong>fear of public backlash</strong> for city leaders. Focuses on procedural safety, regulatory alignment (ISO/IEC compliance), and standardized procurement tools.</p>
-      
-      <table class="posture-spec-table">
-        <tr>
-          <td>Form Variable</td>
-          <td>Rounded/beveled hexagons; Offset floating layers; Assembly Cobalt/Amber palette</td>
-        </tr>
-        <tr>
-          <td>Process Variable</td>
-          <td>Glitch/signal scan indicators; Sans-Serif standard typography stack</td>
-        </tr>
-        <tr>
-          <td>Semantic Variable</td>
-          <td>Connected physical-digital-AI hybrid focus; developer register; search database</td>
-        </tr>
-        <tr>
-          <td>Feedback Loop</td>
-          <td>Formal issue ticket filing &amp; discrepancy logs</td>
-        </tr>
-        <tr>
-          <td>Core Analogy</td>
-          <td>City pitch-deck checklists &amp; federated municipal chapters</td>
-        </tr>
-      </table>
-    </div>
-  </div>
+  <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--gray-500); border-top: 1px dashed var(--gray-200); padding-top: 0.8rem;">The remaining pages in the audit cluster (14 Sprint Morphology, 15 Transformation Morphology, 16 Semantic Morphology, 17 Sprint Recipes, 18 Geometric Blueprint, 19 Core CAA Assets, 20 ISO 3864 Matrix, 21 Responsive Specs, 22 Primitive Derivation) still reference the earlier A/B/C/D posture vocabulary and are being reconciled against this canonical framing in a separate pass. Treat them as <em>historical evidence</em> until that pass ships.</p>
 
   <div class="page-nav">
     <a href="12-findings.html">← 12 Findings</a>
