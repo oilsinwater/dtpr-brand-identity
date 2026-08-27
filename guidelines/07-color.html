@@ -76,7 +76,7 @@
 <main>
   <span class="eyebrow">07 · Color Guide</span>
   <h1>The Recipe B palette</h1>
-  <p class="lede">The DTPR Recipe B palette is built on high contrast — deep navy for structure, bright chartreuse reserved for interaction and status indicators. The palette is one of three DTPR recipe palettes; this page documents the Recipe B (Maker) variant. Recipe A and Recipe C have their own palettes and constraints — see the recipe handoff archives.</p>
+  <p class="lede">The DTPR Recipe B palette is built on high contrast — deep navy for structure, medium blue as the secondary accent for non-CTA affordances, and chartreuse *reserved* as the tertiary accent for the primary CTA and live-data status only. The palette is one of three DTPR recipe palettes; this page documents the Recipe B (Maker) variant.</p>
 
   <div class="tag-row">
     <span class="tag observed">OBSERVED</span>
@@ -89,7 +89,7 @@
 
   <p><span class="reservation">Chartreuse is reserved for the live-data status indicator and the primary CTA. Period.</span></p>
 
-  <p>Chartreuse <code>#9ACD00</code> is strictly reserved for the live-data status indicator and the primary CTA. It must <strong>NEVER</strong> be used on hero headlines, body text, decorative elements, hover states of non-primary elements, or background fills other than the CTA itself. Hover and active states of the chartreuse CTA use <code>#B5DB1A</code> (chartreuse-hover) and <code>#84B400</code> (chartreuse-active).</p>
+  <p>Chartreuse <code>#9ACD00</code> is strictly reserved for the live-data status indicator and the primary CTA. It must <strong>NEVER</strong> be used on hero headlines, body text, decorative elements, hover states of non-primary elements, secondary-action affordances (use medium blue for those), or background fills other than the CTA itself. Hover and active states of the chartreuse CTA use <code>#B5DB1A</code> (chartreuse-hover) and <code>#84B400</code> (chartreuse-active).</p>
 
   <p>This is the parent's "one accent, one job" principle, made literal. The rarity of chartreuse is what makes it trustworthy as an action signal. If chartreuse appears on hover, on labels, on borders, the rule has been violated.</p>
 
@@ -102,26 +102,31 @@
       <div class="swatch-color light" style="background: #1B2B80;">#1B2B80</div>
       <div class="swatch-meta">
         <strong>Navy</strong>
-        Primary container borders, navigation headers, structural divides.<br>Hover: <code>#2563D0</code>
-      </div>
-    </div>
-    <div class="swatch">
-      <div class="swatch-color light" style="background: #2563D0;">#2563D0</div>
-      <div class="swatch-meta">
-        <strong>Medium Blue</strong>
-        Hover states for primary actions, text link hovers, mid-level category tags. <em>Not</em> a primary CTA color.
+        Primary container borders, navigation headers, structural divides, navy CTAs (the secondary action CTA — see <code>DESIGN.md</code> Section 5.1).
       </div>
     </div>
   </div>
 
-  <h2>Tertiary</h2>
+  <h2>Secondary</h2>
 
   <div class="swatch-row">
     <div class="swatch">
-      <div class="swatch-color dark" style="background: #E8EAF5;">#E8EAF5</div>
+      <div class="swatch-color light" style="background: #2563D0;">#2563D0</div>
       <div class="swatch-meta">
-        <strong>Cool Paper</strong>
-        Sidebar fills, table headers, desaturated container backgrounds.
+        <strong>Medium Blue</strong>
+        The secondary accent. Hover states for primary (navy) actions, navy CTA hover, text link hovers, mid-level category tags, focus rings on navy buttons, and selected-state accents on secondary controls. <em>Not</em> a primary CTA color. <em>Use this anywhere you'd reach for an accent and the chartreuse reservation rules it out.</em>
+      </div>
+    </div>
+  </div>
+
+  <h2>Tertiary — Reserved Accent</h2>
+
+  <div class="swatch-row">
+    <div class="swatch">
+      <div class="swatch-color dark" style="background: #9ACD00;">#9ACD00</div>
+      <div class="swatch-meta">
+        <strong>Chartreuse</strong>
+        <em>Reserved.</em> Live-data indicator + primary CTA only. Hover: <code>#B5DB1A</code>. Active: <code>#84B400</code>. See the Chartreuse Reservation Rule above.
       </div>
     </div>
   </div>
@@ -158,6 +163,13 @@
       </div>
     </div>
     <div class="swatch">
+      <div class="swatch-color dark" style="background: #E8EAF5;">#E8EAF5</div>
+      <div class="swatch-meta">
+        <strong>Cool Paper</strong>
+        Sidebar fills, table headers, desaturated container backgrounds. (A neutral in the paper family — <em>not</em> a tertiary accent.)
+      </div>
+    </div>
+    <div class="swatch">
       <div class="swatch-color dark" style="background: #E2E0D8;">#E2E0D8</div>
       <div class="swatch-meta">
         <strong>Border Grey</strong>
@@ -173,21 +185,9 @@
     </div>
   </div>
 
-  <h2>Reserved accent — chartreuse</h2>
-
-  <div class="swatch-row">
-    <div class="swatch">
-      <div class="swatch-color dark" style="background: #9ACD00;">#9ACD00</div>
-      <div class="swatch-meta">
-        <strong>Chartreuse</strong>
-        <em>Reserved.</em> Live-data indicator + primary CTA only. Hover: <code>#B5DB1A</code>. Active: <code>#84B400</code>.
-      </div>
-    </div>
-  </div>
-
   <h2>Semantic status (system-wide)</h2>
 
-  <p>Identical across Recipe B and the optional A-flavored and C-flavored registers — these are status colors, not brand colors.</p>
+  <p>Identical across Recipe B and the optional A-flavored and C-flavored registers — these are status colors, not brand colors. They sit outside the primary/secondary/tertiary hierarchy.</p>
 
   <div class="swatch-row">
     <div class="swatch">
