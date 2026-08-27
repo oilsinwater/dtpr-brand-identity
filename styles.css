@@ -248,12 +248,14 @@ body {
   padding: 0;
 }
 
-/* Big nav items */
+/* Big nav items — same font family, size, weight, letter-spacing, and casing as proper nav */
 .site-header .dropdown-menu li a {
-  font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 600;
-  font-size: 0.88rem;
-  color: #002684;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--navy);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -261,7 +263,7 @@ body {
   border-radius: 4px;
   border-left: 2px solid transparent;
   transition: all 0.15s ease-in-out;
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 /* Big nav item Hover Interaction: Highlighted + Underlined */
