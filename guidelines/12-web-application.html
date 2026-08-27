@@ -219,18 +219,57 @@
 
   <div class="app-preview-container">
     <div class="app-preview-toolbar">
-      <div>
-        <span class="status-dot"></span>
-        <span>RECIPE B PROTOTYPE // V3.0 (MAKER · PARED-BACK)</span>
+      <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center;">
+          <span class="status-dot" id="status-dot"></span>
+          <span id="prototype-label" style="font-weight: 600;">RECIPE B // V3.0 (MINIMAL · PARED-BACK)</span>
+        </div>
+        <!-- Segmented Expression Switcher -->
+        <div style="display: inline-flex; background: rgba(255,255,255,0.1); padding: 2px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2);">
+          <button id="btn-switch-v3" onclick="switchPrototype('v3')" style="background: #9ACD00; color: #070B1A; border: none; padding: 4px 10px; border-radius: 3px; font-family: 'Source Code Pro', monospace; font-size: 0.75rem; font-weight: bold; cursor: pointer;">
+            Minimal (V3)
+          </button>
+          <button id="btn-switch-v2" onclick="switchPrototype('v2')" style="background: transparent; color: #94A3B8; border: none; padding: 4px 10px; border-radius: 3px; font-family: 'Source Code Pro', monospace; font-size: 0.75rem; font-weight: bold; cursor: pointer;">
+            Maximal (V2 3D)
+          </button>
+        </div>
       </div>
-      <div>
-        <a href="./prototype/index.html" target="_blank" class="btn-open">Open Standalone App ↗</a>
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <a id="btn-standalone" href="./prototype/index.html" target="_blank" class="btn-open">Open Standalone ↗</a>
       </div>
     </div>
     <div class="app-iframe-wrapper">
-      <iframe src="./prototype/index.html" title="DTPR Web Application Prototype — V3 pared-back" loading="lazy"></iframe>
+      <iframe id="prototype-iframe" src="./prototype/index.html" title="DTPR Web Application Prototype — V3 pared-back" loading="lazy" style="width: 100%; height: 750px; border: none;"></iframe>
     </div>
   </div>
+
+  <script>
+    function switchPrototype(version) {
+      var iframe = document.getElementById('prototype-iframe');
+      var label = document.getElementById('prototype-label');
+      var standaloneBtn = document.getElementById('btn-standalone');
+      var btnV3 = document.getElementById('btn-switch-v3');
+      var btnV2 = document.getElementById('btn-switch-v2');
+
+      if (version === 'v2') {
+        iframe.src = './prototype-v2/index.html';
+        label.textContent = 'RECIPE B // V2.0 (MAXIMAL · 3D WEBGL)';
+        standaloneBtn.href = './prototype-v2/index.html';
+        btnV2.style.background = '#2563D0';
+        btnV2.style.color = '#FFFFFF';
+        btnV3.style.background = 'transparent';
+        btnV3.style.color = '#94A3B8';
+      } else {
+        iframe.src = './prototype/index.html';
+        label.textContent = 'RECIPE B // V3.0 (MINIMAL · PARED-BACK)';
+        standaloneBtn.href = './prototype/index.html';
+        btnV3.style.background = '#9ACD00';
+        btnV3.style.color = '#070B1A';
+        btnV2.style.background = 'transparent';
+        btnV2.style.color = '#94A3B8';
+      }
+    }
+  </script>
 
   <hr>
 
