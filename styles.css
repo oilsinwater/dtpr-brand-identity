@@ -98,7 +98,7 @@ body {
 }
 
 /* ============================================
-   SITE CHROME — HEADER
+   SITE CHROME — HEADER & PROPER NAV
    ============================================ */
 
 .site-header {
@@ -119,6 +119,13 @@ body {
   color: var(--navy);
   text-decoration: none;
   white-space: nowrap;
+  padding: 0.2rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.site-header .brand:hover {
+  border-bottom-color: var(--chartreuse);
 }
 
 .site-header .brand .dot {
@@ -128,31 +135,11 @@ body {
   display: inline-block; flex-shrink: 0;
 }
 
-.site-header nav a {
-  font-family: var(--font-mono);
-  font-weight: 700; font-size: 0.68rem; letter-spacing: 0.09em; text-transform: uppercase;
-  color: var(--gray-600);
-  text-decoration: none;
-  padding: 0.2rem 0;
-  border-bottom: 2px solid transparent;
-  transition: color 0.15s, border-color 0.15s;
-}
-
-.dropdown{
-  position:relative;
-}
-
-/* ============================================
-   MEGA MENU (horizontal nav + auto-fit grid panel)
-   ============================================ */
-
-/* Outer nav: items are <li>s whether they're direct children of <nav> (guidelines
-   pages, missing outer <ul>) or children of an outer <ul> inside <nav> (root
-   pages, semantically correct). Target both to keep the layout consistent. */
 .site-header nav,
 .site-header nav > ul {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
@@ -163,8 +150,63 @@ body {
 
 .site-header nav > li,
 .site-header nav > ul > li {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
+/* Links and Dropdown Triggers in the proper nav bar */
+.site-header nav a,
+.site-header nav .nav-dropdown-trigger {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--gray-600);
+  text-decoration: none;
+  padding: 0.35rem 0.15rem;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  background: transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Hover and Focus interaction on proper nav */
+.site-header nav a:hover,
+.site-header nav .nav-dropdown-trigger:hover,
+.site-header nav a:focus,
+.site-header nav .nav-dropdown-trigger:focus {
+  color: var(--navy);
+  border-bottom-color: var(--chartreuse);
+}
+
+/* Active / Current Page or Active Section on proper nav */
+.site-header nav a[aria-current="page"],
+.site-header nav a.active,
+.site-header nav .nav-dropdown-trigger[aria-current="page"],
+.site-header nav .nav-dropdown-trigger.active-section {
+  color: var(--navy);
+  border-bottom-color: var(--chartreuse);
+  font-weight: 800;
+}
+
+/* While a dropdown is open, highlight the trigger */
+.site-header .dropdown.is-open > .nav-dropdown-trigger {
+  color: var(--navy);
+  border-bottom-color: var(--chartreuse);
+  font-weight: 800;
+}
+
+/* ============================================
+   MEGA MENU / BIG NAV
+   ============================================ */
 
 .site-header .dropdown {
   position: static;
@@ -175,61 +217,78 @@ body {
   position: fixed;
   left: 0;
   right: 0;
-  top: 53px;
+  top: 52px;
   width: 100vw;
-  min-height: 350px;
-  max-height: 400px;
+  height: auto;
+  min-height: auto;
+  max-height: 80vh;
   background: #ffffff;
   border-bottom: 3px solid #002684;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
   z-index: 9999;
-  padding: 2rem;
+  padding: 1.25rem 2rem 1.5rem;
   overflow-y: auto;
 }
 
-/* Open state — toggled by nav.js when the trigger is clicked.
-   Hover on the dropdown OR its open menu keeps it visible so the user can
-   move the cursor from trigger to menu items without losing focus. */
+/* Open state when toggled or hovered */
 .site-header .dropdown.is-open > .dropdown-menu,
 .site-header .dropdown:hover > .dropdown-menu,
 .site-header .dropdown-menu:hover {
-  /* CSS Grid: fill rows first, then wrap to next row of columns.
-     Short menus → 1 row. Long menus → multi-row, multi-column wrapping. */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 0.75rem 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem 1.25rem;
   align-content: start;
   max-width: 1280px;
   margin: 0 auto;
 }
 
-/* Visual feedback: trigger looks active while its menu is open. */
-.site-header .dropdown.is-open > .nav-dropdown-trigger {
-  color: var(--navy);
-  border-bottom-color: var(--chartreuse);
-}
-
 .site-header .dropdown-menu li {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
+/* Big nav items */
 .site-header .dropdown-menu li a {
-  font-family: 'Public Sans', sans-serif;
+  font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: #002684;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0.45rem 0.65rem;
+  border-radius: 4px;
+  border-left: 2px solid transparent;
+  transition: all 0.15s ease-in-out;
+  line-height: 1.35;
+}
+
+/* Big nav item Hover Interaction: Highlighted + Underlined */
+.site-header .dropdown-menu li a:hover,
+.site-header .dropdown-menu li a:focus {
+  background: #EEF2FF;
+  color: #002684;
+  text-decoration: underline;
+  border-left-color: #9ACD00;
+  transform: translateX(2px);
+}
+
+/* Big nav item Active / Current Page Highlight */
+.site-header .dropdown-menu li a[aria-current="page"],
+.site-header .dropdown-menu li a.active {
+  background: #002684;
+  color: #FFFFFF;
+  font-weight: 700;
+  border-left-color: #9ACD00;
   text-decoration: none;
 }
 
-.site-header .dropdown-menu li a:hover {
+.site-header .dropdown-menu li a[aria-current="page"]:hover,
+.site-header .dropdown-menu li a.active:hover {
+  background: #0F194B;
+  color: #FFFFFF;
   text-decoration: underline;
-}
-
-.site-header nav a:hover { color: var(--navy); }
-
-.site-header nav a[aria-current="page"] {
-  color: var(--navy);
-  border-bottom-color: var(--chartreuse);
 }
 
 .site-header .badge-draft {
@@ -238,7 +297,6 @@ body {
   border: 1px solid var(--gray-300); padding: 0.2rem 0.6rem; border-radius: var(--r-sm);
   white-space: nowrap; flex-shrink: 0;
 }
-
 
 /* ============================================
    LAYOUT
