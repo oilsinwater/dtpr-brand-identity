@@ -531,6 +531,7 @@ hr { border: none; border-top: 1px solid var(--gray-200); margin: 3rem 0; }
   .cover-hex { display: none; }
 }
 
+.cover-hex svg,
 .cover-hex-img {
   width: 100%;
   height: auto;
