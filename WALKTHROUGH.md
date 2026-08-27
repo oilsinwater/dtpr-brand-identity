@@ -2,7 +2,7 @@
 
 ## Purpose
 
-**DTPR** (Digital Trust for Places & Routines) is an open standard for transparent public-interest technology, stewarded by [Helpful Places](https://www.helpfulplaces.com) under CC BY 4.0. This site is a v0.3 working artifact by Superbloom Design (Philliph Drummond, Senior Tech Design Researcher), in two halves:
+**DTPR** (Digital Trust for Places & Routines) is an open standard for transparent public-interest technology, stewarded by [Helpful Places](https://www.helpfulplaces.com) under CC BY 4.0. This site is a v0.3 working artifact by Superbloom Design (Philippe Truman, Senior Tech Design Researcher), in two halves:
 
 - **Brand Identity Audit (00–12)** — what the brand actually is across every visible surface, in source code, and print collateral. The inventory.
 - **Visual System Prep (13–21)** — Phase 3 sprint prep. Design rules, morphological parameter grids, sprint recipes, hexagon blueprint, application assets, and responsive specs. The system that addresses the audit.
