@@ -514,13 +514,16 @@ hr { border: none; border-top: 1px solid var(--gray-200); margin: 3rem 0; }
   line-height: 1.65;
 }
 
-/* ---- Layered hex mark (CSS) ---- */
+/* ---- Layered Hex Graphic (SVG mark) ---- */
 
 .cover-hex {
   position: relative;
   width: 220px;
   height: 220px;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 900px) {
@@ -528,60 +531,13 @@ hr { border: none; border-top: 1px solid var(--gray-200); margin: 3rem 0; }
   .cover-hex { display: none; }
 }
 
-.hex-layer {
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+.cover-hex-img {
+  width: 100%;
+  height: auto;
+  max-width: 220px;
+  filter: drop-shadow(0 12px 24px rgba(0, 16, 112, 0.12));
+  display: block;
 }
-
-.hex-layer-1 {
-  background: var(--navy);
-  top: 0; left: 20px;
-  z-index: 3;
-  display: flex; align-items: center; justify-content: center;
-}
-
-.hex-layer-2 {
-  background: var(--royal-blue);
-  top: 26px; left: 8px;
-  z-index: 2;
-}
-
-.hex-layer-3 {
-  background: var(--pale-blue);
-  top: 50px; left: -6px;
-  z-index: 1;
-}
-
-.hex-layer-1 .hex-inner-text {
-  font-family: var(--font-mono);
-  font-weight: 800;
-  font-size: 0.58rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.9);
-  text-align: center;
-  line-height: 1.6;
-  padding: 0 1.5rem;
-  margin-top: -1.5rem;
-}
-
-/* Layer labels */
-.hex-layer-label {
-  position: absolute;
-  font-family: var(--font-mono);
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gov-blue);
-  white-space: nowrap;
-}
-
-.hex-layer-label.l1 { top: 10px; left: 210px; }
-.hex-layer-label.l2 { top: 36px; left: 200px; }
-.hex-layer-label.l3 { top: 62px; left: 190px; }
 
 /* ============================================
    TABLE OF CONTENTS
