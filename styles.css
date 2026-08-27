@@ -395,15 +395,19 @@ p {
   font-weight: 400;
 }
 
-/* Eyebrow — MakeShift-style chartreuse label band */
+/* Eyebrow — structural section label chip (navy on paper, AAA).
+   The chartreuse reservation rule reserves chartreuse for primary CTAs
+   and the live-data indicator only. A section-label chip is neither —
+   it is structural, not interactive. Use navy on paper for the
+   structural label, save chartreuse for the things that earn it. */
 .eyebrow {
   font-family: var(--font-mono);
   font-weight: 800;
   font-size: 0.7rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--ink);
-  background: var(--chartreuse);
+  color: var(--white);
+  background: var(--navy);
   display: inline-block;
   padding: 0.3rem 0.75rem;
   border-radius: var(--r-sm);
@@ -1355,8 +1359,8 @@ tbody tr:hover { background: rgba(0, 38, 132, 0.03); }
   font-size: 0.7rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--navy);
-  background: var(--chartreuse);
+  color: var(--white);
+  background: var(--navy);
   display: inline-block;
   padding: 0.25rem 0.55rem;
   border-radius: 3px;
