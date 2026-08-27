@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "wrangler dev",
     "serve": "npx serve .",
-    "build:v3": "cd ../dtpr-site-v3 && pnpm generate && rm -rf ../dtpr-brand-identity/guidelines/prototype && cp -R .output/public ../dtpr-brand-identity/guidelines/prototype",
-    "build:v2": "cd ../dtpr-site-v2 && pnpm generate && rm -rf ../dtpr-brand-identity/guidelines/prototype-v2 && cp -R .output/public ../dtpr-brand-identity/guidelines/prototype-v2",
+    "build:v3": "cd ../dtpr-site-v3 && NUXT_APP_BASE_URL=/guidelines/prototype/ pnpm generate && rm -rf ../dtpr-brand-identity/guidelines/prototype && cp -R .output/public ../dtpr-brand-identity/guidelines/prototype",
+    "build:v2": "cd ../dtpr-site-v2 && NUXT_APP_BASE_URL=/guidelines/prototype-v2/ pnpm generate && rm -rf ../dtpr-brand-identity/guidelines/prototype-v2 && cp -R .output/public ../dtpr-brand-identity/guidelines/prototype-v2",
     "build": "npm run build:v3 && npm run build:v2",
     "deploy": "wrangler pages deploy ."
   },
