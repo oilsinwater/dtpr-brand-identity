@@ -114,16 +114,38 @@
     flex-shrink: 0;
   }
   .tee .tee-svg { width: 100%; height: 100%; }
-  .tee .chest-mark {
+  .tee .tee-label {
     position: absolute;
+    top: -1.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray-500);
+    background: var(--white);
+    padding: 0.15rem 0.6rem;
+    border-radius: 3px;
+    border: 1px solid var(--gray-300);
+  }
+  .tee .chest-mark { position: absolute; z-index: 2; }
+  /* Front view: small stacked lockup, off-centre on the LEFT chest
+     (the standard print position). Smaller than the old single-view
+     version per Phil: "use your judgement, but it should be pretty small." */
+  .tee .chest-mark.front-chest {
+    top: 24%;
+    left: 32%;
+    width: 36px; height: 50px;
+  }
+  /* Back view: just the hex icon, centred between the shoulder blades. */
+  .tee .chest-mark.back-icon {
     top: 22%;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px; height: 84px;
-    display: flex; align-items: center; justify-content: center;
-    z-index: 2;
+    width: 38px; height: 44px;
   }
-  .tee .chest-mark svg { width: 100%; height: 100%; }
   /* Tote preview: cream tote silhouette with screen-printed mark. */
   .tote {
     width: 260px;
@@ -134,10 +156,13 @@
     flex-shrink: 0;
   }
   .tote .tote-svg { width: 100%; height: 100%; }
+  /* The tote body is a slight trapezoid (50-60px at top, 40-220px at bottom)
+     so the geometric centre shifts downward and outward. Offset the mark
+     slightly LEFT and UP to align with the visual centre of the bag. */
   .tote .chest-mark {
     position: absolute;
-    top: 38%;
-    left: 50%;
+    top: 36%;
+    left: 47%;
     transform: translateX(-50%);
     width: 80px; height: 112px;
     z-index: 2;
@@ -151,13 +176,16 @@
     border-radius: 50%;
     border: 4px solid var(--navy);
     display: flex; align-items: center; justify-content: center;
-    flex-direction: column;
     margin: 0 auto;
     padding: 1rem;
-    text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   }
-  .sticker svg { width: 50%; height: auto; }
+  .sticker img {
+    max-width: 65%;
+    max-height: 70%;
+    width: auto;
+    height: auto;
+  }
 /* Button / pin. */
   .button-pin {
     width: 200px;
@@ -169,7 +197,15 @@
     margin: 0 auto;
     padding: 1rem;
   }
-  .button-pin svg { width: 50%; height: auto; }
+  /* The stacked logo is tall (75.63 × 128.26). Constrain by both
+     width and height so the lockup fits in the circle without
+     overflowing vertically. */
+  .button-pin img {
+    max-width: 55%;
+    max-height: 70%;
+    width: auto;
+    height: auto;
+  }
 
 </style>
 </head>
@@ -242,11 +278,12 @@
 
   <hr>
   <h2>Tee</h2>
-  <p>Heavyweight cotton, white surface, single-color navy stacked lockup on the chest, sized to read from 3 ft away. No back print.</p>
+  <p>Heavyweight cotton, white surface. Front: small navy stacked lockup, off-centre on the left chest (the standard print position, ~4 in wide). Back: just the icon, centred between the shoulder blades, ~2.5 in wide.</p>
 
-  <div class="mock-stage" style="display: flex; justify-content: center;">
+  <div class="mock-stage" style="display: flex; gap: 2.5rem; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
     <div class="tee">
-      <svg class="tee-svg" viewBox="0 0 260 340" xmlns="http://www.w3.org/2000/svg" aria-label="White t-shirt silhouette with screen-printed DTPR mark on the chest">
+      <div class="tee-label">Front</div>
+      <svg class="tee-svg" viewBox="0 0 260 340" xmlns="http://www.w3.org/2000/svg" aria-label="White t-shirt front with small DTPR stacked lockup on left chest">
         <!-- Shoulders + body silhouette -->
         <path d="M 78,40 L 50,68 L 30,90 L 60,110 L 60,300 L 200,300 L 200,110 L 230,90 L 210,68 L 182,40 L 158,62 C 148,72 112,72 102,62 Z"
               fill="#fafafa" stroke="#d0d0d0" stroke-width="1.5" />
@@ -256,12 +293,25 @@
         <!-- Subtle shadow at hem -->
         <rect x="62" y="285" width="136" height="14" fill="#000" opacity="0.04" />
       </svg>
-      <div class="chest-mark">
-        <img src="../assets/marks/dtpr_logo_stacked_navy.svg" alt="DTPR" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain;">
+      <div class="chest-mark front-chest">
+        <img src="../assets/marks/dtpr_logo_stacked_navy.svg" alt="DTPR" style="width: 100%; height: 100%; object-fit: contain;">
+      </div>
+    </div>
+    <div class="tee">
+      <div class="tee-label">Back</div>
+      <svg class="tee-svg" viewBox="0 0 260 340" xmlns="http://www.w3.org/2000/svg" aria-label="White t-shirt back with DTPR icon centred between shoulder blades">
+        <!-- Shoulders + body silhouette (no collar — back view) -->
+        <path d="M 78,40 L 50,68 L 30,90 L 60,110 L 60,300 L 200,300 L 200,110 L 230,90 L 210,68 L 182,40 C 172,50 88,50 78,40 Z"
+              fill="#fafafa" stroke="#d0d0d0" stroke-width="1.5" />
+        <!-- Subtle shadow at hem -->
+        <rect x="62" y="285" width="136" height="14" fill="#000" opacity="0.04" />
+      </svg>
+      <div class="chest-mark back-icon">
+        <img src="../assets/marks/dtpr_mark_navy.svg" alt="DTPR" style="width: 100%; height: 100%; object-fit: contain;">
       </div>
     </div>
   </div>
-  <p class="stage-label">Tee · white cotton · stacked lockup chest print · no back print</p>
+  <p class="stage-label">Tee · white cotton · front: small stacked lockup, left chest · back: icon, centred</p>
 
   <hr>
 
@@ -295,7 +345,7 @@
 
   <div class="mock-stage" style="display: flex; justify-content: center; min-height: 240px;">
     <div class="sticker">
-      <img src="../assets/marks/dtpr_logo_stacked_navy.svg" alt="DTPR" style="max-width: 75%; max-height: 70%; width: auto; height: auto;">
+      <img src="../assets/marks/dtpr_logo_stacked_navy.svg" alt="DTPR" style="max-width: 65%; max-height: 70%; width: auto; height: auto;">
     </div>
   </div>
   <p class="stage-label">Sticker · 3 in round · white surface · navy stacked lockup · die-cut</p>
@@ -307,7 +357,7 @@
 
   <div class="mock-stage" style="display: flex; justify-content: center; min-height: 240px;">
     <div class="button-pin">
-      <img src="../assets/marks/dtpr_logo_stacked_white.svg" alt="DTPR" style="max-width: 65%; max-height: 60%; width: auto; height: auto;">
+      <img src="../assets/marks/dtpr_logo_stacked_white.svg" alt="DTPR" style="max-width: 55%; max-height: 70%; width: auto; height: auto;">
     </div>
   </div>
   <p class="stage-label">Button/pin · 1.25 in · medium-blue surface · stacked lockup in white · steward's mark</p>
