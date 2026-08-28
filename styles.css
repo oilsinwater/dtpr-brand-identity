@@ -427,14 +427,15 @@ p {
 }
 
 /* Breadcrumb — small mono path back to the section cover.
-   Sits between the eyebrow and the page h1. */
+   Sits below the navbar, above the eyebrow. ~2.5 units between
+   the breadcrumb and the eyebrow chip. */
 .breadcrumb {
   font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--gray-500);
-  margin: 0 0 0.75rem 0;
+  margin: 1.5rem 0 2.5rem 0;
 }
 .breadcrumb a {
   color: var(--gray-600);
