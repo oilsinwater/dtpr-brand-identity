@@ -426,6 +426,34 @@ p {
   margin-bottom: 1.2rem;
 }
 
+/* Breadcrumb — small mono path back to the section cover.
+   Sits between the eyebrow and the page h1. */
+.breadcrumb {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--gray-500);
+  margin: 0 0 0.75rem 0;
+}
+.breadcrumb a {
+  color: var(--gray-600);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.breadcrumb a:hover {
+  color: var(--navy);
+  border-bottom-color: var(--medium-blue);
+}
+.breadcrumb .sep {
+  margin: 0 0.45rem;
+  color: var(--gray-300);
+}
+.breadcrumb .current {
+  color: var(--gray-600);
+}
+
 .mono  { font-family: var(--font-mono); }
 .small { font-size: 0.875rem; color: var(--gray-600); line-height: 1.5; }
 .tiny  { font-size: 0.75rem; color: var(--gray-500); }
