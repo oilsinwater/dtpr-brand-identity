@@ -427,7 +427,7 @@ p {
 }
 
 /* Breadcrumb — small mono path back to the section cover.
-   Sits below the navbar, above the eyebrow. ~3.5rem (56px) between
+   Sits below the navbar, above the eyebrow. ~5.5rem (88px) between
    the breadcrumb and the eyebrow chip. No top margin — the
    navbar's own bottom margin provides the gap. */
 .breadcrumb {
@@ -436,7 +436,7 @@ p {
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--gray-500);
-  margin: 0 0 3.5rem 0;
+  margin: 0 0 5.5rem 0;
 }
 .breadcrumb a {
   color: var(--gray-600);
