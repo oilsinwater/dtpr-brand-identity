@@ -482,6 +482,9 @@ hr { border: none; border-top: 1px solid var(--gray-200); margin: 3rem 0; }
   display: inline-block; font-family: var(--font-mono);
   font-size: 0.6rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
   padding: 0.2rem 0.55rem; border-radius: var(--r-sm);
+  background: var(--gray-100);
+  color: var(--gray-700);
+  border: 1px solid var(--gray-200);
 }
 
 .tag.observed   { background: #e6f4ea; color: #1e6e3a; border: 1px solid #b8e0c2; }
