@@ -116,10 +116,10 @@
   .tee .tee-svg { width: 100%; height: 100%; }
   .tee .chest-mark {
     position: absolute;
-    top: 26%;
+    top: 22%;
     left: 50%;
     transform: translateX(-50%);
-    width: 36px; height: 40px;
+    width: 60px; height: 84px;
     display: flex; align-items: center; justify-content: center;
     z-index: 2;
   }
@@ -136,10 +136,10 @@
   .tote .tote-svg { width: 100%; height: 100%; }
   .tote .chest-mark {
     position: absolute;
-    top: 42%;
+    top: 38%;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px; height: 70px;
+    width: 80px; height: 112px;
     z-index: 2;
   }
   .tote .chest-mark svg { width: 100%; height: 100%; }
@@ -158,20 +158,16 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   }
   .sticker svg { width: 50%; height: auto; }
-  .sticker .label {
-    font-family: 'Source Code Pro', monospace; font-size: 0.55rem;
-    color: var(--navy); text-transform: uppercase; letter-spacing: 0.06em;
-    margin-top: 0.4rem;
-  }
-  /* Button / pin. */
+/* Button / pin. */
   .button-pin {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     background: #2563D0;  /* medium blue — secondary; chartreuse reserved for primary CTA + live status */
     border-radius: 50%;
     border: 2px solid var(--navy);
     display: flex; align-items: center; justify-content: center;
     margin: 0 auto;
+    padding: 1rem;
   }
   .button-pin svg { width: 50%; height: auto; }
 
@@ -243,7 +239,7 @@
 
   <hr>
   <h2>Tee</h2>
-  <p>Heavyweight cotton, white surface, single-color navy print on the chest. Mark sits 4 cm below the collar, sized to read from 3 ft away. No back print.</p>
+  <p>Heavyweight cotton, white surface, single-color navy stacked lockup on the chest, sized to read from 3 ft away. No back print.</p>
 
   <div class="mock-stage" style="display: flex; justify-content: center;">
     <div class="tee">
@@ -258,16 +254,16 @@
         <rect x="62" y="285" width="136" height="14" fill="#000" opacity="0.04" />
       </svg>
       <div class="chest-mark">
-        <svg viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/><circle cx="14" cy="16" r="9" fill="#FFFFFF"/><rect x="10" y="12" width="8" height="8" fill="#1B2B80"/></svg>
+        <img src="../assets/marks/dtpr_logo_stacked_navy.svg" alt="DTPR" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain;">
       </div>
     </div>
   </div>
-  <p class="stage-label">Tee · white cotton · 4cm chest mark · no back print</p>
+  <p class="stage-label">Tee · white cotton · stacked lockup chest print · no back print</p>
 
   <hr>
 
   <h2>Tote bag</h2>
-  <p>Natural canvas tote, 14×16 in. Single-color navy screen print centered on the front panel. Web handles, no gusset. Pairs with the workshop kit.</p>
+  <p>Natural canvas tote, 14×16 in. Single-color navy stacked lockup screen print centered on the front panel. Web handles, no gusset. Pairs with the workshop kit.</p>
 
   <div class="mock-stage" style="display: flex; justify-content: center;">
     <div class="tote">
@@ -283,36 +279,35 @@
         <rect x="42" y="290" width="176" height="14" fill="#000" opacity="0.05" />
       </svg>
       <div class="chest-mark">
-        <svg viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/><circle cx="14" cy="16" r="9" fill="#f5f0e6"/><rect x="10" y="12" width="8" height="8" fill="#1B2B80"/></svg>
+        <img src="../assets/marks/dtpr_logo_stacked_navy.svg" alt="DTPR" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain;">
       </div>
     </div>
   </div>
-  <p class="stage-label">Tote · natural canvas · 14×16 in · navy single-color print</p>
+  <p class="stage-label">Tote · natural canvas · 14×16 in · stacked lockup single-color print</p>
 
   <hr>
 
   <h2>Sticker</h2>
-  <p>Round die-cut, 3 in diameter. Mark at center, mono "DTPR · v2.1 · CC BY 4.0" caption around the perimeter. White surface, navy print.</p>
+  <p>Round die-cut, 3 in diameter. Stacked lockup centered on white surface, navy print.</p>
 
   <div class="mock-stage" style="display: flex; justify-content: center; min-height: 240px;">
     <div class="sticker">
-      <svg viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#1B2B80"/><circle cx="14" cy="16" r="9" fill="#1B2B80"/><rect x="10" y="12" width="8" height="8" fill="#FFFFFF"/></svg>
-      <div class="label">DTPR · v2.1 · CC BY 4.0</div>
+      <img src="../assets/marks/dtpr_logo_stacked_navy.svg" alt="DTPR" style="max-width: 75%; max-height: 70%; width: auto; height: auto;">
     </div>
   </div>
-  <p class="stage-label">Sticker · 3 in round · white surface · navy print · die-cut</p>
+  <p class="stage-label">Sticker · 3 in round · white surface · navy stacked lockup · die-cut</p>
 
   <hr>
 
   <h2>Button / pin</h2>
-  <p>1.25 in round pin-back button. <strong>Medium-blue surface</strong> — secondary blue is the merch accent; the steward's mark lives on a colored field so it reads as a badge, not a brand element. White print of the mark at center.</p>
+  <p>1.25 in round pin-back button. <strong>Medium-blue surface</strong> — secondary blue is the merch accent; the steward's mark lives on a colored field so it reads as a badge, not a brand element. White stacked lockup at center.</p>
 
   <div class="mock-stage" style="display: flex; justify-content: center; min-height: 240px;">
     <div class="button-pin">
-      <svg viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#FFFFFF"/><circle cx="14" cy="16" r="9" fill="#2563D0"/><rect x="10" y="12" width="8" height="8" fill="#FFFFFF"/></svg>
+      <img src="../assets/marks/dtpr_logo_stacked_white.svg" alt="DTPR" style="max-width: 65%; max-height: 60%; width: auto; height: auto;">
     </div>
   </div>
-  <p class="stage-label">Button/pin · 1.25 in · medium-blue surface · white print · steward's mark</p>
+  <p class="stage-label">Button/pin · 1.25 in · medium-blue surface · stacked lockup in white · steward's mark</p>
 
   <hr>
 
