@@ -80,9 +80,9 @@
     
     <!-- Morphological Labels Layer (Top of Z-Order) -->
     <g id="layer-labels">
-      <text transform="translate(90, 362) rotate(23.584)" class="hex-mono-text text-white">Form</text>
-      <text transform="translate(75, 428) rotate(23.584)" class="hex-mono-text text-white">Process</text>
-      <text transform="translate(60, 492) rotate(23.584)" class="hex-mono-text text-navy">Semantics</text>
+      <text transform="translate(90, 362) rotate(23.584)" class="hex-mono-text text-white">Governance</text>
+      <text transform="translate(75, 428) rotate(23.584)" class="hex-mono-text text-white">Community + Power</text>
+      <text transform="translate(60, 492) rotate(23.584)" class="hex-mono-text text-navy">Infrastructure</text>
     </g>
     </g>
   </g>

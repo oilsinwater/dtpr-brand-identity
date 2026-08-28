@@ -397,7 +397,7 @@ p {
   color: var(--gray-700);
   line-height: 1.6;
   max-width: 64ch;
-  margin-bottom: 3.5rem;
+  margin-bottom: 1rem;
 }
 
 /* Editorial serif — for pull quotes, h1 subtitles */
@@ -476,7 +476,7 @@ hr { border: none; border-top: 1px solid var(--gray-200); margin: 3rem 0; }
    SOURCE / OBSERVATION TAGS
    ============================================ */
 
-.tag-row { display: flex; gap: 0.4rem; flex-wrap: wrap; margin: 0.6rem 0 1.2rem; }
+.tag-row { display: flex; gap: 0.4rem; flex-wrap: wrap; margin: 0.6rem 0 3.5rem; }
 
 .tag {
   display: inline-block; font-family: var(--font-mono);
