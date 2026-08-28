@@ -132,29 +132,36 @@
     font-size: 0.65rem; color: var(--gray-600);
     text-transform: uppercase; letter-spacing: 0.05em;
   }
-  /* Brochure: tri-fold cover. */
+  /* Brochure: tri-fold cover.
+     Warm paper surface + deep slate text — readable, on-brand.
+     Phil: avoid navy substrate; the title was unreadable on navy. */
   .brochure-cover {
     aspect-ratio: 11/8.5;
-    background: var(--navy);
-    color: var(--white);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #F4F2EC;
+    color: var(--navy);
     padding: 2rem;
     display: flex; flex-direction: column; justify-content: space-between;
-    border: 1px solid var(--navy);
+    border: 1px solid #E2E0D8;
+    min-height: 460px;
   }
   .brochure-cover .mark-row svg { height: 32px; width: auto; }
   .brochure-cover .title {
     font-family: 'Source Serif 4', Georgia, serif; font-style: italic;
     font-size: 2rem; line-height: 1.1; margin: 0;
+    color: var(--navy);
   }
   .brochure-cover .sub {
     font-family: 'Public Sans', sans-serif; font-weight: 600;
     font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase;
-    margin: 0.5rem 0 0; color: rgba(255,255,255,0.7);
+    margin: 0.5rem 0 0; color: var(--medium-blue);
   }
   .brochure-cover .footer-line {
     display: flex; justify-content: space-between;
     font-family: 'Source Code Pro', monospace; font-size: 0.7rem;
-    color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.05em;
+    color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.05em;
   }
   /* Poster: vertical column with one serif italic moment + chartreuse pin. */
   .poster {
@@ -270,7 +277,7 @@
         <p>This brief is one of three formats. A one-pager is the standard. A brochure extends it to three folds for events. A poster is the public-space variant.</p>
       </div>
       <div class="footer-line">
-        <span>DTPR · Helpful Places · Superbloom</span>
+        <span>DTPR · Helpful Places</span>
         <span>CC BY 4.0</span>
       </div>
     </div>
@@ -280,29 +287,29 @@
   <hr>
 
   <h2>Brochure (tri-fold)</h2>
-  <p>Landscape 11×8.5 in (or A4 tri-fold) for events, conferences, council briefings. Cover panel uses the navy surface, inverse mark, and serif-italic display headline. Inside panels repeat the one-pager structure with section-specific copy.</p>
+  <p>Landscape 11×8.5 in (or A4 tri-fold) for events, conferences, council briefings. Cover panel reads on warm paper, with the navy mark at the top, the canonical display headline in Source Serif 4 italic set in deep slate, and the subhead in the medium-blue secondary accent. Inside panels repeat the one-pager structure with section-specific copy.</p>
 
   <div class="mock-stage">
     <div class="brochure-cover">
       <div class="mark-row">
-        <svg viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 8.6378V23.3623C28 23.8176 27.7573 24.2391 27.363 24.4671L14.6364 31.829C14.2427 32.057 13.7573 32.057 13.3636 31.829L0.63636 24.4671C0.24268 24.2391 0 23.8176 0 23.3623V8.6378C0 8.1819 0.24268 7.76102 0.63636 7.53307L13.3636 0.170468C13.7573 -0.0568225 14.2427 -0.0568225 14.6364 0.170468L27.363 7.53307C27.7573 7.76102 28 8.1819 28 8.6378Z" fill="#F4F2EC"/><circle cx="14" cy="16" r="9" fill="#1B2B80"/><rect x="10" y="12" width="8" height="8" fill="#F4F2EC"/></svg>
+        <img src="../assets/marks/dtpr_mark_navy.svg" alt="DTPR" style="height: 32px; width: auto;">
       </div>
       <div>
-        <p class="title">Making the<br>invisible<br>visible.</p>
+        <p class="title" style="color: #1B2B80; font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 2rem; line-height: 1.1; margin: 0 0 1rem 0;">Making the<br>invisible<br>visible.</p>
         <p class="sub">DTPR · Open standard · v2.1</p>
       </div>
       <div class="footer-line">
-        <span>Helpful Places · Superbloom</span>
+        <span>DTPR · Helpful Places</span>
         <span>CC BY 4.0</span>
       </div>
     </div>
   </div>
-  <p class="stage-label">Brochure cover · navy surface · inverse mark · serif-italic display</p>
+  <p class="stage-label">Brochure cover · warm paper · navy mark · serif-italic display in deep slate</p>
 
   <hr>
 
   <h2>Poster</h2>
-  <p>Vertical 2:3 format for civic-space display. The chartreuse dot appears only on the footer line (active deployment indicator). White surface, navy text.</p>
+  <p>Vertical 2:3 format for civic-space display. The chartreuse dot appears only on the footer line as the active deployment indicator. White surface, navy text.</p>
 
   <div class="mock-stage">
     <div class="poster">
