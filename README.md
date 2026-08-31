@@ -1,18 +1,18 @@
-# DTPR Brand Identity — Audit & System Prep
+# DTPR Brand Identity — Audit, System Prep & Guidelines
 
-A static, browser-native deck documenting DTPR's visual identity as observed across every live surface, plus the prescriptive system prep that follows it.
+A static, browser-native site documenting DTPR's visual identity — from the original brand audit through prescriptive guidelines and interactive web prototypes.
 
-**DTPR** (Digital Trust for Places & Routines) is a data-transparency standard for urban sensors, stewarded by [Helpful Places](https://www.helpfulplaces.com) and licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). This repo holds Superbloom Design's v0.3 brand audit and the resulting Visual System Prep.
+**DTPR** (Digital Trust for Places & Routines) is a data-transparency standard for urban sensors, stewarded by [Helpful Places](https://www.helpfulplaces.com) and licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). This repo holds Superbloom Design's brand audit, visual system prep, prescriptive brand identity guidelines, and two Recipe B web prototypes.
 
 ---
 
 ## What's in here
 
-Two related decks, sharing one stylesheet, two covers, and a numbered-chapter convention.
+Three interconnected sections, sharing one design language.
 
 ### Part 1 — Brand Identity Audit (open `index.html`)
 
-An observational inventory of the brand as it actually exists in the wild — across every visible surface, in source code, print collateral, and on the page.
+An observational inventory of the brand as it actually exists — across every visible surface, in source code, print collateral, and on the page.
 
 | # | Chapter | Scope |
 |---|---|---|
@@ -35,25 +35,68 @@ The prescriptive engine — morphological boxes, recipes, blueprints, ISO matrix
 
 | # | Chapter | Scope |
 |---|---|---|
-| 13 | Form Box | Geometry, layout grids, color parameters, border radii |
-| 14 | Process Box | Active scaling, line weights, motion, signal scans |
-| 15 | Semantic Box | Element relationships, taxonomy hooks |
-| 16 | Sprint Recipes | Combined into Regulatory, Maker, Commons contexts |
-| 17 | Geometric Blueprint | Honeycomb math, coordinate mapping |
-| 18 | Core CAA Assets | Built from the blueprint |
-| 19 | ISO 3864 Matrix | Warning-color co-placement rules |
-| 20 | Responsive Specs | Physical-to-digital transformation parameters |
+| 13 | Strategic Postures | Four postures mapped to four personas |
+| 14 | Sprint Morphology (Form) | Geometry, layout grids, color parameters, border radii |
+| 15 | Transformation Morphology | Scaling, motion, live-data, domain-change rules |
+| 16 | Semantic Morphology | Meaning, register, disclosure rules |
+| 17 | Sprint Recipes | Regulatory (A), Maker (B), Commons (C) combined |
+| 18 | Geometric Blueprint | Honeycomb math and coordinate mapping |
+| 19 | Core CAA Assets | Built from the blueprint |
+| 20 | ISO 3864 Matrix | Warning-color co-placement rules |
+| 21 | Responsive Specs | Physical-to-digital transformation parameters |
+| 22 | Primitive Derivation | Token primitives derived from the morphological boxes |
+
+### Part 3 — Brand Identity Guidelines (open `guidelines/index.html`)
+
+The prescriptive brand guidelines — use-case rules, logo specifications, color and typography protocols, application examples. Deliverable-grade document.
+
+| # | Chapter | Scope |
+|---|---|---|
+| 01 | Brand Identity Values | Core values: openness, legibility, agency, accountability, community |
+| 02 | Logo | Canonical hexagon mark, horizontal lockup, clear space rules |
+| 03 | Logo (Stacked) | Stacked lockup variant and usage |
+| 04 | Watermark | Reduced-scale watermark form and background treatments |
+| 05 | Icon | Standalone icon usage — minimum sizes and contexts |
+| 06 | Dimensions & Clear Space | Dimensional grid, exclusion zones, size thresholds |
+| 07 | Color Guide | Primary navy, secondary chartreuse, extended palette, semantic usage |
+| 08 | Fonts | Source Serif 4, Public Sans, Source Code Pro — specimens and pairing rules |
+| 09 | Font Protocol | Cross-recipe usage rules, hierarchy, responsive type scale |
+| 10 | Photography | Editorial photography direction, subject framing, do's and don'ts |
+| 11 | Visual Language | Graph-paper grid system, geometric motifs, layout principles |
+| 12 | Web Application | Recipe B web component patterns, nav, hero, section anatomy |
+| 13 | Misuse & Don'ts | Logo distortions, color violations, typographic misuse, prohibited patterns |
+| 14 | Voice & Tone | Five principles, organizational values, register calibration |
+| 15 | Co-Branding | Partner mark placement, co-authorship rules, lockup hierarchy |
+| 16 | Print Collateral | Report covers, flyers, one-pagers — layout and margins |
+| 17 | Stationery | Business cards, letterhead, email signature |
+| 18 | Environmental & Signage | Physical sign templates, physical-to-digital QR flows |
+| 19 | Merch & Swag | Tote bags, pins, buttons — logo placement and sizing |
+| 21 | Email Templates | HTML email templates: announcement, update, invitation |
+
+#### Interactive Prototypes (in `guidelines/`)
+
+Two interactive web prototypes demonstrate Recipe B in motion. Built with Vue 3 + Nuxt, deployed as static HTML.
+
+| Path | Description |
+|---|---|
+| `guidelines/prototype/` | **V3 — Minimal** — clean Recipe B, real deployment map, active deployments only |
+| `guidelines/prototype-v2/` | **V2 — Maximal** — full section treatment, animation-forward, complete A-Day-with-DTPR journey |
 
 ---
 
 ## Viewing
 
-No build step. Open `index.html` (or `sprint-index.html`) in any browser, or serve the directory:
+No build step. Open any entry point in any browser, or serve the directory:
 
     python3 -m http.server 8000
     # then http://localhost:8000
 
 All page-to-page links are relative — the whole site can sit on any static host.
+
+**Entry points:**
+- `index.html` — Brand Identity Audit cover
+- `sprint-index.html` — Visual System Prep cover
+- `guidelines/index.html` — Brand Identity Guidelines cover
 
 ---
 
@@ -69,38 +112,40 @@ Every claim in the audit is tagged so the deck can be read with calibrated confi
 | **MEMO** | Sourced from the brand foundation memo (v2), not a live surface |
 | **OPEN** | A decision the brand book has to surface for the team |
 
-Source tags mark where evidence was gathered: `vision.dtpr.io` · `dtpr.io` · `makeshift` · `docs.dtpr.io` · `Assembly Day`.
-
-The distinction matters. OBSERVED is reproducible from the source; INFERRED is the auditor's read; PROPOSED has not yet been decided by Helpful Places; MEMO lives in a foundation document, not in any live CSS or HTML. Confusing them is the most common failure mode of brand audits, so the deck keeps them visually separate.
-
----
-
-## What this is and isn't
-
-**It is.** An inventory of the DTPR visual identity across dtpr.io, vision.dtpr.io, makeshift2026.dtpr.io, docs.dtpr.io, the Assembly Day deck, the Message Map, and MakeShift print collateral — with screenshots, source-code citations, and analysis. Then a structured set of system parameters and recipes for how DTPR assets behave in the field.
-
-**It is not.** A prescriptive brand book. Decisions and color-token lockups in Part 1 are *observed* or *inferred*, never invented. Every open question is named; nothing is silently resolved.
+Source tags: `vision.dtpr.io` · `dtpr.io` · `makeshift` · `docs.dtpr.io` · `Assembly Day`.
 
 ---
 
 ## Repository layout
 
-    index.html             Part 1 cover (Brand Identity Audit)
-    sprint-index.html      Part 2 cover (Visual System Prep)
-    01..12-*.html          Audit chapters (12 pages)
-    13..20-*.html          System prep chapters (8 pages)
-    styles.css             Shared stylesheet for all 22 pages
+    index.html                Part 1 cover (Brand Identity Audit)
+    sprint-index.html         Part 2 cover (Visual System Prep)
+    01..12-*.html             Audit chapters (12 pages)
+    13..22-*.html             System prep chapters (10 pages)
+    styles.css                Shared stylesheet for all pages
     assets/
-      marks/               DTPR hexagon, lockup variants, three seals
-      logos-partners/      Helpful Places, Superbloom wordmarks
-      screenshots/         Live-site and event collateral captures
-        dtpr-io-hero/      dtpr.io section-by-section
-        vision-hero/       vision.dtpr.io section-by-section
-        makeshift-hero/    Makeshift 2026 section-by-section
-        docs-dtpr/         docs.dtpr.io captures
-        dtpr-io-live/      Full-page deploy captures
-        walkthroughs/      Page-by-page screen recordings
-      assembly-day/        Assembly Day deck captures
+      marks/                  DTPR hexagon, lockup variants, three seals
+      logos-partners/         Helpful Places, Superbloom wordmarks
+      screenshots/            Live-site and event collateral captures
+    guidelines/
+      index.html              Part 3 cover (Brand Identity Guidelines)
+      01..21-*.html           Guidelines chapters (20 pages)
+      prototype/              V3 Minimal prototype (Vue 3 + Nuxt, static)
+      prototype-v2/           V2 Maximal prototype (Vue 3 + Nuxt, static)
+    BRAND_BOOK.md             Recipe B brand contract (canonical design direction)
+    DESIGN.md                 Visual design system reference and token definitions
+    RATIONALE.md              Why this site is built the way it is
+    README.md                 This file
+
+---
+
+## Reference documents
+
+| File | Purpose |
+|---|---|
+| `BRAND_BOOK.md` | The canonical Recipe B design contract — the agreement between designers and builders. Covers brand personality, token system, component anatomy, voice, and application rules. |
+| `DESIGN.md` | Visual design system reference — token definitions, color primitives, type scale, spacing, and grid. |
+| `RATIONALE.md` | Deep rationale for the site format and model — why HTML over PDF, why generative over fixed, why this approach. |
 
 ---
 
@@ -109,20 +154,23 @@ The distinction matters. OBSERVED is reproducible from the source; INFERRED is t
 | Metric | Value | Note |
 |---|---|---|
 | Live sites audited | 5 | dtpr.io, vision.dtpr.io, makeshift2026.dtpr.io, docs.dtpr.io, dtpr.guide |
-| Pages observed | 76+ | across the four most-active sites, including localized and taxonomy pages |
+| Pages observed | 76+ | across the four most-active sites |
 | Hex colors extracted | 12 | brand primary, secondary, accent, status, neutrals — all from source CSS |
 | Taxonomy elements | 147 | 51 device + 23 processing + 73 AI across three taxonomies |
-| Stakeholder tiers | 3 | Public Sector · Social Sector · General Public — Assembly Day ecosystem research |
-| Organizational values | 5 | Openness · Legibility · Agency · Accountability · Community — Message Map |
+| Stakeholder tiers | 3 | Public Sector · Social Sector · General Public |
+| Organizational values | 5 | Openness · Legibility · Agency · Accountability · Community |
+| Audit + Prep pages | 22 | Parts 1 and 2 combined |
+| Guidelines pages | 20 | Part 3 Brand Identity Guidelines |
+| Prototypes | 2 | V2 Maximal and V3 Minimal — interactive Recipe B demos |
 
 ---
 
 ## Stewardship & license
 
 - **Standard steward:** [Helpful Places](https://www.helpfulplaces.com)
-- **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — applies to both this audit deck and the DTPR standard assets it documents
+- **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Audit author:** Superbloom Design · June 2026 — attribution requested on redistribution
-- **Status:** v0.3 — audit draft + system prep draft
+- **Status:** v0.4 — audit + system prep + brand identity guidelines + prototypes
 
 ---
 
@@ -131,13 +179,12 @@ The distinction matters. OBSERVED is reproducible from the source; INFERRED is t
 - **v0.1** (April 2026) — initial site inventory
 - **v0.2** (May 2026) — Assembly Day findings integrated, color tokens locked
 - **v0.3** (June 2026) — Voice chapter added, Visual System Prep split out, Message Map two-track fork surfaced
-
-Each page carries a `v0.3 · audit` or `v0.3 · system prep` badge in its header.
+- **v0.4** (August 2026) — Brand Identity Guidelines (Part 3) added, two Recipe B interactive prototypes deployed, BRAND_BOOK.md added as canonical design contract, visual system reconciled against production codebase
 
 ---
 
 ## Contributing
 
-This is a published audit artifact. Open an issue or PR if you spot an inaccuracy — the OBSERVED/INFERRED/PROPOSED distinction makes it easy to triage: factual corrections land on the OBSERVED claims, and framing questions land on the INFERRED or PROPOSED ones.
+This is a published audit artifact. Open an issue or PR if you spot an inaccuracy — the OBSERVED/INFERRED/PROPOSED distinction makes it easy to triage.
 
-Helpful Places owns the standard and the brand direction; Superbloom authored this deck. Reach Helpful Places for any decision about how DTPR should look going forward.
+Helpful Places owns the standard and the brand direction; Superbloom authored this deck.
