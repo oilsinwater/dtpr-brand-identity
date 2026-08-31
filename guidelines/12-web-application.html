@@ -208,24 +208,24 @@
       <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
         <div style="display: flex; align-items: center;">
           <span class="status-dot" id="status-dot"></span>
-          <span id="prototype-label" style="font-weight: 600;">RECIPE B // V3.0 (MINIMAL · PARED-BACK)</span>
+          <span id="prototype-label" style="font-weight: 600;">RECIPE B // V2.0 (MAXIMAL)</span>
         </div>
-        <!-- Segmented Expression Switcher -->
+        <!-- Segmented Expression Switcher: Maximal (V2) first, Minimal (V3) second -->
         <div style="display: inline-flex; background: rgba(255,255,255,0.1); padding: 2px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2);">
-          <button id="btn-switch-v3" onclick="switchPrototype('v3')" style="background: #9ACD00; color: #070B1A; border: none; padding: 4px 10px; border-radius: 3px; font-family: 'Source Code Pro', monospace; font-size: 0.75rem; font-weight: bold; cursor: pointer;">
-            Minimal (V3)
+          <button id="btn-switch-v2" onclick="switchPrototype('v2')" style="background: #2563D0; color: #FFFFFF; border: none; padding: 4px 10px; border-radius: 3px; font-family: 'Source Code Pro', monospace; font-size: 0.75rem; font-weight: bold; cursor: pointer;">
+            Maximal (V2)
           </button>
-          <button id="btn-switch-v2" onclick="switchPrototype('v2')" style="background: transparent; color: #94A3B8; border: none; padding: 4px 10px; border-radius: 3px; font-family: 'Source Code Pro', monospace; font-size: 0.75rem; font-weight: bold; cursor: pointer;">
-            Maximal (V2 3D)
+          <button id="btn-switch-v3" onclick="switchPrototype('v3')" style="background: transparent; color: #94A3B8; border: none; padding: 4px 10px; border-radius: 3px; font-family: 'Source Code Pro', monospace; font-size: 0.75rem; font-weight: bold; cursor: pointer;">
+            Minimal (V3)
           </button>
         </div>
       </div>
       <div style="display: flex; align-items: center; gap: 0.75rem;">
-        <a id="btn-standalone" href="./prototype/index.html" target="_blank" class="btn-open">Open Standalone ↗</a>
+        <a id="btn-standalone" href="./prototype-v2/index.html" target="_blank" class="btn-open">Open Standalone ↗</a>
       </div>
     </div>
     <div class="app-iframe-wrapper">
-      <iframe id="prototype-iframe" src="./prototype/index.html" title="DTPR Web Application Prototype — V3 pared-back" loading="lazy" style="width: 100%; height: 100%; border: none; display: block;"></iframe>
+      <iframe id="prototype-iframe" src="./prototype-v2/index.html" title="DTPR Web Application Prototype — V2 Maximal" loading="lazy" style="width: 100%; height: 100%; border: none; display: block;"></iframe>
     </div>
   </div>
 
@@ -239,7 +239,7 @@
 
       if (version === 'v2') {
         iframe.src = './prototype-v2/index.html';
-        label.textContent = 'RECIPE B // V2.0 (MAXIMAL · 3D WEBGL)';
+        label.textContent = 'RECIPE B // V2.0 (MAXIMAL)';
         standaloneBtn.href = './prototype-v2/index.html';
         btnV2.style.background = '#2563D0';
         btnV2.style.color = '#FFFFFF';
