@@ -1,21 +1,22 @@
-# DTPR Brand Identity — Audit, System Prep & Guidelines
+# DTPR Brand Identity — Audit & Guidelines
 
 A static, browser-native site documenting DTPR's visual identity — from the original brand audit through prescriptive guidelines and interactive web prototypes.
 
-**DTPR** (Digital Trust for Places & Routines) is a data-transparency standard for urban sensors, stewarded by [Helpful Places](https://www.helpfulplaces.com) and licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). This repo holds Superbloom Design's brand audit, visual system prep, prescriptive brand identity guidelines, and two Recipe B web prototypes.
+**DTPR** (Digital Trust for Places & Routines) is a data-transparency standard for urban sensors, stewarded by [Helpful Places](https://www.helpfulplaces.com) and licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). This repo holds Superbloom Design's brand audit, prescriptive brand identity guidelines, and two Recipe B web prototypes.
 
 ---
 
 ## What's in here
 
-Three interconnected sections, sharing one design language.
+Two interconnected sections, sharing one design language.
 
 ### Part 1 — Brand Identity Audit (open `index.html`)
 
-An observational inventory of the brand as it actually exists — across every visible surface, in source code, print collateral, and on the page.
+An observational inventory of the brand as it actually exists — across every visible surface, in source code, print collateral, and on the page. Closes with Strategic Postures: the four conceptual directions that frame the guidelines.
 
 | # | Chapter | Scope |
 |---|---|---|
+| 00 | Cover | Scope, sources, steward, author |
 | 01 | Evolution | The 2020–2026 arc: vision → dtpr.io → Makeshift → Assembly Day |
 | 02 | dtpr.io (current) | Hero, problem/proposal/mission cards, taxonomy page, footer |
 | 03 | vision.dtpr.io | The 2020 co-design prototype — origin of the hex mark |
@@ -28,25 +29,9 @@ An observational inventory of the brand as it actually exists — across every v
 | 10 | Illustrations | Corporate Memphis cityscapes vs. hex-based scenarios |
 | 11 | Voice & tone | Five principles, organizational values, two-track fork |
 | 12 | Findings | What survived, what's fragile, next steps |
+| 13 | Strategic Postures | Four conceptual brand axes mapped to four stakeholder personas |
 
-### Part 2 — Visual System Prep (open `sprint-index.html`)
-
-The prescriptive engine — morphological boxes, recipes, blueprints, ISO matrix, responsive specs.
-
-| # | Chapter | Scope |
-|---|---|---|
-| 13 | Strategic Postures | Four postures mapped to four personas |
-| 14 | Sprint Morphology (Form) | Geometry, layout grids, color parameters, border radii |
-| 15 | Transformation Morphology | Scaling, motion, live-data, domain-change rules |
-| 16 | Semantic Morphology | Meaning, register, disclosure rules |
-| 17 | Sprint Recipes | Regulatory (A), Maker (B), Commons (C) combined |
-| 18 | Geometric Blueprint | Honeycomb math and coordinate mapping |
-| 19 | Core CAA Assets | Built from the blueprint |
-| 20 | ISO 3864 Matrix | Warning-color co-placement rules |
-| 21 | Responsive Specs | Physical-to-digital transformation parameters |
-| 22 | Primitive Derivation | Token primitives derived from the morphological boxes |
-
-### Part 3 — Brand Identity Guidelines (open `guidelines/index.html`)
+### Part 2 — Brand Identity Guidelines (open `guidelines/index.html`)
 
 The prescriptive brand guidelines — use-case rules, logo specifications, color and typography protocols, application examples. Deliverable-grade document.
 
@@ -95,7 +80,6 @@ All page-to-page links are relative — the whole site can sit on any static hos
 
 **Entry points:**
 - `index.html` — Brand Identity Audit cover
-- `sprint-index.html` — Visual System Prep cover
 - `guidelines/index.html` — Brand Identity Guidelines cover
 
 ---
@@ -118,17 +102,15 @@ Source tags: `vision.dtpr.io` · `dtpr.io` · `makeshift` · `docs.dtpr.io` · `
 
 ## Repository layout
 
-    index.html                Part 1 cover (Brand Identity Audit)
-    sprint-index.html         Part 2 cover (Visual System Prep)
-    01..12-*.html             Audit chapters (12 pages)
-    13..22-*.html             System prep chapters (10 pages)
+    index.html                Audit cover (Part 1)
+    01..13-*.html             Audit chapters (13 pages)
     styles.css                Shared stylesheet for all pages
     assets/
       marks/                  DTPR hexagon, lockup variants, three seals
       logos-partners/         Helpful Places, Superbloom wordmarks
       screenshots/            Live-site and event collateral captures
     guidelines/
-      index.html              Part 3 cover (Brand Identity Guidelines)
+      index.html              Guidelines cover (Part 2)
       01..21-*.html           Guidelines chapters (20 pages)
       prototype/              V3 Minimal prototype (Vue 3 + Nuxt, static)
       prototype-v2/           V2 Maximal prototype (Vue 3 + Nuxt, static)
@@ -159,8 +141,8 @@ Source tags: `vision.dtpr.io` · `dtpr.io` · `makeshift` · `docs.dtpr.io` · `
 | Taxonomy elements | 147 | 51 device + 23 processing + 73 AI across three taxonomies |
 | Stakeholder tiers | 3 | Public Sector · Social Sector · General Public |
 | Organizational values | 5 | Openness · Legibility · Agency · Accountability · Community |
-| Audit + Prep pages | 22 | Parts 1 and 2 combined |
-| Guidelines pages | 20 | Part 3 Brand Identity Guidelines |
+| Audit pages | 13 | Part 1 Brand Identity Audit (00–13) |
+| Guidelines pages | 20 | Part 2 Brand Identity Guidelines |
 | Prototypes | 2 | V2 Maximal and V3 Minimal — interactive Recipe B demos |
 
 ---
@@ -170,7 +152,7 @@ Source tags: `vision.dtpr.io` · `dtpr.io` · `makeshift` · `docs.dtpr.io` · `
 - **Standard steward:** [Helpful Places](https://www.helpfulplaces.com)
 - **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Audit author:** Superbloom Design · June 2026 — attribution requested on redistribution
-- **Status:** v0.4 — audit + system prep + brand identity guidelines + prototypes
+- **Status:** v0.4 — brand identity audit + brand identity guidelines + prototypes
 
 ---
 
@@ -179,7 +161,7 @@ Source tags: `vision.dtpr.io` · `dtpr.io` · `makeshift` · `docs.dtpr.io` · `
 - **v0.1** (April 2026) — initial site inventory
 - **v0.2** (May 2026) — Assembly Day findings integrated, color tokens locked
 - **v0.3** (June 2026) — Voice chapter added, Visual System Prep split out, Message Map two-track fork surfaced
-- **v0.4** (August 2026) — Brand Identity Guidelines (Part 3) added, two Recipe B interactive prototypes deployed, BRAND_BOOK.md added as canonical design contract, visual system reconciled against production codebase
+- **v0.4** (August 2026) — Brand Identity Guidelines added, two Recipe B prototypes deployed, BRAND_BOOK.md added as canonical design contract, Visual System Prep pages retired
 
 ---
 
