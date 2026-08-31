@@ -1,11 +1,14 @@
-# Process development & morphology pages (kept locally, excluded from public deployment)
-14-sprint-morphology.html
-15-transformation-morphology.html
-16-semantic-morphology.html
-17-sprint-recipes.html
-18-geometric-blueprint.html
-19-core-caa-assets.html
-20-iso-3864-matrix.html
-21-responsive-specs.html
-22-primitive-derivation.html
-sprint-index.html
+node_modules/
+.git/
+*.bak
+*.bak.bak
+probes-from-pdfs/
+package.json
+package-lock.json
+bun.lockb
+wrangler.jsonc
+.assetsignore
+BRAND_BOOK.md
+DESIGN.md
+RATIONALE.md
+README.md
