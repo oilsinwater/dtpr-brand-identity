@@ -1,0 +1,1 @@
+import{r as e}from"./BZ9lYc6A.js";var t=e(`/marks/hexagon.svg`);export{t};
